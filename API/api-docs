@@ -1,0 +1,50 @@
+{
+  "apiVersion": "1.1",
+  "espiVersion": "1.1",
+  "apis": [
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/DataCustodian",
+      "description": "Operations about the Data Custodian"
+    },
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/ThirdParty",
+      "description": "Operations about Third Parties"
+    },
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/Subscription",
+      "description": "Operations about Subscriptions"
+    },
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/Authorization",
+      "description": "Operations about Authorizations"
+    },
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/ApplicationInformation",
+      "description": "Operations about Application Information"
+    },
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/UsagePoint",
+      "description": "Operations about Usage Points"
+    },
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/MeterReading",
+      "description": "Operations about Meter Readings"
+    },
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/ReadingType",
+      "description": "Operations about Reading Types"
+    },
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/IntervalBlock",
+      "description": "Operations about Interval Blocks"
+    },
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/ElectricPowerQualitySummary",
+      "description": "Operations about Electric Power Quality Summariess"
+    },
+    {
+      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/ElectricPowerUsageSummary",
+      "description": "Operations about Electric Power Usage Summaries"
+    }
+  ]
+}

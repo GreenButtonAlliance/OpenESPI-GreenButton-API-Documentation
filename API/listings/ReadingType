@@ -1,0 +1,306 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://greenbuttondata.org/datacustodian",
+  "resourcePath": "/usagepoint",
+  "produces": [
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis": [
+    {
+      "path": "/readingtype",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Finds all Reading Types",
+          "notes": "An XML representation of all Reading Types will be returned",
+          "responseClass": "<feed> ... </feed>",
+          "nickname": "findReadingTypes",
+          "produces": [
+            "application/xml"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "There are no Reading Types"
+            }
+          ]
+	      },
+        {
+          "method": "POST",
+          "summary": "Add a new Reading Type to the Data Custodian",
+          "notes": "The New Reading Type will be added",
+          "responseClass": "void",
+          "nickname": "addReadingType",
+          "parameters": [
+            {
+              "name": "ReadingType",
+              "description": "0 or more ReadingTypes that need to be added to the ReadingType",
+              "required": false,
+              "allowMultiple": true,
+              "dataType": "ReadingType",
+              "paramType": "ReadingType"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 405,
+              "message": "Invalid input"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/readingtype/{ReadingTypeID}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a ReadingType Using it's ID",
+          "notes": "Returns a Reading Type",
+          "responseClass": "ReadingType",
+          "nickname": "getReadingType",
+          "produces": [
+            "application/xml"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "usagepontID",
+              "description": "ID of the ReadingType that needs to be fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid ReadingType ID supplied"
+            },
+            {
+              "code": 404,
+              "message": "ReadingType not found"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Update an existing Reading Type within the DataCustodian",
+          "notes": "The Reading Type must exist",
+          "responseClass": "void",
+          "nickname": "updateReadingType",
+          "parameters": [
+            {
+              "name": "ReadingType",
+              "description": "A Reading Type object that needs to be updated",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "ReadingType",
+              "paramType": "ReadingType"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid ReadingTypeID supplied"
+            },
+            {
+              "code": 404,
+              "message": "Reading Type not found"
+            },
+            {
+              "code": 405,
+              "message": "Validation exception"
+            }
+          ]
+	},
+        {
+          "method": "DELETE",
+          "summary": "Deletes a Reading Type",
+          "notes": "",
+          "responseClass": "void",
+          "nickname": "deleteReadingType",
+          "parameters": [
+            {
+              "name": "ReadingTypeID",
+              "description": "Reading Type id to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "Reading Type not found"
+            },
+            {
+              "code": 400,
+              "message": "Invalid Reading Type ID"
+            }
+          ]
+        }
+
+      ]
+    }
+  ],
+  "models": {
+    "Authorization": {
+      "id": "Authorization",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "UsagePoint": {
+      "id": "UsagePoint",
+      "description": "A pet is a person's best friend",
+      "required": [
+        "name",
+        "id"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "MeterReadings": {
+          "type": "list",
+          "items": {
+            "$ref": "MeterReading"
+          }
+        },
+        "ReadingType": {
+          "type": "array",
+          "items": {
+            "$ref": "ReadingType"
+          }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "status": {
+          "type": "string",
+          "description": "pet status in the store",
+          "enum": [
+            "available",
+            "pending",
+            "sold"
+          ]
+        },
+        "MeterReadingCollection": {
+          "$ref": "MeterReading"
+        }
+      }
+    },
+    "MeterReading": {
+      "id": "MeterReading",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ApplicationInformation": {
+      "id": "ApplicationInformation",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "Subscription": {
+      "id": "Subscription",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ReadingType": {
+      "id": "ReadingType",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "IntervalBlock": {
+      "id": "IntervalBlock",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "LocalTime": {
+      "id": "LocalTime",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://greenbuttondata.org/datacustodian",
+  "resourcePath": "/usagepoint",
+  "produces": [
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis": [
+    {
+      "path": "/meterreading",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Finds all Meter Readings",
+          "notes": "An XML representation of all Meter Readings will be returned",
+          "responseClass": "<feed> ... </feed>",
+          "nickname": "findMeterReadings",
+          "produces": [
+            "application/xml"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "There are no Meter Readings"
+            }
+          ]
+	      },
+        {
+          "method": "POST",
+          "summary": "Add a new Meter Reading to the Data Custodian",
+          "notes": "The New Meter Reading will be added",
+          "responseClass": "void",
+          "nickname": "addMeterReading",
+          "parameters": [
+            {
+              "name": "MeterReading",
+              "description": "0 or more MeterReadings that need to be added to the MeterReading",
+              "required": false,
+              "allowMultiple": true,
+              "dataType": "MeterReading",
+              "paramType": "MeterReading"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 405,
+              "message": "Invalid input"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/meterreading/{MeterReadingID}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a MeterReading Using it's ID",
+          "notes": "Returns a Meter Reading",
+          "responseClass": "MeterReading",
+          "nickname": "getMeterReading",
+          "produces": [
+            "application/xml"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "usagepontID",
+              "description": "ID of the MeterReading that needs to be fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid MeterReading ID supplied"
+            },
+            {
+              "code": 404,
+              "message": "MeterReading not found"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Update an existing Meter Reading within the DataCustodian",
+          "notes": "The Meter Reading must exist",
+          "responseClass": "void",
+          "nickname": "updateMeterReading",
+          "parameters": [
+            {
+              "name": "MeterReading",
+              "description": "A Meter Reading object that needs to be updated",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "MeterReading",
+              "paramType": "MeterReading"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid MeterReadingID supplied"
+            },
+            {
+              "code": 404,
+              "message": "Meter Reading not found"
+            },
+            {
+              "code": 405,
+              "message": "Validation exception"
+            }
+          ]
+	},
+        {
+          "method": "DELETE",
+          "summary": "Deletes a Meter Reading",
+          "notes": "",
+          "responseClass": "void",
+          "nickname": "deleteMeterReading",
+          "parameters": [
+            {
+              "name": "MeterReadingID",
+              "description": "Meter Reading to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid MeterReadingID"
+            }
+          ]
+        }
+
+      ]
+    }
+  ],
+  "models": {
+    "Authorization": {
+      "id": "Authorization",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "UsagePoint": {
+      "id": "UsagePoint",
+      "description": "A pet is a person's best friend",
+      "required": [
+        "name",
+        "id"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "MeterReadings": {
+          "type": "list",
+          "items": {
+            "$ref": "MeterReading"
+          }
+        },
+        "ReadingType": {
+          "type": "array",
+          "items": {
+            "$ref": "ReadingType"
+          }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "status": {
+          "type": "string",
+          "description": "pet status in the store",
+          "enum": [
+            "available",
+            "pending",
+            "sold"
+          ]
+        },
+        "MeterReadingCollection": {
+          "$ref": "MeterReading"
+        }
+      }
+    },
+    "MeterReading": {
+      "id": "MeterReading",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ApplicationInformation": {
+      "id": "ApplicationInformation",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "Subscription": {
+      "id": "Subscription",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ReadingType": {
+      "id": "ReadingType",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "IntervalBlock": {
+      "id": "IntervalBlock",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "LocalTime": {
+      "id": "LocalTime",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    }
+
+  }
+}

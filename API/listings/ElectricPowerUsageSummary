@@ -1,0 +1,302 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://greenbuttondata.org/datacustodian",
+  "resourcePath": "/usagepoint",
+  "produces": [
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis": [
+    {
+      "path": "/electricpowerusagesummary",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Finds all Electric Power Usage Summarys",
+          "notes": "An XML representation of all Electric Power Usage Summarys will be returned",
+          "responseClass": "<feed> ... </feed>",
+          "nickname": "findElectricPowerUsageSummarys",
+          "produces": [
+            "application/xml"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "There are no Electric Power Usage Summarys"
+            }
+          ]
+	      },
+        {
+          "method": "POST",
+          "summary": "Add a new Electric Power Usage Summary to the Data Custodian",
+          "notes": "The New Electric Power Usage Summary will be added",
+          "responseClass": "void",
+          "nickname": "addElectricPowerUsageSummary",
+          "parameters": [
+            {
+              "name": "ElectricPowerUsageSummary",
+              "description": "0 or more ElectricPowerUsageSummarys that need to be added to the ElectricPowerUsageSummary",
+              "required": false,
+              "allowMultiple": true,
+              "dataType": "ElectricPowerUsageSummary",
+              "paramType": "ElectricPowerUsageSummary"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 405,
+              "message": "Invalid input"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/electricpowerusagesummary/{ElectricPowerUsageSummaryID}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a ElectricPowerUsageSummary Using it's ID",
+          "notes": "Returns a Electric Power Usage Summary",
+          "responseClass": "ElectricPowerUsageSummary",
+          "nickname": "getElectricPowerUsageSummary",
+          "produces": [
+            "application/xml"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "usagepontID",
+              "description": "ID of the ElectricPowerUsageSummary that needs to be fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid ElectricPowerUsageSummary ID supplied"
+            },
+            {
+              "code": 404,
+              "message": "ElectricPowerUsageSummary not found"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Update an existing Electric Power Usage Summary within the DataCustodian",
+          "notes": "The Electric Power Usage Summary must exist",
+          "responseClass": "void",
+          "nickname": "updateElectricPowerUsageSummary",
+          "parameters": [
+            {
+              "name": "ElectricPowerUsageSummary",
+              "description": "A Electric Power Usage Summary object that needs to be updated",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "ElectricPowerUsageSummary",
+              "paramType": "ElectricPowerUsageSummary"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid ElectricPowerUsageSummaryID supplied"
+            },
+            {
+              "code": 404,
+              "message": "Electric Power Usage Summary not found"
+            },
+            {
+              "code": 405,
+              "message": "Validation exception"
+            }
+          ]
+	},
+        {
+          "method": "DELETE",
+          "summary": "Deletes a Electric Power Usage Summary",
+          "notes": "",
+          "responseClass": "void",
+          "nickname": "deleteElectricPowerUsageSummary",
+          "parameters": [
+            {
+              "name": "ElectricPowerUsageSummaryID",
+              "description": "Electric Power Usage Summary id to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid Electric Power Usage Summary ID"
+            }
+          ]
+        }
+
+      ]
+    }
+  ],
+  "models": {
+    "Authorization": {
+      "id": "Authorization",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "UsagePoint": {
+      "id": "UsagePoint",
+      "description": "A pet is a person's best friend",
+      "required": [
+        "name",
+        "id"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "MeterReadings": {
+          "type": "list",
+          "items": {
+            "$ref": "MeterReading"
+          }
+        },
+        "ReadingType": {
+          "type": "array",
+          "items": {
+            "$ref": "ReadingType"
+          }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "status": {
+          "type": "string",
+          "description": "pet status in the store",
+          "enum": [
+            "available",
+            "pending",
+            "sold"
+          ]
+        },
+        "MeterReadingCollection": {
+          "$ref": "MeterReading"
+        }
+      }
+    },
+    "MeterReading": {
+      "id": "MeterReading",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ApplicationInformation": {
+      "id": "ApplicationInformation",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "Subscription": {
+      "id": "Subscription",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ReadingType": {
+      "id": "ReadingType",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "IntervalBlock": {
+      "id": "IntervalBlock",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "LocalTime": {
+      "id": "LocalTime",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    }
+
+  }
+}
