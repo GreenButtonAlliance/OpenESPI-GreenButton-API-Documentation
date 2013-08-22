@@ -3,47 +3,47 @@
   "espiVersion": "1.1",
   "apis": [
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/DataCustodian",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/DataCustodian",
       "description": "Operations about the Data Custodian"
     },
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/ThirdParty",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ThirdParty",
       "description": "Operations about Third Parties"
     },
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/Subscription",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/Subscription",
       "description": "Operations about Subscriptions"
     },
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/Authorization",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/Authorization",
       "description": "Operations about Authorizations"
     },
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/ApplicationInformation",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ApplicationInformation",
       "description": "Operations about Application Information"
     },
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/UsagePoint",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/UsagePoint",
       "description": "Operations about Usage Points"
     },
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/MeterReading",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/MeterReading",
       "description": "Operations about Meter Readings"
     },
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/ReadingType",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ReadingType",
       "description": "Operations about Reading Types"
     },
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/IntervalBlock",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/IntervalBlock",
       "description": "Operations about Interval Blocks"
     },
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/ElectricPowerQualitySummary",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ElectricPowerQualitySummary",
       "description": "Operations about Electric Power Quality Summariess"
     },
     {
-      "path": "http://www.openespi.org/GreenButtonDeveloper/listings/ElectricPowerUsageSummary",
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ElectricPowerUsageSummary",
       "description": "Operations about Electric Power Usage Summaries"
     }
   ]
