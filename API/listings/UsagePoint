@@ -2,7 +2,7 @@
   "apiVersion": "1.0",
   "swaggerVersion": "1.2",
   "basePath": "http://greenbuttondata.org/datacustodian",
-  "resourcePath": "/usagepoint",
+  "resourcePath": "/espi/1_1/resource",
   "produces": [
     "application/xml",
     "text/plain",
@@ -10,16 +10,39 @@
   ],
   "apis": [
     {
-      "path": "/usagepoint",
+      "path": "/espi/1_1/resource/usagepoint",
       "operations": [
         {
           "method": "GET",
           "summary": "Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
-          "responseClass": "<feed> ... </feed>",
+          "responseClass": "UsagePoints",
           "nickname": "findUsagePoints",
           "produces": [
             "application/xml"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            }
           ],
           "responseMessages": [
             {
@@ -36,12 +59,30 @@
           "nickname": "addUsagePoint",
           "parameters": [
             {
-              "name": "MeterReading",
+              "name": "MeterReadingURLs",
               "description": "0 or more MeterReadings that need to be added to the UsagePoint",
               "required": false,
               "allowMultiple": true,
-              "dataType": "MeterReading",
-              "paramType": "MeterReading"
+              "dataType": "MeterReadingReference",
+              "paramType": "body"
+            },
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
             }
           ],
           "responseMessages": [
@@ -54,7 +95,7 @@
       ]
     },
     {
-      "path": "/usagepoint/{UsagePointID}",
+      "path": "/espi/1_1/resource/usagepoint/{UsagePointID}",
       "operations": [
         {
           "method": "GET",
@@ -70,12 +111,30 @@
           ],
           "parameters": [
             {
-              "name": "usagepontID",
+              "name": "usagePointID",
               "description": "ID of the UsagePoint that needs to be fetched",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
+            },
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
             }
           ],
           "responseMessages": [
@@ -90,22 +149,55 @@
           ]
         },
         {
-          "method": "PUT",
+          "httpMethod": "PUT",
           "summary": "Update an existing Usage Point within the DataCustodian",
           "notes": "The Usage Point must exist",
           "responseClass": "void",
           "nickname": "updateUsagePoint",
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
             {
-              "name": "MeterReading",
-              "description": "A Usage Point object that needs to be updated",
+              "name": "UsagePointID",
+              "description": "Usage Point to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "UpdatedUsagePoint",
+              "description": "The Updated Information to be placed in the existing UsagePoint",
               "required": true,
               "allowMultiple": false,
               "dataType": "UsagePoint",
-              "paramType": "MeterReading"
+              "paramType": "body"
             }
           ],
           "responseMessages": [
+	    {
+	      "code": 200,
+	      "message" : "OK"
+	    },
             {
               "code": 400,
               "message": "Invalid UsagePointID supplied"
@@ -126,6 +218,9 @@
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteUsagePoint",
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
             {
               "name": "UsagePointID",
@@ -134,9 +229,31 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
+            },
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
             }
           ],
           "responseMessages": [
+	    {
+	      "code": 200,
+	      "message" : "OK"
+	    },
             {
               "code": 400,
               "message": "Invalid UsagePointID"
@@ -162,7 +279,7 @@
     },
     "UsagePoint": {
       "id": "UsagePoint",
-      "description": "A pet is a person's best friend",
+      "description": "A Usage Point is typically a meter of some sort",
       "required": [
         "name",
         "id"
@@ -171,7 +288,7 @@
         "name": {
           "type": "string"
         },
-        "MeterReadings": {
+        "MeterReadingCollection": {
           "type": "list",
           "items": {
             "$ref": "MeterReading"
@@ -195,12 +312,23 @@
             "pending",
             "sold"
           ]
-        },
-        "MeterReadingCollection": {
-          "$ref": "MeterReading"
         }
       }
     },
+
+    "UsagePoints" : {
+      "id": "UsagePoints",
+      "description": "A List of Usage Points", 
+      "properties": {
+         "UsagePointCollection" : {
+            "type": "list",
+            "items": {
+              "$ref": "UsagePoint"
+  	    }
+         }
+       }
+    },
+       
     "MeterReading": {
       "id": "MeterReading",
       "properties": {
@@ -213,6 +341,28 @@
         }
       }
     },
+
+    "MeterReadingURL" : {
+      "id" : "MeterReadingURL",
+      "description" : "the Resource Locator of a Specific Meter Reading",
+      "properties" : {
+        "resourceURL" : "String"
+      }
+    },
+
+    "MeterReadings" : {
+      "id": "MeterReadings",
+      "description": "A List of Meter Readings", 
+      "properties": {
+         "MeterReadingCollection" : {
+            "type": "list",
+            "items": {
+              "$ref": "MeterReading"
+  	    }
+         }
+       }
+    },
+       
     "ApplicationInformation": {
       "id": "ApplicationInformation",
       "properties": {
