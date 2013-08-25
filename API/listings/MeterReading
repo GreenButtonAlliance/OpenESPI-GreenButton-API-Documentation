@@ -2,7 +2,7 @@
   "apiVersion": "1.0",
   "swaggerVersion": "1.2",
   "basePath": "http://greenbuttondata.org/datacustodian",
-  "resourcePath": "/usagepoint",
+  "resourcePath": "/espi/1_1/resource",
   "produces": [
     "application/xml",
     "text/plain",
@@ -10,56 +10,97 @@
   ],
   "apis": [
     {
-      "path": "/meterreading",
+      "path": "/espi/1_1/resource/usagepoint/{UsagePointID}/MeterReading",
       "operations": [
         {
           "method": "GET",
-          "summary": "Finds all Meter Readings",
-          "notes": "An XML representation of all Meter Readings will be returned",
-          "responseClass": "<feed> ... </feed>",
-          "nickname": "findMeterReadings",
+          "summary": "Finds all Meter Readings associated with a given Usage Point",
+          "notes": "An XML representation of all MeterReadingss will be returned",
+          "responseClass": "MeterReadingss",
+          "nickname": "findMeterReadingss",
           "produces": [
             "application/xml"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            }
           ],
           "responseMessages": [
             {
               "code": 404,
-              "message": "There are no Meter Readings"
+              "message": "Invalid Usage Point"
             }
           ]
-	      },
+        },
         {
           "method": "POST",
-          "summary": "Add a new Meter Reading to the Data Custodian",
+          "summary": "Add a new Meter Reading to an existing Usage Point to the Data Custodian",
           "notes": "The New Meter Reading will be added",
           "responseClass": "void",
           "nickname": "addMeterReading",
           "parameters": [
             {
-              "name": "MeterReading",
-              "description": "0 or more MeterReadings that need to be added to the MeterReading",
+              "name": "MeterReadingURLs",
+              "description": "0 or more MeterReadings that need to be added to the UsagePoint",
               "required": false,
               "allowMultiple": true,
-              "dataType": "MeterReading",
-              "paramType": "MeterReading"
+              "dataType": "MeterReadingURL",
+              "paramType": "body"
+            },
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
             }
           ],
           "responseMessages": [
             {
-              "code": 405,
-              "message": "Invalid input"
+              "code": 404,
+              "message": "Usage Point Not Found"
             }
           ]
         }
       ]
     },
     {
-      "path": "/meterreading/{MeterReadingID}",
+      "path": "/espi/1_1/resource/usagepoint/{UsagePointID}/MeterReading/{MeterReadingID}",
       "operations": [
         {
           "method": "GET",
-          "summary": "Retrieve a MeterReading Using it's ID",
-          "notes": "Returns a Meter Reading",
+          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
+          "notes": "Returns a MeterReading",
           "responseClass": "MeterReading",
           "nickname": "getMeterReading",
           "produces": [
@@ -70,49 +111,108 @@
           ],
           "parameters": [
             {
-              "name": "usagepontID",
-              "description": "ID of the MeterReading that needs to be fetched",
+              "name": "usagePointID",
+              "description": "ID of the UsagePoint that needs to be fetched",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
+            },
+            {
+              "name": "MeterReadingID",
+              "description": "ID of the Meter Reading that needs to be fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
             }
           ],
           "responseMessages": [
             {
               "code": 400,
-              "message": "Invalid MeterReading ID supplied"
+              "message": "Invalid UsagePoint ID or Meter Reading IDsupplied"
             },
             {
               "code": 404,
-              "message": "MeterReading not found"
+              "message": "UsagePoint or Meter Reading not found"
             }
           ]
         },
         {
-          "method": "PUT",
-          "summary": "Update an existing Meter Reading within the DataCustodian",
-          "notes": "The Meter Reading must exist",
+          "httpMethod": "PUT",
+          "summary": "Update an existing Meter Reading within Usage Point of a DataCustodian",
+          "notes": "The Usage Point and Meter Reading must exist",
           "responseClass": "void",
           "nickname": "updateMeterReading",
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
             {
-              "name": "MeterReading",
-              "description": "A Meter Reading object that needs to be updated",
+              "name": "UsagePointID",
+              "description": "Usage Point to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "UpdatedMeterReading",
+              "description": "The Updated Information to be placed in the existing MeterReading",
               "required": true,
               "allowMultiple": false,
               "dataType": "MeterReading",
-              "paramType": "MeterReading"
+              "paramType": "body"
             }
           ],
           "responseMessages": [
+	    {
+	      "code": 200,
+	      "message" : "OK"
+	    },
             {
               "code": 400,
-              "message": "Invalid MeterReadingID supplied"
+              "message": "Invalid UsagePointID or MeterReadingID supplied"
             },
             {
               "code": 404,
-              "message": "Meter Reading not found"
+              "message": "Usage Point or Meter Reading not found"
             },
             {
               "code": 405,
@@ -122,11 +222,22 @@
 	},
         {
           "method": "DELETE",
-          "summary": "Deletes a Meter Reading",
+          "summary": "Deletes a Meter Reading and Removes it for the Usage Point Meter Reading Collection",
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteMeterReading",
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
+            {
+              "name": "UsagePointID",
+              "description": "Usage Point containing the Meter Reading to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
             {
               "name": "MeterReadingID",
               "description": "Meter Reading to delete",
@@ -134,12 +245,34 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
+            },
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
             }
           ],
           "responseMessages": [
+	    {
+	      "code": 200,
+	      "message" : "OK"
+	    },
             {
               "code": 400,
-              "message": "Invalid MeterReadingID"
+              "message": "Invalid UsagePointID or MeterReadingID"
             }
           ]
         }
@@ -162,7 +295,7 @@
     },
     "UsagePoint": {
       "id": "UsagePoint",
-      "description": "A pet is a person's best friend",
+      "description": "A Usage Point is typically a meter of some sort",
       "required": [
         "name",
         "id"
@@ -171,7 +304,7 @@
         "name": {
           "type": "string"
         },
-        "MeterReadings": {
+        "MeterReadingCollection": {
           "type": "list",
           "items": {
             "$ref": "MeterReading"
@@ -195,12 +328,23 @@
             "pending",
             "sold"
           ]
-        },
-        "MeterReadingCollection": {
-          "$ref": "MeterReading"
         }
       }
     },
+
+    "UsagePoints" : {
+      "id": "UsagePoints",
+      "description": "A List of Usage Points", 
+      "properties": {
+         "UsagePointCollection" : {
+            "type": "list",
+            "items": {
+              "$ref": "UsagePoint"
+  	    }
+         }
+       }
+    },
+       
     "MeterReading": {
       "id": "MeterReading",
       "properties": {
@@ -213,6 +357,28 @@
         }
       }
     },
+
+    "MeterReadingURL" : {
+      "id" : "MeterReadingURL",
+      "description" : "the Resource Locator of a Specific Meter Reading",
+      "properties" : {
+        "resourceURL" : "String"
+      }
+    },
+
+    "MeterReadings" : {
+      "id": "MeterReadings",
+      "description": "A List of Meter Readings", 
+      "properties": {
+         "MeterReadingCollection" : {
+            "type": "list",
+            "items": {
+              "$ref": "MeterReading"
+  	    }
+         }
+       }
+    },
+       
     "ApplicationInformation": {
       "id": "ApplicationInformation",
       "properties": {
@@ -300,3 +466,4 @@
 
   }
 }
+
