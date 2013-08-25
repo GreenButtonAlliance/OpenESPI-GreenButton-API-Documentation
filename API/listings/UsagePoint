@@ -59,11 +59,11 @@
           "nickname": "addUsagePoint",
           "parameters": [
             {
-              "name": "MeterReadingURLs",
-              "description": "0 or more MeterReadings that need to be added to the UsagePoint",
+              "name": "UsagePointURLs",
+              "description": "0 or more UsagePoints that need to be added to the Data Custodian",
               "required": false,
               "allowMultiple": true,
-              "dataType": "MeterReadingReference",
+              "dataType": "UsagePointURL",
               "paramType": "body"
             },
             {
@@ -327,6 +327,14 @@
   	    }
          }
        }
+    },
+    
+   "UsagePointURL" : {
+      "id" : "UsagePointURL",
+      "description" : "the Resource Locator of a Specific Usage Point",
+      "properties" : {
+        "resourceURL" : "String"
+      }
     },
        
     "MeterReading": {
