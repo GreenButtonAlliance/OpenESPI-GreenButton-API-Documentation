@@ -285,6 +285,10 @@
         "id"
       ],
       "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
         "name": {
           "type": "string"
         },
@@ -299,19 +303,6 @@
           "items": {
             "$ref": "ReadingType"
           }
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "status": {
-          "type": "string",
-          "description": "pet status in the store",
-          "enum": [
-            "available",
-            "pending",
-            "sold"
-          ]
         }
       }
     },
@@ -350,14 +341,6 @@
       }
     },
 
-    "MeterReadingURL" : {
-      "id" : "MeterReadingURL",
-      "description" : "the Resource Locator of a Specific Meter Reading",
-      "properties" : {
-        "resourceURL" : "String"
-      }
-    },
-
     "MeterReadings" : {
       "id": "MeterReadings",
       "description": "A List of Meter Readings", 
@@ -370,7 +353,15 @@
          }
        }
     },
-       
+
+   "MeterReadingURL" : {
+      "id" : "MeterReadingURL",
+      "description" : "the Resource Locator of a Specific Meter Reading",
+      "properties" : {
+        "resourceURL" : "String"
+      }
+    },
+           
     "ApplicationInformation": {
       "id": "ApplicationInformation",
       "properties": {
@@ -383,6 +374,7 @@
         }
       }
     },
+    
     "Subscription": {
       "id": "Subscription",
       "properties": {
@@ -395,6 +387,7 @@
         }
       }
     },
+    
     "ReadingType": {
       "id": "ReadingType",
       "properties": {
@@ -407,6 +400,7 @@
         }
       }
     },
+    
     "IntervalBlock": {
       "id": "IntervalBlock",
       "properties": {
@@ -419,6 +413,7 @@
         }
       }
     },
+    
     "ElectricPowerUsageSummary": {
       "id": "ElectricPowerUsageSummary",
       "properties": {
@@ -431,6 +426,7 @@
         }
       }
     },
+    
     "LocalTime": {
       "id": "LocalTime",
       "properties": {
@@ -443,6 +439,7 @@
         }
       }
     },
+    
     "ElectricPowerUsageSummary": {
       "id": "ElectricPowerUsageSummary",
       "properties": {
