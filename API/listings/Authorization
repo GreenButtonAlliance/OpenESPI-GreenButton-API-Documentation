@@ -162,16 +162,20 @@
     },
     "UsagePoint": {
       "id": "UsagePoint",
-      "description": "A pet is a person's best friend",
+      "description": "A Usage Point is typically a meter of some sort",
       "required": [
         "name",
         "id"
       ],
       "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
         "name": {
           "type": "string"
         },
-        "MeterReadings": {
+        "MeterReadingCollection": {
           "type": "list",
           "items": {
             "$ref": "MeterReading"
@@ -182,25 +186,31 @@
           "items": {
             "$ref": "ReadingType"
           }
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "status": {
-          "type": "string",
-          "description": "pet status in the store",
-          "enum": [
-            "available",
-            "pending",
-            "sold"
-          ]
-        },
-        "MeterReadingCollection": {
-          "$ref": "MeterReading"
         }
       }
     },
+
+    "UsagePoints" : {
+      "id": "UsagePoints",
+      "description": "A List of Usage Points", 
+      "properties": {
+         "UsagePointCollection" : {
+            "type": "list",
+            "items": {
+              "$ref": "UsagePoint"
+  	    }
+         }
+       }
+    },
+    
+   "UsagePointURL" : {
+      "id" : "UsagePointURL",
+      "description" : "the Resource Locator of a Specific Usage Point",
+      "properties" : {
+        "resourceURL" : "String"
+      }
+    },
+       
     "MeterReading": {
       "id": "MeterReading",
       "properties": {
@@ -213,6 +223,28 @@
         }
       }
     },
+
+    "MeterReadings" : {
+      "id": "MeterReadings",
+      "description": "A List of Meter Readings", 
+      "properties": {
+         "MeterReadingCollection" : {
+            "type": "list",
+            "items": {
+              "$ref": "MeterReading"
+  	    }
+         }
+       }
+    },
+
+   "MeterReadingURL" : {
+      "id" : "MeterReadingURL",
+      "description" : "the Resource Locator of a Specific Meter Reading",
+      "properties" : {
+        "resourceURL" : "String"
+      }
+    },
+           
     "ApplicationInformation": {
       "id": "ApplicationInformation",
       "properties": {
@@ -225,6 +257,7 @@
         }
       }
     },
+    
     "Subscription": {
       "id": "Subscription",
       "properties": {
@@ -237,6 +270,7 @@
         }
       }
     },
+    
     "ReadingType": {
       "id": "ReadingType",
       "properties": {
@@ -249,6 +283,7 @@
         }
       }
     },
+    
     "IntervalBlock": {
       "id": "IntervalBlock",
       "properties": {
@@ -261,6 +296,7 @@
         }
       }
     },
+    
     "ElectricPowerUsageSummary": {
       "id": "ElectricPowerUsageSummary",
       "properties": {
@@ -273,6 +309,7 @@
         }
       }
     },
+    
     "LocalTime": {
       "id": "LocalTime",
       "properties": {
@@ -285,6 +322,7 @@
         }
       }
     },
+    
     "ElectricPowerUsageSummary": {
       "id": "ElectricPowerUsageSummary",
       "properties": {

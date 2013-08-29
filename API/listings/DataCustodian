@@ -688,6 +688,7 @@
     }
 
   ],
+
   "models": {
     "Authorization": {
       "id": "Authorization",
@@ -826,8 +827,8 @@
         }
       }
     },
-    "ElectricPowerQualitySummary": {
-      "id": "ElectricPowerQualitySummary",
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
       "properties": {
         "name": {
           "type": "string"
