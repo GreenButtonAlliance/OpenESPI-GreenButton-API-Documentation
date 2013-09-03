@@ -10,7 +10,7 @@
   ],
   "apis": [
     {
-      "path": "/authorization",
+      "path": "/espi/1_1/resource/Authorization",
       "operations": [
         {
           "method": "GET",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "path": "/authorization/{AuthorizationID}",
+      "path": "/espi/1_1/resource/Authorization/{AuthorizationID}",
       "operations": [
         {
           "method": "GET",

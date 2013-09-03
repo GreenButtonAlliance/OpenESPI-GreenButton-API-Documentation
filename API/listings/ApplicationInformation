@@ -10,7 +10,7 @@
   ],
   "apis": [
     {
-      "path": "/applicationinformation",
+      "path": "/espi/1_1/resource/ApplicationInformaiton",
       "operations": [
         {
           "method": "GET",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "path": "/applicationinformation/{ApplicationInformationID}",
+      "path": "/espi/1_1/resource/ApplicationInformaiton/{ApplicationInformationID}",
       "operations": [
         {
           "method": "GET",

@@ -10,7 +10,7 @@
   ],
   "apis": [
     {
-      "path": "/subscription",
+      "path": "/espi/1_1/resource/Subscription",
       "operations": [
         {
           "method": "GET",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "path": "/subscription/{SubscriptionID}",
+      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}",
       "operations": [
         {
           "method": "GET",
