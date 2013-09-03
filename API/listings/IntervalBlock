@@ -10,7 +10,7 @@
   ],
   "apis": [
     {
-      "path": "/intervalblock",
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}/IntervalBlock",
       "operations": [
         {
           "method": "GET",
@@ -19,7 +19,54 @@
           "responseClass": "<feed> ... </feed>",
           "nickname": "findIntervalBlocks",
           "produces": [
-            "application/xml"
+            "application/atom+xml"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+	    {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+	    {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+	    {
+              "name": "MeterReadingID",
+              "description": "ID of the MeterReading that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
           ],
           "responseMessages": [
             {
@@ -35,6 +82,30 @@
           "responseClass": "void",
           "nickname": "addIntervalBlock",
           "parameters": [
+	    {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+	    {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+	    {
+              "name": "MeterReadingID",
+              "description": "ID of the MeterReading that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
             {
               "name": "IntervalBlock",
               "description": "0 or more IntervalBlocks that need to be added to the IntervalBlock",
@@ -54,7 +125,7 @@
       ]
     },
     {
-      "path": "/intervalblock/{IntervalBlockID}",
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}/IntervalBlock/{IntervalBlockID}",
       "operations": [
         {
           "method": "GET",
@@ -68,15 +139,56 @@
           "authorizations": [
             "oauth2"
           ],
+          "produces": [
+            "application/atom+xml"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
             {
-              "name": "usagepontID",
-              "description": "ID of the IntervalBlock that needs to be fetched",
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+	    {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+	    {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+	    {
+              "name": "MeterReadingID",
+              "description": "ID of the MeterReading that contains the Interval Block to be Fetched",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             }
+
           ],
           "responseMessages": [
             {
@@ -162,20 +274,16 @@
     },
     "UsagePoint": {
       "id": "UsagePoint",
-      "description": "A Usage Point is typically a meter of some sort",
+      "description": "A pet is a person's best friend",
       "required": [
         "name",
         "id"
       ],
       "properties": {
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
         "name": {
           "type": "string"
         },
-        "MeterReadingCollection": {
+        "MeterReadings": {
           "type": "list",
           "items": {
             "$ref": "MeterReading"
@@ -186,31 +294,25 @@
           "items": {
             "$ref": "ReadingType"
           }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "status": {
+          "type": "string",
+          "description": "pet status in the store",
+          "enum": [
+            "available",
+            "pending",
+            "sold"
+          ]
+        },
+        "MeterReadingCollection": {
+          "$ref": "MeterReading"
         }
       }
     },
-
-    "UsagePoints" : {
-      "id": "UsagePoints",
-      "description": "A List of Usage Points", 
-      "properties": {
-         "UsagePointCollection" : {
-            "type": "list",
-            "items": {
-              "$ref": "UsagePoint"
-  	    }
-         }
-       }
-    },
-    
-   "UsagePointURL" : {
-      "id" : "UsagePointURL",
-      "description" : "the Resource Locator of a Specific Usage Point",
-      "properties" : {
-        "resourceURL" : "String"
-      }
-    },
-       
     "MeterReading": {
       "id": "MeterReading",
       "properties": {
@@ -223,28 +325,6 @@
         }
       }
     },
-
-    "MeterReadings" : {
-      "id": "MeterReadings",
-      "description": "A List of Meter Readings", 
-      "properties": {
-         "MeterReadingCollection" : {
-            "type": "list",
-            "items": {
-              "$ref": "MeterReading"
-  	    }
-         }
-       }
-    },
-
-   "MeterReadingURL" : {
-      "id" : "MeterReadingURL",
-      "description" : "the Resource Locator of a Specific Meter Reading",
-      "properties" : {
-        "resourceURL" : "String"
-      }
-    },
-           
     "ApplicationInformation": {
       "id": "ApplicationInformation",
       "properties": {
@@ -257,7 +337,6 @@
         }
       }
     },
-    
     "Subscription": {
       "id": "Subscription",
       "properties": {
@@ -270,7 +349,6 @@
         }
       }
     },
-    
     "ReadingType": {
       "id": "ReadingType",
       "properties": {
@@ -283,7 +361,6 @@
         }
       }
     },
-    
     "IntervalBlock": {
       "id": "IntervalBlock",
       "properties": {
@@ -296,7 +373,6 @@
         }
       }
     },
-    
     "ElectricPowerUsageSummary": {
       "id": "ElectricPowerUsageSummary",
       "properties": {
@@ -309,7 +385,6 @@
         }
       }
     },
-    
     "LocalTime": {
       "id": "LocalTime",
       "properties": {
@@ -322,7 +397,6 @@
         }
       }
     },
-    
     "ElectricPowerUsageSummary": {
       "id": "ElectricPowerUsageSummary",
       "properties": {

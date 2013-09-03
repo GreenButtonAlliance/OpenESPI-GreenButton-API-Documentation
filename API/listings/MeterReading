@@ -10,7 +10,7 @@
   ],
   "apis": [
     {
-      "path": "/espi/1_1/resource/usagepoint/{UsagePointID}/MeterReading",
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/MeterReading",
       "operations": [
         {
           "method": "GET",
@@ -19,7 +19,7 @@
           "responseClass": "MeterReadingss",
           "nickname": "findMeterReadingss",
           "produces": [
-            "application/xml"
+            "application/atom+xml"
           ],
           "authorizations": [
             "oauth2"
@@ -42,6 +42,22 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "header"
+            },
+	    {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+	    {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
             }
           ],
           "responseMessages": [
@@ -59,7 +75,7 @@
           "nickname": "addMeterReading",
           "parameters": [
             {
-              "name": "MeterReadingURLs",
+              "name": "MeterReadingURL",
               "description": "0 or more MeterReadings that need to be added to the UsagePoint",
               "required": false,
               "allowMultiple": true,
@@ -83,6 +99,22 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "header"
+            },
+	    {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+	    {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
             }
           ],
           "responseMessages": [
@@ -95,7 +127,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/usagepoint/{UsagePointID}/MeterReading/{MeterReadingID}",
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}",
       "operations": [
         {
           "method": "GET",
@@ -110,22 +142,7 @@
             "oauth2"
           ],
           "parameters": [
-            {
-              "name": "usagePointID",
-              "description": "ID of the UsagePoint that needs to be fetched",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "MeterReadingID",
-              "description": "ID of the Meter Reading that needs to be fetched",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
+
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -143,6 +160,22 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "header"
+            },
+            {
+              "name": "usagePointID",
+              "description": "ID of the UsagePoint that needs to be fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "MeterReadingID",
+              "description": "ID of the Meter Reading that needs to be fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
             }
           ],
           "responseMessages": [
@@ -167,14 +200,6 @@
           ],
           "parameters": [
             {
-              "name": "UsagePointID",
-              "description": "Usage Point to delete",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
               "name": "Authorization",
               "description": "Access Token",
 	      "defaultValue": "Basic {access_token}",
@@ -191,6 +216,22 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "header"
+            },
+	    {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+	    {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
             },
             {
               "name": "UpdatedMeterReading",
@@ -231,22 +272,6 @@
           ],
           "parameters": [
             {
-              "name": "UsagePointID",
-              "description": "Usage Point containing the Meter Reading to delete",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "MeterReadingID",
-              "description": "Meter Reading to delete",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
               "name": "Authorization",
               "description": "Access Token",
 	      "defaultValue": "Basic {access_token}",
@@ -263,6 +288,22 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "header"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "Usage Point containing the Meter Reading to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "MeterReadingID",
+              "description": "Meter Reading to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
             }
           ],
           "responseMessages": [
@@ -301,10 +342,6 @@
         "id"
       ],
       "properties": {
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
         "name": {
           "type": "string"
         },
@@ -319,6 +356,19 @@
           "items": {
             "$ref": "ReadingType"
           }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "status": {
+          "type": "string",
+          "description": "pet status in the store",
+          "enum": [
+            "available",
+            "pending",
+            "sold"
+          ]
         }
       }
     },
@@ -335,14 +385,6 @@
          }
        }
     },
-    
-   "UsagePointURL" : {
-      "id" : "UsagePointURL",
-      "description" : "the Resource Locator of a Specific Usage Point",
-      "properties" : {
-        "resourceURL" : "String"
-      }
-    },
        
     "MeterReading": {
       "id": "MeterReading",
@@ -354,6 +396,14 @@
           "type": "integer",
           "format": "int64"
         }
+      }
+    },
+
+    "MeterReadingURL" : {
+      "id" : "MeterReadingURL",
+      "description" : "the Resource Locator of a Specific Meter Reading",
+      "properties" : {
+        "resourceURL" : "String"
       }
     },
 
@@ -369,15 +419,7 @@
          }
        }
     },
-
-   "MeterReadingURL" : {
-      "id" : "MeterReadingURL",
-      "description" : "the Resource Locator of a Specific Meter Reading",
-      "properties" : {
-        "resourceURL" : "String"
-      }
-    },
-           
+       
     "ApplicationInformation": {
       "id": "ApplicationInformation",
       "properties": {
@@ -390,7 +432,6 @@
         }
       }
     },
-    
     "Subscription": {
       "id": "Subscription",
       "properties": {
@@ -403,7 +444,6 @@
         }
       }
     },
-    
     "ReadingType": {
       "id": "ReadingType",
       "properties": {
@@ -416,7 +456,6 @@
         }
       }
     },
-    
     "IntervalBlock": {
       "id": "IntervalBlock",
       "properties": {
@@ -429,7 +468,6 @@
         }
       }
     },
-    
     "ElectricPowerUsageSummary": {
       "id": "ElectricPowerUsageSummary",
       "properties": {
@@ -442,7 +480,6 @@
         }
       }
     },
-    
     "LocalTime": {
       "id": "LocalTime",
       "properties": {
@@ -455,7 +492,6 @@
         }
       }
     },
-    
     "ElectricPowerUsageSummary": {
       "id": "ElectricPowerUsageSummary",
       "properties": {
@@ -471,3 +507,4 @@
 
   }
 }
+

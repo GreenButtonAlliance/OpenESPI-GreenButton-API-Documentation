@@ -10,7 +10,7 @@
   ],
   "apis": [
     {
-      "path": "/subscription",
+      "path": "/espi/1_1/resource/Subscription",
       "operations": [
         {
           "method": "GET",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "path": "/subscription/{SubscriptionID}",
+      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}",
       "operations": [
         {
           "method": "GET",
@@ -147,7 +147,7 @@
       ]
     },
     {
-      "path": "/authorization",
+      "path": "/espi/1_1/resource/Authorization",
       "operations": [
         {
           "method": "GET",
@@ -191,7 +191,7 @@
       ]
     },
     {
-      "path": "/authorization/{AuthorizationID}",
+      "path": "/espi/1_1/resource/Authorization/{AuthorizationID}",
       "operations": [
         {
           "method": "GET",
@@ -284,7 +284,7 @@
       ]
     },
     {
-      "path": "/applicationinformation",
+      "path": "/espi/1_1/resource/ApplicationInformation",
       "operations": [
         {
           "method": "GET",
@@ -328,7 +328,7 @@
       ]
     },
     {
-      "path": "/applicationinformation/{ApplicationInformationID}",
+      "path": "/espi/1_1/resource/ApplicationInformation/{ApplicationInformationID}",
       "operations": [
         {
           "method": "GET",
@@ -422,198 +422,6 @@
     }
 
   ],
-  "models": {
-    "Authorization": {
-      "id": "Authorization",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "UsagePoint": {
-      "id": "UsagePoint",
-      "description": "A Usage Point is typically a meter of some sort",
-      "required": [
-        "name",
-        "id"
-      ],
-      "properties": {
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "name": {
-          "type": "string"
-        },
-        "MeterReadingCollection": {
-          "type": "list",
-          "items": {
-            "$ref": "MeterReading"
-          }
-        },
-        "ReadingType": {
-          "type": "array",
-          "items": {
-            "$ref": "ReadingType"
-          }
-        }
-      }
-    },
-
-    "UsagePoints" : {
-      "id": "UsagePoints",
-      "description": "A List of Usage Points", 
-      "properties": {
-         "UsagePointCollection" : {
-            "type": "list",
-            "items": {
-              "$ref": "UsagePoint"
-  	    }
-         }
-       }
-    },
-    
-   "UsagePointURL" : {
-      "id" : "UsagePointURL",
-      "description" : "the Resource Locator of a Specific Usage Point",
-      "properties" : {
-        "resourceURL" : "String"
-      }
-    },
-       
-    "MeterReading": {
-      "id": "MeterReading",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-
-    "MeterReadings" : {
-      "id": "MeterReadings",
-      "description": "A List of Meter Readings", 
-      "properties": {
-         "MeterReadingCollection" : {
-            "type": "list",
-            "items": {
-              "$ref": "MeterReading"
-  	    }
-         }
-       }
-    },
-
-   "MeterReadingURL" : {
-      "id" : "MeterReadingURL",
-      "description" : "the Resource Locator of a Specific Meter Reading",
-      "properties" : {
-        "resourceURL" : "String"
-      }
-    },
-           
-    "ApplicationInformation": {
-      "id": "ApplicationInformation",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    
-    "Subscription": {
-      "id": "Subscription",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    
-    "ReadingType": {
-      "id": "ReadingType",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    
-    "IntervalBlock": {
-      "id": "IntervalBlock",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    
-    "LocalTime": {
-      "id": "LocalTime",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    }
-
-  }
-}
-
   "models": {
     "Authorization": {
       "id": "Authorization",

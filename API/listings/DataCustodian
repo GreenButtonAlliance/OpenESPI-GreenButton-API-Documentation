@@ -11,7 +11,7 @@
   ],
   "apis": [
     {
-      "path": "/espi/1.1/register",
+      "path": "/espi/1_1/register/",
       "operations" : [
         {
 	 "method": "POST",
@@ -20,71 +20,78 @@
 	 "responseClass" : "A redict URL",
 	 "nickname" : "registerThirdParty",
 	 "parameters" : [
-	   {"redirect_uris" : "A URI to handle the redirect back to the requesting Third Party",
-	    "summary" : "A URI that will be called during the OAuth2 Registration process",
-	    "description" : "An OAuth2 Registration Description from the pending RFC",
+	   {
+	    "paramType": "form",
+            "name": "redirect_uris",
+	    "description" : "A URI to handle the redirect back to the requesting Third Party as part of the OAuth2 Registration (RFC Pending)",
             "required": true,
             "allowMultiple": false,
-            "dataType": "URI",
-            "paramType": "string"
+            "dataType": "String"
 	    },
-	   {"client_name" : "The Pretty Name of the  Third Party Application",
-	    "summary" : "A human readable name of the requesting Third Party",
+	   {
+            "paramType": "form",
+	    "name" : "client_name",
 	    "description" : "A human readable name of the requesting Third Party",
             "required": true,
             "allowMultiple": false,
-            "dataType": "client_name",
-            "paramType": "string"
+            "dataType": "String"
 	    },
-	   {"tos_uri" : "The Terms of Service of the requesting  Third Party Application",
-	    "summary" : "The public URI of the Terms of Service of the  Third Party Application",
+	   {
+            "paramType": "form",
+            "name" : "tos_uri",
 	    "description" : "The public URI of the Terms of Service of the  Third Party Application",
             "required": true,
             "allowMultiple": false,
-            "dataType": "tos_uri",
-            "paramType": "string"
+            "dataType": "String"
 	    },
-	   {"policy_uri" : "The URI of the usage policy of the requesting  Third Party Application",
-	    "summary" : "The public URI of the usage policy of the requesting Third Party Application",
+	   {
+            "paramType" : "form",
+	    "name" : "policy_uri",
 	    "description" : "The URI of a document describing the Usage Policy of the requesting Third Party Application",
             "required": true,
             "allowMultiple": false,
-            "dataType": "policy_uri",
-            "paramType": "string"
+            "dataType": "String"
 	    },
-	   {"token_endpoint_auth_method" : "The OAuth Token Endpoint Authorization Method",
-	    "summary" : "Must be the string: client_secret_basic",
+	   {
+            "paramType": "form",
+	    "name" : "token_endpoint_auth_method",
 	    "description" : "the token endpoint authorization method as described in the pending OAuth2 Registration documents. Must be the value client_secret_basic",
+	    "defaultValue" : "client_secret_basic",
             "required": true,
             "allowMultiple": false,
-            "dataType": "OAuth2_auth_method_endpoint",
-            "paramType": "string"
+            "dataType": "String"
 	    },
-	   {"scope" : "The OAuth2 scope string",
-	    "summary" : "The OAuth2 scope requested",
-	    "description" : "The scope of access requested by the requesting <b>Third Party Application</b>.",
+	   {
+            "paramType": "form",
+	    "name" : "scope",
+	    "description" : "The scope of access requested by the requesting Third Party Application.",
             "required": true,
             "allowMultiple": false,
-            "dataType": "OAuth2_Scope_String",
-            "paramType": "string"
+            "dataType": "String",
+	    "enum" : [
+              "1", "2", "3", "4"
+             ]
 	    },
-	   {"grant_types" : "The OAuth2 grant types",
+	   {
+	    "grant_types" : "The OAuth2 grant types",
 	    "summary" : "The OAuth2 grant types requested",
 	    "description" : "The OAuth2 grant types MUST be: [\"auhoriztion_code\", \"client_credentials\", \"refresh_token\"]",
             "required": true,
             "allowMultiple": false,
             "dataType": "OAuth2_Grant_Type_String",
-            "paramType": "string"
+            "paramType": "form"
 	    },
-	   {"response_types" : "The OAuth2 response types",
+	   {
+	    "response_types" : "The OAuth2 response types",
 	    "summary" : "The OAuth2 response types", 
 	    "description" : "The OAuth2 response types: must be the string: \"code\"",
             "required": true,
             "allowMultiple": false,
             "dataType": "OAuth2_Response_Type_String",
-            "paramType": "string"
+            "paramType": "form"
 	    },
-	   {"grant_types" : "The OAuth2 application description",
+	   {
+	    "grant_types" : "The OAuth2 application description",
 	    "summary" : "The OAuth2 application description",
 	    "description" : "The OAuth2 application description string",
             "required": true,
@@ -92,7 +99,8 @@
             "dataType": "OAuth2_application_description",
             "paramType": "string"
 	    },
-	   {"application_type" : "The OAuth2 application_type",
+	   {
+	    "application_type" : "The OAuth2 application_type",
 	    "summary" : "The OAuth2 application_type",
 	    "description" : "The OAuth2 application_type, must be \"1\" |  \"2\" | \"3\"",
             "required": true,
@@ -100,7 +108,8 @@
             "dataType": "application_type",
             "paramType": "string"
 	    },
-	   {"application_use" : "The OAuth2 application_use",
+	   {
+	    "application_use" : "The OAuth2 application_use",
 	    "summary" : "The OAuth2 application_use",
 	    "description" : "The OAuth2 application_use, must be \"1\" |  \"2\" | \"3\" | \"4\" | \"5\"",
             "required": true,
@@ -108,21 +117,23 @@
             "dataType": "application_use",
             "paramType": "string"
 	    },
-	   {"third_party_application_status" : "The OAuth2 third_party_application_status",
+	   {
+	    "third_party_application_status" : "The OAuth2 third_party_application_status",
 	    "summary" : "The Third Party Application Status",
 	    "description" : "The OAuth2 third_party_application_status, must be \"1\" |  \"2\" | \"3\" | \"4\" | \"5\" | \"6\" ",
             "required": true,
             "allowMultiple": false,
             "dataType": "third_party_application_status",
-            "paramType": "string"
+            "paramType": "form"
 	    },
-	   {"third_party_notify_uri" : "The OAuth2 third_party_notify_uri",
+	   {
+	    "third_party_notify_uri" : "The OAuth2 third_party_notify_uri",
 	    "summary" : "The Third Party Application Notification URI",
 	    "description" : "A URI that will be called via HTTP GET when the Data Custodian has a new delivery of usage information available.",
             "required": true,
             "allowMultiple": false,
             "dataType": "third_party_notification_uri",
-            "paramType": "string"
+            "paramType": "form"
 	    }
 	    ],	    
 	 "produces" : [
@@ -148,7 +159,7 @@
      ]
     },
     {
-      "path": "/oauth/2.0/token",
+      "path": "/oauth/2_0/token",
       "operations" : [
         {
 	 "method": "POST",
@@ -163,7 +174,7 @@
             "required": true,
             "allowMultiple": false,
             "dataType": "grant_type",
-            "paramType": "string"
+            "paramType": "header"
 	    }
 	    ],	    
 	 "produces" : [
@@ -188,7 +199,7 @@
      ]
     },
     {
-      "path": "/oauth/2.0/token",
+      "path": "/oauth/2_0/token",
       "operations" : [
         {
 	 "method": "POST",
@@ -255,9 +266,92 @@
       }
      ]
     },
+    {
+      "path": "/espi/1_1/ThirdParty/{ThirdPartyID}/Batch",
+      "operations" : [
+        {
+	 "method": "GET",
+	 "summary": "A Third Party requests the GET of a Batch.",
+	 "notes": "",
+	 "responseClass" : "ESPI XML structure of Batch feed",
+	 "nickname" : "getBatch",
+	 "produces" : [
+	   "application/atom+xml"
+	   ],
+
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            }
+          ],
+
+	 "responseMessages" : [
+	    {"code" : 200,
+             "message" : "an OAuth2 Response Message",
+             "parameters" : [
+	       {"access_token" : "A valid access_token",
+	        "token_type" : "bearer",
+		"expires_in" : "Access Token Expiration Time"
+	       }
+	      ]
+	    },
+	    {
+   	     "code" : 400,
+	     "message" : "Service Not Available"
+	    }
+	  ]
+      }
+     ]
+    },
+    {
+      "path": "/espi/1_1/resource/ReadServiceStatus",
+      "operations" : [
+        {
+	 "method": "GET",
+	 "summary": "Obtain the Data Custodian Resource Server Status",
+	 "notes": "The HTTP header must contain a valid access_token of token_type \"bearer\" as well as a valid expires_in time.",
+	 "responseClass" : "application/atom+xml",
+	 "nickname" : "getServiceStatus",
+	 "produces" : [
+	   "application/xml"
+	   ],
+	 "responseMessages" : [
+	    {"code" : 200,
+             "parameters" : [
+	       {
+                "feed" : "An ESPI XML representation of <example to be supplied>"
+	       }
+	      ]
+	    },
+	    {
+   	     "code" : 400,
+	     "message" : "Service Not Available"
+	    }
+	  ]
+      }
+     ]
+    },
    
     {
-      "path": "/retailcustomer",
+      "path": "/espi/1_1/resource/RetailCustomer",
       "operations": [
         {
           "method": "GET",
@@ -320,7 +414,7 @@
       ]
     },
     {
-      "path": "/subscription/{SubscriptionID}",
+      "path": "/espi/1_1/Subscription/{SubscriptionID}",
       "operations": [
         {
           "method": "GET",
@@ -413,7 +507,7 @@
       ]
     },
     {
-      "path": "/authorization",
+      "path": "/espi/1_1/Authorization",
       "operations": [
         {
           "method": "GET",
@@ -457,7 +551,7 @@
       ]
     },
     {
-      "path": "/authorization/{AuthorizationID}",
+      "path": "/espi/1_1/Authorization/{AuthorizationID}",
       "operations": [
         {
           "method": "GET",
@@ -550,7 +644,7 @@
       ]
     },
     {
-      "path": "/applicationinformation",
+      "path": "/espi/1_1/Applicationinformation",
       "operations": [
         {
           "method": "GET",
@@ -594,7 +688,7 @@
       ]
     },
     {
-      "path": "/applicationinformation/{ApplicationInformationID}",
+      "path": "/espi/1_1/Applicationinformation/{ApplicationInformationID}",
       "operations": [
         {
           "method": "GET",
@@ -688,7 +782,6 @@
     }
 
   ],
-
   "models": {
     "Authorization": {
       "id": "Authorization",
@@ -827,8 +920,8 @@
         }
       }
     },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
+    "ElectricPowerQualitySummary": {
+      "id": "ElectricPowerQualitySummary",
       "properties": {
         "name": {
           "type": "string"
