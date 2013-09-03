@@ -19,7 +19,30 @@
           "responseClass": "<feed> ... </feed>",
           "nickname": "findApplicationInformations",
           "produces": [
-            "application/xml"
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            }
           ],
           "responseMessages": [
             {
@@ -34,14 +57,38 @@
           "notes": "The New Application Information will be added",
           "responseClass": "void",
           "nickname": "addApplicationInformation",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
             {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
               "name": "ApplicationInformation",
-              "description": "0 or more Application Informations that need to be added to the ApplicationInformation",
+              "description": "The ApplicationInformation object to create",
               "required": false,
               "allowMultiple": true,
-              "dataType": "ApplicationInformation",
-              "paramType": "ApplicationInformation"
+              "dataType": "String",
+              "paramType": "form"
             }
           ],
           "responseMessages": [
@@ -63,18 +110,36 @@
           "responseClass": "ApplicationInformation",
           "nickname": "getApplicationInformation",
           "produces": [
-            "application/xml"
+            "application/xml+atom"
           ],
-          "applicationinformations": [
+          "authorizations": [
             "oauth2"
           ],
           "parameters": [
             {
-              "name": "usagepontID",
-              "description": "ID of the Application Information that needs to be fetched",
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "ApplicationInformationID",
+              "description": "The ApplicationInformationID of the requested object",
+              "required": false,
+              "allowMultiple": true,
+              "dataType": "String",
               "paramType": "path"
             }
           ],
@@ -95,14 +160,46 @@
           "notes": "The Application Information must exist",
           "responseClass": "void",
           "nickname": "updateApplicationInformation",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
             {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "ApplicationInformationID",
+              "description": "The ApplicationInformationID of the requested object",
+              "required": false,
+              "allowMultiple": true,
+              "dataType": "String",
+              "paramType": "path"
+            },
+            {
               "name": "ApplicationInformation",
-              "description": "A Application Information object that needs to be updated",
+              "description": "Application Information information to be used with the update",
               "required": true,
               "allowMultiple": false,
               "dataType": "ApplicationInformation",
-              "paramType": "ApplicationInformation"
+              "paramType": "form"
             }
           ],
           "responseMessages": [
@@ -126,13 +223,37 @@
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteApplicationInformation",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
             {
-              "name": "ApplicationInformationID",
-              "description": "Application Information id to delete",
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "ApplicationInformationID",
+              "description": "The ApplicationInformationID of the requested object",
+              "required": false,
+              "allowMultiple": true,
+              "dataType": "String",
               "paramType": "path"
             }
           ],

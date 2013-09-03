@@ -19,7 +19,30 @@
           "responseClass": "<feed> ... </feed>",
           "nickname": "findSubscriptions",
           "produces": [
-            "application/xml"
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            }
           ],
           "responseMessages": [
             {
@@ -34,14 +57,38 @@
           "notes": "The New Subscription will be added",
           "responseClass": "void",
           "nickname": "addSubscription",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
             {
               "name": "Subscription",
               "description": "0 or more Subscriptions that need to be added to the Subscription",
               "required": false,
               "allowMultiple": true,
               "dataType": "Subscription",
-              "paramType": "Subscription"
+              "paramType": "form"
             }
           ],
           "responseMessages": [
@@ -63,14 +110,32 @@
           "responseClass": "Subscription",
           "nickname": "getSubscription",
           "produces": [
-            "application/xml"
+            "application/xml+atom"
           ],
           "authorizations": [
             "oauth2"
           ],
           "parameters": [
             {
-              "name": "usagepontID",
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "SubscriptionID",
               "description": "ID of the Subscription that needs to be fetched",
               "required": true,
               "allowMultiple": false,
@@ -95,14 +160,46 @@
           "notes": "The Subscription must exist",
           "responseClass": "void",
           "nickname": "updateSubscription",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "SubscriptionID",
+              "description": "A SubscriptionID that needs to be updated",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "Subscription",
+              "paramType": "path"
+            },
             {
               "name": "Subscription",
               "description": "A Subscription object that needs to be updated",
               "required": true,
               "allowMultiple": false,
               "dataType": "Subscription",
-              "paramType": "Subscription"
+              "paramType": "form"
             }
           ],
           "responseMessages": [
@@ -126,7 +223,31 @@
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteSubscription",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
             {
               "name": "SubscriptionID",
               "description": "Subscription id to delete",

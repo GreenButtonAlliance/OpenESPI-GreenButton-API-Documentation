@@ -19,7 +19,30 @@
           "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
           "produces": [
-            "application/xml"
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            }
           ],
           "responseMessages": [
             {
@@ -34,14 +57,38 @@
           "notes": "The New Authorization will be added",
           "responseClass": "void",
           "nickname": "addAuthorization",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
             {
               "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "AuthorizationURLs",
               "description": "0 or more Authorizations that need to be added to the Authorization",
               "required": false,
               "allowMultiple": true,
               "dataType": "Authorization",
-              "paramType": "Authorization"
+              "paramType": "form"
             }
           ],
           "responseMessages": [
@@ -63,14 +110,32 @@
           "responseClass": "Authorization",
           "nickname": "getAuthorization",
           "produces": [
-            "application/xml"
+            "application/xml+atom"
           ],
           "authorizations": [
             "oauth2"
           ],
           "parameters": [
             {
-              "name": "usagepontID",
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "AuthorizationID",
               "description": "ID of the Authorization that needs to be fetched",
               "required": true,
               "allowMultiple": false,
@@ -93,18 +158,51 @@
           "method": "PUT",
           "summary": "Update an existing Authorization within the DataCustodian",
           "notes": "The Authorization must exist",
-          "responseClass": "void",
           "nickname": "updateAuthorization",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
             {
               "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "AuthorizationID",
               "description": "A Authorization object that needs to be updated",
               "required": true,
               "allowMultiple": false,
               "dataType": "Authorization",
-              "paramType": "Authorization"
+              "paramType": "path"
+            },
+            {
+              "name": "Authorization",
+              "description": "The updated Authorization information",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "form"
             }
+
           ],
+          "responseClass": "void",
           "responseMessages": [
             {
               "code": 400,
@@ -126,7 +224,31 @@
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteAuthorization",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
             {
               "name": "AuthorizationID",
               "description": "Authorization id to delete",
