@@ -238,6 +238,88 @@
       }
      ]
     },
+
+    {
+      "path": "/home",
+      "operations" : [
+        {
+	 "method": "GET",
+	 "summary": "The Home Screen of the DataCustodian Portal",
+	 "notes": "The requesting browser is to display the default Portal Home Screen. It is assumed that this html response will contain a sign-in opportunity throught the user experience",
+	 "responseClass" : "text/html",
+	 "nickname" : "getPortalHome",
+	 "produces" : [
+	   "text/html"
+	   ],
+	 "responseMessages" : [
+	    {"code" : 200
+	    },
+	    {
+   	     "code" : 404,
+	     "message" : "Service Not Available"
+	    }
+	  ]
+      }
+     ]
+    },
+    {
+      "path": "/login",
+      "operations" : [
+        {
+	 "method": "GET",
+	 "summary": "The signin Screen of the DataCustodian Portal",
+	 "notes": "The requesting browser is to display a portal signin Home Screen. It is assumed that this will result in a sign-in POST to the DataCustodian",
+	 "responseClass" : "text/html",
+	 "nickname" : "portalSignin",
+	 "produces" : [
+	   "text/html"
+	   ],
+	 "responseMessages" : [
+	    {"code" : 200
+	    },
+	    {
+   	     "code" : 404,
+	     "message" : "Service Not Available"
+	    }
+	  ]
+      }
+     ]
+    },
+    {
+      "path": "/RetailCustomer/{RetailCustomerID}/ShowThirdPartyList",
+      "operations" : [
+        {
+         "method": "POST",
+         "summary": "The post signin Screen of the DataCustodian Portal",
+         "notes": "The requesting browser is to display a Retail Custoemr home Screen of the portal. It is assumed that this will contain a Select your Third Part for Green Button sharing as well as a Download My Data Green button page",
+         "responseClass" : "text/html",
+         "nickname" : "getPortalHome",
+         "produces" : [
+           "text/html"
+           ],
+          "parameters": [
+            {
+              "name": "RetailCustomerID",
+              "description": "The DataCustodian's RetailCustomerID",
+	      "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+         "responseMessages" : [
+            {"code" : 200
+            },
+            {
+             "code" : 404,
+             "message" : "Service Not Available"
+            }
+          ]
+      }
+     ]
+    },
+
     {
       "path": "/espi/1_1/resource/ReadServiceStatus",
       "operations" : [
