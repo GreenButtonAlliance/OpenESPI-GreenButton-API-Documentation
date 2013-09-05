@@ -42,7 +42,10 @@
       "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/UsagePoint(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Usage Points"
     },
-
+    {
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/MeterReading(DataCustodian_OR_ThirdParty)",
+      "description": "Operations about Meter Readings"
+    },
     {
       "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ReadingType(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Reading Types"
