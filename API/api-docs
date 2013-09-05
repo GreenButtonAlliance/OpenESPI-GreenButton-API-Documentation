@@ -3,47 +3,63 @@
   "espiVersion": "1.1",
   "apis": [
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/DataCustodian",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/DataCustodian",
       "description": "Operations about the Data Custodian"
     },
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ThirdParty",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/Screens(DataCustodian)",
+      "description": "Operations about the Data Custodian"
+    },
+    {
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/RetailCustomer(DataCustodian)",
+      "description": "Data Custodian Operations about RetailCustomers"
+    },
+    {
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/ThirdParty",
       "description": "Operations about Third Parties"
     },
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/Subscription",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/Screens(ThirdParty)",
+      "description": "Operations about Third Parties"
+    },
+    {
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/RetailCustomer(ThirdParty)",
+      "description": "Third Party Operations about RetailCustomers"
+    },
+    {
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/Subscription(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Subscriptions"
     },
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/Authorization",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/Authorization(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Authorizations"
     },
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ApplicationInformation",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/ApplicationInformation(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Application Information"
     },
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/UsagePoint",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/UsagePoint(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Usage Points"
     },
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/MeterReading",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/MeterReading(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Meter Readings"
     },
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ReadingType",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/ReadingType(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Reading Types"
     },
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/IntervalBlock",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/IntervalBlock(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Interval Blocks"
     },
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ElectricPowerQualitySummary",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/ElectricPowerQualitySummary(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Electric Power Quality Summariess"
     },
     {
-      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/ElectricPowerUsageSummary",
+      "path": "http://localhost:8070/GreenButtonDeveloper/listings/ElectricPowerUsageSummary(DataCustodian_OR_ThirdParty)",
       "description": "Operations about Electric Power Usage Summaries"
     }
   ]
