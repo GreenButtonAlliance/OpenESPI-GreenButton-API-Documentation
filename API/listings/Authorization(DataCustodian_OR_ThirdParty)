@@ -1,0 +1,424 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://greenbuttondata.org/datacustodian",
+  "resourcePath": "/resources",
+  "produces": [
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis": [
+    {
+      "path": "/espi/1_1/resource/Authorization",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Finds all Authorizations",
+          "notes": "An XML representation of all Authorizations will be returned",
+          "responseClass": "<feed> ... </feed>",
+          "nickname": "findAuthorizations",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "There are no Authorizations"
+            }
+          ]
+	      },
+        {
+          "method": "POST",
+          "summary": "Add a new Authorization to the Data Custodian",
+          "notes": "The New Authorization will be added",
+          "responseClass": "void",
+          "nickname": "addAuthorization",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "AuthorizationURLs",
+              "description": "0 or more Authorizations that need to be added to the Authorization",
+              "required": false,
+              "allowMultiple": true,
+              "dataType": "Authorization",
+              "paramType": "form"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 405,
+              "message": "Invalid input"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/espi/1_1/resource/Authorization/{AuthorizationID}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a Authorization Using it's ID",
+          "notes": "Returns a Authorization",
+          "responseClass": "Authorization",
+          "nickname": "getAuthorization",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "AuthorizationID",
+              "description": "ID of the Authorization that needs to be fetched",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid Authorization ID supplied"
+            },
+            {
+              "code": 404,
+              "message": "Authorization not found"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Update an existing Authorization within the DataCustodian",
+          "notes": "The Authorization must exist",
+          "nickname": "updateAuthorization",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "AuthorizationID",
+              "description": "A Authorization object that needs to be updated",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "Authorization",
+              "paramType": "path"
+            },
+            {
+              "name": "Authorization",
+              "description": "The updated Authorization information",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "form"
+            }
+
+          ],
+          "responseClass": "void",
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid AuthorizationID supplied"
+            },
+            {
+              "code": 404,
+              "message": "Authorization not found"
+            },
+            {
+              "code": 405,
+              "message": "Validation exception"
+            }
+          ]
+	},
+        {
+          "method": "DELETE",
+          "summary": "Deletes a Authorization",
+          "notes": "",
+          "responseClass": "void",
+          "nickname": "deleteAuthorization",
+          "produces": [
+            "application/xml+atom"
+          ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "AuthorizationID",
+              "description": "Authorization id to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "Invalid Authorization ID"
+            }
+          ]
+        }
+
+      ]
+    }
+  ],
+  "models": {
+    "Authorization": {
+      "id": "Authorization",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "UsagePoint": {
+      "id": "UsagePoint",
+      "description": "A pet is a person's best friend",
+      "required": [
+        "name",
+        "id"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "MeterReadings": {
+          "type": "list",
+          "items": {
+            "$ref": "MeterReading"
+          }
+        },
+        "ReadingType": {
+          "type": "array",
+          "items": {
+            "$ref": "ReadingType"
+          }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "status": {
+          "type": "string",
+          "description": "pet status in the store",
+          "enum": [
+            "available",
+            "pending",
+            "sold"
+          ]
+        },
+        "MeterReadingCollection": {
+          "$ref": "MeterReading"
+        }
+      }
+    },
+    "MeterReading": {
+      "id": "MeterReading",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ApplicationInformation": {
+      "id": "ApplicationInformation",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "Subscription": {
+      "id": "Subscription",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ReadingType": {
+      "id": "ReadingType",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "IntervalBlock": {
+      "id": "IntervalBlock",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "LocalTime": {
+      "id": "LocalTime",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    }
+
+  }
+}
