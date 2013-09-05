@@ -108,10 +108,72 @@
              "message" : "Service Not Available"
             }
           ]
-      }
-     ]
-    }
+      },
+      ,
+    {
+      "path": "/espi/1_1/resource/RetailCustomer",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Finds all Retail Customers",
+          "notes": "An XML representation of all Retail Customers will be returned",
+          "responseClass": "<feed> ... </feed>",
+          "nickname": "findRetailCustomers",
+          "produces": [
+            "application/xml",
+            "text/html"
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "There are no Retail Customers"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "Add a new Retail Customer to the Data Custodian",
+          "notes": "The New Retail Customer will be added",
+          "responseClass": "void",
+          "nickname": "addRetailCustomer",
+          "parameters": [
+            {
+              "firstName": "Retail Customer First Name",
+              "description": "A Retail Customer First Name",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "string"
+            },
+            {
+              "lastName": "Retail Customer Last Name",
+              "description": "A Retail Customer Last Name",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "string"
+            },
+            {
+              "Phone": "Retail Customer Home Number",
+              "description": "Retail Customer Home Number",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "string"
+            }
 
+
+          ],
+          "responseMessages": [
+            {
+              "code": 405,
+              "message": "Invalid input"
+            }
+          ]
+        }
+      ]
+    }
+  
   ],
   "models": {
     "Authorization": {
