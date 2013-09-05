@@ -1,0 +1,314 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://greenbuttondata.org/thirdparty",
+  "resourcePath": "/resources",
+  "produces": [
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis": [
+    {
+      "path": "/home",
+      "operations" : [
+        {
+	 "method": "GET",
+	 "summary": "The Home Screen of the ThirdParty Portal",
+	 "notes": "The requesting browser is to display the default Portal Home Screen. It is assumed that this html response will contain a sign-in opportunity throught the user experience",
+	 "responseClass" : "text/html",
+	 "nickname" : "getPortalHome",
+	 "produces" : [
+	   "text/html"
+	   ],
+	 "responseMessages" : [
+	    {"code" : 200
+	    },
+	    {
+   	     "code" : 404,
+	     "message" : "Service Not Available"
+	    }
+	  ]
+      }
+     ]
+    },
+    {
+      "path": "/login",
+      "operations" : [
+        {
+	 "method": "GET",
+	 "summary": "The signin Screen of the ThirdParty Portal",
+	 "notes": "The requesting browser is to display a portal signin Home Screen. It is assumed that this will result in a sign-in POST to the ThirdParty",
+	 "responseClass" : "text/html",
+	 "nickname" : "portalSignin",
+	 "produces" : [
+	   "text/html"
+	   ],
+	 "responseMessages" : [
+	    {"code" : 200
+	    },
+	    {
+   	     "code" : 404,
+	     "message" : "Service Not Available"
+	    }
+	  ]
+      }
+     ]
+    },
+    {
+      "path": "/RetailCustomer/{RetailCustomerID}/home",
+      "operations" : [
+        {
+         "method": "GET",
+         "summary": "The post signin Screen of the ThirdParty Portal",
+         "notes": "A Third Party’s web page the Retail Customer user-agent is returned to after authorizing the {ThirdParty} access to the Retail Customer’s energy usage information (EUI).",
+         "responseClass" : "text/html",
+         "nickname" : "getRetailCustomerHome",
+         "produces" : [
+           "text/html"
+           ],
+          "parameters": [
+            {
+              "name": "RetailCustomerID",
+              "description": "The ThirdParty's RetailCustomerID",
+	      "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+         "responseMessages" : [
+            {"code" : 200
+            },
+            {
+             "code" : 404,
+             "message" : "Service Not Available"
+            }
+          ]
+      }
+     ]
+    },
+    {
+      "path": "/RetailCustomer/{RetailCustomerID}/DataCustodianList",
+      "operations" : [
+        {
+         "method": "GET",
+         "summary": "Display a List of Data Custodians related to this Retail Customer",
+         "notes": "The Retail Customer is allowed to see and select a Data Custodian from which the Third Party is to be approved to access Data",
+         "responseClass" : "text/html",
+         "nickname" : "getPortalHome",
+         "produces" : [
+           "text/html"
+           ],
+          "parameters": [
+            {
+              "name": "RetailCustomerID",
+              "description": "The DataCustodian's RetailCustomerID",
+	      "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+         "responseMessages" : [
+            {"code" : 200
+            },
+            {
+             "code" : 404,
+             "message" : "Service Not Available"
+            }
+          ]
+      }
+     ]
+    },
+    {
+      "path": "/RetailCustomer/{RetailCustomerID}/ScopeSelection",
+      "operations" : [
+        {
+         "method": "GET",
+         "summary": "Allows the Customer to select the scope(s) to use for the Third Party authorizationu",
+         "notes": "The is to display a Retail Customer a screen that allows for the selection of the types of data access for which the Data Custodian will approve access",
+         "responseClass" : "text/html",
+         "nickname" : "getPortalHome",
+         "produces" : [
+           "text/html"
+           ],
+          "parameters": [
+            {
+              "name": "RetailCustomerID",
+              "description": "The DataCustodian's RetailCustomerID",
+	      "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+         "responseMessages" : [
+            {"code" : 200
+            },
+            {
+             "code" : 404,
+             "message" : "Service Not Available"
+            }
+          ]
+      }
+     ]
+    }
+
+  ],
+  "models": {
+    "Authorization": {
+      "id": "Authorization",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "UsagePoint": {
+      "id": "UsagePoint",
+      "description": "A pet is a person's best friend",
+      "required": [
+        "name",
+        "id"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "MeterReadings": {
+          "type": "list",
+          "items": {
+            "$ref": "MeterReading"
+          }
+        },
+        "ReadingType": {
+          "type": "array",
+          "items": {
+            "$ref": "ReadingType"
+          }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "status": {
+          "type": "string",
+          "description": "pet status in the store",
+          "enum": [
+            "available",
+            "pending",
+            "sold"
+          ]
+        },
+        "MeterReadingCollection": {
+          "$ref": "MeterReading"
+        }
+      }
+    },
+    "MeterReading": {
+      "id": "MeterReading",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ApplicationInformation": {
+      "id": "ApplicationInformation",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "Subscription": {
+      "id": "Subscription",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ReadingType": {
+      "id": "ReadingType",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "IntervalBlock": {
+      "id": "IntervalBlock",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "LocalTime": {
+      "id": "LocalTime",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "ElectricPowerUsageSummary": {
+      "id": "ElectricPowerUsageSummary",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    }
+
+  }
+}
