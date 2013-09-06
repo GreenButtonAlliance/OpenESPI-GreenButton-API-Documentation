@@ -1,30 +1,111 @@
 {
   "apiVersion": "1.0",
   "swaggerVersion": "1.2",
-  "basePath": "http://greenbuttondata.org/thirdparty",
-  "resourcePath": "/resources",
+  "basePath": "http://greenbuttondata.org/datacustodian",
+  "resourcePath": "/",
   "produces": [
     "application/xml",
+    "application/json",
     "text/plain",
     "text/html"
   ],
   "apis": [
     {
+      "path": "/home",
+      "operations" : [
+        {
+	 "method": "GET",
+	 "summary": "The Home Screen of the DataCustodian Portal",
+	 "notes": "The requesting browser is to display the default Portal Home Screen. It is assumed that this html response will contain a sign-in opportunity throught the user experience",
+	 "responseClass" : "text/html",
+	 "nickname" : "getPortalHome",
+	 "produces" : [
+	   "text/html"
+	   ],
+	 "responseMessages" : [
+	    {"code" : 200
+	    },
+	    {
+   	     "code" : 404,
+	     "message" : "Service Not Available"
+	    }
+	  ]
+      }
+     ]
+    },
+    {
+      "path": "/login",
+      "operations" : [
+        {
+	 "method": "GET",
+	 "summary": "The signin Screen of the DataCustodian Portal",
+	 "notes": "The requesting browser is to display a portal signin Home Screen. It is assumed that this will result in a sign-in POST to the DataCustodian",
+	 "responseClass" : "text/html",
+	 "nickname" : "portalSignin",
+	 "produces" : [
+	   "text/html"
+	   ],
+	 "responseMessages" : [
+	    {"code" : 200
+	    },
+	    {
+   	     "code" : 404,
+	     "message" : "Service Not Available"
+	    }
+	  ]
+      }
+     ]
+    },
+    {
+      "path": "/RetailCustomer/{RetailCustomerID}/ApproveAuthorization",
+      "operations" : [
+        {
+	 "method": "GET",
+	 "summary": "The DataCustodian Screen that provides for the user approval of a Third Party's access to their EUI data",
+	 "notes": "This is only executed upon successfule scope negotion",
+	 "responseClass" : "text/html",
+	 "nickname" : "approveAuthorization",
+	 "produces" : [
+	   "text/html"
+	   ],
+          "parameters": [
+            {
+              "name": "RetailCustomerID",
+              "description": "The DataCustodian's RetailCustomerID",
+	      "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+	 "responseMessages" : [
+	    {"code" : 200
+	    },
+	    {
+   	     "code" : 404,
+	     "message" : "Service Not Available"
+	    }
+	  ]
+      }
+     ]
+    },
+    {
       "path": "/RetailCustomer/{RetailCustomerID}/home",
       "operations" : [
         {
-         "method": "GET",
-         "summary": "The post signin Screen of the ThirdParty Portal",
-         "notes": "A Third Party’s web page the Retail Customer user-agent is returned to after authorizing the {ThirdParty} access to the Retail Customer’s energy usage information (EUI).",
-         "responseClass" : "text/html",
-         "nickname" : "getRetailCustomerHome",
-         "produces" : [
-           "text/html"
-           ],
+	 "method": "GET",
+	 "summary": "The DataCustodian Screen that displays a signed-in users home (or main) landing page",
+	 "notes": "The home page of the signed in Retail Customer. It is assumed to provide Green Button CMD Authorization support",
+	 "responseClass" : "text/html",
+	 "nickname" : "retailCustomerHome",
+	 "produces" : [
+	   "text/html"
+	   ],
           "parameters": [
             {
               "name": "RetailCustomerID",
-              "description": "The ThirdParty's RetailCustomerID",
+              "description": "The DataCustodian's RetailCustomerID",
 	      "defaultValue": "",
               "required": true,
               "allowMultiple": false,
@@ -32,24 +113,24 @@
               "paramType": "path"
             }
           ],
-         "responseMessages" : [
-            {"code" : 200
-            },
-            {
-             "code" : 404,
-             "message" : "Service Not Available"
-            }
-          ]
+	 "responseMessages" : [
+	    {"code" : 200
+	    },
+	    {
+   	     "code" : 404,
+	     "message" : "Service Not Available"
+	    }
+	  ]
       }
      ]
     },
     {
-      "path": "/RetailCustomer/{RetailCustomerID}/DataCustodianList",
+      "path": "/RetailCustomer/{RetailCustomerID}/ThirdPartyList",
       "operations" : [
         {
-         "method": "GET",
-         "summary": "Display a List of Data Custodians related to this Retail Customer",
-         "notes": "The Retail Customer is allowed to see and select a Data Custodian from which the Third Party is to be approved to access Data",
+         "method": "POST",
+         "summary": "The post signin Screen of the DataCustodian Portal",
+         "notes": "The requesting browser is to display a Retail Custoemr home Screen of the portal. It is assumed that this will contain a Select your Third Part for Green Button sharing as well as a Download My Data Green button page",
          "responseClass" : "text/html",
          "nickname" : "getPortalHome",
          "produces" : [
@@ -76,105 +157,9 @@
           ]
       }
      ]
-    },
-    {
-      "path": "/RetailCustomer/{RetailCustomerID}/ScopeSelection",
-      "operations" : [
-        {
-         "method": "GET",
-         "summary": "Allows the Customer to select the scope(s) to use for the Third Party authorizationu",
-         "notes": "The is to display a Retail Customer a screen that allows for the selection of the types of data access for which the Data Custodian will approve access",
-         "responseClass" : "text/html",
-         "nickname" : "getPortalHome",
-         "produces" : [
-           "text/html"
-           ],
-          "parameters": [
-            {
-              "name": "RetailCustomerID",
-              "description": "The DataCustodian's RetailCustomerID",
-	      "defaultValue": "",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            }
-          ],
-         "responseMessages" : [
-            {"code" : 200
-            },
-            {
-             "code" : 404,
-             "message" : "Service Not Available"
-            }
-          ]
-      },
-      ,
-    {
-      "path": "/espi/1_1/resource/RetailCustomer",
-      "operations": [
-        {
-          "method": "GET",
-          "summary": "Finds all Retail Customers",
-          "notes": "An XML representation of all Retail Customers will be returned",
-          "responseClass": "<feed> ... </feed>",
-          "nickname": "findRetailCustomers",
-          "produces": [
-            "application/xml",
-            "text/html"
-          ],
-          "responseMessages": [
-            {
-              "code": 404,
-              "message": "There are no Retail Customers"
-            }
-          ]
-        },
-        {
-          "method": "POST",
-          "summary": "Add a new Retail Customer to the Data Custodian",
-          "notes": "The New Retail Customer will be added",
-          "responseClass": "void",
-          "nickname": "addRetailCustomer",
-          "parameters": [
-            {
-              "firstName": "Retail Customer First Name",
-              "description": "A Retail Customer First Name",
-              "required": false,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "string"
-            },
-            {
-              "lastName": "Retail Customer Last Name",
-              "description": "A Retail Customer Last Name",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "string"
-            },
-            {
-              "Phone": "Retail Customer Home Number",
-              "description": "Retail Customer Home Number",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "string"
-            }
-
-
-          ],
-          "responseMessages": [
-            {
-              "code": 405,
-              "message": "Invalid input"
-            }
-          ]
-        }
-      ]
     }
-  
   ],
+
   "models": {
     "Authorization": {
       "id": "Authorization",
@@ -313,8 +298,8 @@
         }
       }
     },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
+    "ElectricPowerQualitySummary": {
+      "id": "ElectricPowerQualitySummary",
       "properties": {
         "name": {
           "type": "string"

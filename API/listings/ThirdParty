@@ -10,12 +10,12 @@
   ],
   "apis": [
     {
-      "path": "/home",
+      "path": "/espi/1_1/RegistrationRedirect",
       "operations" : [
         {
 	 "method": "GET",
-	 "summary": "The Home Screen of the ThirdParty Portal",
-	 "notes": "The requesting browser is to display the default Portal Home Screen. It is assumed that this html response will contain a sign-in opportunity throught the user experience",
+	 "summary": "The URI used as a callback redirect within the DataCustodian/espi/1_1/register GET",
+	 "notes": "The DataCustodian will use this redirect during the ThirdParty registration process",
 	 "responseClass" : "text/html",
 	 "nickname" : "getPortalHome",
 	 "produces" : [
@@ -33,19 +33,31 @@
      ]
     },
     {
-      "path": "/login",
+      "path": "/espi/1_1/Notify_SubscriptionAvailable",
       "operations" : [
         {
 	 "method": "GET",
-	 "summary": "The signin Screen of the ThirdParty Portal",
-	 "notes": "The requesting browser is to display a portal signin Home Screen. It is assumed that this will result in a sign-in POST to the ThirdParty",
+	 "summary": "The URI used to notify the Third Party that a particular subscription is available for retrieval from the DataCustodian",
+	 "notes": "The DataCustodian will use this to notify the Third Party of the availability of a subscription",
 	 "responseClass" : "text/html",
-	 "nickname" : "portalSignin",
+	 "nickname" : "notifySubscription",
+         "parameter" : [
+	   {
+	    "subscriptionURI" : "The Data Custodian URL to be used to retrieve the specific Subscription",
+	    "summary" : "The Third Party may use this URL to retrieve the specific subscription data",
+	    "description" : "A URI that will be called via HTTP GET when the Data Custodian has a new delivery of usage information available.",
+            "required": true,
+            "allowMultiple": false,
+            "dataType": "String",
+            "paramType": "query"
+	    }
+	 ],
 	 "produces" : [
 	   "text/html"
 	   ],
 	 "responseMessages" : [
-	    {"code" : 200
+	    {"code" : 204,
+	     "Message" : "Operation Completed, no data is returned"
 	    },
 	    {
    	     "code" : 404,
@@ -54,109 +66,8 @@
 	  ]
       }
      ]
-    },
-    {
-      "path": "/RetailCustomer/{RetailCustomerID}/home",
-      "operations" : [
-        {
-         "method": "GET",
-         "summary": "The post signin Screen of the ThirdParty Portal",
-         "notes": "A Third Party’s web page the Retail Customer user-agent is returned to after authorizing the {ThirdParty} access to the Retail Customer’s energy usage information (EUI).",
-         "responseClass" : "text/html",
-         "nickname" : "getRetailCustomerHome",
-         "produces" : [
-           "text/html"
-           ],
-          "parameters": [
-            {
-              "name": "RetailCustomerID",
-              "description": "The ThirdParty's RetailCustomerID",
-	      "defaultValue": "",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            }
-          ],
-         "responseMessages" : [
-            {"code" : 200
-            },
-            {
-             "code" : 404,
-             "message" : "Service Not Available"
-            }
-          ]
-      }
-     ]
-    },
-    {
-      "path": "/RetailCustomer/{RetailCustomerID}/DataCustodianList",
-      "operations" : [
-        {
-         "method": "GET",
-         "summary": "Display a List of Data Custodians related to this Retail Customer",
-         "notes": "The Retail Customer is allowed to see and select a Data Custodian from which the Third Party is to be approved to access Data",
-         "responseClass" : "text/html",
-         "nickname" : "getPortalHome",
-         "produces" : [
-           "text/html"
-           ],
-          "parameters": [
-            {
-              "name": "RetailCustomerID",
-              "description": "The DataCustodian's RetailCustomerID",
-	      "defaultValue": "",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            }
-          ],
-         "responseMessages" : [
-            {"code" : 200
-            },
-            {
-             "code" : 404,
-             "message" : "Service Not Available"
-            }
-          ]
-      }
-     ]
-    },
-    {
-      "path": "/RetailCustomer/{RetailCustomerID}/ScopeSelection",
-      "operations" : [
-        {
-         "method": "GET",
-         "summary": "Allows the Customer to select the scope(s) to use for the Third Party authorizationu",
-         "notes": "The is to display a Retail Customer a screen that allows for the selection of the types of data access for which the Data Custodian will approve access",
-         "responseClass" : "text/html",
-         "nickname" : "getPortalHome",
-         "produces" : [
-           "text/html"
-           ],
-          "parameters": [
-            {
-              "name": "RetailCustomerID",
-              "description": "The DataCustodian's RetailCustomerID",
-	      "defaultValue": "",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            }
-          ],
-         "responseMessages" : [
-            {"code" : 200
-            },
-            {
-             "code" : 404,
-             "message" : "Service Not Available"
-            }
-          ]
-      }
-     ]
     }
+
 
   ],
   "models": {

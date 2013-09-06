@@ -26,6 +26,7 @@
 	    "description" : "A URI to handle the redirect back to the requesting Third Party as part of the OAuth2 Registration (RFC Pending)",
             "required": true,
             "allowMultiple": false,
+	    "defaultValue" : "http://greenbuttondata.org/thirdparty/RegistrationRedirect",
             "dataType": "String"
 	    },
 	   {
@@ -33,6 +34,7 @@
 	    "name" : "client_name",
 	    "description" : "A human readable name of the requesting Third Party",
             "required": true,
+	    "defaultValue" : "OpenESPI Green Button Third Party",
             "allowMultiple": false,
             "dataType": "String"
 	    },
@@ -42,6 +44,7 @@
 	    "description" : "The public URI of the Terms of Service of the  Third Party Application",
             "required": true,
             "allowMultiple": false,
+	    "defaultValue" : "http://greenbuttondata.org/thirdparty/TermsOfService",
             "dataType": "String"
 	    },
 	   {
@@ -50,6 +53,7 @@
 	    "description" : "The URI of a document describing the Usage Policy of the requesting Third Party Application",
             "required": true,
             "allowMultiple": false,
+	    "defaultValue" : "http://greenbuttondata.org/thirdparty/UsagePolicy",
             "dataType": "String"
 	    },
 	   {
@@ -67,6 +71,7 @@
 	    "description" : "The scope of access requested by the requesting Third Party Application.",
             "required": true,
             "allowMultiple": false,
+	    "defaultValue": "1 | 2 | 3 | 4",
             "dataType": "String",
 	    "enum" : [
               "1", "2", "3", "4"
@@ -78,7 +83,8 @@
 	    "description" : "The OAuth2 grant types MUST be: [\"auhoriztion_code\", \"client_credentials\", \"refresh_token\"]",
             "required": true,
             "allowMultiple": false,
-            "dataType": "OAuth2_Grant_Type_String",
+	    "defaultValue": "OAuth2_Grant_Type_String",
+            "dataType": "String",
             "paramType": "form"
 	    },
 	   {
@@ -86,8 +92,9 @@
 	    "summary" : "The OAuth2 response types", 
 	    "description" : "The OAuth2 response types: must be the string: \"code\"",
             "required": true,
+	    "defaultValue" : "code",
             "allowMultiple": false,
-            "dataType": "OAuth2_Response_Type_String",
+            "dataType": "String",
             "paramType": "form"
 	    },
 	   {
@@ -95,18 +102,20 @@
 	    "summary" : "The OAuth2 application description",
 	    "description" : "The OAuth2 application description string",
             "required": true,
+	    "defaultValue" : "OpenESPI Third Party Green Button Application Service",
             "allowMultiple": false,
-            "dataType": "OAuth2_application_description",
-            "paramType": "string"
+            "dataType": "String",
+            "paramType": "form"
 	    },
 	   {
 	    "application_type" : "The OAuth2 application_type",
 	    "summary" : "The OAuth2 application_type",
 	    "description" : "The OAuth2 application_type, must be \"1\" |  \"2\" | \"3\"",
             "required": true,
+	    "defaultValue" : "1 | 2 | 3", 
             "allowMultiple": false,
-            "dataType": "application_type",
-            "paramType": "string"
+            "dataType": "String",
+            "paramType": "form"
 	    },
 	   {
 	    "application_use" : "The OAuth2 application_use",
@@ -114,8 +123,9 @@
 	    "description" : "The OAuth2 application_use, must be \"1\" |  \"2\" | \"3\" | \"4\" | \"5\"",
             "required": true,
             "allowMultiple": false,
-            "dataType": "application_use",
-            "paramType": "string"
+	    "defaultValue" : "1 | 2 | 3 | 4 | 5",
+            "dataType": "String",
+            "paramType": "form"
 	    },
 	   {
 	    "third_party_application_status" : "The OAuth2 third_party_application_status",
@@ -123,7 +133,8 @@
 	    "description" : "The OAuth2 third_party_application_status, must be \"1\" |  \"2\" | \"3\" | \"4\" | \"5\" | \"6\" ",
             "required": true,
             "allowMultiple": false,
-            "dataType": "third_party_application_status",
+	    "defaultValue" : "1 | 2 | 3 | 4 | 5 | 6",
+            "dataType": "String",
             "paramType": "form"
 	    },
 	   {
@@ -132,7 +143,8 @@
 	    "description" : "A URI that will be called via HTTP GET when the Data Custodian has a new delivery of usage information available.",
             "required": true,
             "allowMultiple": false,
-            "dataType": "third_party_notification_uri",
+	    "defaultValue" : "https://www.greenbuttondata.org/thirdparty/Notify_SubscriptionAvailable",
+            "dataType": "String",
             "paramType": "form"
 	    }
 	    ],	    
@@ -173,6 +185,7 @@
 	    "description" : "An OAuth2 defined grant type",
             "required": true,
             "allowMultiple": false,
+	    "defaultValue": "client_credtials",
             "dataType": "grant_type",
             "paramType": "header"
 	    }
@@ -204,7 +217,7 @@
         {
 	 "method": "POST",
 	 "summary": "A Third Party utilizes the HTTP Basic authentication scheme as defined in [RFC2617] to authenticate with the Data Custodian AuthorizationServer.",
-	 "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
+	 "notes": "The HTTP header must contain the Authorization: Bearer {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
 	 "responseClass" : "OAuth2 JSON structure",
 	 "nickname" : "getAuthorizationToken",
 	 "parameters" : [
@@ -213,8 +226,9 @@
 	    "description" : "An OAuth2 defined grant type",
             "required": true,
             "allowMultiple": false,
-            "dataType": "grant_type",
-            "paramType": "string"
+	    "defaultValue" : "Bearer {DataCustodianAuthorizationString}",
+            "dataType": "String",
+            "paramType": "head"
 	    }
 	    ],	    
 	 "produces" : [
@@ -250,6 +264,29 @@
 	 "produces" : [
 	   "application/xml"
 	   ],
+          "authorizations": [
+            "oauth2"
+          ],
+          "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+	      "defaultValue": "Basic {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
+            {
+              "name": "Accept",
+              "description": "Accept type for the Request",
+	      "defaultValue": "application/atom+xml",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            }
+	 ],
 	 "responseMessages" : [
 	    {"code" : 200,
              "parameters" : [
