@@ -2,7 +2,7 @@
   "apiVersion": "1.0",
   "swaggerVersion": "1.2",
   "basePath": "http://datacustodian-dev.herokuapp.com/DataCustodian",
-  "resourcePath": "",
+  "resourcePath": "/",
   "produces": [
     "application/xml",
     "application/json",
@@ -11,7 +11,7 @@
   ],
   "apis": [
     {
-      "path": "/home",
+      "path": "home",
       "operations" : [
         {
 	 "method": "GET",
@@ -34,7 +34,7 @@
      ]
     },
     {
-      "path": "/login",
+      "path": "login",
       "operations" : [
         {
 	 "method": "GET",
@@ -57,7 +57,7 @@
      ]
     },
     {
-      "path": "/RetailCustomer/{RetailCustomerID}/ApproveAuthorization",
+      "path": "RetailCustomer/{RetailCustomerID}/ApproveAuthorization",
       "operations" : [
         {
 	 "method": "GET",
@@ -91,7 +91,7 @@
      ]
     },
     {
-      "path": "/RetailCustomer/{RetailCustomerID}/home",
+      "path": "RetailCustomer/{RetailCustomerID}/home",
       "operations" : [
         {
 	 "method": "GET",
@@ -125,7 +125,7 @@
      ]
     },
     {
-      "path": "/RetailCustomer/{RetailCustomerID}/ThirdPartyList",
+      "path": "RetailCustomer/{RetailCustomerID}/ThirdPartyList",
       "operations" : [
         {
          "method": "POST",
