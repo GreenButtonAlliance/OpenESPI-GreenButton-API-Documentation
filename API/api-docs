@@ -39,6 +39,10 @@
       "description": "Data Custodian Operations about RetailCustomers"
     },
     {
+      "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/DataCustodian.ApplicationInformation",
+      "description": "Operations about Authorizations"
+    },
+    {
       "path": "http://energyos.github.io/OpenESPI-GreenButtonDeveloper/API/listings/DataCustodian.Subscription",
       "description": "Operations about Subscriptions"
     },
