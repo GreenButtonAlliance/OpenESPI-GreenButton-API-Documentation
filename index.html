@@ -1,14 +1,136 @@
 <!DOCTYPE html>
 <html>
-
   <head>
+    <title>Green Button Developers Guide</title>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Openespi-greenbuttondeveloper : A repository for the Green Button Connect My Data API Documentation" />
-
+    <script src="jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
+    <script src="jquery-ui-1.10.3.custom/js/ui/jquery-ui.custom.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.10.3.custom/css/GB_2/jquery-ui.css" />
+    <link rel="stylesheet" href="resources/demos/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script>
+      $(function() {
+      $( "#accordion" ).accordion({
+      collapsible: true,
+      active: false
+      });
+      });
+    </script>
+    <script>
+      $(function() {
+      $( "#accordion1" ).accordion({
+      collapsible: true,
+      active: false
+      });
+      });
+    </script>
+    <script>
+      $(function() {
+      $( "#accordion2" ).accordion({
+      collapsible: true,
+      active: false
+      });
+      });
+    </script>
+    <script>
+      $(function() {
+      $( "#accordion2_2" ).accordion({
+      collapsible: true,
+      active: false
+      });
+      });
+    </script>
+   <script>
+  $(function() {
+    var icons = {
+      header: "ui-icon-circle-arrow-e",
+      activeHeader: "ui-icon-circle-arrow-s"
+    };
+    $( "#accordion" ).accordion({
+      icons: icons
+    });
+    $( "#toggle" ).button().click(function() {
+      if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+        $( "#accordion" ).accordion( "option", "icons", null );
+      } else {
+        $( "#accordion" ).accordion( "option", "icons", icons );
+      }
+    });
+  });
+  </script>
+   <script>
+  $(function() {
+    var icons = {
+      header: "ui-icon-circle-arrow-e",
+      activeHeader: "ui-icon-circle-arrow-s"
+    };
+    $( "#accordion1" ).accordion({
+      icons: icons
+    });
+    $( "#toggle" ).button().click(function() {
+      if ( $( "#accordion1" ).accordion( "option", "icons" ) ) {
+        $( "#accordion1" ).accordion( "option", "icons", null );
+      } else {
+        $( "#accordion1" ).accordion( "option", "icons", icons );
+      }
+    });
+  });
+  </script>
+   <script>
+  $(function() {
+    var icons = {
+      header: "ui-icon-circle-arrow-e",
+      activeHeader: "ui-icon-circle-arrow-s"
+    };
+    $( "#accordion2" ).accordion({
+      icons: icons
+    });
+    $( "#toggle" ).button().click(function() {
+      if ( $( "#accordion2" ).accordion( "option", "icons" ) ) {
+        $( "#accordion2" ).accordion( "option", "icons", null );
+      } else {
+        $( "#accordion2" ).accordion( "option", "icons", icons );
+      }
+    });
+  });
 
-    <title>Openespi-greenbuttondeveloper</title>
+  </script>
+   <script>
+  $(function() {
+    var icons = {
+      header: "ui-icon-circle-arrow-e",
+      activeHeader: "ui-icon-circle-arrow-s"
+    };
+    $( "#accordion2_2" ).accordion({
+      icons: icons
+    });
+    $( "#toggle" ).button().click(function() {
+      if ( $( "#accordion2_2" ).accordion( "option", "icons" ) ) {
+        $( "#accordion2_2" ).accordion( "option", "icons", null );
+      } else {
+        $( "#accordion2_2" ).accordion( "option", "icons", icons );
+      }
+    });
+  });
+</script>
+<!-- menu stuff -->
+  <script>
+  $( "#menu" ).menu();
+  </script>
+
+<style>
+    #nav li { width: auto; clear: none; }
+</style>
+<!-- end menu stuff -->
+
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+
   </head>
 
   <body>
@@ -17,58 +139,347 @@
     <div id="header_wrap" class="outer">
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/energyos/OpenESPI-GreenButtonDeveloper">View on GitHub</a>
-
-          <h1 id="project_title">Openespi-greenbuttondeveloper</h1>
-          <h2 id="project_tagline">A repository for the Green Button Connect My Data API Documentation</h2>
+	  <img style="float:left; width:48px; margin-top:0px; margin-right:20px; border:0px;"
+	       src="images/GreenButton_only_64x64.png"/>
+          <h1 id="project_title">Green Button Developers Guide</h1>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/energyos/OpenESPI-GreenButtonDeveloper/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/energyos/OpenESPI-GreenButtonDeveloper/tarball/master">Download this project as a tar.gz file</a>
             </section>
         </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
+   </div>
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Home</a></li>
+    <li><a href="#tabs-2">OData & Atom</a></li>
+    <li><a href="#tabs-3">Publish &amp; Subscribe</a></li>
+    <li><a href="#tabs-4">Data</a></li>
+    <li><a href="#tabs-5">Message Patterns</a></li>
+    <li><a href="#tabs-6">RESTful APIs</a></li>
+    <li><a href="#tabs-7">Support</a></li>
+  </ul>
+  <div id="tabs-1">
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+	  <img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+	  <a name="welcome-to-green-button-developer" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>
+         Welcome to Green Button Developer</h3>
+<p>The Green Button API provides flexible access to Energy Usage Information through a set of RESTful interfaces. Using the API, you may gain access to the following exposed Green Buttron resources:</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>A Simple Design</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Green Button uses the  <a href="http://wwww.odata.org">OData</a> standardized protocol for creating and consuming data APIs. OData builds on core protocols
+like HTTP and commonly accepted methodologies like REST to a uniform way to expose full-featured data publishing APIs. OData uses the standard ATOM Publishing
+standard to encapsulate Energy Usage Information.</p>
+
+  </div>
+  <div id="tabs-2">
+<h3>
+<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>A Simple Design</h3>
+
+<p>Green Button uses the  <a href="http://wwww.odata.org">OData</a> standardized protocol for creating and consuming data APIs. OData builds on core protocols
+like HTTP and commonly accepted methodologies like REST to a uniform way to expose full-featured data publishing APIs. OData uses the standard ATOM Publishing
+standard to encapsulate Energy Usage Information.</p>
+<h3>
+<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+<span class="octicon octicon-link"></span></a>Atom Wrappers</h3>
+<p>OData works by placing data within the <em>&lt;entry&gt;</em> tags of the Atom stream. Data records are placed within the <em>&lt;content&gt;</em> tags, and relationships between tables are reprsented in the <em>&lg;link&gt;</em>tags. For example:</p>
+    <pre><code>
+&lt;feed xmlns="http://www.w3.org/2005/Atom"
+         xsi:schemaLocation="http://naesb.org/espi espiDerived.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+    &lt;id&gt;urn:uuid:728B5594-414E-471A-A230-08FCCDAC655C&lt;/id&gt;
+ &lt;title&gt;ThirdPartyX Batch Feed&lt;/title&gt;
+ &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+ &lt;link rel="self" href="/ThirdParty/83e269c1/Batch"/&gt;
+    &lt;entry&gt;
+    &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+        &lt;link rel="self"
+                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01"/&gt;
+        &lt;link rel="up"
+                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint"/&gt;
+        &lt;link rel="related"
+                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/MeterReading"/&gt;
+        &lt;link rel="related"
+                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/ElectricPowerUsageSummary"/&gt;
+        &lt;link rel="related"
+                 href="/espi/1_1/resource/UsagePoint/01/LocalTimeParameters/01"/&gt;
+        &lt;title&gt;my house&lt;/title&gt;
+        &lt;content&gt;
+            &lt;UsagePoint xmlns="http://naesb.org/espi"&gt;
+                &lt;ServiceCategory&gt;
+                    &lt;kind&gt;0&lt;/kind&gt;
+                &lt;/ServiceCategory&gt;
+            &lt;/UsagePoint&gt;
+        &lt;/content&gt;
+        &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+        &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+    &lt;/entry&gt;
+ &lt;/feed&gt;
+    </code></pre>
+<p></p>
+<div id="accordion2">
+  <h3>Atom Containers</h3>
+  <div>
+  <p></p>
+  <div id="accordion2_2">
+  <h3>feed</h3>
+  <div>
+  <p>description 1</p>
+  </div>
+  <h3>id</h3>
+  <div>
+  <p>description 1</p>
+  </div>
+  <h3>link</h3>
+  <div>
+  <p>description 1</p>
+  </div>
+  <h3>title</h3>
+  <div>
+  <p>description 1</p>
+  </div>
+  <h3>entry</h3>
+  <div>
+  <p>description 1</p>
+  </div>
+  </div>
+  </div>
+  <h3>Exmaple</h3>
+  <div>
+  <p>description 1</p>
+    <pre><code>
+&lt;feed xmlns="http://www.w3.org/2005/Atom"
+         xsi:schemaLocation="http://naesb.org/espi espiDerived.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+    &lt;id&gt;urn:uuid:728B5594-414E-471A-A230-08FCCDAC655C&lt;/id&gt;
+ &lt;title&gt;ThirdPartyX Batch Feed&lt;/title&gt;
+ &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+ &lt;link rel="self" href="/ThirdParty/83e269c1/Batch"/&gt;
+    &lt;entry&gt;
+    &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+        &lt;link rel="self"
+                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01"/&gt;
+        &lt;link rel="up"
+                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint"/&gt;
+        &lt;link rel="related"
+                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/MeterReading"/&gt;
+        &lt;link rel="related"
+                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/ElectricPowerUsageSummary"/&gt;
+        &lt;link rel="related"
+                 href="/espi/1_1/resource/UsagePoint/01/LocalTimeParameters/01"/&gt;
+        &lt;title&gt;my house&lt;/title&gt;
+        &lt;content&gt;
+            &lt;UsagePoint xmlns="http://naesb.org/espi"&gt;
+                &lt;ServiceCategory&gt;
+                    &lt;kind&gt;0&lt;/kind&gt;
+                &lt;/ServiceCategory&gt;
+            &lt;/UsagePoint&gt;
+        &lt;/content&gt;
+        &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+        &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+    &lt;/entry&gt;
+ &lt;/feed&gt;
+    </code></pre>
+  </div>
+</div>
+
+  </div>
+  <div id="tabs-3">
+<h3>
+<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+<span class="octicon octicon-link"></span></a>Publish &amp; Subscribe</h3>
+
+
+<p>In addition to the basic reading elements above, Green Button also allows management of how the data is to flow between your Utility (a <em>DataCustodian</em>) and an application (a <em>ThirdParty</em>). We follow the basic publish/subscribe patterns established withint the <em>Atom</em> publishing stream. RESTful APIs are available to help manage:</p>
+
+<div id="accordion1">
+  <h3>Subscription</h3>
+  <div>
+    <p></p>
+    <pre><code>&lt;Subscription&gt;
+&lt;\Subscription&gt;
+    </code></pre>
+  </div>
+  <h3>Authorization</h3>
+  <div>
+    <p></p>
+    <pre><code>&lt;Authorization&gt;
+&lt;\Authorization&gt;
+    </code></pre>
+  </div>
+  <h3>ApplicationInformation</h3>
+  <div>
+    <p></p>
+    <pre><code>&lt;ApplicationInformation&gt;
+&lt;\ApplicationInformation&gt;
+    </code></pre>
+    </div>
+  </div>
+
+     <p>Green Button APIs are designed to support data flows that are both large and small. Many Utilities will schedule bulk transfers of hundreds of thousands of 24 hour data as a batch process. In this case, the Green Button APIs must be able to accomodate blocked transfers, recovery, and restarts. Other use-cases are more driven by frequent transmissions of smaller data sets, for example the hourly usage of a single outlet in your home. Green Button is designed to handle both!</p>
+</div>
+  <div id="tabs-4">
+<h3>
+<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+<span class="octicon octicon-link"></span></a>Green Button Data Elements</h3>
+<div id="accordion">
+  <h3>UsagePoint</h3>
+  <div>
+    <p>A <em>UsagePoint</em> is where a resource is measured. Typically, it is your Utility Smart Meter, but it could be the outlet on the wall as well. UsagePoints provide the reference for all meter readings that are contained within the Green Button data. As you can see below, UsagePoints have a <em>ServiceCategory</em> that says what <em>kind</em> of resource, such as electricity, gas, or water measurement is being reported. </p>
+    <pre><code>&lt;UsagePoint  xmlns="http://naesb.org/espi"&gt;
+   &lt;ServiceCategory&gt;
+      &lt;kind&gt;0&lt;/kind&gt;
+   &lt;/ServiceCategory&gt;
+&lt;\UsagePoint&gt;
+    </code></pre>
+  </div>
+  <h3>ReadingType</h3>
+  <div>
+    <p>A <em>ReadingType</em> provides detail as to the specifics of the reading data that is being obtained. Green Button follows international standards and has the ability to represent large industrial resources as well as those used in your home.</p>
+    <pre><code>&lt;ReadingType xmlns="http://naesb.org/espi"&gt;
+  &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+  &lt;commodity&gt;1&lt;/commodity&gt;
+  &lt;currency&gt;840&lt;/currency&gt;
+  &lt;dataQualifier&gt;12&lt;/dataQualifier&gt;
+  &lt;flowDirection&gt;1&lt;/flowDirection&gt;
+  &lt;intervalLength&gt;86400&lt;/intervalLength&gt;
+  &lt;kind&gt;12&lt;/kind&gt;
+  &lt;phase&gt;769&lt;/phase&gt;
+  &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
+  &lt;timeAttribute&gt;0&lt;/timeAttribute&gt;
+  &lt;uom&gt;72&lt;/uom&gt;
+&lt;/ReadingType&gt;
+    </code></pre>
+  </div>
+  <h3>MeterReading</h3>
+  <div>
+    <p>A MeterReading is a container for all of the measured <em>IntervalBlocks</em> within the Green Button data captured at a <em>UsagePoint</em>.</p>
+    <pre><code>&lt;MeterReading&gt;
+&lt;\MeterReading&gt;
+    </code></pre>
+  </div>
+  <h3>IntervalBlock</h3>
+  <div>
+    <p><em>IntervalBlock</em>s are the primary data carrier within the Green Button data. As you can see below, IntervalBlocks may have one or more Intervals, each with a start and duration, as well as the specific <em>IntervalReading</em></p>
+
+    <pre><code>
+&lt;IntervalBlock xmlns="http://naesb.org/espi"&gt;
+  &lt;interval&gt;
+    &lt;duration&gt;86400&lt;/duration&gt;
+    &lt;start&gt;1330578000&lt;/start&gt;
+    &lt;!-- start date: 3/1/2012 5:00:00 AM --&gt;
+  &lt;/interval&gt;
+  &lt;IntervalReading&gt;
+    &lt;cost&gt;539919&lt;/cost&gt;
+    &lt;timePeriod&gt;
+      &lt;duration&gt;86400&lt;/duration&gt;
+      &lt;start&gt;1330578000&lt;/start&gt;
+      &lt;!-- 3/1/2012 5:00:00 AM  --&gt;
+     &lt;/timePeriod&gt;
+    &lt;value&gt;57751&lt;/value&gt;
+  &lt;/IntervalReading&gt;
+&lt;/IntervalBlock&gt;
+    </code></pre>
+  </div>
+  <h3>LocalTimeParameters</h3>
+  <div>
+    <p>The <em>LocalTimeParameters</em> provide a flexible manner to enable <em>Energy Usage Information (EUI)</em> to be provided with a reference to local time, without including any <em>Personal Identifiable Information</em>.  </p>
+    <pre><code>&lt;LocalTimeParameters xmlns="http://naesb.org/espi"&gt;
+  &lt;dstEndRule&gt;B40E2000&lt;/dstEndRule&gt;
+  &lt;dstOffset&gt;3600&lt;/dstOffset&gt;
+  &lt;dstStartRule&gt;360E2000&lt;/dstStartRule&gt;
+  &lt;tzOffset&gt;-18000&lt;/tzOffset&gt;
+&lt;/LocalTimeParameters&gt;
+    </code></pre>
+  </div>
+  <h3>ElectricPowerUsageSummary</h3>
+  <div>
+    <p></p>
+    <pre><code>
+&lt;ElectricPowerUsageSummary xmlns="http://naesb.org/espi"&gt;
+  &lt;billingPeriod&gt;
+    &lt;duration&gt;2588400&lt;/duration&gt;
+    &lt;start&gt;1330578000&lt;/start&gt;
+  &lt;/billingPeriod&gt;
+  &lt;billLastPeriod&gt;20810000&lt;/billLastPeriod&gt;
+  &lt;billToDate&gt;8145000&lt;/billToDate&gt;
+  &lt;costAdditionalLastPeriod&gt;4525000&lt;/costAdditionalLastPeriod&gt;
+  &lt;currency&gt;840&lt;/currency&gt;
+  &lt;overallConsumptionLastPeriod&gt;
+     &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
+     &lt;uom&gt;72&lt;/uom&gt;
+     &lt;value&gt;1951364&lt;/value&gt;
+  &lt;/overallConsumptionLastPeriod&gt;
+  &lt;currentBillingPeriodOverAllConsumption&gt;
+     &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
+     &lt;timeStamp&gt;1334462400&lt;/timeStamp&gt;
+     &lt;uom&gt;72&lt;/uom&gt;
+     &lt;value&gt;1006640&lt;/value&gt;
+  &lt;/currentBillingPeriodOverAllConsumption&gt;
+     &lt;qualityOfReading&gt;14&lt;/qualityOfReading&gt;
+     &lt;statusTimeStamp&gt;1334462400&lt;/statusTimeStamp&gt;
+&lt;/ElectricPowerUsageSummary&gt;
+    </code></pre>
+  </div>
+  <h3>ElectricPowerQualitySummary</h3>
+  <div>
+    <p></p>
+    <pre><code>&lt;ElectricPowerQualitySummary&gt;
+&lt;\ElectricPowerQualitySummary&gt;
+    </code></pre>
+  </div>
+</div>
+  </div>
+
+  <div id="tabs-5">
+<h3>
+ <img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+  <a name="welcome-to-green-button-developer" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>
+    Message Patterns</h3>
+
+<p></p>
+
+  </div>
+
+  <div id="tabs-6">
+<h3>
+<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Green Button APIs</h3>
+
+<p>Green Button services are provided through a set of <a href="API">Application Programming Interfaces (APIs)</a> that enable you to publish metered data as well as subscribe to data streams from meters maintained by your Utility.</p>
+
+  </div>
+
+  <div id="tabs-7">
+<h3>
+ <img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Further Information</h3>
+
+<p></p>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
+<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Having trouble with Green Button? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:info@ggreenbuttondata.org">support@greenbuttondata.org</a> and we’ll help you sort it out.</p>
+
+  </div>
+</div>
+
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Openespi-greenbuttondeveloper maintained by <a href="https://github.com/energyos">energyos</a></p>
+	<br />	<br />
+        <p class="copyright" style="float:right">OpenESPI Green Button Developer is maintained by <a href="https://www.energyos.org/">EnergyOS.org</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
