@@ -18,30 +18,7 @@
       });
       });
     </script>
-    <script>
-      $(function() {
-      $( "#accordion1" ).accordion({
-      collapsible: true,
-      active: false
-      });
-      });
-    </script>
-    <script>
-      $(function() {
-      $( "#accordion2" ).accordion({
-      collapsible: true,
-      active: false
-      });
-      });
-    </script>
-    <script>
-      $(function() {
-      $( "#accordion2_2" ).accordion({
-      collapsible: true,
-      active: false
-      });
-      });
-    </script>
+
    <script>
   $(function() {
     var icons = {
@@ -60,6 +37,14 @@
     });
   });
   </script>
+    <script>
+      $(function() {
+      $( "#accordion1" ).accordion({
+      collapsible: true,
+      active: false
+      });
+      });
+    </script>
    <script>
   $(function() {
     var icons = {
@@ -78,6 +63,14 @@
     });
   });
   </script>
+    <script>
+      $(function() {
+      $( "#accordion2" ).accordion({
+      collapsible: true,
+      active: false
+      });
+      });
+    </script>
    <script>
   $(function() {
     var icons = {
@@ -97,6 +90,15 @@
   });
 
   </script>
+
+    <script>
+      $(function() {
+      $( "#accordion2_2" ).accordion({
+      collapsible: true,
+      active: false
+      });
+      });
+    </script>
    <script>
   $(function() {
     var icons = {
@@ -113,8 +115,60 @@
         $( "#accordion2_2" ).accordion( "option", "icons", icons );
       }
     });
-  });
-</script>
+   });
+  </script>
+    <script>
+      $(function() {
+      $( "#accordion3" ).accordion({
+      collapsible: true,
+      active: false
+      });
+      });
+    </script>
+   <script>
+  $(function() {
+    var icons = {
+      header: "ui-icon-circle-arrow-e",
+      activeHeader: "ui-icon-circle-arrow-s"
+    };
+    $( "#accordion3" ).accordion({
+      icons: icons
+    });
+    $( "#toggle" ).button().click(function() {
+      if ( $( "#accordion3" ).accordion( "option", "icons" ) ) {
+        $( "#accordion3" ).accordion( "option", "icons", null );
+      } else {
+        $( "#accordion3" ).accordion( "option", "icons", icons );
+      }
+    });
+   });
+  </script>
+    <script>
+      $(function() {
+      $( "#accordion4" ).accordion({
+      collapsible: true,
+      active: false
+      });
+      });
+    </script>
+   <script>
+  $(function() {
+    var icons = {
+      header: "ui-icon-circle-arrow-e",
+      activeHeader: "ui-icon-circle-arrow-s"
+    };
+    $( "#accordion4" ).accordion({
+      icons: icons
+    });
+    $( "#toggle" ).button().click(function() {
+      if ( $( "#accordion4" ).accordion( "option", "icons" ) ) {
+        $( "#accordion4" ).accordion( "option", "icons", null );
+      } else {
+        $( "#accordion4" ).accordion( "option", "icons", icons );
+      }
+    });
+   });
+  </script>
 <!-- menu stuff -->
   <script>
   $( "#menu" ).menu();
@@ -156,8 +210,8 @@
     <li><a href="#tabs-1">Home</a></li>
     <li><a href="#tabs-2">OData & Atom</a></li>
     <li><a href="#tabs-3">Publish &amp; Subscribe</a></li>
-    <li><a href="#tabs-4">Data</a></li>
     <li><a href="#tabs-5">Message Patterns</a></li>
+    <li><a href="#tabs-4">Data Elements</a></li>
     <li><a href="#tabs-6">RESTful APIs</a></li>
     <li><a href="#tabs-7">Support</a></li>
   </ul>
@@ -168,26 +222,54 @@
          Welcome to Green Button Developer</h3>
 <p>The Green Button API provides flexible access to Energy Usage Information through a set of RESTful interfaces. Using the API, you may gain access to the following exposed Green Buttron resources:</p>
 
-<h3>
+<h4>
 <img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>A Simple Design</h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>A Simple Design</h4>
 
 <p>Green Button uses the  <a href="http://wwww.odata.org">OData</a> standardized protocol for creating and consuming data APIs. OData builds on core protocols
 like HTTP and commonly accepted methodologies like REST to a uniform way to expose full-featured data publishing APIs. OData uses the standard ATOM Publishing
 standard to encapsulate Energy Usage Information.</p>
+
+<h4>
+<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>With Powerful Impact</h4>
+
+<p>Green Button uses the  <a href="API">RESTful APIs</a> to provide standard access to information for metered resources such as electricity, gas, and water.
+These interfaces may be used to access and manage the metered data by using atom+xml based streams of Energy Usage Information (EUI) encapsulaged within an Atom Feed. 
+The tabs above allow you to dig more deeply into the Green Button API by reviewing example API calls.</p>
+
+<h3>
+<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>RetailCustomer, DataCustodian &amp; ThirdParty Actors</h3>
+
+<p>A bit of nomenclagure:
+<dl>
+<dt>RetailCustomer</dt>
+
+<dd>Any person or enterprise that is provided services such as
+electricity, water, or gas from a resource service provider.
+RetailCustomers may be residential, commercial, or industrial.</dd>
+
+<dt>DataCustodian</dt>
+
+<dd>Any enterprise that is holding metered data obtained during the
+course of providing resources to a <em>RetailCustomer</em>. A <em>DataCustodian</em>
+holds that data as part of the service providedand may, with the authorization of the
+RetailCustomer, allow that data to be shared with a third party.</dd>
+
+
+<dt>ThirdParty</dt>
+<dd>Any person or enterprise that is authorized to have access to metered data held by a <em>DataCustodian</em>.  A <em>ThirdParty</em>, when authorized, may <em>subscribe</em> to a <em>RetailCustomer's</em> data and provide additional services as desired.</dd>
+</dl>
 
   </div>
   <div id="tabs-2">
-<h3>
-<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>A Simple Design</h3>
-
 <p>Green Button uses the  <a href="http://wwww.odata.org">OData</a> standardized protocol for creating and consuming data APIs. OData builds on core protocols
 like HTTP and commonly accepted methodologies like REST to a uniform way to expose full-featured data publishing APIs. OData uses the standard ATOM Publishing
 standard to encapsulate Energy Usage Information.</p>
-<h3>
-<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
-<span class="octicon octicon-link"></span></a>Atom Wrappers</h3>
+<div id="accordion2" class="accordion">
+<h3>Atom Wrappers</h3>
+<div>
 <p>OData works by placing data within the <em>&lt;entry&gt;</em> tags of the Atom stream. Data records are placed within the <em>&lt;content&gt;</em> tags, and relationships between tables are reprsented in the <em>&lg;link&gt;</em>tags. For example:</p>
     <pre><code>
 &lt;feed xmlns="http://www.w3.org/2005/Atom"
@@ -222,11 +304,14 @@ standard to encapsulate Energy Usage Information.</p>
     &lt;/entry&gt;
  &lt;/feed&gt;
     </code></pre>
-<p></p>
-<div id="accordion2">
-  <h3>Atom Containers</h3>
+  </div>
+  <h3>Relationships</h3>
   <div>
   <p></p>
+  </div>
+  <h3>Atom Containers</h3>
+  <div>
+  <p>Eeach of the atom entities is used to describe portions of the Green Button data structures. For example, the &lg;title&gt; is used to hold the <em>description</em> of the Green Button entity. The &lt;id&gt; holds the entities <em>UUID</em>. The following gives an overview of each related tag:</p>
   <div id="accordion2_2">
   <h3>feed</h3>
   <div>
@@ -291,13 +376,7 @@ standard to encapsulate Energy Usage Information.</p>
 
   </div>
   <div id="tabs-3">
-<h3>
-<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
-<span class="octicon octicon-link"></span></a>Publish &amp; Subscribe</h3>
-
-
-<p>In addition to the basic reading elements above, Green Button also allows management of how the data is to flow between your Utility (a <em>DataCustodian</em>) and an application (a <em>ThirdParty</em>). We follow the basic publish/subscribe patterns established withint the <em>Atom</em> publishing stream. RESTful APIs are available to help manage:</p>
-
+<p>A <em>DataCustodian</em> will, when authorized by a <em>RetailCustomer</em>, publish a GreenButton data stream. A <em>ThirdParty</em> may then subscribe to that stream. Green Button uses the <a href="www.odata.org">OData</a> standard to serialize the data and the <a href="http://http://oauth.net/">OAuth</a> protocoal to maintain authorizations for accessing that subscription.
 <div id="accordion1">
   <h3>Subscription</h3>
   <div>
@@ -324,6 +403,28 @@ standard to encapsulate Energy Usage Information.</p>
 
      <p>Green Button APIs are designed to support data flows that are both large and small. Many Utilities will schedule bulk transfers of hundreds of thousands of 24 hour data as a batch process. In this case, the Green Button APIs must be able to accomodate blocked transfers, recovery, and restarts. Other use-cases are more driven by frequent transmissions of smaller data sets, for example the hourly usage of a single outlet in your home. Green Button is designed to handle both!</p>
 </div>
+  <div id="tabs-5">
+<p>Green Button comes in two flavors:
+<dl>
+<dt>Download My Data</dt>
+<dd>A RetailCustomer may download an XML file directly from either a Data Custodian or a Third Party. Restfull interfaces are provided to enable this operation. There are no assumptions made with respect to what the RetailCustoemr might do with this XML file, although best practices would be to insure that the file viewable by using a minimal stylesheet.</dd>
+<dt>Connect My Data</dt>
+<dd>The RetailCustomer may also authorize Green Button data to move between two machines, such as from their utility to a company that might use the data to estimate the energy efficiency of their facility. In this case, <em>Connect My Data</em> would be used to provide machine-2-machine data transfers. Connect My Data may provide a single transfer of information, or transfers on a predefined schedule.</dd>
+</dl>
+The simple message flows associated with each are described below:
+</p>
+<div id="accordion4">
+<h3>Download My Data Patterns</h3>
+<div>
+</div>
+<h3>Connect My Data Patterns</h3>
+<div>
+</div>
+
+</div>
+
+  </div>
+
   <div id="tabs-4">
 <h3>
 <img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
@@ -437,15 +538,6 @@ standard to encapsulate Energy Usage Information.</p>
 </div>
   </div>
 
-  <div id="tabs-5">
-<h3>
- <img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
-  <a name="welcome-to-green-button-developer" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>
-    Message Patterns</h3>
-
-<p></p>
-
-  </div>
 
   <div id="tabs-6">
 <h3>
