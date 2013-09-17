@@ -53,7 +53,7 @@
               "required": true,
               "allowMultiple": false,
               "defaultValue" : "http://greenbuttondata.org/thirdparty/image.jpg",
-              "dataType": "image"
+              "dataType": "string"
             },
             {	
               "paramType": "form",
