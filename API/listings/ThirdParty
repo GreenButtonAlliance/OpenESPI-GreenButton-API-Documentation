@@ -10,216 +10,66 @@
   ],
   "apis": [
     {
-      "path": "/espi/1_1/RegistrationRedirect",
+      "path": "/espi/1_1/OAuthCallBack",
       "operations" : [
         {
-	 "method": "GET",
-	 "summary": "The URI used as a callback redirect within the DataCustodian/espi/1_1/register GET",
-	 "notes": "The DataCustodian will use this redirect during the ThirdParty registration process",
-	 "responseClass" : "text/html",
-	 "nickname" : "getPortalHome",
-	 "produces" : [
-	   "text/html"
-	   ],
-	 "responseMessages" : [
-	    {"code" : 200
-	    },
-	    {
-   	     "code" : 404,
-	     "message" : "Service Not Available"
-	    }
-	  ]
-      }
-     ]
+          "method": "GET",
+          "summary": "OAuth 2.0 Authorization Code callback URI",
+          "notes": "The DataCustodian uses this URI to return an OAuth 2.0 Authorization Code to the Third Party Application during the OAuth 2.0 Authorization Code flow process.",
+          "responseClass" : "text/html",
+          "nickname" : "getAuthorizationCallback",
+          "produces" : [
+            "text/html",
+						"application/xhtml+xml",
+						"application/xml"
+          ],
+          "responseMessages" : [
+            { 
+					    "code" : 200
+            },
+            {
+              "code" : 404,
+              "message" : "Service Not Available"
+            }
+          ]
+        }
+      ]
     },
     {
       "path": "/espi/1_1/Notify_SubscriptionAvailable",
       "operations" : [
         {
-	 "method": "GET",
-	 "summary": "The URI used to notify the Third Party that a particular subscription is available for retrieval from the DataCustodian",
-	 "notes": "The DataCustodian will use this to notify the Third Party of the availability of a subscription",
-	 "responseClass" : "text/html",
-	 "nickname" : "notifySubscription",
-         "parameter" : [
-	   {
-	    "subscriptionURI" : "The Data Custodian URL to be used to retrieve the specific Subscription",
-	    "summary" : "The Third Party may use this URL to retrieve the specific subscription data",
-	    "description" : "A URI that will be called via HTTP GET when the Data Custodian has a new delivery of usage information available.",
-            "required": true,
-            "allowMultiple": false,
-            "dataType": "String",
-            "paramType": "query"
-	    }
-	 ],
-	 "produces" : [
-	   "text/html"
-	   ],
-	 "responseMessages" : [
-	    {"code" : 204,
-	     "Message" : "Operation Completed, no data is returned"
-	    },
-	    {
-   	     "code" : 404,
-	     "message" : "Service Not Available"
-	    }
-	  ]
-      }
-     ]
-    }
-
-
-  ],
-  "models": {
-    "Authorization": {
-      "id": "Authorization",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "UsagePoint": {
-      "id": "UsagePoint",
-      "description": "A pet is a person's best friend",
-      "required": [
-        "name",
-        "id"
-      ],
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "MeterReadings": {
-          "type": "list",
-          "items": {
-            "$ref": "MeterReading"
-          }
-        },
-        "ReadingType": {
-          "type": "array",
-          "items": {
-            "$ref": "ReadingType"
-          }
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "status": {
-          "type": "string",
-          "description": "pet status in the store",
-          "enum": [
-            "available",
-            "pending",
-            "sold"
+          "method": "GET",
+          "summary": "The URI used to notify the Third Party that a particular subscription is available for retrieval from the DataCustodian",
+          "notes": "The DataCustodian will use this to notify the Third Party of the availability of a subscription",
+          "responseClass" : "text/html",
+          "nickname" : "notifySubscription",
+          "parameter" : [
+            {
+              "subscriptionURI" : "The Data Custodian URL to be used to retrieve the specific Subscription",
+              "summary" : "The Third Party may use this URL to retrieve the specific subscription data",
+              "description" : "A URI that will be called via HTTP GET when the Data Custodian has a new delivery of usage information available.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "query"
+            }
+          ],
+          "produces" : [
+            "text/html"
+          ],
+          "responseMessages" : [
+            {
+              "code" : 204,
+              "Message" : "Operation Completed, no data is returned"
+            },
+            {
+              "code" : 404,
+              "message" : "Service Not Available"
+            }
           ]
-        },
-        "MeterReadingCollection": {
-          "$ref": "MeterReading"
         }
-      }
-    },
-    "MeterReading": {
-      "id": "MeterReading",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ApplicationInformation": {
-      "id": "ApplicationInformation",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "Subscription": {
-      "id": "Subscription",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ReadingType": {
-      "id": "ReadingType",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "IntervalBlock": {
-      "id": "IntervalBlock",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "LocalTime": {
-      "id": "LocalTime",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
+      ]
     }
-
-  }
+  ]
 }

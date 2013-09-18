@@ -284,8 +284,44 @@
 						  "dataType": "string"
 					  }						
 					],
+					"requestHeader": [
+					  {
+					    "type": "object",
+						  "properties": {
+						    "paramType": {
+							    "type": "string"
+					  		},
+						  	"paras": {
+							    "type": "array",
+								  "items": {
+								    "type": "object",
+									  "properties": {
+									    "name": {
+										    "type": "string"
+									  	},
+										  "required": {
+										    "type": "boolean",
+											  "required": true
+									  	},
+										  "description": {
+										    "type": "string"
+									  	},
+										  "type": {
+										    "type": "string"
+										  },
+										  "linkType": {
+										    "type": "string"
+										  }
+									  }
+									}
+								}
+							}
+						}
+					],
 					"produces": [
-					  "plain/text"
+					  "text/html",
+						"application/xhtml+xml",
+						"application/xml"
 					],
           "responseMessages": [
             {	
@@ -634,149 +670,19 @@
     "OAuth 2.0 Authorization Response": {
       "properties": {
         "code": {
+				  "paramType": "query",
 					"required": true,
 					"description": "Authorization code.  The authorization code MUST expire shortly and MUST NOT be used more than once.",
           "type":"string"
         },
         "state": {
+				  "paramType": "query",
 					"required": true,
           "description": "MUST contain the exact value received in the request.",					
           "type":"string"
         }
       },
       "id": "OAuth 2.0 Authorization Response"
-    },		
-    "UsagePoint": {
-      "id": "UsagePoint",
-      "description": "A pet is a person's best friend",
-      "required": [
-        "name",
-        "id"
-      ],
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "MeterReadings": {
-          "type": "list",
-          "items": {
-            "$ref": "MeterReading"
-          }
-        },
-        "ReadingType": {
-          "type": "array",
-          "items": {
-            "$ref": "ReadingType"
-          }
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "status": {
-          "type": "string"
-        },
-        "MeterReadingCollection": {
-          "$ref": "MeterReading"
-        }
-      }
-    },
-    "MeterReading": {
-      "id": "MeterReading",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ApplicationInformation": {
-      "id": "ApplicationInformation",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "Subscription": {
-      "id": "Subscription",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ReadingType": {
-      "id": "ReadingType",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "IntervalBlock": {
-      "id": "IntervalBlock",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "LocalTime": {
-      "id": "LocalTime",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ElectricPowerQualitySummary": {
-      "id": "ElectricPowerQualitySummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    }
-
+    }	
   }
 }
