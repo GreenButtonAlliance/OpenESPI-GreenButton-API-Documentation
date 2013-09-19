@@ -3,72 +3,55 @@
   "espiVersion": "1.1",
   "apis": [
     {
-      "path": "/../listings/ThirdParty",
-      "description": "Operations about Third Parties"
+      "path": "/../listings/ThirdParty"
     },
     {
-      "path": "/../listings/ThirdParty.Screens",
-      "description": "Operations about Third Parties"
+      "path": "/../listings/ThirdParty.Screens"
     },
     {
-      "path": "/../listings/ThirdParty.RetailCustomer",
-      "description": "Third Party Operations about RetailCustomers"
+      "path": "/../listings/ThirdParty.RetailCustomer"
     },
     {
-      "path": "/../listings/ThirdParty.ApplicationInformation",
-      "description": "Operations about Application Information"
+      "path": "/../listings/ThirdParty.ApplicationInformation"
     },
     {
-      "path": "/../listings/ThirdParty.Authorization",
-      "description": "Operations about Authorizations"
+      "path": "/../listings/ThirdParty.Authorization"
     },
     {
-      "path": "/../listings/DataCustodian",
-      "description": "Operations about the Data Custodian"
+      "path": "/../listings/DataCustodian"
     },
     {
-      "path": "/../listings/DataCustodian.Screens",
-      "description": "Operations about the Data Custodian"
+      "path": "/../listings/DataCustodian.Screens"
     },
     {
-      "path": "/../listings/DataCustodian.RetailCustomer",
-      "description": "Data Custodian Operations about RetailCustomers"
+      "path": "/../listings/DataCustodian.RetailCustomer"
     },
     {
-      "path": "/../listings/DataCustodian.ApplicationInformation",
-      "description": "Operations about the ApplicationInformation Resource"
+      "path": "/../listings/DataCustodian.ApplicationInformation"
     },
     {
-      "path": "/../listings/DataCustodian.Subscription",
-      "description": "Operations about Subscription Resource"
+      "path": "/../listings/DataCustodian.Subscription"
     },
     {
-      "path": "/../listings/DataCustodian.Authorization",
-      "description": "Operations about Authorization Resource"
+      "path": "/../listings/DataCustodian.Authorization"
     },
     {
-      "path": "/../listings/DataCustodian.UsagePoint",
-      "description-x": "Operations about UsagePoint Resource"
+      "path": "/../listings/DataCustodian.UsagePoint"
     },
     {
-      "path": "/../listings/DataCustodian.MeterReading",
-      "description": "Operations about MeterReading Resource"
+      "path": "/../listings/DataCustodian.MeterReading"
     },
     {
-      "path": "/../listings/DataCustodian.ReadingType",
-      "description": "Operations about Reading Types"
+      "path": "/../listings/DataCustodian.ReadingType"
     },
     {
-      "path": "/../listings/DataCustodian.IntervalBlock",
-      "description": "Operations about IntervalBlock Resource"
+      "path": "/../listings/DataCustodian.IntervalBlock"
     },
     {
-      "path": "/../listings/DataCustodian.ElectricPowerQualitySummary",
-      "description": "Operations about ElectricPowerQualitySummary Resource"
+      "path": "/../listings/DataCustodian.ElectricPowerQualitySummary"
     },
     {
-      "path": "/../listings/DataCustodian.ElectricPowerUsageSummary",
-      "description": "Operations about ElectricPowerUsageSummary Resource"
+      "path": "/../listings/DataCustodian.ElectricPowerUsageSummary"
     }
   ]
 }
