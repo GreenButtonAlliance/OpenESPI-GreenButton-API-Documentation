@@ -4,71 +4,71 @@
   "apis": [
     {
       "path": "/../listings/ThirdParty",
-      "description": "Operations about Third Parties"
+      "description-x": "Operations about Third Parties"
     },
     {
       "path": "/../listings/ThirdParty.Screens",
-      "description": "Operations about Third Parties"
+      "description-x": "Operations about Third Parties"
     },
     {
       "path": "/../listings/ThirdParty.RetailCustomer",
-      "description": "Third Party Operations about RetailCustomers"
+      "description-x": "Third Party Operations about RetailCustomers"
     },
     {
       "path": "/../listings/ThirdParty.ApplicationInformation",
-      "description": "Operations about Application Information"
+      "description-x": "Operations about Application Information"
     },
     {
       "path": "/../listings/ThirdParty.Authorization",
-      "description": "Operations about Authorizations"
+      "description-x": "Operations about Authorizations"
     },
     {
       "path": "/../listings/DataCustodian",
-      "description": "Operations about the Data Custodian"
+      "description-x": "Operations about the Data Custodian"
     },
     {
       "path": "/../listings/DataCustodian.Screens",
-      "description": "Operations about the Data Custodian"
+      "description-x": "Operations about the Data Custodian"
     },
     {
       "path": "/../listings/DataCustodian.RetailCustomer",
-      "description": "Data Custodian Operations about RetailCustomers"
+      "description-x": "Data Custodian Operations about RetailCustomers"
     },
     {
       "path": "/../listings/DataCustodian.ApplicationInformation",
-      "description": "Operations about the ApplicationInformation Resource"
+      "description-x": "Operations about the ApplicationInformation Resource"
     },
     {
       "path": "/../listings/DataCustodian.Subscription",
-      "description": "Operations about Subscription Resource"
+      "description-x": "Operations about Subscription Resource"
     },
     {
       "path": "/../listings/DataCustodian.Authorization",
-      "description": "Operations about Authorization Resource"
+      "description-x": "Operations about Authorization Resource"
     },
     {
       "path": "/../listings/DataCustodian.UsagePoint",
-      "description": "Operations about UsagePoint Resource"
+      "description-x": "Operations about UsagePoint Resource"
     },
     {
       "path": "/../listings/DataCustodian.MeterReading",
-      "description": "Operations about MeterReading Resource"
+      "description-x": "Operations about MeterReading Resource"
     },
     {
       "path": "/../listings/DataCustodian.ReadingType",
-      "description": "Operations about Reading Types"
+      "description-x": "Operations about Reading Types"
     },
     {
       "path": "/../listings/DataCustodian.IntervalBlock",
-      "description": "Operations about IntervalBlock Resource"
+      "description-x": "Operations about IntervalBlock Resource"
     },
     {
       "path": "/../listings/DataCustodian.ElectricPowerQualitySummary",
-      "description": "Operations about ElectricPowerQualitySummary Resource"
+      "description-x": "Operations about ElectricPowerQualitySummary Resource"
     },
     {
       "path": "/../listings/DataCustodian.ElectricPowerUsageSummary",
-      "description": "Operations about ElectricPowerUsageSummary Resource"
+      "description-x": "Operations about ElectricPowerUsageSummary Resource"
     }
   ]
 }
