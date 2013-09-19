@@ -18,10 +18,10 @@
       "path": "/../listings/ThirdParty.ApplicationInformation",
       "description": "Operations about Application Information"
     },
-    {
-      "path": "/../listings/ThirdParty.Subscription",
-      "description": "Operations about Subscriptions"
-    },
+#    {
+#      "path": "/../listings/ThirdParty.Subscription",
+#      "description": "Operations about Subscriptions"
+#    },
     {
       "path": "/../listings/ThirdParty.Authorization",
       "description": "Operations about Authorizations"
