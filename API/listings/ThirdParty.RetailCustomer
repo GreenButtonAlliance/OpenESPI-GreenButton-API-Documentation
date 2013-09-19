@@ -133,6 +133,57 @@
         }
        ]
       },
+    {
+    "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UploadMyData",
+    "operations": [
+        {
+            "method": "PUT",
+            "summary": "Allows a Green Button XML file to be uploaded by the retail customer",
+            "responseClass": "",
+            "nickname": "uploadMyData",
+            "parameters": [
+                {
+                    "name": "client_token",
+                    "description": "The ThirdParty's client access token",
+                    "defaultValue": "Bearer {client_access_token}",
+                    "required": true,
+                    "allowMultiple": false,
+                    "dataType": "String",
+                    "paramType": "head"
+                },
+                {
+                    "name": "RetailCustomerID",
+                    "description": "The ThirdParty's RetailCustomerID",
+                    "defaultValue": "",
+                    "required": true,
+                    "allowMultiple": false,
+                    "dataType": "String",
+                    "paramType": "path"
+                },
+                {
+                    "name": "xmlFile",
+                    "description": "theContents of the file being uploaded"
+                    "allowMultiple": false,
+                    "dataType": "string",
+                    "paramType": "form"
+                }
+            ],
+            "produces": [
+                "text/html"
+            ],
+            "responseMessages": [
+                {
+                    "code": 200,
+                    "message" : "OK"
+                },
+                {
+                    "code": 404,
+                    "message": "Service Not Available"
+                }
+	    ]
+        }
+       ]
+      },
       {
       "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
       "operations" : [
