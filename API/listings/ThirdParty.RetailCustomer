@@ -89,7 +89,7 @@
             "method": "GET",
             "summary": "Allows a Green Button DownloadMyData .xml file to be downloaded to the retail customer",
             "responseClass": "application/atom+xml",
-            "nicname": "downloadMyData",
+            "nickname": "downloadMyData",
             "parameters": [
                 {
                     "name": "client_token",
@@ -129,10 +129,10 @@
                     "code": 404,
                     "message": "Service Not Available"
                 }
-            ]
+	    ]
         }
-    ]
-}
+       ]
+      },
       {
       "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
       "operations" : [
