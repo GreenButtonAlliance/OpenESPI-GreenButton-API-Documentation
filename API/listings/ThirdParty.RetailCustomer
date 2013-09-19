@@ -106,7 +106,7 @@
 	    {
 	      "name" : "Content-Disposition",
 	      "description" : "Controling the browser actions on receipt of the file",
-	      "defaultValue" : "attachment; filename=<file name.ext>"
+	      "defaultValue" : "attachment; filename=<file name.ext>",
 	      "allowMultiple" : false,
 	      "dataType", "string",
 	      "paramType" : "head"
