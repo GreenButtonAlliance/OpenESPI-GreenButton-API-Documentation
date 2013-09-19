@@ -61,7 +61,7 @@
       "operations" : [
         {
 	 "method": "GET",
-	 "summary": "The DataCustodian Screen that provides for the user approval of a Third Party's access to their EUI data",
+	 "summary": "[ESPI] The DataCustodian Screen that provides for the user approval of a Third Party's access to their EUI data",
 	 "notes": "This is only executed upon successfule scope negotion",
 	 "responseClass" : "text/html",
 	 "nickname" : "approveAuthorization",
@@ -129,7 +129,7 @@
       "operations" : [
         {
          "method": "POST",
-         "summary": "The post signin Screen of the DataCustodian Portal",
+         "summary": "[ESPI] The post signin Screen of the DataCustodian Portal",
          "notes": "The requesting browser is to display a Retail Custoemr home Screen of the portal. It is assumed that this will contain a Select your Third Part for Green Button sharing as well as a Download My Data Green button page",
          "responseClass" : "text/html",
          "nickname" : "getPortalHome",

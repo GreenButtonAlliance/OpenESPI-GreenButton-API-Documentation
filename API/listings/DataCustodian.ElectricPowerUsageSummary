@@ -14,7 +14,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Finds all Electric Power Usage Summarys",
+          "summary": "[ESPI] Finds all Electric Power Usage Summarys",
           "notes": "An XML representation of all Electric Power Usage Summarys will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findElectricPowerUsageSummarys",
@@ -145,7 +145,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Retrieve a ElectricPowerUsageSummary Using it's ID",
+          "summary": "[ESPI] Retrieve a ElectricPowerUsageSummary Using it's ID",
           "notes": "Returns a Electric Power Usage Summary",
           "responseClass": "ElectricPowerUsageSummary",
           "nickname": "getElectricPowerUsageSummary",

@@ -14,7 +14,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Finds all Authorizations",
+          "summary": "[ESPI] Finds all Authorizations",
           "notes": "An XML representation of all Authorizations will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
@@ -105,7 +105,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Retrieve a Authorization Using it's ID",
+          "summary": "[ESPI] Retrieve a Authorization Using it's ID",
           "notes": "Returns a Authorization",
           "responseClass": "Authorization",
           "nickname": "getAuthorization",

@@ -83,6 +83,55 @@
       ]
       },
       {
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/DownloadMyData",
+      "operations" : [
+        {
+	 "method": "GET",
+	 "summary": "Allows a Green Button DownloadMyData .xml file to be downloaded to the retail customer",
+	 "responseClass" : "application/atom+xml",
+	 "nicname" : "downloadMyData",
+	 "produces" : [
+	   "text/html"
+	 ],
+          "parameters": [
+            {
+              "name": "client_token",
+              "description": "The ThirdParty's client access token",
+	      "defaultValue": "Bearer {client_access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "head"
+            },
+	    {
+	      "name" : "Content-Disposition",
+	      "description" : "Controling the browser actions on receipt of the file",
+	      "defaultValue" : "attachment; filename=<file name.ext>"
+	      "allowMultiple" : false,
+	      "dataType", "string",
+	      "paramType" : "head"
+	    },
+            {
+              "name": "RetailCustomerID",
+              "description": "The ThirdParty's RetailCustomerID",
+	      "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+         "responseMessages" : [
+            {"code" : 200
+            },
+            {
+             "code" : 404,
+             "message" : "Service Not Available"
+            }
+          ]
+        ]
+      },
+      {
       "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
       "operations" : [
         {

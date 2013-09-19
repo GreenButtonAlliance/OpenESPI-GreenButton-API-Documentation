@@ -14,7 +14,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Finds all Reading Types",
+          "summary": "[ESPI] Finds all Reading Types",
           "notes": "An XML representation of all Reading Types will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findReadingTypes",
@@ -96,7 +96,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Retrieve a ReadingType Using it's ID",
+          "summary": "[ESPI] Retrieve a ReadingType Using it's ID",
           "notes": "Returns a Reading Type",
           "responseClass": "ReadingType",
           "nickname": "getReadingType",

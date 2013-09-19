@@ -14,7 +14,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Finds all Usage Points",
+          "summary": "[ESPI] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "responseClass": "UsagePoints",
           "nickname": "findUsagePoints",
@@ -115,7 +115,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Retrieve a UsagePoint Using it's ID",
+          "summary": "[ESPI] Retrieve a UsagePoint Using it's ID",
           "notes": "Returns a Usage Point",
           "responseClass": "UsagePoint",
           "nickname": "getUsagePoint",

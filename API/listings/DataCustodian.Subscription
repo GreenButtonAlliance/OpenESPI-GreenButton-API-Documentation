@@ -14,7 +14,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Finds all Subscriptions",
+          "summary": "[ESPI] Finds all Subscriptions",
           "notes": "An XML representation of all Subscriptions will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findSubscriptions",
@@ -105,7 +105,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Retrieve a Subscription Using it's ID",
+          "summary": "[ESPI] Retrieve a Subscription Using it's ID",
           "notes": "Returns a Subscription",
           "responseClass": "Subscription",
           "nickname": "getSubscription",

@@ -104,7 +104,7 @@
       "operations" : [
         {
          "method": "GET",
-         "summary": "The post signin Screen of the ThirdParty Portal",
+         "summary": "[ESPI] The post signin Screen of the ThirdParty Portal",
          "notes": "A Third Party’s web page the Retail Customer user-agent is returned to after authorizing the {ThirdParty} access to the Retail Customer’s energy usage information (EUI).",
          "responseClass" : "text/html",
          "nickname" : "getRetailCustomerHome",
@@ -138,7 +138,7 @@
       "operations" : [
         {
          "method": "GET",
-         "summary": "Display a List of Data Custodians related to this Retail Customer",
+         "summary": "[ESPI] Display a List of Data Custodians related to this Retail Customer",
          "notes": "The Retail Customer is allowed to see and select a Data Custodian from which the Third Party is to be approved to access Data",
          "responseClass" : "text/html",
          "nickname" : "getPortalHome",
@@ -172,7 +172,7 @@
       "operations" : [
         {
          "method": "GET",
-         "summary": "Allows the Customer to select the scope(s) to use for the Third Party authorizationu",
+         "summary": "[ESPI] Allows the Customer to select the scope(s) to use for the Third Party authorizationu",
          "notes": "The is to display a Retail Customer a screen that allows for the selection of the types of data access for which the Data Custodian will approve access",
          "responseClass" : "text/html",
          "nickname" : "getPortalHome",

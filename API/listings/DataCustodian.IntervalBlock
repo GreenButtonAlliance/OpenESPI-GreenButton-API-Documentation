@@ -14,7 +14,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Finds all Interval Blocks",
+          "summary": "[ESPI] Finds all Interval Blocks",
           "notes": "An XML representation of all Interval Blocks will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findIntervalBlocks",
@@ -129,7 +129,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Retrieve a IntervalBlock Using it's ID",
+          "summary": "[ESPI] Retrieve a IntervalBlock Using it's ID",
           "notes": "Returns a Interval Block",
           "responseClass": "IntervalBlock",
           "nickname": "getIntervalBlock",

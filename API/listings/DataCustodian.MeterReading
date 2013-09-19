@@ -14,7 +14,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Finds all Meter Readings associated with a given Usage Point",
+          "summary": "[ESPI] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "responseClass": "MeterReadingss",
           "nickname": "findMeterReadingss",
@@ -131,7 +131,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
+          "summary": "[ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "notes": "Returns a MeterReading",
           "responseClass": "MeterReading",
           "nickname": "getMeterReading",
