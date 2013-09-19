@@ -556,11 +556,11 @@
         },
         "client_id_issued_at": {
 					"required": true,				
-          "type":"string"
+          "type":"string, date-time"
         },
         "client_secret_expires_at": {
 					"required": true,				
-          "type":"string"
+          "type":"string, date-time"
         },
         "registration_access_token": {
 					"required": true,				
