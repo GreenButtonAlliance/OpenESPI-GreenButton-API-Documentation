@@ -209,12 +209,11 @@
 <div id="tabs">
   <ul>
     <li><a href="#tabs-1">Home</a></li>
-    <li><a href="#tabs-2">OData & Atom</a></li>
-    <li><a href="#tabs-3">Publish &amp; Subscribe</a></li>
-    <li><a href="#tabs-5">Message Patterns</a></li>
-    <li><a href="#tabs-4">Data Elements</a></li>
-    <li><a href="#tabs-6">RESTful APIs</a></li>
-    <li><a href="#tabs-7">Support</a></li>
+    <li><a href="#tabs-2">Concepts</a></li>
+    <li><a href="#tabs-3">Data Elements</a></li>
+    <li><a href="#tabs-4">Example Code</a></li>
+    <li><a href="#tabs-5">API Documentaiton</a></li>
+    <li><a href="#tabs-6">Support</a></li>
   </ul>
   <div id="tabs-1">
         <h3>
@@ -278,33 +277,33 @@ standard to encapsulate Energy Usage Information.</p>
 &lt;feed xmlns="http://www.w3.org/2005/Atom"
          xsi:schemaLocation="http://naesb.org/espi espiDerived.xsd"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-    &lt;id&gt;urn:uuid:728B5594-414E-471A-A230-08FCCDAC655C&lt;/id&gt;
+ &lt;id&gt;urn:uuid:728B5594-414E-471A-A230-08FCCDAC655C&lt;/id&gt;
+ &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+ &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
  &lt;title&gt;ThirdPartyX Batch Feed&lt;/title&gt;
  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
  &lt;link rel="self" href="/ThirdParty/83e269c1/Batch"/&gt;
-    &lt;entry&gt;
-    &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
-        &lt;link rel="self"
-                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01"/&gt;
-        &lt;link rel="up"
-                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint"/&gt;
-        &lt;link rel="related"
-                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/MeterReading"/&gt;
-        &lt;link rel="related"
-                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/ElectricPowerUsageSummary"/&gt;
-        &lt;link rel="related"
-                 href="/espi/1_1/resource/UsagePoint/01/LocalTimeParameters/01"/&gt;
-        &lt;title&gt;my house&lt;/title&gt;
-        &lt;content&gt;
-            &lt;UsagePoint xmlns="http://naesb.org/espi"&gt;
-                &lt;ServiceCategory&gt;
-                    &lt;kind&gt;0&lt;/kind&gt;
-                &lt;/ServiceCategory&gt;
-            &lt;/UsagePoint&gt;
-        &lt;/content&gt;
-        &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
-        &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
-    &lt;/entry&gt;
+   &lt;entry&gt;
+   &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+     &lt;link rel="self"
+           href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01"/&gt;
+     &lt;link rel="up"
+           href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint"/&gt;
+     &lt;link rel="related"
+           href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/MeterReading"/&gt;
+     &lt;link rel="related"
+           href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/ElectricPowerUsageSummary"/&gt;
+     &lt;link rel="related"
+           href="/espi/1_1/resource/UsagePoint/01/LocalTimeParameters/01"/&gt;
+     &lt;title&gt;my house&lt;/title&gt;
+     &lt;content&gt;
+       &lt;UsagePoint xmlns="http://naesb.org/espi"&gt;
+         &lt;ServiceCategory&gt;
+           &lt;kind&gt;0&lt;/kind&gt;
+         &lt;/ServiceCategory&gt;
+       &lt;/UsagePoint&gt;
+     &lt;/content&gt;
+   &lt;/entry&gt;
  &lt;/feed&gt;
     </code></pre>
   </div>
@@ -345,33 +344,33 @@ standard to encapsulate Energy Usage Information.</p>
 &lt;feed xmlns="http://www.w3.org/2005/Atom"
          xsi:schemaLocation="http://naesb.org/espi espiDerived.xsd"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-    &lt;id&gt;urn:uuid:728B5594-414E-471A-A230-08FCCDAC655C&lt;/id&gt;
+ &lt;id&gt;urn:uuid:728B5594-414E-471A-A230-08FCCDAC655C&lt;/id&gt;
+ &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+ &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
  &lt;title&gt;ThirdPartyX Batch Feed&lt;/title&gt;
  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
  &lt;link rel="self" href="/ThirdParty/83e269c1/Batch"/&gt;
-    &lt;entry&gt;
-    &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
-        &lt;link rel="self"
-                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01"/&gt;
-        &lt;link rel="up"
-                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint"/&gt;
-        &lt;link rel="related"
-                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/MeterReading"/&gt;
-        &lt;link rel="related"
-                 href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/ElectricPowerUsageSummary"/&gt;
-        &lt;link rel="related"
-                 href="/espi/1_1/resource/UsagePoint/01/LocalTimeParameters/01"/&gt;
-        &lt;title&gt;my house&lt;/title&gt;
-        &lt;content&gt;
-            &lt;UsagePoint xmlns="http://naesb.org/espi"&gt;
-                &lt;ServiceCategory&gt;
-                    &lt;kind&gt;0&lt;/kind&gt;
-                &lt;/ServiceCategory&gt;
-            &lt;/UsagePoint&gt;
-        &lt;/content&gt;
-        &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
-        &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
-    &lt;/entry&gt;
+   &lt;entry&gt;
+   &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+     &lt;link rel="self"
+           href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01"/&gt;
+     &lt;link rel="up"
+           href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint"/&gt;
+     &lt;link rel="related"
+           href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/MeterReading"/&gt;
+     &lt;link rel="related"
+           href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/ElectricPowerUsageSummary"/&gt;
+     &lt;link rel="related"
+           href="/espi/1_1/resource/UsagePoint/01/LocalTimeParameters/01"/&gt;
+     &lt;title&gt;my house&lt;/title&gt;
+     &lt;content&gt;
+       &lt;UsagePoint xmlns="http://naesb.org/espi"&gt;
+         &lt;ServiceCategory&gt;
+           &lt;kind&gt;0&lt;/kind&gt;
+         &lt;/ServiceCategory&gt;
+       &lt;/UsagePoint&gt;
+     &lt;/content&gt;
+   &lt;/entry&gt;
  &lt;/feed&gt;
     </code></pre>
   </div>
@@ -381,6 +380,7 @@ standard to encapsulate Energy Usage Information.</p>
   <div id="tabs-3">
 <p>A <em>DataCustodian</em> will, when authorized by a <em>RetailCustomer</em>, publish a GreenButton data stream. A <em>ThirdParty</em> may then subscribe to that stream. Green Button uses the <a href="www.odata.org">OData</a> standard to serialize the data and the <a href="http://http://oauth.net/">OAuth</a> protocoal to maintain authorizations for accessing that subscription.
 <div id="accordion1">
+<!--
   <h3>Subscription</h3>
   <div>
     <p></p>
@@ -388,47 +388,53 @@ standard to encapsulate Energy Usage Information.</p>
 &lt;\Subscription&gt;
     </code></pre>
   </div>
+-->
   <h3>Authorization</h3>
   <div>
     <p></p>
-    <pre><code>&lt;Authorization&gt;
-&lt;\Authorization&gt;
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/Authorization/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/Authorization"/&gt;
+  &lt;title&gt;An Authorization to exchange data&lt;/title&gt;
+  &lt;content&gt;
+      &lt;Authorization xmlns="http://naesb.org/espi"&gt;
+           &lt;kind&gt;0&lt;/kind&gt;
+      &lt;/Authorization&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
     </code></pre>
   </div>
   <h3>ApplicationInformation</h3>
   <div>
     <p></p>
-    <pre><code>&lt;ApplicationInformation&gt;
-&lt;\ApplicationInformation&gt;
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/ApplicationInformation/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/ApplicationInformation"/&gt;
+  &lt;title&gt;ApplicationInformation Describing a DataCustodian and ThirdParty relationship&lt;/title&gt;
+  &lt;content&gt;
+      &lt;ApplicationInformation xmlns="http://naesb.org/espi"&gt;
+           &lt;kind&gt;0&lt;/kind&gt;
+      &lt;/ApplicationInformation&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
     </code></pre>
     </div>
   </div>
 
      <p>Green Button APIs are designed to support data flows that are both large and small. Many Utilities will schedule bulk transfers of hundreds of thousands of 24 hour data as a batch process. In this case, the Green Button APIs must be able to accomodate blocked transfers, recovery, and restarts. Other use-cases are more driven by frequent transmissions of smaller data sets, for example the hourly usage of a single outlet in your home. Green Button is designed to handle both!</p>
-</div>
-  <div id="tabs-5">
-<p>Green Button comes in two flavors:
-<dl>
-<dt>Download My Data</dt>
-<dd>A RetailCustomer may download an XML file directly from either a Data Custodian or a Third Party. Restfull interfaces are provided to enable this operation. There are no assumptions made with respect to what the RetailCustoemr might do with this XML file, although best practices would be to insure that the file viewable by using a minimal stylesheet.</dd>
-<dt>Connect My Data</dt>
-<dd>The RetailCustomer may also authorize Green Button data to move between two machines, such as from their utility to a company that might use the data to estimate the energy efficiency of their facility. In this case, <em>Connect My Data</em> would be used to provide machine-2-machine data transfers. Connect My Data may provide a single transfer of information, or transfers on a predefined schedule.</dd>
-</dl>
-The simple message flows associated with each are described below:
-</p>
-<div id="accordion4">
-<h3>Download My Data Patterns</h3>
-<div>
-</div>
-<h3>Connect My Data Patterns</h3>
-<div>
-</div>
 
-</div>
 
-  </div>
 
-  <div id="tabs-4">
 <h3>
 <img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
 <span class="octicon octicon-link"></span></a>Green Button Data Elements</h3>
@@ -436,29 +442,61 @@ The simple message flows associated with each are described below:
   <h3>UsagePoint</h3>
   <div>
     <p>A <em>UsagePoint</em> is where a resource is measured. Typically, it is your Utility Smart Meter, but it could be the outlet on the wall as well. UsagePoints provide the reference for all meter readings that are contained within the Green Button data. As you can see below, UsagePoints have a <em>ServiceCategory</em> that says what <em>kind</em> of resource, such as electricity, gas, or water measurement is being reported. </p>
-    <pre><code>&lt;UsagePoint  xmlns="http://naesb.org/espi"&gt;
-   &lt;ServiceCategory&gt;
-      &lt;kind&gt;0&lt;/kind&gt;
-   &lt;/ServiceCategory&gt;
-&lt;\UsagePoint&gt;
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/MeterReading"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/ElectricPowerUsageSummary"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/UsagePoint/01/LocalTimeParameters/01"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;UsagePoint xmlns="http://naesb.org/espi"&gt;
+      &lt;ServiceCategory&gt;
+        &lt;kind&gt;0&lt;/kind&gt;
+      &lt;/ServiceCategory&gt;
+    &lt;/UsagePoint&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
     </code></pre>
   </div>
   <h3>ReadingType</h3>
   <div>
     <p>A <em>ReadingType</em> provides detail as to the specifics of the reading data that is being obtained. Green Button follows international standards and has the ability to represent large industrial resources as well as those used in your home.</p>
-    <pre><code>&lt;ReadingType xmlns="http://naesb.org/espi"&gt;
-  &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
-  &lt;commodity&gt;1&lt;/commodity&gt;
-  &lt;currency&gt;840&lt;/currency&gt;
-  &lt;dataQualifier&gt;12&lt;/dataQualifier&gt;
-  &lt;flowDirection&gt;1&lt;/flowDirection&gt;
-  &lt;intervalLength&gt;86400&lt;/intervalLength&gt;
-  &lt;kind&gt;12&lt;/kind&gt;
-  &lt;phase&gt;769&lt;/phase&gt;
-  &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
-  &lt;timeAttribute&gt;0&lt;/timeAttribute&gt;
-  &lt;uom&gt;72&lt;/uom&gt;
-&lt;/ReadingType&gt;
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/ReadingType/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/ReadingType"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/MeterReading"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;ReadingType xmlns="http://naesb.org/espi"&gt;
+      &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+      &lt;commodity&gt;1&lt;/commodity&gt;
+      &lt;currency&gt;840&lt;/currency&gt;
+      &lt;dataQualifier&gt;12&lt;/dataQualifier&gt;
+      &lt;flowDirection&gt;1&lt;/flowDirection&gt;
+      &lt;intervalLength&gt;86400&lt;/intervalLength&gt;
+      &lt;kind&gt;12&lt;/kind&gt;
+      &lt;phase&gt;769&lt;/phase&gt;
+      &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
+      &lt;timeAttribute&gt;0&lt;/timeAttribute&gt;
+      &lt;uom&gt;72&lt;/uom&gt;
+    &lt;/ReadingType&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
     </code></pre>
   </div>
   <h3>MeterReading</h3>
@@ -472,77 +510,148 @@ The simple message flows associated with each are described below:
   <div>
     <p><em>IntervalBlock</em>s are the primary data carrier within the Green Button data. As you can see below, IntervalBlocks may have one or more Intervals, each with a start and duration, as well as the specific <em>IntervalReading</em></p>
 
-    <pre><code>
-&lt;IntervalBlock xmlns="http://naesb.org/espi"&gt;
-  &lt;interval&gt;
-    &lt;duration&gt;86400&lt;/duration&gt;
-    &lt;start&gt;1330578000&lt;/start&gt;
-    &lt;!-- start date: 3/1/2012 5:00:00 AM --&gt;
-  &lt;/interval&gt;
-  &lt;IntervalReading&gt;
-    &lt;cost&gt;539919&lt;/cost&gt;
-    &lt;timePeriod&gt;
-      &lt;duration&gt;86400&lt;/duration&gt;
-      &lt;start&gt;1330578000&lt;/start&gt;
-      &lt;!-- 3/1/2012 5:00:00 AM  --&gt;
-     &lt;/timePeriod&gt;
-    &lt;value&gt;57751&lt;/value&gt;
-  &lt;/IntervalReading&gt;
-&lt;/IntervalBlock&gt;
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/IntervalBlock/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063IntervalBlock"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01/MeterReading/01"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;IntervalBlock xmlns="http://naesb.org/espi"&gt;
+      &lt;interval&gt;
+        &lt;duration&gt;86400&lt;/duration&gt;
+        &lt;start&gt;1330578000&lt;/start&gt;
+        &lt;!-- start date: 3/1/2012 5:00:00 AM --&gt;
+      &lt;/interval&gt;
+      &lt;IntervalReading&gt;
+        &lt;cost&gt;539919&lt;/cost&gt;
+        &lt;timePeriod&gt;
+          &lt;duration&gt;86400&lt;/duration&gt;
+          &lt;start&gt;1330578000&lt;/start&gt;
+          &lt;!-- 3/1/2012 5:00:00 AM  --&gt;
+         &lt;/timePeriod&gt;
+        &lt;value&gt;57751&lt;/value&gt;
+      &lt;/IntervalReading&gt;
+    &lt;/IntervalBlock&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
     </code></pre>
   </div>
   <h3>LocalTimeParameters</h3>
   <div>
     <p>The <em>LocalTimeParameters</em> provide a flexible manner to enable <em>Energy Usage Information (EUI)</em> to be provided with a reference to local time, without including any <em>Personal Identifiable Information</em>.  </p>
-    <pre><code>&lt;LocalTimeParameters xmlns="http://naesb.org/espi"&gt;
-  &lt;dstEndRule&gt;B40E2000&lt;/dstEndRule&gt;
-  &lt;dstOffset&gt;3600&lt;/dstOffset&gt;
-  &lt;dstStartRule&gt;360E2000&lt;/dstStartRule&gt;
-  &lt;tzOffset&gt;-18000&lt;/tzOffset&gt;
-&lt;/LocalTimeParameters&gt;
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/LocalTimeParameters/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/LocalTimeParameters"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/UsagePoint/01"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;LocalTimeParameters xmlns="http://naesb.org/espi"&gt;
+      &lt;dstEndRule&gt;B40E2000&lt;/dstEndRule&gt;
+      &lt;dstOffset&gt;3600&lt;/dstOffset&gt;
+      &lt;dstStartRule&gt;360E2000&lt;/dstStartRule&gt;
+      &lt;tzOffset&gt;-18000&lt;/tzOffset&gt;
+    &lt;/LocalTimeParameters&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
     </code></pre>
   </div>
   <h3>ElectricPowerUsageSummary</h3>
   <div>
     <p></p>
-    <pre><code>
-&lt;ElectricPowerUsageSummary xmlns="http://naesb.org/espi"&gt;
-  &lt;billingPeriod&gt;
-    &lt;duration&gt;2588400&lt;/duration&gt;
-    &lt;start&gt;1330578000&lt;/start&gt;
-  &lt;/billingPeriod&gt;
-  &lt;billLastPeriod&gt;20810000&lt;/billLastPeriod&gt;
-  &lt;billToDate&gt;8145000&lt;/billToDate&gt;
-  &lt;costAdditionalLastPeriod&gt;4525000&lt;/costAdditionalLastPeriod&gt;
-  &lt;currency&gt;840&lt;/currency&gt;
-  &lt;overallConsumptionLastPeriod&gt;
-     &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
-     &lt;uom&gt;72&lt;/uom&gt;
-     &lt;value&gt;1951364&lt;/value&gt;
-  &lt;/overallConsumptionLastPeriod&gt;
-  &lt;currentBillingPeriodOverAllConsumption&gt;
-     &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
-     &lt;timeStamp&gt;1334462400&lt;/timeStamp&gt;
-     &lt;uom&gt;72&lt;/uom&gt;
-     &lt;value&gt;1006640&lt;/value&gt;
-  &lt;/currentBillingPeriodOverAllConsumption&gt;
-     &lt;qualityOfReading&gt;14&lt;/qualityOfReading&gt;
-     &lt;statusTimeStamp&gt;1334462400&lt;/statusTimeStamp&gt;
-&lt;/ElectricPowerUsageSummary&gt;
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/ElectricPowerUsageSummary/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/ElectricPowerUsageSummary"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;ElectricPowerUsageSummary xmlns="http://naesb.org/espi"&gt;
+      &lt;billingPeriod&gt;
+        &lt;duration&gt;2588400&lt;/duration&gt;
+        &lt;start&gt;1330578000&lt;/start&gt;
+      &lt;/billingPeriod&gt;
+      &lt;billLastPeriod&gt;20810000&lt;/billLastPeriod&gt;
+      &lt;billToDate&gt;8145000&lt;/billToDate&gt;
+      &lt;costAdditionalLastPeriod&gt;4525000&lt;/costAdditionalLastPeriod&gt;
+      &lt;currency&gt;840&lt;/currency&gt;
+      &lt;overallConsumptionLastPeriod&gt;
+        &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
+        &lt;uom&gt;72&lt;/uom&gt;
+        &lt;value&gt;1951364&lt;/value&gt;
+      &lt;/overallConsumptionLastPeriod&gt;
+      &lt;currentBillingPeriodOverAllConsumption&gt;
+        &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
+        &lt;timeStamp&gt;1334462400&lt;/timeStamp&gt;
+        &lt;uom&gt;72&lt;/uom&gt;
+        &lt;value&gt;1006640&lt;/value&gt;
+      &lt;/currentBillingPeriodOverAllConsumption&gt;
+      &lt;qualityOfReading&gt;14&lt;/qualityOfReading&gt;
+      &lt;statusTimeStamp&gt;1334462400&lt;/statusTimeStamp&gt;
+    &lt;/ElectricPowerUsageSummary&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
     </code></pre>
   </div>
   <h3>ElectricPowerQualitySummary</h3>
   <div>
     <p></p>
-    <pre><code>&lt;ElectricPowerQualitySummary&gt;
-&lt;\ElectricPowerQualitySummary&gt;
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/ElectricPowerUsageSummary/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/RetailCustomer/9b6c7063/ElectricPowerUsageSummary"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;ElectricPowerQualitySummary&gt;
+    &lt;\ElectricPowerQualitySummary&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
     </code></pre>
   </div>
 </div>
   </div>
 
+<div id="tabs-4">
+<p>Green Button comes in two flavors:
+<dl>
+<dt>Download My Data</dt>
+<dd>A RetailCustomer may download an XML file directly from either a Data Custodian or a Third Party. Restfull interfaces are provided to enable this operation. There are no assumptions made with respect to what the RetailCustoemr might do with this XML file, although best practices would be to insure that the file viewable by using a minimal stylesheet.</dd>
+<dt>Connect My Data</dt>
+<dd>The RetailCustomer may also authorize Green Button data to move between two machines, such as from their utility to a company that might use the data to estimate the energy efficiency of their facility. In this case, <em>Connect My Data</em> would be used to provide machine-2-machine data transfers. Connect My Data may provide a single transfer of information, or transfers on a predefined schedule.</dd>
+</dl>
+The simple message flows associated with each are described below:
+</p>
+<div id="accordion4">
+<h3>Download My Data Examples</h3>
+<div>
+</div>
+<h3>Connect My Data Examples</h3>
+<div>
+</div>
 
-  <div id="tabs-6">
+</div>
+
+</div>
+
+ <div id="tabs-5">
 <h3>
 <img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
 <a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Green Button APIs</h3>
@@ -551,7 +660,7 @@ The simple message flows associated with each are described below:
 
   </div>
 
-  <div id="tabs-7">
+  <div id="tabs-6">
 <h3>
  <img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Further Information</h3>
