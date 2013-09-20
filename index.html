@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Green Button Developers Guide</title>
+    <title>Green Button Developer's Guide</title>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Openespi-greenbuttondeveloper : A repository for the Green Button Connect My Data API Documentation" />
@@ -212,7 +212,7 @@
     <li><a href="#tabs-2">Concepts</a></li>
     <li><a href="#tabs-3">Data Elements</a></li>
     <li><a href="#tabs-4">Example Code</a></li>
-    <li><a href="#tabs-5">API Documentaiton</a></li>
+    <li><a href="#tabs-5">API Documentation</a></li>
     <li><a href="#tabs-6">Support</a></li>
   </ul>
   <div id="tabs-1">
@@ -223,7 +223,7 @@
 
 <p>The Green Button API provides flexible access to Energy Usage
 Information through a set of RESTful interfaces. Using the API, you
-may gain access to the following exposed Green Buttron resources:</p>
+may gain access to the following exposed Green Buttn resources:</p>
 
 <p>Green Button uses the <a href="http://wwww.odata.org">OData</a>
 standardized protocol for creating and consuming data APIs. OData
@@ -236,15 +236,15 @@ Energy Usage Information.</p>
 standard access to information for metered resources such as
 electricity, gas, and water.These interfaces may be used to access and
 manage the metered data by using atom+xml based streams of Energy
-Usage Information (EUI) encapsulaged within an Atom Feed. The tabs
-above allow you to dig more deeply into the Green Button API by
+Usage Information (EUI) encapsulated within an Atom Feed. The tabs
+above allow you to explore more deeply into the Green Button API by
 reviewing example API calls.</p>
 
 <h3>
 <img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
 <a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>RetailCustomer, DataCustodian &amp; ThirdParty Actors</h3>
 
-<p>A bit of nomenclagure:
+<p>A bit of nomenclature:
 <dl>
 <dt>RetailCustomer</dt>
 
@@ -256,7 +256,7 @@ RetailCustomers may be residential, commercial, or industrial.</dd>
 
 <dd>Any enterprise that is holding metered data obtained during the
 course of providing resources to a <em>RetailCustomer</em>. A <em>DataCustodian</em>
-holds that data as part of the service providedand may, with the authorization of the
+holds that data as part of the service they provide and may, with the authorization of the
 RetailCustomer, allow that data to be shared with a third party.</dd>
 
 
@@ -266,13 +266,13 @@ RetailCustomer, allow that data to be shared with a third party.</dd>
 
   </div>
   <div id="tabs-2">
-<p>Green Button uses the  <a href="http://wwww.odata.org">OData</a> standardized protocol for creating and consuming data APIs. OData builds on core protocols
-like HTTP and commonly accepted methodologies like REST to a uniform way to expose full-featured data publishing APIs. OData uses the standard ATOM Publishing
-standard to encapsulate Energy Usage Information.</p>
+<p>Green Button uses the <a href="http://wwww.odata.org">Open Data Protocol (OData)</a> standardized protocol for creating and consuming data APIs. OData builds on core protocols
+like HTTP and commonly accepted methodologies like REST.  This results in a uniform way to expose full-featured data APIs. Green Button utilizes OData and the ATOM Publishing standard 
+to encapsulate Energy Usage Information.</p>
 <div id="accordion2" class="accordion">
 <h3>Atom Wrappers</h3>
 <div>
-<p>OData works by placing data within the <em>&lt;entry&gt;</em> tags of the Atom stream. Data records are placed within the <em>&lt;content&gt;</em> tags, and relationships between tables are reprsented in the <em>&lg;link&gt;</em>tags. For example:</p>
+<p>OData works by placing data within the <em>&lt;entry&gt;</em> tags of the Atom stream. Data records are placed within the <em>&lt;content&gt;</em> tags, and relationships between tables are represented in the <em>&lg;link&gt;</em>tags. For example:</p>
     <pre><code>
 &lt;feed xmlns="http://www.w3.org/2005/Atom"
          xsi:schemaLocation="http://naesb.org/espi espiDerived.xsd"
@@ -313,7 +313,7 @@ standard to encapsulate Energy Usage Information.</p>
   </div>
   <h3>Atom Containers</h3>
   <div>
-  <p>Eeach of the atom entities is used to describe portions of the Green Button data structures. For example, the &lg;title&gt; is used to hold the <em>description</em> of the Green Button entity. The &lt;id&gt; holds the entities <em>UUID</em>. The following gives an overview of each related tag:</p>
+  <p>Each of the atom entities is used to describe portions of the Green Button data structure. For example, the &lg;title&gt; contains the <em>description</em> of the Green Button entity. The &lt;id&gt; contains the entities <em>UUID</em>. The following gives an overview of each related tag:</p>
   <div id="accordion2_2">
   <h3>feed</h3>
   <div>
@@ -337,7 +337,7 @@ standard to encapsulate Energy Usage Information.</p>
   </div>
   </div>
   </div>
-  <h3>Exmaple</h3>
+  <h3>Example</h3>
   <div>
   <p>description 1</p>
     <pre><code>
@@ -378,7 +378,7 @@ standard to encapsulate Energy Usage Information.</p>
 
   </div>
   <div id="tabs-3">
-<p>A <em>DataCustodian</em> will, when authorized by a <em>RetailCustomer</em>, publish a GreenButton data stream. A <em>ThirdParty</em> may then subscribe to that stream. Green Button uses the <a href="www.odata.org">OData</a> standard to serialize the data and the <a href="http://http://oauth.net/">OAuth</a> protocoal to maintain authorizations for accessing that subscription.
+<p>A <em>DataCustodian</em> will, when authorized by a <em>RetailCustomer</em>, publish a GreenButton data stream. A <em>ThirdParty</em> may then subscribe to that stream. Green Button uses the <a href="http://wwww.odata.org">Open Data Protocol (OData)</a> standard to serialize the data and the <a href="http://oauth.net/">OAuth 2.0 Authorization Framework</a> protocol to provide secure authorization for accessing the published data stream.
 <div id="accordion1">
 <!--
   <h3>Subscription</h3>
@@ -441,7 +441,7 @@ standard to encapsulate Energy Usage Information.</p>
 <div id="accordion">
   <h3>UsagePoint</h3>
   <div>
-    <p>A <em>UsagePoint</em> is where a resource is measured. Typically, it is your Utility Smart Meter, but it could be the outlet on the wall as well. UsagePoints provide the reference for all meter readings that are contained within the Green Button data. As you can see below, UsagePoints have a <em>ServiceCategory</em> that says what <em>kind</em> of resource, such as electricity, gas, or water measurement is being reported. </p>
+    <p>A <em>UsagePoint</em> is where a resource is measured. Typically, it is your Utility Smart Meter, but it could be the outlet on the wall as well. UsagePoints provide the reference for all meter readings that are contained within the Green Button data. UsagePoints have a <em>ServiceCategory</em> that defines what <em>kind</em> of resource, such as electricity, gas, or water measurement is being reported. </p>
     <pre><code>&lt;entry&gt;
   &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
   &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
@@ -469,7 +469,7 @@ standard to encapsulate Energy Usage Information.</p>
   </div>
   <h3>ReadingType</h3>
   <div>
-    <p>A <em>ReadingType</em> provides detail as to the specifics of the reading data that is being obtained. Green Button follows international standards and has the ability to represent large industrial resources as well as those used in your home.</p>
+    <p>A <em>ReadingType</em> provides detail as to the specifics of the reading data that is being obtained. Green Button follows international standards and has the ability to represent large industrial resources as well as those used in a residence.</p>
     <pre><code>&lt;entry&gt;
   &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
   &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
@@ -508,7 +508,7 @@ standard to encapsulate Energy Usage Information.</p>
   </div>
   <h3>IntervalBlock</h3>
   <div>
-    <p><em>IntervalBlock</em>s are the primary data carrier within the Green Button data. As you can see below, IntervalBlocks may have one or more Intervals, each with a start and duration, as well as the specific <em>IntervalReading</em></p>
+    <p><em>IntervalBlock</em>s are the primary data carrier within the Green Button data. IntervalBlocks may have one or more Intervals, each with a start and duration, as well as the specific <em>IntervalReading</em></p>
 
     <pre><code>&lt;entry&gt;
   &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
@@ -633,7 +633,7 @@ standard to encapsulate Energy Usage Information.</p>
 <p>Green Button comes in two flavors:
 <dl>
 <dt>Download My Data</dt>
-<dd>A RetailCustomer may download an XML file directly from either a Data Custodian or a Third Party. Restfull interfaces are provided to enable this operation. There are no assumptions made with respect to what the RetailCustoemr might do with this XML file, although best practices would be to insure that the file viewable by using a minimal stylesheet.</dd>
+<dd>A RetailCustomer may download an XML file from either a Data Custodian or a Third Party. Restful interfaces are provided to enable this operation. There are no assumptions made with respect to what the RetailCustomer might do with this XML file, although best practices would be to insure the file is viewable by using a minimal stylesheet.</dd>
 <dt>Connect My Data</dt>
 <dd>The RetailCustomer may also authorize Green Button data to move between two machines, such as from their utility to a company that might use the data to estimate the energy efficiency of their facility. In this case, <em>Connect My Data</em> would be used to provide machine-2-machine data transfers. Connect My Data may provide a single transfer of information, or transfers on a predefined schedule.</dd>
 </dl>
