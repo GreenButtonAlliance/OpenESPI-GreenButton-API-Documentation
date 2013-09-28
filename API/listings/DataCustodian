@@ -382,50 +382,6 @@
 			]
     },
     {
-      "path": "/oauth/2_0/token",
-      "operations" : [
-        {	
-					"method": "POST",
-					"summary": "Third Party obtains access token using client_credentials grant type.",
-					"notes": "The HTTP header must contain the Authorization: Bearer {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
-					"responseClass" : "OAuth2 JSON structure",
-					"nickname" : "getAccessToken",
-					"parameters" : [
-						{	
-							"grant_type" : "client_credentials",
-							"summary" : "The OAuth2 client credentials grant type", 
-							"description" : "An OAuth2 defined grant type",
-							"required": true,
-							"allowMultiple": false,
-							"defaultValue" : "Bearer {DataCustodianAuthorizationString}",
-							"dataType": "String",
-							"paramType": "head"
-						}
-					],	    
-					"produces" : [
-						"application/json"
-					],
-					"responseMessage" : [
-						{	
-							"code" : 200,
-							"message" : "an OAuth2 Response Message",
-							"parameters" : [
-								{	
-									"access_token" : "A valid access_token",
-									"token_type" : "bearer",
-									"expires_in" : "Access Token Expiration Time"
-								}
-							]
-						},
-						{
-							"code" : 400,
-							"message" : "Service Not Available"
-						}
-					]
-				}
-			]
-    },
-    {
       "path": "/espi/1_1/resource/ReadServiceStatus",
       "operations" : [
         {	
