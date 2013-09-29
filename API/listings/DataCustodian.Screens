@@ -154,7 +154,7 @@
       [
         {
           "method": "POST",
-          "summary": "[ESPI] The Data Custodian Portal's supported Third Party Applications Screen.",
+          "summary": "[ESPI] The Data Custodian Portal's supported Third Party Applications Screen",
           "notes": "The requesting browser is to display a Retail Customer home Screen of the portal. It is assumed that this will contain a Select your Third Part for Green Button sharing as well as a Download My Data Green button page",
           "responseClass" : "text/html",
           "nickname" : "getPortalHome",

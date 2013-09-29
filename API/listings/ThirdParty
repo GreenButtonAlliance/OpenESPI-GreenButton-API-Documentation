@@ -4,16 +4,17 @@
   "basePath": "http://greenbuttondata.org/thirdparty",
   "resourcePath": "/resources",
   "produces": 
-	[
+  [
     "application/xml",
     "text/plain",
     "text/html"
   ],
-  "apis": [
+  "apis": 
+  [
     {
       "path": "/espi/1_1/OAuthCallBack",
       "operations" : 
-			[
+      [
         {
           "method": "GET",
           "summary": "OAuth 2.0 Authorization Code callback URI",
@@ -21,16 +22,16 @@
           "responseClass" : "text/html",
           "nickname" : "getAuthorizationCallback",
           "produces" : 
-					[
+          [
             "text/html",
-						"application/xhtml+xml",
-						"application/xml"
+            "application/xhtml+xml",
+            "application/xml"
           ],
           "responseMessages" : 
-					[
+          [
             { 
-					    "code" : 200,
-							"message" : "OK"
+              "code" : 200,
+              "message" : "OK"
             },
             {
               "code" : 404,
@@ -43,7 +44,7 @@
     {
       "path": "/espi/1_1/Notify_SubscriptionAvailable",
       "operations" : 
-			[
+      [
         {
           "method": "GET",
           "summary": "The URI used to notify the Third Party that a particular subscription is available for retrieval from the DataCustodian",
@@ -51,7 +52,7 @@
           "responseClass" : "text/html",
           "nickname" : "notifySubscription",
           "parameter" : 
-					[
+          [
             {
               "subscriptionURI" : "The Data Custodian URL to be used to retrieve the specific Subscription",
               "summary" : "The Third Party may use this URL to retrieve the specific subscription data",
@@ -63,11 +64,15 @@
             }
           ],
           "produces" : 
-					[
+          [
             "text/html"
           ],
           "responseMessages" : 
-					[
+          [
+            {
+              "code" : 200,
+							"message" : "OK"
+            },
             {
               "code" : 204,
               "message" : "Operation Completed, no data is returned"
