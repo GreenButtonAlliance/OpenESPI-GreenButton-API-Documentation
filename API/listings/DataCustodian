@@ -233,7 +233,7 @@
 		  "operations": [
 			  {
 			    "method": "GET",
-				  "summary": "Third Party Application obtains an authorization code.",
+				  "summary": "Third Party Application obtains an OAuth 2.0 authorization code.",
 				  "responseClass": "OAuth 2.0 Authorization Response",
 				  "nickname": "getAuthorizationCode",
 				  "Authorizations": {
@@ -342,7 +342,7 @@
       "operations" : [
         { 
 					"method": "POST",
-					"summary": "Third Party obtains access token using authorization_code grant type.",
+					"summary": "Third Party Application obtains an OAuth 2.0 access token.",
 					"notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
 					"responseClass" : "OAuth2 JSON structure",
 					"nickname" : "getAccessToken",

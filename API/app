@@ -1,6 +1,6 @@
 {
     "basePath": "http://localhost/rest",
-    "swaggerVersion": "1.1",
+    "swaggerVersion": "1.3",
     "apiVersion": "1.0",
     "resourcePath": "/app",
     "apis": [
