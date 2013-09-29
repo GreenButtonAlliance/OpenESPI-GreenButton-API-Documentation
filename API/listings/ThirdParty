@@ -3,7 +3,8 @@
   "swaggerVersion": "1.3",
   "basePath": "http://greenbuttondata.org/thirdparty",
   "resourcePath": "/resources",
-  "produces": [
+  "produces": 
+	[
     "application/xml",
     "text/plain",
     "text/html"
@@ -11,21 +12,25 @@
   "apis": [
     {
       "path": "/espi/1_1/OAuthCallBack",
-      "operations" : [
+      "operations" : 
+			[
         {
           "method": "GET",
           "summary": "OAuth 2.0 Authorization Code callback URI",
           "notes": "The DataCustodian uses this URI to return an OAuth 2.0 Authorization Code to the Third Party Application during the OAuth 2.0 Authorization Code flow process.",
           "responseClass" : "text/html",
           "nickname" : "getAuthorizationCallback",
-          "produces" : [
+          "produces" : 
+					[
             "text/html",
 						"application/xhtml+xml",
 						"application/xml"
           ],
-          "responseMessages" : [
+          "responseMessages" : 
+					[
             { 
-					    "code" : 200
+					    "code" : 200,
+							"message" : "OK"
             },
             {
               "code" : 404,
@@ -37,14 +42,16 @@
     },
     {
       "path": "/espi/1_1/Notify_SubscriptionAvailable",
-      "operations" : [
+      "operations" : 
+			[
         {
           "method": "GET",
           "summary": "The URI used to notify the Third Party that a particular subscription is available for retrieval from the DataCustodian",
           "notes": "The DataCustodian will use this to notify the Third Party of the availability of a subscription",
           "responseClass" : "text/html",
           "nickname" : "notifySubscription",
-          "parameter" : [
+          "parameter" : 
+					[
             {
               "subscriptionURI" : "The Data Custodian URL to be used to retrieve the specific Subscription",
               "summary" : "The Third Party may use this URL to retrieve the specific subscription data",
@@ -55,13 +62,15 @@
               "paramType": "query"
             }
           ],
-          "produces" : [
+          "produces" : 
+					[
             "text/html"
           ],
-          "responseMessages" : [
+          "responseMessages" : 
+					[
             {
               "code" : 204,
-              "Message" : "Operation Completed, no data is returned"
+              "message" : "Operation Completed, no data is returned"
             },
             {
               "code" : 404,
