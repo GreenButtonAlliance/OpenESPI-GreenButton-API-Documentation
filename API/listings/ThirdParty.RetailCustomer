@@ -83,6 +83,10 @@
           "responseMessages" : 
           [
             {
+						  "code" : 200,
+							"message" : "OK"
+						},
+						{
               "code" : 204,
               "message" : "Operation Completed with No response body"
             },
@@ -310,6 +314,10 @@
           "responseMessages" : 
           [
             {
+						  "code" : 200,
+							"message" : "OK"
+						},
+						{
               "code" : 204,
               "message" : "Action completed with no data returned"
             },
