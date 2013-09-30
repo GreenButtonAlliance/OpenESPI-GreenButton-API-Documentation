@@ -43,8 +43,8 @@
         },
         {
          "method": "POST",
-         "summary": "Adds a new Retail Customer to the ThirdParty",
-         "notes":  "Returns a feed representing the collection of all Retail Customers of the Data Custodian.",
+         "summary": "Adds a new Retail Customer to the Data Custodian",
+         "notes":  "Adds a new Data Custodian Retail Customer.",
          "responseClass" : "application/atom+xml",
          "nickname" : "getRetailCustomerCollection",
          "produces" : [
