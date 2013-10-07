@@ -273,6 +273,23 @@ to encapsulate Energy Usage Information.</p>
 <h3>Atom Wrappers</h3>
 <div>
 <p>OData works by placing data within the <em>&lt;entry&gt;</em> tags of the Atom stream. Data records are placed within the <em>&lt;content&gt;</em> tags, and relationships between tables are represented in the <em>&lg;link&gt;</em>tags. For example:</p>
+OData.org will provide you with part of the background you need. It describes the usage of the Atom entities, in particular <entry>, <link> and <contents>.The second thing to note is that an Atom <feed> <entry> .... <contents> <espi entity> </contents></entry></feed>.
+
+So all the espiDerived.xsd entities are always contained in a feed and the entry/contents describe the espi entity itself. In addtion, you need to construct (during the parse if possible for you:) the associations that need to exist between the espi entities. For example, the:
+<pre>
+  <link rel="self" href="...." />
+and
+ <link rel="related" href="...." />
+</pre>
+ <lin
+are quite important for use during fixup of the espi entities,  
+(making sure MeterReadings always point to a UsagePoint for example).
+So re: espi objects, you need to think of the feed as a collection of n <entry> ... </entry> entities, each of which you might use to create a espi entity. 
+
+hth
+
+jt
+
     <pre><code>
 &lt;feed xmlns="http://www.w3.org/2005/Atom"
          xsi:schemaLocation="http://naesb.org/espi espiDerived.xsd"
