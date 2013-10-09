@@ -326,46 +326,46 @@ jt
     
         <pre><code>
         ==========================================================================================
-    re: <link> ... </link>
+re: &lt;link&gt; ... &lt;/link&gt;
 
 that allows the relationships (of UsagePoint to MeterReading for example) to be represented in the XML. it is an alternative to the normal hierarchical structure in XML, such as:
 ===
-  <UsagePoint>
-       <link rel="self" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}" />
-       <MeterReading>
+  &lt;UsagePoint&gt;
+       &lt;link rel="self" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}" /&gt;
+       &lt;MeterReading&gt;
 
-            <IntervalBlock>
+            &lt;IntervalBlock&gt;
              ...
-            </IntervalBlock>
+            &lt;/IntervalBlock&gt;
       ...
-      </MeterReading>
+      &lt;/MeterReading&gt;
       ...
-  </UsagePoint>
+  &lt;/UsagePoint&gt;
 ===
-Rather, the odata representation uses the <link> tag to represent the relationships. so an equivalent representation would be:
+Rather, the odata representation uses the &lt;link&gt; tag to represent the relationships. so an equivalent representation would be:
 ===
-<entry>
-  <link rel="self" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}" />
-  <link rel="related" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}" />
-   <content>
-       <MeterReading>
+&lt;entry&gt;
+  &lt;link rel="self" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}" /&gt;
+  &lt;link rel="related" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}" /&gt;
+   &lt;content&gt;
+       &lt;MeterReading&gt;
         ...
      
-      </MeterReading>
-  </content>
-</entry>   
+      &lt;/MeterReading&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;   
      
-<entry>
+&lt;entry&gt;
  ...
-  <link rel="self"      
-          href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}/IntervalBlock/{IntervalBlockID}" />
-  <link rel="related" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}" />
-  <content>
-       <IntervalBlock>
+  &lt;link rel="self"      
+          href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}/IntervalBlock/{IntervalBlockID}" /&gt;
+  &lt;link rel="related" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}" /&gt;
+  &lt;content&gt;
+       &lt;IntervalBlock&gt;
          ...
-        </IntervalBlock>
-  </content>
-</entry>
+        &lt;/IntervalBlock&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
  ...
 
 ===
