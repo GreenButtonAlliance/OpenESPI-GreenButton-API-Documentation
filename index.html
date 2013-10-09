@@ -324,8 +324,17 @@ jt
  &lt;/feed&gt;
     </code></pre>
     
-        <pre><code>
-        ==========================================================================================
+
+  </div>
+  <h3>Relationships</h3>
+  <div>
+  <p>OData uses the atom <link> tag to reflect relationships within data. For example, if I have a data base table with a column that contains a index key to an additional table, then I would use the </p>&lt;link%gt; tag to represent that association.
+  </p><p>
+  This allows (normally hierarchic) XML representations to contain pointers. Additionally, OData uses the atom &lg;entry&gt; tag to represent the a data base row. The actual data table is generally refered to through the &lt;type&gt; entitiy or within the &lt;content&gt; tag. 
+  </p><p>
+  An atom <feed> is then the container that is used to contain these entries. 
+          <pre><code>
+==========================================================================================
 re: &lt;link&gt; ... &lt;/link&gt;
 
 that allows the relationships (of UsagePoint to MeterReading for example) to be represented in the XML. it is an alternative to the normal hierarchical structure in XML, such as:
@@ -370,10 +379,7 @@ Rather, the odata representation uses the &lt;link&gt; tag to represent the rela
 
 ===
     </code></pre>
-  </div>
-  <h3>Relationships</h3>
-  <div>
-  <p></p>
+    </p>
   </div>
   <h3>Atom Containers</h3>
   <div>
@@ -382,6 +388,11 @@ Rather, the odata representation uses the &lt;link&gt; tag to represent the rela
   <h3>feed</h3>
   <div>
   <p>description</p>
+  <p>The &lt;description&gt; is used to provide a human readable discription of the feed. An example might be:</p>
+  <pre><code>
+  &lt;description&gt;Bulk Transfer of Energy Usage Information: mm/dd/yyyy 02:22:03 ...&lt;/description&gt;
+  </code>
+  </pre>
   </div>
   <h3>id</h3>
   <div>
