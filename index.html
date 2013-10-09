@@ -323,6 +323,53 @@ jt
    &lt;/entry&gt;
  &lt;/feed&gt;
     </code></pre>
+    
+        <pre><code>
+        ==========================================================================================
+    re: <link> ... </link>
+
+that allows the relationships (of UsagePoint to MeterReading for example) to be represented in the XML. it is an alternative to the normal hierarchical structure in XML, such as:
+===
+  <UsagePoint>
+       <link rel="self" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}" />
+       <MeterReading>
+
+            <IntervalBlock>
+             ...
+            </IntervalBlock>
+      ...
+      </MeterReading>
+      ...
+  </UsagePoint>
+===
+Rather, the odata representation uses the <link> tag to represent the relationships. so an equivalent representation would be:
+===
+<entry>
+  <link rel="self" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}" />
+  <link rel="related" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}" />
+   <content>
+       <MeterReading>
+        ...
+     
+      </MeterReading>
+  </content>
+</entry>   
+     
+<entry>
+ ...
+  <link rel="self"      
+          href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}/IntervalBlock/{IntervalBlockID}" />
+  <link rel="related" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}" />
+  <content>
+       <IntervalBlock>
+         ...
+        </IntervalBlock>
+  </content>
+</entry>
+ ...
+
+===
+    </code></pre>
   </div>
   <h3>Relationships</h3>
   <div>
