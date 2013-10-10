@@ -229,7 +229,7 @@
         }
       ]
     },
-		{ "path": "/oauth/2_0/authorize",
+		{ "path": "/oauth/authorize",
 		  "operations": [
 			  {
 			    "method": "GET",
@@ -338,7 +338,7 @@
 			  }
 			]
 		},
-    { "path": "/oauth/2_0/token",
+    { "path": "/oauth/token",
       "operations" : [
         { 
 					"method": "POST",
