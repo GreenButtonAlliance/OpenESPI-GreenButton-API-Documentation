@@ -120,5 +120,5 @@
   "basePath": "http://localhost:8000",
   "models": null,
   "resourcePath": "/samplehub/sample/insert",
-  "swaggerVersion": "1.1"
+  "swaggerVersion": "1.3"
 }
