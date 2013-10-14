@@ -1,7 +1,7 @@
 {
   "apiVersion": "1.0",
   "swaggerVersion": "1.3",
-  "basePath": "http://greenbuttondata.org/datacustodian",
+  "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/usagepoint",
   "produces": [
     "application/xml",

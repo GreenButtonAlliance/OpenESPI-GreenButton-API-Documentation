@@ -1,7 +1,7 @@
 {
   "apiVersion": "1.0.0",
   "swaggerVersion": "1.3",
-  "basePath": "http://greenbuttondata.org/datacustodian",
+  "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/",
   "produces":
   [
@@ -30,7 +30,7 @@
               "description": "A URI to be used in the OAuth 2.0 authorization code flow sequence. This MUST be an absolute URI as defined by [RFC3986] Section 4.3.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://greenbuttondata.org/thirdparty/OAuthCallBack",
+              "defaultValue": "http://54.200.90.158:8080/ThirdParty/OAuthCallBack",
               "dataType": "string"
             },
             {
@@ -48,7 +48,7 @@
               "description" : "A URI that points to the homepage of the Third Party Application.  The value of this field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://greenbuttondata.org/thirdparty/home",
+              "defaultValue": "http://54.200.90.158:8080/ThirdParty/home",
               "dataType": "string"
             },
             {
@@ -57,7 +57,7 @@
               "description" : "A URI that points to a logo for the Third Party Application.  The value of this field MUST point to a valid image file.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://greenbuttondata.org/thirdparty/image.jpg",
+              "defaultValue": "http://54.200.90.158:8080/ThirdParty/image.jpg",
               "dataType": "string"
             },
             {
@@ -78,7 +78,7 @@
               "description" : "A URI that points to a human-readable Terms of Service document for the Third Party Application.  The Terms of Service usually describes a contractual relationship between the Retail Customer and the Third Party Application that the Retail Customer accepts when authorizing access to the Third Party Application.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://greenbuttondata.org/thirdparty/TermsOfService",
+              "defaultValue": "http://54.200.90.158:8080/ThirdParty/TermsOfService",
               "dataType": "string"
             },
             {
@@ -87,7 +87,7 @@
               "description": "A URI that points to a human-readable Policy document for the Third Party Application.  The policy usually describes how a Retail Customer's energy usage information will be used by the Third Party Application.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://greenbuttondata.org/thirdparty/UsagePolicy",
+              "defaultValue": "http://54.200.90.158:8080/ThirdParty/UsagePolicy",
               "dataType": "string"
             },
             {
@@ -207,7 +207,7 @@
               "description": "** ESPI ** -- The default endpoint for Third Party notification of Batch data availability that is then requested from the Data Custodian via the Batch resource.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue" : "https://www.greenbuttondata.org/thirdparty/Notify_SubscriptionAvailable",
+              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/Notify_SubscriptionAvailable",
               "dataType": "string"
             }
           ],
@@ -271,7 +271,7 @@
               "description": "A Third Party Application URI used to return the OAuth 2.0 authorization code.  This MUST be the same URI the Third Party supplied during the registration process (metadata field \"redirect-uris\".",
               "required": true,
               "allowMultiple": false,
-              "defaultValue" : "http://greenbuttondata.org/thirdparty/OAuthCallBack",
+              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/OAuthCallBack",
               "dataType": "string"
             },
             {
@@ -398,7 +398,7 @@
               "description": "The redirect_uri parameter supplied in the authorization request. Their values MUST be identical.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://greenbuttondata.org/thirdparty/OAuthCallBack",
+              "defaultValue": "http://54.200.90.158:8080/ThirdParty/OAuthCallBack",
               "dataType": "string",
               "paramType": "header"
             }
