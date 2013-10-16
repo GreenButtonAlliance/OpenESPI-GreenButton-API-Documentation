@@ -32,15 +32,6 @@
           "parameters": 
           [
             {
-              "name": "Authorization",
-              "description": "Access Token",
-              "defaultValue": "Basic {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
-            {
               "name": "Accept",
               "description": "Accept type for the Request",
               "defaultValue": "application/atom+xml",
@@ -78,15 +69,6 @@
           ],
           "parameters": 
           [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "defaultValue": "Basic {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "Accept",
               "description": "Accept type for the Request",
@@ -140,15 +122,6 @@
           "parameters": 
           [
             {
-              "name": "Authorization",
-              "description": "Access Token",
-              "defaultValue": "Basic {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
-            {
               "name": "Accept",
               "description": "Accept type for the Request",
               "defaultValue": "application/atom+xml",
@@ -197,15 +170,6 @@
           ],
           "parameters": 
           [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "defaultValue": "Basic {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "Accept",
               "description": "Accept type for the Request",
@@ -269,15 +233,6 @@
           ],
           "parameters": 
           [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "defaultValue": "Basic {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "Accept",
               "description": "Accept type for the Request",

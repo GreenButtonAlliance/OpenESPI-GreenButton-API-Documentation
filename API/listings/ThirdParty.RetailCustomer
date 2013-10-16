@@ -27,15 +27,6 @@
           ],
           "parameters": 
           [
-            {
-              "name": "client_token",
-              "description": "The Third Party's access token",
-              "defaultValue": "Bearer {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "head"
-            }
           ],
           "responseMessages" : 
           [
@@ -61,15 +52,6 @@
           ],
           "parameters": 
           [
-            {
-              "name": "client_token",
-              "description": "The ThirdParty's client access token",
-              "defaultValue": "Bearer {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "head"
-            },
             {
               "name": "RetailCustomerURIs",
               "description": "The ThirdParty's client access token",
@@ -205,16 +187,7 @@
             "text/html"
           ],
           "parameters": 
-          [
-            {
-              "name": "client_token",
-              "description": "The ThirdParty's client access token",
-              "defaultValue": "Bearer {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "head"
-            },					
+          [			
             {
               "name": "RetailCustomerID",
               "description": "The ThirdParty's RetailCustomerID",
@@ -250,15 +223,6 @@
           "parameters": 
           [
             {
-              "name": "client_token",
-              "description": "The ThirdParty's client access token",
-              "defaultValue": "Bearer {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "head"
-            },
-            {
               "name": "RetailCustomerID",
               "description": "The DataCustodian's RetailCustomerID",
               "defaultValue": "",
@@ -292,15 +256,6 @@
           ],
           "parameters": 
           [
-            {
-              "name": "client_token",
-              "description": "The ThirdParty's client access token",
-              "defaultValue": "Bearer {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "head"
-            },
             {
               "name": "RetailCustomerID",
               "description": "The DataCustodian's RetailCustomerID",

@@ -21,11 +21,11 @@
           "produces": [
             "application/atom+xml"
           ],
-	  "parameters" : [
+      "parameters" : [
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -34,7 +34,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -58,7 +58,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -67,7 +67,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -110,7 +110,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -119,7 +119,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -219,7 +219,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -228,7 +228,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -268,7 +268,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -277,7 +277,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -320,83 +320,6 @@
         }
       }
     },
-    "UsagePoint": {
-      "id": "UsagePoint",
-      "description": "A pet is a person's best friend",
-      "required": [
-        "name",
-        "id"
-      ],
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "MeterReadings": {
-          "type": "list",
-          "items": {
-            "$ref": "MeterReading"
-          }
-        },
-        "ReadingType": {
-          "type": "array",
-          "items": {
-            "$ref": "ReadingType"
-          }
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "status": {
-          "type": "string",
-          "description": "pet status in the store",
-          "enum": [
-            "available",
-            "pending",
-            "sold"
-          ]
-        },
-        "MeterReadingCollection": {
-          "$ref": "MeterReading"
-        }
-      }
-    },
-    "MeterReading": {
-      "id": "MeterReading",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ApplicationInformation": {
-      "id": "ApplicationInformation",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "Subscription": {
-      "id": "Subscription",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
     "ReadingType": {
       "id": "ReadingType",
       "properties": {
@@ -408,55 +331,6 @@
           "format": "int64"
         }
       }
-    },
-    "IntervalBlock": {
-      "id": "IntervalBlock",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "LocalTime": {
-      "id": "LocalTime",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
     }
-
   }
 }

@@ -28,7 +28,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -37,7 +37,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -91,7 +91,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -100,7 +100,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -159,7 +159,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -168,7 +168,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -282,7 +282,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -291,7 +291,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -355,7 +355,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -364,7 +364,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -423,7 +423,6 @@
     },
     "UsagePoint": {
       "id": "UsagePoint",
-      "description": "A pet is a person's best friend",
       "required": [
         "name",
         "id"

@@ -28,7 +28,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -37,7 +37,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -81,7 +81,19 @@
           "notes": "The New Interval Block will be added",
           "responseClass": "void",
           "nickname": "addIntervalBlock",
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+              "defaultValue": "Bearer {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },					
 	    {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
@@ -136,9 +148,6 @@
           "produces": [
             "application/xml"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
           "produces": [
             "application/atom+xml"
           ],
@@ -149,7 +158,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -158,7 +167,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -270,7 +279,19 @@
           "notes": "The Interval Block must exist",
           "responseClass": "void",
           "nickname": "updateIntervalBlock",
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+              "defaultValue": "Bearer {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
             {
               "name": "IntervalBlock",
               "description": "A Interval Block object that needs to be updated",
@@ -301,7 +322,19 @@
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteIntervalBlock",
+          "authorizations": [
+            "oauth2"
+          ],
           "parameters": [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+              "defaultValue": "Bearer {access_token}",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "header"
+            },
             {
               "name": "IntervalBlockID",
               "description": "Interval Block id to delete",
@@ -337,7 +370,6 @@
     },
     "UsagePoint": {
       "id": "UsagePoint",
-      "description": "A pet is a person's best friend",
       "required": [
         "name",
         "id"
@@ -388,30 +420,6 @@
         }
       }
     },
-    "ApplicationInformation": {
-      "id": "ApplicationInformation",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "Subscription": {
-      "id": "Subscription",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
     "ReadingType": {
       "id": "ReadingType",
       "properties": {
@@ -435,43 +443,6 @@
           "format": "int64"
         }
       }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "LocalTime": {
-      "id": "LocalTime",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
     }
-
   }
 }

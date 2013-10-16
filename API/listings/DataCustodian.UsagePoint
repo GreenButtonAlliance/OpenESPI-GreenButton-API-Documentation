@@ -28,7 +28,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -37,7 +37,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -77,7 +77,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -86,7 +86,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -129,7 +129,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -138,7 +138,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -249,7 +249,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -258,7 +258,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -321,7 +321,7 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-	      "defaultValue": "Basic {access_token}",
+              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -330,7 +330,7 @@
             {
               "name": "Accept",
               "description": "Accept type for the Request",
-	      "defaultValue": "application/atom+xml",
+              "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -445,7 +445,6 @@
         }
       }
     },
-
     "MeterReadingURL" : {
       "id" : "MeterReadingURL",
       "description" : "the Resource Locator of a Specific Meter Reading",
@@ -453,7 +452,6 @@
         "resourceURL" : "String"
       }
     },
-
     "MeterReadings" : {
       "id": "MeterReadings",
       "description": "A List of Meter Readings", 
@@ -466,31 +464,6 @@
          }
        }
     },
-       
-    "ApplicationInformation": {
-      "id": "ApplicationInformation",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "Subscription": {
-      "id": "Subscription",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
     "ReadingType": {
       "id": "ReadingType",
       "properties": {
@@ -502,55 +475,6 @@
           "format": "int64"
         }
       }
-    },
-    "IntervalBlock": {
-      "id": "IntervalBlock",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "LocalTime": {
-      "id": "LocalTime",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
     }
-
   }
 }
