@@ -17,7 +17,7 @@
       [
         {
           "method": "GET",
-          "summary": "Finds all Authorizations",
+          "summary": "[ESPI] Find all Third Party Authorizations",
           "notes": "An XML representation of all Authorizations will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
@@ -55,7 +55,7 @@
         },
         {
           "method": "POST",
-          "summary": "Add a new Authorization to the Third Party",
+          "summary": "Create a new Third Party Authorization",
           "notes": "The New Authorization will be added",
           "responseClass": "void",
           "nickname": "addAuthorization",
@@ -80,7 +80,7 @@
             },
             {
               "name": "AuthorizationURIs",
-              "description": "0 or more Authorizations that need to be added to the Authorization",
+              "description": "0 or more Authorizations that need to be created",
               "required": false,
               "allowMultiple": true,
               "dataType": "Authorization",
@@ -107,7 +107,7 @@
       [
         {
           "method": "GET",
-          "summary": "Retrieve an Authorization Using its ID",
+          "summary": "[ESPI] Retrieve a Third Party Authorization Using its ID",
           "notes": "Returns an Authorization",
           "responseClass": "Authorization",
           "nickname": "getAuthorization",
@@ -157,7 +157,7 @@
         },
         {
           "method": "PUT",
-          "summary": "Update an existing Authorization within the ThirdParty",
+          "summary": "Update an existing Third Party Authorization",
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
           "produces": 
@@ -219,7 +219,7 @@
         },
         {
           "method": "DELETE",
-          "summary": "Delete an Authorization",
+          "summary": "Delete an existing Third Party Authorization",
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteAuthorization",

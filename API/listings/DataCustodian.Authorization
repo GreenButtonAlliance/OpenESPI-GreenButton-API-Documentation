@@ -14,7 +14,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "[ESPI] Finds all Authorizations",
+          "summary": "[ESPI] Find  all Data Custodian Authorizations",
           "notes": "An XML representation of all Authorizations will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
@@ -53,7 +53,7 @@
 	      },
         {
           "method": "POST",
-          "summary": "Add a new Authorization to the Data Custodian",
+          "summary": "Create a new Data Custodian Authorization",
           "notes": "The New Authorization will be added",
           "responseClass": "void",
           "nickname": "addAuthorization",
@@ -84,7 +84,7 @@
             },
             {
               "name": "AuthorizationURLs",
-              "description": "0 or more Authorizations that need to be added to the Authorization",
+              "description": "0 or more Authorizations that need to be created",
               "required": false,
               "allowMultiple": true,
               "dataType": "Authorization",
@@ -105,7 +105,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "[ESPI] Retrieve a Authorization Using it's ID",
+          "summary": "[ESPI] Retrieve a Data Custodian Authorization Using it's ID",
           "notes": "Returns a Authorization",
           "responseClass": "Authorization",
           "nickname": "getAuthorization",
@@ -220,7 +220,7 @@
         },
         {
           "method": "PUT",
-          "summary": "Update an existing Authorization within the DataCustodian",
+          "summary": "Update an existing Data Custodian Authorization",
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
           "produces": [
@@ -284,7 +284,7 @@
 	},
         {
           "method": "DELETE",
-          "summary": "Deletes a Authorization",
+          "summary": "Delete an existing Data Custodian Authorization",
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteAuthorization",
