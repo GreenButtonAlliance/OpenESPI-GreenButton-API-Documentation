@@ -46,7 +46,7 @@
       "operations" : 
       [
         {
-          "method": "GET",
+          "method": "POST",
           "summary": "The URI used to notify the Third Party that a particular subscription is available for retrieval from the DataCustodian",
           "notes": "The DataCustodian will use this to notify the Third Party of the availability of a subscription",
           "responseClass" : "text/html",
@@ -54,13 +54,13 @@
           "parameter" : 
           [
             {
-              "subscriptionURI" : "The Data Custodian URL to be used to retrieve the specific Subscription",
-              "summary" : "The Third Party may use this URL to retrieve the specific subscription data",
-              "description" : "A URI that will be called via HTTP GET when the Data Custodian has a new delivery of usage information available.",
+              "<BatchList>" : "The Data Custodian URL to be used to retrieve the specific list of available resources",
+              "<Resource>" : "The Third Party may use this URL to retrieve the specific subscription data",
+              "description" : "A <BatchList> <Resource>{URL}</Resource> ... </Batchlistdd representation of that will be called via HTTP GET when the Data Custodian has a new delivery of usage information available.",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
-              "paramType": "query"
+              "paramType": "postdata"
             }
           ],
           "produces" : 
