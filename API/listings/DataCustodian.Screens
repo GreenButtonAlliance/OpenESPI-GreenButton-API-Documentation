@@ -109,46 +109,6 @@
       ]
     },
     {
-      "path": "RetailCustomer/{RetailCustomerID}/ApproveAuthorization",
-      "operations" : 
-      [
-        {
-          "method": "GET",
-          "summary": "[ESPI] The DataCustodian Screen that provides for the user approval of a Third Party's access to their EUI data",
-          "notes": "This is only executed upon successful negotiation of the OAuth 2.0 SCOPE parameter.",
-          "responseClass" : "text/html",
-          "nickname" : "approveAuthorization",
-          "produces" : 
-          [
-            "text/html"
-          ],
-          "parameters": 
-          [
-            {
-              "name": "RetailCustomerID",
-              "description": "The DataCustodian's RetailCustomerID",
-              "defaultValue": "",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages" : 
-          [
-            {
-              "code" : 200,
-							"message" : "OK"
-            },
-            {
-              "code" : 404,
-              "message" : "Service Not Available"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "path": "RetailCustomer/{RetailCustomerID}/ThirdPartyList",
       "operations" : 
       [
