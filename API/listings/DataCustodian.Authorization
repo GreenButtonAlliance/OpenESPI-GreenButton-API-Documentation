@@ -50,54 +50,7 @@
               "message": "There are no Authorizations"
             }
           ]
-	      },
-        {
-          "method": "POST",
-          "summary": "Create a new Data Custodian Authorization",
-          "notes": "The New Authorization will be added",
-          "responseClass": "void",
-          "nickname": "addAuthorization",
-          "produces": [
-            "application/xml+atom"
-          ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "defaultValue": "Bearer {access_token}",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
-            {
-              "name": "AuthorizationURLs",
-              "description": "0 or more Authorizations that need to be created",
-              "required": false,
-              "allowMultiple": true,
-              "dataType": "Authorization",
-              "paramType": "form"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 405,
-              "message": "Invalid input"
-            }
-          ]
-        }
+	      }
       ]
     },
     {
@@ -189,7 +142,7 @@
             },
 	    {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transfered as the first entry of this request.",
+              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of this request.",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
@@ -198,7 +151,7 @@
             },
 	    {
               "name": "depth",
-              "description": "The maximum number of entries to be transfered in the response to this request",
+              "description": "The maximum number of entries to be transferred in the response to this request",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -250,7 +203,7 @@
             },
             {
               "name": "AuthorizationID",
-              "description": "A Authorization object that needs to be updated",
+              "description": "An Authorization object that needs to be updated",
               "required": true,
               "allowMultiple": false,
               "dataType": "Authorization",

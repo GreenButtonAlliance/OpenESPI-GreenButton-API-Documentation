@@ -52,52 +52,6 @@
               "message": "There are no Authorizations"
             }
           ]
-        },
-        {
-          "method": "POST",
-          "summary": "Create a new Third Party Authorization",
-          "notes": "The New Authorization will be added",
-          "responseClass": "void",
-          "nickname": "addAuthorization",
-          "produces": 
-          [
-            "application/xml+atom"
-          ],
-          "authorizations": 
-          [
-            "oauth2"
-          ],
-          "parameters": 
-          [
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
-            {
-              "name": "AuthorizationURIs",
-              "description": "0 or more Authorizations that need to be created",
-              "required": false,
-              "allowMultiple": true,
-              "dataType": "Authorization",
-              "paramType": "form"
-            }
-          ],
-          "responseMessages": 
-          [
-            {
-              "code" : 200,
-              "message" : "OK"
-            },
-            {
-              "code": 405,
-              "message": "Invalid input"
-            }
-          ]
         }
       ]
     },
@@ -181,7 +135,7 @@
             },
             {
               "name": "AuthorizationID",
-              "description": "A Authorization object that needs to be updated",
+              "description": "An Authorization object that needs to be updated",
               "required": true,
               "allowMultiple": false,
               "dataType": "Authorization",
