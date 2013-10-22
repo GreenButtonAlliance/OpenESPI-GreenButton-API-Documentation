@@ -335,51 +335,6 @@
               "dataType": "string"
             }
           ],
-          "requestHeader":
-          [
-            {
-              "type": "object",
-              "properties":
-              {
-                "paramType":
-                {
-                  "type": "string"
-                },
-                "paras":
-                {
-                  "type": "array",
-                  "items":
-                  {
-                    "type": "object",
-                    "properties":
-                    {
-                      "name":
-                      {
-                        "type": "string"
-                      },
-                      "required":
-                      {
-                        "type": "boolean",
-                        "required": true
-                      },
-                      "description":
-                      {
-                        "type": "string"
-                      },
-                      "type":
-                      {
-                        "type": "string"
-                      },
-                      "linkType":
-                      {
-                        "type": "string"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          ],
           "produces":
           [
             "text/html",
@@ -419,6 +374,15 @@
           },
           "parameters":
           [
+            {
+						  "name": "Authorization",
+							"description": "The Third Party's Data Custodian assigned Authorization Code.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+							"defaultValue": "Basic {authorization_code}",
+              "paramType": "header"
+            },							
             {
               "name": "grant_type",
               "description": "OAuth 2.0 grant type.  Value MUST be set to authorization_code.",
@@ -493,6 +457,15 @@
           "parameters":
           [
             {
+						  "name": "Authorization",
+							"description": "The Third Party's Data Custodian assigned Authorization Code.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+							"defaultValue": "Basic {authorization_code}",
+              "paramType": "header"
+            },					
+            {
               "name" : "grant_type",
               "description" : "OAuth 2.0 grant type.  Value MUST be set to client_credentials.",
               "required": true,
@@ -555,6 +528,15 @@
           },
           "parameters":
           [
+            {
+						  "name": "Authorization",
+							"description": "The Third Party's Data Custodian assigned Authorization Code.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+							"defaultValue": "Basic {authorization_code}",
+              "paramType": "header"
+            },					
             {
               "name": "grant_type",
               "description": "OAuth 2.0 grant type.  Value MUST be set to refresh_token.",
