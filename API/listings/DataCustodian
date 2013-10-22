@@ -26,7 +26,7 @@
           [
             {
               "paramType": "form",
-              "name": "redirect_uris",
+              "name": "redirect_uri",
               "description": "A URI to be used in the OAuth 2.0 authorization code flow sequence. This MUST be an absolute URI as defined by [RFC3986] Section 4.3.",
               "required": true,
               "allowMultiple": false,
@@ -161,7 +161,7 @@
             },
             {
               "paramType": "form",
-              "name": "application_description",
+              "name": "third_party_application_description",
               "description": "** ESPI ** -- A description of the application.",
               "required": true,
               "allowMultiple": false,
@@ -169,7 +169,7 @@
             },
             {
               "paramType": "form",
-              "name": "application_type",
+              "name": "third_party_application_type",
               "description": "** ESPI ** -- A code indicating the type of Third Party Application.  The defined values are: [\"1 - Web Application\", \"2 - Desktop Application\", \"3 - Mobile Application\"].",
               "required": true,
               "allowMultiple": false,
@@ -183,7 +183,7 @@
             },
             {
               "paramType": "form",
-              "name": "application_use",
+              "name": "third_party_application_use",
               "description": "** ESPI ** -- A code indicating the expected use of the Third Party Application.  The defined values are: [\"1 - Energy Management\", \"2 - Comparisons\", \"3 - Government\", \"4 - Academic\", \"5 - Law Enforcement\"].",
               "required": true,
               "allowMultiple": false,
@@ -203,13 +203,57 @@
             },
             {
               "paramType": "form",
+              "name": "third_party_phone",
+              "description": "** ESPI ** -- The phone number of the Third Party organization to which access will be granted. (For debugging -- not to be shared with customers).",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string"
+            },						
+            {
+              "paramType": "form",
               "name": "third_party_notify_uri",
               "description": "** ESPI ** -- The default endpoint for Third Party notification of Batch data availability that is then requested from the Data Custodian via the Batch resource.",
               "required": true,
               "allowMultiple": false,
               "defaultValue" : "http://54.200.90.158:8080/ThirdParty/Notify_SubscriptionAvailable",
               "dataType": "string"
-            }
+            },
+            {
+              "paramType": "form",
+              "name": "third_party_data_custodian_selection_screen_uri",
+              "description": "** ESPI ** -- URL of Third Party's supported Data Custodian Selection web page.  The field MUST be a valid web page.",
+              "required": true,
+              "allowMultiple": false,
+              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/RetailCustomer/{RetailCustomerID}/DataCustodianList",
+              "dataType": "string"
+            },
+            {
+              "paramType": "form",
+              "name": "third_party_login_screen_uri",
+              "description": "** ESPI ** -- URL of the Login Screen used by the Third Party to authenticate the identity of the Retail Customer.  The field MUST be a valid web page.",
+              "required": true,
+              "allowMultiple": false,
+              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/login",
+              "dataType": "string"
+            },
+            {
+              "paramType": "form",
+              "name": "third_party_scope_selection_screen_uri",
+              "description": "** ESPI ** -- URL of the Scope Selection Screen used by the Retail Customer to select the characteristics of the Green Button data to be shared with the ThirdParty.  The field MUST be a valid web page.",
+              "required": true,
+              "allowMultiple": false,
+              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/RetailCustomer/{RetailCustomerID}/ScopeSelection",
+              "dataType": "string"
+            },
+            {
+              "paramType": "form",
+              "name": "third_party_user_portal_screen_uri",
+              "description": "** ESPI ** -- URL of a Third Party's web page the Retail Customer user-agent is returned to after authorizing the Third Party access to the Retail Customer's energy usage information (EUI).  The field MUST be a valid web page.",
+              "required": true,
+              "allowMultiple": false,
+              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/RetailCustomer/{RetailCustomerID}/home",
+              "dataType": "string"
+            }						
           ],
           "produces" :
           [
@@ -730,7 +774,7 @@
           "required": true,
           "type":"string"
         },
-        "redirect_uris":
+        "redirect_uri":
         {
           "required": true,
           "type":"string"
@@ -811,36 +855,121 @@
           "type":"string",
           "description": "OAuth 2.0 software_version"
         },
-        "application_description":
+        "third_party_application_description":
         {
           "required": true,
           "type":"string"
         },
-        "application_type":
+        "third_party_application_type":
         {
           "required": true,
           "type":"string",
-          "description": "ESPI application type",
+          "description": "** ESPI ** -- application type",
           "enum":["1 - Web Application","2 -  Desktop Application","3 - Mobile Application"]
         },
-        "application_use":
+        "third_party_application_use":
         {
           "required": true,
           "type":"string",
-          "description": "ESPI application use",
+          "description": "** ESPI ** -- application use",
           "enum":["1 - Energy Management","2 - Comparisons","3 - Government","4 - Academic","5 - Law Enforcement"]
         },
         "third_party_application_status": {
           "required": true,
-          "description": "ESPI Third Party application status",
+          "description": "** ESPI ** -- Third Party application status",
           "type":"string",
           "enum":["1 - Development","2 - Review/Test","3 - Production (Live)","4 - Retired (Remove)"]
         },
+        "third_party_phone": {
+          "required": true,
+          "description": "** ESPI ** -- Third Party organization's phone number",
+          "type":"string"
+        },				
         "third_party_notify_uri":
         {
           "required": true,
+          "description": "** ESPI ** -- Third Party application's notification URI",
           "type":"string"
-        }
+        },
+				
+        "third_party_data_custodian_selection_screen_uri":
+        {
+          "required": true,
+          "description": "** ESPI ** -- URL of Third Party's supported Data Custodian Selection web page.  The field MUST be a valid web page.",
+          "type":"string"
+        },
+        "third_party_login_screen_uri":
+        {
+          "required": true,
+          "description": "** ESPI ** -- URL of the Login Screen used by the Third Party to authenticate the identity of the Retail Customer.  The field MUST be a valid web page.",
+          "type":"string"
+        },
+        "third_party_scope_selection_screen_uri":
+        {
+          "required": true,
+          "description": "** ESPI ** -- URL of the Scope Selection Screen used by the Retail Customer to select the characteristics of the Green Button data to be shared with the ThirdParty.  The field MUST be a valid web page.",
+          "type":"string"
+        },
+        "third_party_user_portal_screen_uri":
+        {
+          "required": true,
+          "description": "** ESPI ** -- URL of a Third Party's web page the Retail Customer user-agent is returned to after authorizing the Third Party access to the Retail Customer's energy usage information (EUI).  The field MUST be a valid web page.",
+          "type":"string"
+        },					
+        "authorization_server_uri":
+        {
+          "required": true,
+          "description": "OAuth 2.0 -- The URI of the server issuing access tokens to the Third Party after successfully authenticating the Retail Customer and obtaining their authorization.",
+          "type":"string"
+        },
+        "authorization_server_authorization_endpoint":
+        {
+          "required": true,
+          "description": "OAuth 2.0 -- The URL used by the Third Party to obtain authorization from the Retail Customer via user-agent redirection.",
+          "type":"string"
+        },
+        "authorization_server_registration_endpoint":
+        {
+          "required": true,
+          "description": "** ESPI ** -- The URL used by the Third Party to register an application with the Data Custodian.",
+          "type":"string"
+        },
+        "data_custodian_batch_uri":
+        {
+          "required": true,
+          "description": "** ESPI ** -- The URL of the Data Custodian's Batch Request endpoint. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
+          "type":"string"
+        },
+        "data_custodian_bulk_uri":
+        {
+          "required": true,
+          "description": "** ESPI ** -- The URL of the Data Custodian's Bulk Request endpoint. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
+          "type":"string"
+        },
+        "data_custodian_subscription_uri":
+        {
+          "required": true,
+          "description": "** ESPI ** -- The URL of the Data Custodian's Subscription Request endpoint. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
+          "type":"string"
+        },
+        "data_custodian_application_status": {
+          "required": true,
+          "description": "** ESPI ** -- A code indicating the current status of the application.  The value is provided by the Data Custodian and cannot be modified by the Third Party.",
+          "type":"string",
+          "enum":["1 - Review","2 - Production (Live)","3 - On hold","4 - Revoked"]
+        },
+        "data_custodian_third_party_selection_screen_uri":
+        {
+          "required": true,
+          "description": "** ESPI ** -- The URL of the Data Custodian's Third Party Selection web page. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
+          "type":"string"
+        },
+        "data_custodian_resource_endpoint":
+        {
+          "required": true,
+          "description": "** ESPI ** -- The URL of the Data Custodian's Resource endpoint. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
+          "type":"string"
+        }			
       },
       "id": "Registration Information Response"
     },
