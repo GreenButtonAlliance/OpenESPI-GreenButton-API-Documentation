@@ -1,35 +1,29 @@
 {
-  "apiVersion": "1.0",
+  "apiVersion": "1.0.0",
   "swaggerVersion": "1.3",
   "basePath": "http://54.200.90.158:8080/ThirdParty",
   "resourcePath": "/",
-  "produces": 
-  [
+  "produces":[
     "application/xml",
     "text/plain",
     "text/html"
   ],
-  "apis": 
-  [
+  "apis":[
     {
       "path": "/espi/1_1/resource/RetailCustomer",
-      "operations" : 
-      [
+      "operations":[
         {
           "method": "GET",
           "summary": "Returns a feed representing the collection of all Retail Customers of the Third Party.",
           "notes":  "Returns a feed representing the collection of all Retail Customers of the Third Party.",
           "responseClass" : "application/atom+xml",
-          "nickname" : "getRetailCustomerCollection",
-          "produces" : 
-          [
+          "nickname": "getRetailCustomerCollection",
+          "produces":[
             "text/html"
           ],
-          "parameters": 
-          [
+          "parameters":[
           ],
-          "responseMessages" : 
-          [
+          "responseMessages":[
             {
               "code" : 200,
 							"message" : "OK"
@@ -45,13 +39,11 @@
           "summary": "Adds a new Retail Customer to the ThirdParty",
           "notes":  "Returns a feed representing the collection of all Retail Customers of the Third Party.",
           "responseClass" : "application/atom+xml",
-          "nickname" : "getRetailCustomerCollection",
-          "produces" : 
-          [
+          "nickname": "getRetailCustomerCollection",
+          "produces":[
             "text/html"
           ],
-          "parameters": 
-          [
+          "parameters":[
             {
               "name": "RetailCustomerURIs",
               "description": "The ThirdParty's client access token",
@@ -62,8 +54,7 @@
               "paramType": "query"
             }
           ],
-          "responseMessages" : 
-          [
+          "responseMessages":[
             {
 						  "code" : 200,
 							"message" : "OK"
@@ -82,15 +73,13 @@
     },
     {
       "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/DownloadMyData",
-      "operations": 
-      [
+      "operations":[
         {
           "method": "GET",
           "summary": "Allows a Green Button DownloadMyData .xml file to be downloaded to the retail customer",
           "responseClass": "application/atom+xml",
           "nickname": "downloadMyData",
-          "parameters": 
-          [
+          "parameters":[
             {
               "name": "Content-Disposition",
               "description": "Controling the browser actions on receipt of the file",
@@ -109,15 +98,13 @@
               "paramType": "path"
             }
           ],
-          "produces": 
-          [
+          "produces":[
             "text/html"
           ],
-          "responseMessages": 
-          [
+          "responseMessages":[
             {
               "code": 200,
-					  	"message" : "OK"
+              "message" : "OK"
             },
             {
               "code": 404,
@@ -129,14 +116,12 @@
     },
     {
       "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UploadMyData",
-      "operations": 
-      [
+      "operations":[
         {
           "method": "PUT",
           "summary": "Allows a Green Button XML file to be uploaded by the retail customer",
           "nickname": "uploadMyData",
-          "parameters": 
-          [
+          "parameters":[
             {
               "name": "RetailCustomerID",
               "description": "The ThirdParty's RetailCustomerID",
@@ -154,12 +139,10 @@
               "paramType": "form"
             }
           ],
-          "produces": 
-          [
+          "produces":[
             "text/html"
           ],
-          "responseMessages": 
-          [
+          "responseMessages":[
             {
               "code": 200,
               "message" : "OK"
@@ -174,54 +157,17 @@
     },
     {
       "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
-      "operations" : 
-      [
-        {
-          "method": "GET",
-          "summary": "The post signin Screen of the ThirdParty Portal",
-          "notes": "A Third Party’s web page the Retail Customer user-agent is returned to after authorizing the {ThirdParty} access to the Retail Customer’s energy usage information (EUI).",
-          "responseClass" : "application/atom+xml",
-          "nickname" : "getRetailCustomerHome",
-          "produces" : 
-          [
-            "text/html"
-          ],
-          "parameters": 
-          [			
-            {
-              "name": "RetailCustomerID",
-              "description": "The ThirdParty's RetailCustomerID",
-              "defaultValue": "",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages" : 
-          [
-            {
-              "code" : 200,
-							"message" : "OK"
-            },
-            {
-              "code" : 404,
-              "message" : "Service Not Available"
-            }
-          ]
-        },
+      "operations":[
         {
           "method": "PUT",
           "summary": "Retrieve a specific Retail Customer",
           "notes": "A Data Custodian’s representation of the specific Retail Customer is returned.",
           "responseClass" : "application/atom+xml",
-          "nickname" : "getRetailCustomer",
-          "produces" : 
-          [
+          "nickname": "getRetailCustomer",
+          "produces":[
             "application/atom+xml"
           ],
-          "parameters": 
-          [
+          "parameters":[
             {
               "name": "RetailCustomerID",
               "description": "The DataCustodian's RetailCustomerID",
@@ -232,15 +178,14 @@
               "paramType": "path"
             }
           ],
-          "responseMessages" : 
-          [
+          "responseMessages":[
             {
               "code" : 200,
-							"message" : "OK"
+							"message": "OK"
             },
             {
               "code" : 404,
-              "message" : "Service Not Available"
+              "message": "Service Not Available"
             }
           ]
         },
@@ -249,13 +194,11 @@
           "summary": "Delete specific Retail Customer",
           "notes": "Delete a Data Custodian’s representation of the specific Retail Customer.",
           "responseClass" : "application/atom+xml",
-          "nickname" : "getRetailCustomer",
-          "produces" : 
-          [
+          "nickname": "getRetailCustomer",
+          "produces":[
             "application/atom+xml"
           ],
-          "parameters": 
-          [
+          "parameters":[
             {
               "name": "RetailCustomerID",
               "description": "The DataCustodian's RetailCustomerID",
@@ -266,8 +209,7 @@
               "paramType": "path"
             }
           ],
-          "responseMessages" : 
-          [
+          "responseMessages":[
             {
 						  "code" : 200,
 							"message" : "OK"
