@@ -4,18 +4,18 @@
   "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/",
   "produces":
-  [
+	[
     "application/xml",
     "application/json",
     "text/plain",
     "text/html"
   ],
   "apis":
-  [
+	[
     {
       "path": "/espi/1_1/register/",
       "operations":
-      [
+			[
         {
           "method": "POST",
           "summary": "Third Party Application registers with a Data Custodian.",
@@ -23,7 +23,7 @@
           "responseClass": "Registration Information Response",
           "nickname": "registerThirdParty",
           "parameters":
-          [
+					[
             {
               "paramType": "form",
               "name": "redirect_uri",
@@ -98,10 +98,7 @@
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "enum":
-              [
-                "client_secret_basic"
-              ]
+              "enum": ["client_secret_basic"]
             },
             {
               "paramType": "form",
@@ -120,15 +117,10 @@
               "defaultValue": "authorization_code, refresh_token",
               "dataType": "array",
               "items":
-              {
+							{
                 "type": "string"
               },
-              "enum":
-              [
-                "authorization_code",
-                "client_credentials",
-                "refresh_token"
-              ]
+              "enum": ["authorization_code","client_credentials","refresh_token"]
             },
             {
               "paramType": "form",
@@ -138,10 +130,7 @@
               "defaultValue" : "code",
               "allowMultiple": false,
               "dataType": "string",
-              "enum":
-              [
-                "code"
-              ]
+              "enum": ["code"]
             },
             {
               "paramType": "form",
@@ -174,12 +163,7 @@
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "enum":
-              [
-                "1",
-                "2",
-                "3"
-              ]
+              "enum": ["1","2","3"]
             },
             {
               "paramType": "form",
@@ -188,8 +172,7 @@
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "enum":
-              ["1","2","3","4","5"]
+              "enum": ["1","2","3","4","5"]
             },
             {
               "paramType": "form",
@@ -198,8 +181,7 @@
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "enum":
-              ["1","2","3","4"]
+              "enum": ["1","2","3","4"]
             },
             {
               "paramType": "form",
@@ -208,7 +190,7 @@
               "required": true,
               "allowMultiple": false,
               "dataType": "string"
-            },						
+            },
             {
               "paramType": "form",
               "name": "third_party_notify_uri",
@@ -253,7 +235,7 @@
               "allowMultiple": false,
               "defaultValue" : "http://54.200.90.158:8080/ThirdParty/RetailCustomer/{RetailCustomerID}/home",
               "dataType": "string"
-            }						
+            }
           ],
           "produces" :
           [
@@ -285,10 +267,6 @@
           "summary": "Third Party Application obtains an OAuth 2.0 authorization code.",
           "responseClass": "OAuth 2.0 Authorization Response",
           "nickname": "getAuthorizationCode",
-          "Authorizations":
-            {
-              "type": "oauth2"
-            },
           "parameters":
           [
             {
@@ -368,10 +346,6 @@
           "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
           "responseClass" : "OAuth 2.0 Access Token Authorization Code & Refresh Token Response",
           "nickname" : "getAccessTokenAuthCode",
-          "Authorizations":
-          {
-            "type": "oauth2"
-          },
           "parameters":
           [
             {
@@ -382,7 +356,7 @@
               "dataType": "string",
 							"defaultValue": "Basic {authorization_code}",
               "paramType": "header"
-            },							
+            },
             {
               "name": "grant_type",
               "description": "OAuth 2.0 grant type.  Value MUST be set to authorization_code.",
@@ -450,10 +424,6 @@
           "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
           "responseClass": "OAuth 2.0 Access Token Client Credentials Response",
           "nickname": "getAccessTokenClientCredentials",
-          "Authorizations":
-          {
-            "type": "oauth2"
-          },
           "parameters":
           [
             {
@@ -464,15 +434,15 @@
               "dataType": "string",
 							"defaultValue": "Basic {authorization_code}",
               "paramType": "header"
-            },					
+            },
             {
-              "name" : "grant_type",
+              "name": "grant_type",
               "description" : "OAuth 2.0 grant type.  Value MUST be set to client_credentials.",
               "required": true,
               "allowMultiple": false,
               "defaultValue": "client_credentials",
               "dataType": "string",
-              "enum" : ["client_credentials"],
+              "enum": ["client_credentials"],
               "paramType": "header"
             },
             {
@@ -522,10 +492,6 @@
           "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
           "responseClass" : "OAuth 2.0 Access Token Authorization Code & Refresh Token Response",
           "nickname" : "getAccessTokenRefreshToken",
-          "Authorizations":
-          {
-            "type": "oauth2"
-          },
           "parameters":
           [
             {
@@ -536,7 +502,7 @@
               "dataType": "string",
 							"defaultValue": "Basic {authorization_code}",
               "paramType": "header"
-            },					
+            },
             {
               "name": "grant_type",
               "description": "OAuth 2.0 grant type.  Value MUST be set to refresh_token.",
@@ -606,10 +572,6 @@
           [
             "application/xml"
           ],
-          "authorizations":
-          [
-            "oauth2"
-          ],
           "parameters":
           [
             {
@@ -663,10 +625,6 @@
           "produces":
           [
             "application/atom+xml"
-          ],
-          "authorizations":
-          [
-            "oauth2"
           ],
           "parameters":
           [
@@ -866,14 +824,13 @@
           "required": true,
           "description": "** ESPI ** -- Third Party organization's phone number",
           "type":"string"
-        },				
+        },
         "third_party_notify_uri":
         {
           "required": true,
           "description": "** ESPI ** -- Third Party application's notification URI",
           "type":"string"
         },
-				
         "third_party_data_custodian_selection_screen_uri":
         {
           "required": true,
@@ -897,7 +854,7 @@
           "required": true,
           "description": "** ESPI ** -- URL of a Third Party's web page the Retail Customer user-agent is returned to after authorizing the Third Party access to the Retail Customer's energy usage information (EUI).  The field MUST be a valid web page.",
           "type":"string"
-        },					
+        },
         "authorization_server_uri":
         {
           "required": true,
@@ -951,7 +908,7 @@
           "required": true,
           "description": "** ESPI ** -- The URL of the Data Custodian's Resource endpoint. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
           "type":"string"
-        }			
+        }
       },
       "id": "Registration Information Response"
     },
