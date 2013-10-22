@@ -1,30 +1,27 @@
 {
-  "apiVersion": "1.0",
+  "apiVersion": "1.0.",
   "swaggerVersion": "1.3",
   "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/espi/1_1/resource",
-  "produces": [
+  "produces":[
     "application/xml",
     "text/plain",
     "text/html"
   ],
-  "apis": [
+  "apis":[
     {
       "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint",
-      "operations": [
+      "operations":[
         {
           "method": "GET",
           "summary": "[ESPI] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "responseClass": "UsagePoints",
           "nickname": "findUsagePoints",
-          "produces": [
+          "produces":[
             "application/xml+atom"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
+          "parameters":[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -52,9 +49,9 @@
               "paramType": "path"
             }
           ],
-          "responseMessages": [
+          "responseMessages":[
             {
-              "code": 404,
+              "code": 204,
               "message": "There are no Usage Points"
             }
           ]
@@ -65,7 +62,7 @@
           "notes": "The New Usage Point will be added",
           "responseClass": "void",
           "nickname": "addUsagePoint",
-          "parameters": [
+          "parameters":[
             {
               "name": "MeterReadingURLs",
               "description": "0 or more MeterReadings that need to be added to the UsagePoint",
@@ -92,7 +89,7 @@
               "dataType": "String",
               "paramType": "header"
             },
-	    {
+            {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
               "required": true,
@@ -101,7 +98,7 @@
               "paramType": "path"
             }
           ],
-          "responseMessages": [
+          "responseMessages":[
             {
               "code": 405,
               "message": "Invalid input"
@@ -112,20 +109,17 @@
     },
     {
       "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}",
-      "operations": [
+      "operations":[
         {
           "method": "GET",
           "summary": "[ESPI] Retrieve a UsagePoint Using it's ID",
           "notes": "Returns a Usage Point",
           "responseClass": "UsagePoint",
           "nickname": "getUsagePoint",
-          "produces": [
+          "produces":[
             "application/xml"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
+          "parameters":[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -144,7 +138,7 @@
               "dataType": "String",
               "paramType": "header"
             },
-	    {
+            {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
               "required": true,
@@ -160,7 +154,7 @@
               "dataType": "string",
               "paramType": "path"
             },
-	    {
+            {
               "name": "published-max",
               "description": "The upper bound on the published date of the referenced resource",
               "defaultValue": "All",
@@ -169,7 +163,7 @@
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "published-min",
               "description": "The lower bound on the published date of the referenced resource",
               "defaultValue": "All",
@@ -178,7 +172,7 @@
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "updated-max",
               "description": "The upper bound on the updated date of the referenced resource",
               "defaultValue": "All",
@@ -187,7 +181,7 @@
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "updated-min",
               "description": "The lower bound on the updated date of the referenced resource",
               "defaultValue": "All",
@@ -196,7 +190,7 @@
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "max-results",
               "description": "The upper bound on the number of entries to be contained in a reply to this response",
               "defaultValue": "All",
@@ -205,16 +199,16 @@
               "dataType": "long",
               "paramType": "query"
             },
-	    {
+            {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transfered as the first entry of this request.",
+              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of this request.",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
               "paramType": "query"
             },
-	    {
+            {
               "name": "depth",
               "description": "The maximum number of entries to be transfered in the response to this request",
               "defaultValue": "All",
@@ -223,9 +217,8 @@
               "dataType": "long",
               "paramType": "query"
             }
-
           ],
-          "responseMessages": [
+          "responseMessages":[
             {
               "code": 400,
               "message": "Invalid UsagePoint ID supplied"
@@ -242,10 +235,7 @@
           "notes": "The Usage Point must exist",
           "responseClass": "void",
           "nickname": "updateUsagePoint",
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
+          "parameters":[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -264,7 +254,7 @@
               "dataType": "String",
               "paramType": "header"
             },
-	    {
+            {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
               "required": true,
@@ -289,11 +279,11 @@
               "paramType": "body"
             }
           ],
-          "responseMessages": [
-	    {
-	      "code": 200,
-	      "message" : "OK"
-	    },
+          "responseMessages":[
+            {
+              "code": 200,
+              "message" : "OK"
+            },
             {
               "code": 400,
               "message": "Invalid UsagePointID supplied"
@@ -307,17 +297,14 @@
               "message": "Validation exception"
             }
           ]
-	},
+        },
         {
           "method": "DELETE",
           "summary": "Deletes a Usage Point",
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteUsagePoint",
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
+          "parameters":[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -336,7 +323,7 @@
               "dataType": "String",
               "paramType": "header"
             },
-	    {
+            {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
               "required": true,
@@ -353,11 +340,11 @@
               "paramType": "path"
             }
           ],
-          "responseMessages": [
-	    {
-	      "code": 200,
-	      "message" : "OK"
-	    },
+          "responseMessages":[
+            {
+              "code": 200,
+              "message" : "OK"
+            },
             {
               "code": 400,
               "message": "Invalid UsagePointID"
@@ -368,50 +355,50 @@
       ]
     }
   ],
-  "models": {
-    "Authorization": {
+  "models":{
+    "Authorization":{
       "id": "Authorization",
-      "properties": {
-        "name": {
+      "properties":{
+        "name":{
           "type": "string"
         },
-        "id": {
+        "id":{
           "type": "integer",
           "format": "int64"
         }
       }
     },
-    "UsagePoint": {
+    "UsagePoint":{
       "id": "UsagePoint",
       "description": "A Usage Point is typically a meter of some sort",
-      "required": [
+      "required":[
         "name",
         "id"
       ],
-      "properties": {
-        "name": {
+      "properties":{
+        "name":{
           "type": "string"
         },
-        "MeterReadingCollection": {
+        "MeterReadingCollection":{
           "type": "list",
-          "items": {
+          "items":{
             "$ref": "MeterReading"
           }
         },
-        "ReadingType": {
+        "ReadingType":{
           "type": "array",
-          "items": {
+          "items":{
             "$ref": "ReadingType"
           }
         },
-        "id": {
+        "id":{
           "type": "integer",
           "format": "int64"
         },
-        "status": {
+        "status":{
           "type": "string",
           "description": "pet status in the store",
-          "enum": [
+          "enum":[
             "available",
             "pending",
             "sold"
@@ -419,58 +406,56 @@
         }
       }
     },
-
-    "UsagePoints" : {
+    "UsagePoints":{
       "id": "UsagePoints",
-      "description": "A List of Usage Points", 
-      "properties": {
-         "UsagePointCollection" : {
-            "type": "list",
-            "items": {
-              "$ref": "UsagePoint"
-  	    }
-         }
-       }
+      "description": "A List of Usage Points",
+      "properties":{
+        "UsagePointCollection":{
+          "type": "list",
+          "items":{
+            "$ref": "UsagePoint"
+          }
+        }
+      }
     },
-       
-    "MeterReading": {
+    "MeterReading":{
       "id": "MeterReading",
-      "properties": {
-        "name": {
+      "properties":{
+        "name":{
           "type": "string"
         },
-        "id": {
+        "id":{
           "type": "integer",
           "format": "int64"
         }
       }
     },
-    "MeterReadingURL" : {
+    "MeterReadingURL":{
       "id" : "MeterReadingURL",
-      "description" : "the Resource Locator of a Specific Meter Reading",
-      "properties" : {
+      "description": "the Resource Locator of a Specific Meter Reading",
+      "properties":{
         "resourceURL" : "String"
       }
     },
-    "MeterReadings" : {
+    "MeterReadings":{
       "id": "MeterReadings",
-      "description": "A List of Meter Readings", 
-      "properties": {
-         "MeterReadingCollection" : {
-            "type": "list",
-            "items": {
-              "$ref": "MeterReading"
-  	    }
-         }
-       }
+      "description": "A List of Meter Readings",
+      "properties":{
+        "MeterReadingCollection":{
+          "type": "list",
+          "items":{
+            "$ref": "MeterReading"
+          }
+        }
+      }
     },
-    "ReadingType": {
+    "ReadingType":{
       "id": "ReadingType",
-      "properties": {
-        "name": {
+      "properties":{
+        "name":{
           "type": "string"
         },
-        "id": {
+        "id":{
           "type": "integer",
           "format": "int64"
         }
