@@ -947,7 +947,13 @@
           "required": true,
           "description": "The URI of the authorization which contains the issued access token",
           "type": "string"
-        }
+        },
+        "referenceID":{
+          "paramType": "form",
+          "required": true,
+          "description": "Reference value used in construction of resource URIs (e.g. in the RESTful API examples, this would populate the RetailCustomerID field)",
+          "type": "string"
+        }					
       },
       "id": "OAuth 2.0 Access Token Authorization Code & Refresh Token Response"
     },
@@ -989,7 +995,13 @@
           "required": true,
           "description": "The URI of the authorization which contains the issued access token",
           "type": "string"
-        }
+        },
+        "referenceID":{
+          "paramType": "form",
+          "required": true,
+          "description": "Reference value used in construction of resource URIs (e.g. in the RESTful API examples, this would populate the RetailCustomerID field)",
+          "type": "string"
+        }				
       },
       "id": "OAuth 2.0 Access Token Client Credentials Response"
     }
