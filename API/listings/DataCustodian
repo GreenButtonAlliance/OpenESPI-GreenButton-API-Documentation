@@ -846,6 +846,11 @@
           "description": "OAuth 2.0 -- The URL used by the Third Party to obtain authorization from the Retail Customer via user-agent redirection.",
           "type":"string"
         },
+        "authorization_server_token_endpoint":{
+          "required": true,
+          "description": "OAuth 2.0 -- The URL used by the Third Party to obtain an access token from the Data Custodian.",
+          "type":"string"
+        },				
         "authorization_server_registration_endpoint":{
           "required": true,
           "description": "** ESPI ** -- The URL used by the Third Party to register an application with the Data Custodian.",
