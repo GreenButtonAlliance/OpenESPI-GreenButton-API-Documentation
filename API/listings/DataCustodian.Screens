@@ -13,7 +13,7 @@
   "apis": 
   [
     {
-      "path": "home",
+      "path": "/home",
       "operations" : 
       [
         {
