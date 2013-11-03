@@ -41,7 +41,7 @@
       ]
     },
     {
-      "path": "login",
+      "path": "/login",
       "operations" : 
       [
         {
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "path": "RetailCustomer/{RetailCustomerID}/home",
+      "path": "/RetailCustomer/{RetailCustomerID}/home",
       "operations" : 
       [
         {
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "path": "RetailCustomer/{RetailCustomerID}/ThirdPartyList",
+      "path": "/RetailCustomer/{RetailCustomerID}/ThirdPartyList",
       "operations" : 
       [
         {
