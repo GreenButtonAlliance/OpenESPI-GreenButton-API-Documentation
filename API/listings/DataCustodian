@@ -4,23 +4,27 @@
   "authorizations": [],
   "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/",
-  "produces":[
+  "produces":
+	[
     "application/xml",
     "application/json",
     "text/plain",
     "text/html"
   ],
-  "apis":[
+  "apis":
+	[
     {
       "path": "/espi/1_1/register/",
-      "operations":[
+      "operations":
+			[
         {
           "method": "POST",
           "summary": "Third Party Application registers with a Data Custodian.",
           "notes": "Follows the proposed OAuth 2.0 Dynamic Client Registration Protocol -- Draft 14 with modifications based on the Energy Services Provider Interface (ESPI) 1.0 standard.  The parameters are Third Party Application metadata values required to complete the  registration process.",
           "responseClass": "Registration Information Response",
           "nickname": "registerThirdParty",
-          "parameters":[
+          "parameters":
+					[
             {
               "paramType": "form",
               "name": "redirect_uri",
@@ -64,7 +68,8 @@
               "required": true,
               "allowMultiple": false,
               "dataType": "array",
-              "items":{
+              "items":
+							{
                 "type": "string"
               }
             },
@@ -233,14 +238,17 @@
               "dataType": "string"
             }
           ],
-          "produces":[
+          "produces":
+					[
             "application/json"
           ],
-          "responseMessages":[
+          "responseMessages":
+					[
             {
               "code": 400,
               "message": "Bad Request",
-              "parameters":[
+              "parameters":
+							[
                 {
                   "error": "[\"invalid_client_metadata\", \"invalid_redirect_uri\", \"invalid_client_id\"]",
                   "error_description": "A Human-readable text description of the error for debugging."
@@ -253,13 +261,15 @@
     },
     {
       "path": "/oauth/authorize",
-      "operations":[
+      "operations":
+			[
         {
           "method": "GET",
           "summary": "Third Party Application obtains an OAuth 2.0 authorization code.",
           "responseClass": "OAuth 2.0 Authorization Response",
           "nickname": "getAuthorizationCode",
-          "parameters":[
+          "parameters":
+					[
             {
               "paramType": "query",
               "name": "response_type",
@@ -304,16 +314,19 @@
               "dataType": "string"
             }
           ],
-          "produces":[
+          "produces":
+					[
             "text/html",
             "application/xhtml+xml",
             "application/xml"
           ],
-          "responseMessages":[
+          "responseMessages":
+					[
             {
               "code": 400,
               "message": "Bad Request",
-              "parameters":[
+              "parameters":
+							[
                 {
                   "error": "[\"invalid_request\", \"unauthorized_client\", \"access_denied\", \"unsupported_response_type\", \"invalid_scope\", \"server_error\", \"temporarily_unavailable\"]",
                   "error_description": "A Human-readable text description of the error for debugging."
@@ -326,10 +339,13 @@
     },
     {
       "path": "/oauth/token",
-      "operations":[
+      "operations":
+			[
         {
-				  "authorizations":{
-					  "basicAuth":{
+				  "authorizations":
+					{
+					  "basicAuth":
+						{
 						  "type": "basicAuth"
 						}
 					},
@@ -338,14 +354,14 @@
           "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
           "responseClass" : "OAuth 2.0 Access Token Authorization Code & Refresh Token Response",
           "nickname" : "getAccessTokenAuthCode",
-          "parameters":[
+          "parameters":
+					[
             {
 						  "name": "Authorization",
 							"description": "The Third Party's Data Custodian assigned Authorization Code.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-							"defaultValue": "Basic {authorization_code}",
               "paramType": "header"
             },
             {
@@ -376,14 +392,17 @@
               "paramType": "header"
             }
           ],
-          "produces":[
+          "produces":
+					[
             "application/json"
           ],
-          "responseMessage":[
+          "responseMessage":
+					[
             {
               "code": 200,
               "message": "OK",
-              "parameters":[
+              "parameters":
+							[
                 {
                   "access_token": "The access token issued by the authorization server",
                   "token_type": "Bearer",
@@ -404,10 +423,13 @@
     },
     {
       "path": "/oauth/token",
-      "operations":[
+      "operations":
+			[
         {
-				  "authorizations":{
-					  "basicAuth":{
+				  "authorizations":
+					{
+					  "basicAuth":
+						{
 						  "type": "basicAuth"
 						}
 					},
@@ -416,14 +438,14 @@
           "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
           "responseClass": "OAuth 2.0 Access Token Client Credentials Response",
           "nickname": "getAccessTokenClientCredentials",
-          "parameters":[
+          "parameters":
+					[
             {
 						  "name": "Authorization",
 							"description": "The Third Party's Data Custodian assigned Authorization Code.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-							"defaultValue": "Basic {authorization_code}",
               "paramType": "header"
             },
             {
@@ -448,11 +470,13 @@
           "produces":[
             "application/json"
           ],
-          "responseMessage":[
+          "responseMessage":
+					[
             {
               "code": 200,
               "message": "OK",
-              "parameters":[
+              "parameters":
+							[
                 {
                   "access_token": "The access token issued by the authorization server",
                   "token_type": "Bearer",
@@ -472,10 +496,13 @@
     },
     {
       "path": "/oauth/token",
-      "operations":[
+      "operations":
+			[
         {
-				  "authorizations":{
-					  "basicAuth":{
+				  "authorizations":
+					{
+					  "basicAuth":
+						{
 						  "type": "basicAuth"
 						}
 					},
@@ -484,14 +511,14 @@
           "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
           "responseClass" : "OAuth 2.0 Access Token Authorization Code & Refresh Token Response",
           "nickname" : "getAccessTokenRefreshToken",
-          "parameters":[
+          "parameters":
+					[
             {
 						  "name": "Authorization",
 							"description": "The Third Party's Data Custodian assigned Authorization Code.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-							"defaultValue": "Basic {authorization_code}",
               "paramType": "header"
             },
             {
@@ -521,14 +548,17 @@
               "paramType": "header"
             }
           ],
-          "produces":[
+          "produces":
+					[
             "application/json"
           ],
-          "responseMessage":[
+          "responseMessage":
+					[
             {
               "code": 200,
               "message": "OK",
-              "parameters":[
+              "parameters":
+							[
                 {
                   "access_token": "The access token issued by the authorization server",
                   "token_type": "Bearer",
@@ -549,20 +579,27 @@
     },
     {
       "path": "/espi/1_1/resource/ReadServiceStatus",
-      "operations":[
+      "operations":
+			[
         {
-				  "authorizations":{
-            "oauth2":{
+				  "authorizations":
+					{
+            "oauth2":
+						{
               "type":"oauth2",
               "scopes":["PUBLIC"],
-              "grantTypes":{
-                "authorization_code":{
-                  "tokenRequestEndpoint":{
+              "grantTypes":
+							{
+                "authorization_code":
+								{
+                  "tokenRequestEndpoint":
+									{
                     "url":"http://54.200.90.158:8080/DataCustodian/oauth/token",
                     "clientIdName":"client_id",
                     "clientSecretName":"client_secret"
                   },
-                  "tokenEndpoint":{
+                  "tokenEndpoint":
+									{
                     "url":"http://54.200.90.158:8080/DataCustodian/oauth/token",
                     "tokenName":"access_code"
                   }
@@ -574,14 +611,15 @@
           "summary": "Obtain the Data Custodian Resource Server Status",
           "responseClass": "application/atom+xml",
           "nickname": "getServiceStatus",
-          "produces":[
+          "produces":
+					[
             "application/xml"
           ],
-          "parameters":[
+          "parameters":
+					[
             {
-              "name": "accessToken",
-              "description": "Access token issued by OAuth 2.0 authorization server",
-              "defaultValue": "Bearer {access_token}",
+              "name": "Authorization",
+              "description": "Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -597,11 +635,13 @@
               "paramType": "header"
             }
           ],
-          "responseMessages":[
+          "responseMessages":
+					[
             {
               "code": 200,
               "message": "OK",
-              "parameters":[
+              "parameters":
+							[
                 {
                   "feed" : "An ESPI XML representation of <example to be supplied>"
                 }
@@ -617,20 +657,26 @@
     },
     {
       "path": "/espi/1_1/resource/ThirdParty/{ThirdPartyID}/Batch",
-      "operations":[
+      "operations":
+			[
         {
-				  "authorizations":{
-            "oauth2":{
+				  "authorizations":
+					{
+            "oauth2":
+						{
               "type":"oauth2",
               "scopes":["PUBLIC"],
               "grantTypes":{
-                "authorization_code":{
-                  "tokenRequestEndpoint":{
+                "authorization_code":
+								{
+                  "tokenRequestEndpoint":
+									{
                     "url":"http://54.200.90.158:8080/DataCustodian/oauth/token",
                     "clientIdName":"client_id",
                     "clientSecretName":"client_secret"
                   },
-                  "tokenEndpoint":{
+                  "tokenEndpoint":
+									{
                     "url":"http://54.200.90.158:8080/DataCustodian/oauth/token",
                     "tokenName":"access_code"
                   }
@@ -642,14 +688,15 @@
           "summary": "A Third Party requests the GET of a Batch.",
           "responseClass" : "ESPI XML structure of Batch feed",
           "nickname": "getBatch",
-          "produces":[
+          "produces":
+					[
             "application/atom+xml"
           ],
-          "parameters":[
+          "parameters":
+					[
             {
-              "name": "accessToken",
-              "description": "Access token issued by OAuth 2.0 authorization server",
-              "defaultValue": "Bearer {access_token}",
+              "name": "Authorization",
+              "description": "Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -665,7 +712,8 @@
               "paramType": "header"
             }
           ],
-          "responseMessages":[
+          "responseMessages":
+					[
             {
               "code": 200,
               "message": "OK"
@@ -679,210 +727,258 @@
       ]
     }
   ],
-  "models":{
-    "Authorization":{
+  "models":
+	{
+    "Authorization":
+    {
       "id": "Authorization",
-      "properties":{
-        "name":{
-          "type": "string"
+      "properties":
+      {
+        "name":
+				{
+          "type": "string",
+					"defaultValue": "Bearer"
         },
-        "id":{
-          "type": "integer",
-          "format": "int64"
+        "id":
+				{
+          "type": "string"
         }
       }
     },
-    "Registration Information Response":{
-      "properties":{
-        "client_id":{
+    "Registration Information Response":
+		{
+      "properties":
+			{
+        "client_id":
+				{
           "required": true,
           "type":"string"
         },
-        "client_secret":{
+        "client_secret":
+				{
           "required": true,
           "type":"string"
         },
-        "client_id_issued_at":{
+        "client_id_issued_at":
+				{
           "required": true,
           "type":"string, date-time"
         },
-        "client_secret_expires_at":{
+        "client_secret_expires_at":
+				{
           "required": true,
           "type":"string, date-time"
         },
-        "registration_access_token":{
+        "registration_access_token":
+				{
           "required": true,
           "type":"string"
         },
-        "registration_client_uri":{
+        "registration_client_uri":
+				{
           "required": true,
           "type":"string"
         },
-        "redirect_uri":{
+        "redirect_uri":
+				{
           "required": true,
           "type":"string"
         },
-        "client_name":{
+        "client_name":
+				{
           "required": true,
           "type":"string"
         },
-        "client_uri":{
+        "client_uri":
+				{
           "required": true,
           "type":"string"
         },
-        "logo_uri":{
+        "logo_uri":
+				{
           "required": true,
           "type":"string"
         },
-        "contacts":{
+        "contacts":
+				{
           "required": true,
           "type":"array",
-          "items":{
+          "items":
+					{
             "type": "string"
           }
         },
-        "tos_uri":{
+        "tos_uri":
+				{
           "required": true,
           "type":"string"
         },
-        "policy_uri":{
+        "policy_uri":
+				{
           "required": true,
           "type":"string"
         },
-        "token_endpoint_auth_method":{
+        "token_endpoint_auth_method":
+				{
           "required": true,
           "type":"string",
           "description": "OAuth 2.0 token endpoint authentication method",
           "enum":["client_secret_basic"]
         },
-        "scope":{
+        "scope":
+				{
           "required": true,
           "type":"string"
         },
-        "grant_types":{
+        "grant_types":
+				{
           "required": true,
           "type":"array",
-          "items":{
+          "items":
+					{
             "type": "string"
           },
           "description": "OAuth 2.0 grant types",
           "enum":["authorization_code","client_credentials","refresh_token"]
         },
-        "response_types":{
+        "response_types":
+				{
           "required": true,
           "type":"string",
           "description": "OAuth 2.0 response types",
           "enum":["code"]
         },
-        "software_id":{
+        "software_id":
+				{
           "required": true,
           "type":"string",
           "description": "OAuth 2.0 software_id"
         },
-        "software_version":{
+        "software_version":
+				{
           "required": true,
           "type":"string",
           "description": "OAuth 2.0 software_version"
         },
-        "third_party_application_description":{
+        "third_party_application_description":
+				{
           "required": true,
           "type":"string"
         },
-        "third_party_application_type":{
+        "third_party_application_type":
+				{
           "required": true,
           "type":"string",
           "description": "** ESPI ** -- application type",
           "enum":["1 - Web Application","2 -  Desktop Application","3 - Mobile Application"]
         },
-        "third_party_application_use":{
+        "third_party_application_use":
+				{
           "required": true,
           "type":"string",
           "description": "** ESPI ** -- application use",
           "enum":["1 - Energy Management","2 - Comparisons","3 - Government","4 - Academic","5 - Law Enforcement"]
         },
-        "third_party_application_status":{
+        "third_party_application_status":
+				{
           "required": true,
           "description": "** ESPI ** -- Third Party application status",
           "type":"string",
           "enum":["1 - Development","2 - Review/Test","3 - Production (Live)","4 - Retired (Remove)"]
         },
-        "third_party_phone":{
+        "third_party_phone":
+				{
           "required": true,
           "description": "** ESPI ** -- Third Party organization's phone number",
           "type":"string"
         },
-        "third_party_notify_uri":{
+        "third_party_notify_uri":
+				{
           "required": true,
           "description": "** ESPI ** -- Third Party application's notification URI",
           "type":"string"
         },
-        "third_party_data_custodian_selection_screen_uri":{
+        "third_party_data_custodian_selection_screen_uri":
+				{
           "required": true,
           "description": "** ESPI ** -- URL of Third Party's supported Data Custodian Selection web page.  The field MUST be a valid web page.",
           "type":"string"
         },
-        "third_party_login_screen_uri":{
+        "third_party_login_screen_uri":
+				{
           "required": true,
           "description": "** ESPI ** -- URL of the Login Screen used by the Third Party to authenticate the identity of the Retail Customer.  The field MUST be a valid web page.",
           "type":"string"
         },
-        "third_party_scope_selection_screen_uri":{
+        "third_party_scope_selection_screen_uri":
+				{
           "required": true,
           "description": "** ESPI ** -- URL of the Scope Selection Screen used by the Retail Customer to select the characteristics of the Green Button data to be shared with the ThirdParty.  The field MUST be a valid web page.",
           "type":"string"
         },
-        "third_party_user_portal_screen_uri":{
+        "third_party_user_portal_screen_uri":
+				{
           "required": true,
           "description": "** ESPI ** -- URL of a Third Party's web page the Retail Customer user-agent is returned to after authorizing the Third Party access to the Retail Customer's energy usage information (EUI).  The field MUST be a valid web page.",
           "type":"string"
         },
-        "authorization_server_uri":{
+        "authorization_server_uri":
+				{
           "required": true,
           "description": "OAuth 2.0 -- The URI of the server issuing access tokens to the Third Party after successfully authenticating the Retail Customer and obtaining their authorization.",
           "type":"string"
         },
-        "authorization_server_authorization_endpoint":{
+        "authorization_server_authorization_endpoint":
+				{
           "required": true,
           "description": "OAuth 2.0 -- The URL used by the Third Party to obtain authorization from the Retail Customer via user-agent redirection.",
           "type":"string"
         },
-        "authorization_server_token_endpoint":{
+        "authorization_server_token_endpoint":
+				{
           "required": true,
           "description": "OAuth 2.0 -- The URL used by the Third Party to obtain an access token from the Data Custodian.",
           "type":"string"
-        },				
-        "authorization_server_registration_endpoint":{
+        },
+        "authorization_server_registration_endpoint":
+				{
           "required": true,
           "description": "** ESPI ** -- The URL used by the Third Party to register an application with the Data Custodian.",
           "type":"string"
         },
-        "data_custodian_batch_uri":{
+        "data_custodian_batch_uri":
+				{
           "required": true,
           "description": "** ESPI ** -- The URL of the Data Custodian's Batch Request endpoint. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
           "type":"string"
         },
-        "data_custodian_bulk_uri":{
+        "data_custodian_bulk_uri":
+				{
           "required": true,
           "description": "** ESPI ** -- The URL of the Data Custodian's Bulk Request endpoint. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
           "type":"string"
         },
-        "data_custodian_subscription_uri":{
+        "data_custodian_subscription_uri":
+				{
           "required": true,
           "description": "** ESPI ** -- The URL of the Data Custodian's Subscription Request endpoint. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
           "type":"string"
         },
-        "data_custodian_application_status":{
+        "data_custodian_application_status":
+				{
           "required": true,
           "description": "** ESPI ** -- A code indicating the current status of the application.  The value is provided by the Data Custodian and cannot be modified by the Third Party.",
           "type":"string",
           "enum":["1 - Review","2 - Production (Live)","3 - On hold","4 - Revoked"]
         },
-        "data_custodian_third_party_selection_screen_uri":{
+        "data_custodian_third_party_selection_screen_uri":
+				{
           "required": true,
           "description": "** ESPI ** -- The URL of the Data Custodian's Third Party Selection web page. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
           "type":"string"
         },
-        "data_custodian_resource_endpoint":{
+        "data_custodian_resource_endpoint":
+				{
           "required": true,
           "description": "** ESPI ** -- The URL of the Data Custodian's Resource endpoint. The value is provided by the Data Custodian and cannot be modified by the Third Party.  The field MUST be a valid URL.",
           "type":"string"
@@ -890,9 +986,12 @@
       },
       "id": "Registration Information Response"
     },
-    "OAuth 2.0 Authorization Response":{
-      "properties":{
-        "code":{
+    "OAuth 2.0 Authorization Response":
+		{
+      "properties":
+			{
+        "code":
+				{
           "paramType": "query",
           "required": true,
           "description": "Authorization code.  The authorization code MUST expire shortly and MUST NOT be used more than once.",
@@ -908,93 +1007,110 @@
       },
       "id": "OAuth 2.0 Authorization Response"
     },
-    "OAuth 2.0 Access Token Authorization Code & Refresh Token Response":{
-      "properties":{
-        "access_token":{
+    "OAuth 2.0 Access Token Authorization Code & Refresh Token Response":
+		{
+      "properties":
+			{
+        "access_token":
+				{
           "paramType": "form",
           "required": true,
           "description": "The access token issued by the authorization server.",
           "type":"string"
         },
-        "token_type":{
+        "token_type":
+				{
           "paramType": "form",
           "required": true,
           "description": "The type of the token issued.  Value is case insensitive.",
           "enum" : ["Bearer"],
           "type":"string"
         },
-        "expires_in":{
+        "expires_in":
+				{
           "paramType": "form",
           "required": true,
           "description": "The lifetime in seconds of the access token.",
           "type": "integer"
         },
-        "refresh_token":{
+        "refresh_token":
+				{
           "paramType": "form",
           "required": true,
           "description": "The refresh token, which can be used to obtain new access tokens using the same authorization code provided by the authorization server",
           "type": "string"
         },
-        "scope":{
+        "scope":
+				{
           "paramType": "form",
           "required": true,
           "description": "The scope of the access token issued by the authorization server",
           "type": "string"
         },
-        "resourceURI":{
+        "resourceURI":
+				{
           "paramType": "form",
           "required": true,
           "description": "The URI of the resource to which access is being granted",
           "type": "string"
         },
-        "authorizationURI":{
+        "authorizationURI":
+				{
           "paramType": "form",
           "required": true,
           "description": "The URI of the authorization which contains the issued access token",
           "type": "string"
-        }				
+        }
       },
       "id": "OAuth 2.0 Access Token Authorization Code & Refresh Token Response"
     },
-    "OAuth 2.0 Access Token Client Credentials Response":{
-      "properties":{
-        "access_token":{
+    "OAuth 2.0 Access Token Client Credentials Response":
+		{
+      "properties":
+			{
+        "access_token":
+				{
           "paramType": "form",
           "required": true,
           "description": "The access token issued by the authorization server.",
           "type":"string"
         },
-        "token_type":{
+        "token_type":
+				{
           "paramType": "form",
           "required": true,
           "description": "The type of the token issued.  Value is case insensitive.",
           "enum" : ["Bearer"],
           "type":"string"
         },
-        "expires_in":{
+        "expires_in":
+				{
           "paramType": "form",
           "required": true,
           "description": "The lifetime in seconds of the access token.",
           "type": "integer"
         },
-        "scope":{
+        "scope":
+				{
           "paramType": "form",
           "required": true,
           "description": "The scope of the access token issued by the authorization server",
           "type": "string"
         },
-        "resourceURI":{
+        "resourceURI":
+				{
           "paramType": "form",
           "required": true,
           "description": "The URI of the resource to which access is being granted",
           "type": "string"
         },
-        "authorizationURI":{
+        "authorizationURI":
+				{
           "paramType": "form",
           "required": true,
           "description": "The URI of the authorization which contains the issued access token",
           "type": "string"
-        }			
+        }
       },
       "id": "OAuth 2.0 Access Token Client Credentials Response"
     }

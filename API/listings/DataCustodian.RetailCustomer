@@ -3,36 +3,41 @@
   "swaggerVersion": "1.3",
   "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/resources",
-  "produces": [
+  "produces":
+  [
     "application/xml",
     "text/plain",
     "text/html"
   ],
-  "apis": [
+  "apis":
+  [
     {
       "path": "/espi/1_1/resource/RetailCustomer",
-      "operations" : [
+      "operations":
+      [
         {
-         "method": "GET",
-         "summary": "Returns a feed representing the collection of all Retail Customers of the Data Custodian.",
-         "notes":  "Returns a feed representing the collection of all Retail Customers of the Data Custodian.",
-         "responseClass" : "application/atom+xml",
-         "nickname" : "getRetailCustomerCollection",
-         "produces" : [
-           "text/html"
-           ],
-          "parameters": [
+          "method": "GET",
+          "summary": "Returns a feed representing the collection of all Retail Customers of the Data Custodian.",
+          "notes":  "Returns a feed representing the collection of all Retail Customers of the Data Custodian.",
+          "responseClass" : "application/atom+xml",
+          "nickname": "getRetailCustomerCollection",
+          "produces":
+          [
+            "text/html"
+          ],
+          "parameters":
+          [
             {
-              "name": "client_token",
-              "description": "The ThirdParty's client access token",
-	      "defaultValue": "Bearer {client_access_token}",
+              "name": "Authorization",
+              "description": "Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "head"
             }
           ],
-         "responseMessages" : [
+          "responseMessages":
+          [
             {
               "code": 200,
               "message" : "OK"
@@ -44,19 +49,20 @@
           ]
         },
         {
-         "method": "POST",
-         "summary": "Adds a new Retail Customer to the Data Custodian",
-         "notes":  "Adds a new Data Custodian Retail Customer.",
-         "responseClass" : "application/atom+xml",
-         "nickname" : "getRetailCustomerCollection",
-         "produces" : [
-           "text/html"
-           ],
-          "parameters": [
+          "method": "POST",
+          "summary": "Adds a new Retail Customer to the Data Custodian",
+          "notes":  "Adds a new Data Custodian Retail Customer.",
+          "responseClass" : "application/atom+xml",
+          "nickname": "getRetailCustomerCollection",
+          "produces":
+          [
+            "text/html"
+          ],
+          "parameters":
+          [
             {
-              "name": "client_token",
-              "description": "The ThirdParty's client access token",
-	      "defaultValue": "Bearer {client_access_token}",
+              "name": "Authorization",
+              "description": "Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -65,14 +71,15 @@
             {
               "name": "RetailCustomerURLs",
               "description": "The ThirdParty's client access token",
-	      "defaultValue": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
+              "defaultValue": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
               "paramType": "query"
             }
-         ],
-         "responseMessages" : [
+          ],
+          "responseMessages":
+          [
             {
               "code": 200,
               "message" : "OK"
@@ -83,48 +90,51 @@
             }
           ]
         }
-       ]
-      },
+      ]
+    },
     {
-    "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/DownloadMyData",
-    "operations": [
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/DownloadMyData",
+      "operations":
+      [
         {
-            "method": "GET",
-            "summary": "Allows a Green Button DownloadMyData .xml file to be downloaded to the retail customer",
-            "responseClass": "application/atom+xml",
-            "nickname": "downloadMyData",
-            "parameters": [
-                {
-                    "name": "client_token",
-                    "description": "The ThirdParty's client access token",
-                    "defaultValue": "Bearer {client_access_token}",
-                    "required": true,
-                    "allowMultiple": false,
-                    "dataType": "String",
-                    "paramType": "head"
-                },
-                {
-                    "name": "Content-Disposition",
-                    "description": "Controling the browser actions on receipt of the file",
-                    "defaultValue": "attachment; filename=<file name.ext>",
-                    "allowMultiple": false,
-                    "dataType": "string",
-                    "paramType": "head"
-                },
-                {
-                    "name": "RetailCustomerID",
-                    "description": "The ThirdParty's RetailCustomerID",
-                    "defaultValue": "",
-                    "required": true,
-                    "allowMultiple": false,
-                    "dataType": "String",
-                    "paramType": "path"
-                }
-            ],
-            "produces": [
-                "text/html"
-            ],
-            "responseMessages": [
+          "method": "GET",
+          "summary": "Allows a Green Button DownloadMyData .xml file to be downloaded to the retail customer",
+          "responseClass": "application/atom+xml",
+          "nickname": "downloadMyData",
+          "parameters":
+          [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "head"
+            },
+            {
+              "name": "Content-Disposition",
+              "description": "Controling the browser actions on receipt of the file",
+              "defaultValue": "attachment; filename=<file name.ext>",
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "head"
+            },
+            {
+              "name": "RetailCustomerID",
+              "description": "The ThirdParty's RetailCustomerID",
+              "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "produces":
+          [
+            "text/html"
+          ],
+          "responseMessages":
+          [
             {
               "code": 200,
               "message" : "OK"
@@ -133,50 +143,53 @@
               "code": 400,
               "message": "Bad Request"
             }
-	    ]
+          ]
         }
-       ]
-      },
+      ]
+    },
     {
-    "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/DownloadMyData",
-    "operations": [
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/DownloadMyData",
+      "operations":
+      [
         {
-            "method": "GET",
-            "summary": "Allows a Green Button DownloadMyData .xml file to be downloaded to the retail customer",
-            "responseClass": "application/atom+xml",
-            "nickname": "downloadMyData",
-            "parameters": [
-                {
-                    "name": "client_token",
-                    "description": "The ThirdParty's client access token",
-                    "defaultValue": "Bearer {client_access_token}",
-                    "required": true,
-                    "allowMultiple": false,
-                    "dataType": "String",
-                    "paramType": "head"
-                },
-                {
-                    "name": "Content-Disposition",
-                    "description": "Controling the browser actions on receipt of the file",
-                    "defaultValue": "attachment; filename=<file name.ext>",
-                    "allowMultiple": false,
-                    "dataType": "string",
-                    "paramType": "head"
-                },
-                {
-                    "name": "RetailCustomerID",
-                    "description": "The ThirdParty's RetailCustomerID",
-                    "defaultValue": "",
-                    "required": true,
-                    "allowMultiple": false,
-                    "dataType": "String",
-                    "paramType": "path"
-                }
-            ],
-            "produces": [
-                "text/html"
-            ],
-            "responseMessages": [
+          "method": "GET",
+          "summary": "Allows a Green Button DownloadMyData .xml file to be downloaded to the retail customer",
+          "responseClass": "application/atom+xml",
+          "nickname": "downloadMyData",
+          "parameters":
+          [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "head"
+            },
+            {
+              "name": "Content-Disposition",
+              "description": "Controling the browser actions on receipt of the file",
+              "defaultValue": "attachment; filename=<file name.ext>",
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "head"
+            },
+            {
+              "name": "RetailCustomerID",
+              "description": "The ThirdParty's RetailCustomerID",
+              "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "produces":
+          [
+            "text/html"
+          ],
+          "responseMessages":
+					[
             {
               "code": 200,
               "message" : "OK"
@@ -185,48 +198,51 @@
               "code": 400,
               "message": "Bad Request"
             }
-	    ]
+          ]
         }
-       ]
-      },
+      ]
+    },
     {
-    "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UploadMyData",
-    "operations": [
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UploadMyData",
+      "operations":
+      [
         {
-            "method": "PUT",
-            "summary": "Allows a Green Button XML file to be uploaded by the retail customer",
-            "nickname": "uploadMyData",
-            "parameters": [
-                {
-                    "name": "client_token",
-                    "description": "The ThirdParty's client access token",
-                    "defaultValue": "Bearer {client_access_token}",
-                    "required": true,
-                    "allowMultiple": false,
-                    "dataType": "String",
-                    "paramType": "head"
-                },
-                {
-                    "name": "RetailCustomerID",
-                    "description": "The ThirdParty's RetailCustomerID",
-                    "defaultValue": "",
-                    "required": true,
-                    "allowMultiple": false,
-                    "dataType": "String",
-                    "paramType": "path"
-                },
-                {
-                    "name": "xmlFile",
-                    "description": "theContents of the file being uploaded",
-                    "allowMultiple": false,
-                    "dataType": "string",
-                    "paramType": "form"
-                }
-            ],
-            "produces": [
-                "text/html"
-            ],
-            "responseMessages": [
+          "method": "PUT",
+          "summary": "Allows a Green Button XML file to be uploaded by the retail customer",
+          "nickname": "uploadMyData",
+          "parameters":
+          [
+            {
+              "name": "Authorization",
+              "description": "Access Token",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "head"
+            },
+            {
+              "name": "RetailCustomerID",
+              "description": "The ThirdParty's RetailCustomerID",
+              "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            },
+            {
+              "name": "xmlFile",
+              "description": "theContents of the file being uploaded",
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "form"
+            }
+          ],
+          "produces":
+          [
+            "text/html"
+          ],
+          "responseMessages":
+          [
             {
               "code": 200,
               "message" : "OK"
@@ -235,27 +251,29 @@
               "code": 400,
               "message": "Bad Request"
             }
-	    ]
+          ]
         }
-       ]
-      },
-      {
+      ]
+    },
+    {
       "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
-      "operations" : [
+      "operations":
+      [
         {
-         "method": "GET",
-         "summary": "Retrieve a specific Retail Customer",
-         "notes": "A Data Custodian’s representation of the specific Retail Customer is returned.",
-         "responseClass" : "application/atom+xml",
-         "nickname" : "getRetailCustomer",
-         "produces" : [
-           "application/atom+xml"
-           ],
-          "parameters": [
+          "method": "GET",
+          "summary": "Retrieve a specific Retail Customer",
+          "notes": "A Data Custodian’s representation of the specific Retail Customer is returned.",
+          "responseClass" : "application/atom+xml",
+          "nickname": "getRetailCustomer",
+          "produces":
+          [
+            "application/atom+xml"
+          ],
+          "parameters":
+          [
             {
-              "name": "client_token",
-              "description": "The ThirdParty's client access token",
-	      "defaultValue": "Bearer {client_access_token}",
+              "name": "Authorization",
+              "description": "Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -264,14 +282,15 @@
             {
               "name": "RetailCustomerID",
               "description": "The DataCustodian's RetailCustomerID",
-	      "defaultValue": "",
+              "defaultValue": "",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             }
           ],
-         "responseMessages" : [
+          "responseMessages":
+          [
             {
               "code": 200,
               "message" : "OK"
@@ -283,19 +302,20 @@
           ]
         },
         {
-         "method": "PUT",
-         "summary": "Retrieve a specific Retail Customer",
-         "notes": "A Data Custodian’s representation of the specific Retail Customer is returned.",
-         "responseClass" : "application/atom+xml",
-         "nickname" : "getRetailCustomer",
-         "produces" : [
-           "application/atom+xml"
-           ],
-          "parameters": [
+          "method": "PUT",
+          "summary": "Retrieve a specific Retail Customer",
+          "notes": "A Data Custodian’s representation of the specific Retail Customer is returned.",
+          "responseClass" : "application/atom+xml",
+          "nickname": "getRetailCustomer",
+          "produces":
+          [
+            "application/atom+xml"
+          ],
+          "parameters":
+          [
             {
-              "name": "client_token",
-              "description": "The ThirdParty's client access token",
-	      "defaultValue": "Bearer {client_access_token}",
+              "name": "Authorization",
+              "description": "Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -304,14 +324,15 @@
             {
               "name": "RetailCustomerID",
               "description": "The DataCustodian's RetailCustomerID",
-	      "defaultValue": "",
+              "defaultValue": "",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             }
           ],
-         "responseMessages" : [
+          "responseMessages":
+          [
             {
               "code": 200,
               "message" : "OK"
@@ -323,19 +344,20 @@
           ]
         },
         {
-         "method": "DELETE",
-         "summary": "Delete specific Retail Customer",
-         "notes": "Delete a Data Custodian’s representation of the specific Retail Customer.",
-         "responseClass" : "application/atom+xml",
-         "nickname" : "getRetailCustomer",
-         "produces" : [
-           "application/atom+xml"
-           ],
-          "parameters": [
+          "method": "DELETE",
+          "summary": "Delete specific Retail Customer",
+          "notes": "Delete a Data Custodian’s representation of the specific Retail Customer.",
+          "responseClass" : "application/atom+xml",
+          "nickname": "getRetailCustomer",
+          "produces":
+          [
+            "application/atom+xml"
+          ],
+          "parameters":
+          [
             {
-              "name": "client_token",
-              "description": "The ThirdParty's client access token",
-	      "defaultValue": "Bearer {client_access_token}",
+              "name": "Authorization",
+              "description": "Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -344,14 +366,15 @@
             {
               "name": "RetailCustomerID",
               "description": "The DataCustodian's RetailCustomerID",
-	      "defaultValue": "",
+              "defaultValue": "",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             }
           ],
-         "responseMessages" : [
+          "responseMessages":
+          [
             {
               "code": 200,
               "message" : "OK"
@@ -361,143 +384,184 @@
               "message": "Bad Request"
             }
           ]
-      }
-     ]
+        }
+      ]
     }
   ],
-  "models": {
-    "Authorization": {
+  "models":
+  {
+    "Authorization":
+    {
       "id": "Authorization",
-      "properties": {
-        "name": {
-          "type": "string"
+      "properties":
+      {
+        "name":
+        {
+          "type": "string",
+          "defaultValue": "Bearer"
         },
-        "id": {
+        "id":
+        {
           "type": "integer",
           "format": "int64"
         }
       }
     },
-    "UsagePoint": {
+    "UsagePoint":
+    {
       "id": "UsagePoint",
       "description": "A pet is a person's best friend",
-      "required": [
+      "required":
+      [
         "name",
         "id"
       ],
-      "properties": {
-        "name": {
+      "properties":
+      {
+        "name":
+        {
           "type": "string"
         },
-        "MeterReadings": {
+        "MeterReadings":
+        {
           "type": "list",
-          "items": {
+          "items":
+          {
             "$ref": "MeterReading"
           }
         },
-        "ReadingType": {
+        "ReadingType":
+        {
           "type": "array",
-          "items": {
+          "items":
+          {
             "$ref": "ReadingType"
           }
         },
-        "id": {
+        "id":
+        {
           "type": "integer",
           "format": "int64"
         },
-        "status": {
+        "status":
+        {
           "type": "string",
           "description": "pet status in the store",
-          "enum": [
-            "available",
-            "pending",
-            "sold"
-          ]
+          "enum": ["available","pending","sold"]
         },
-        "MeterReadingCollection": {
+        "MeterReadingCollection":
+        {
           "$ref": "MeterReading"
         }
       }
     },
-    "MeterReading": {
+    "MeterReading":
+    {
       "id": "MeterReading",
-      "properties": {
-        "name": {
+      "properties":
+      {
+        "name":
+        {
           "type": "string"
         },
-        "id": {
+        "id":
+        {
           "type": "integer",
           "format": "int64"
         }
       }
     },
-    "ApplicationInformation": {
+    "ApplicationInformation":
+    {
       "id": "ApplicationInformation",
-      "properties": {
-        "name": {
+      "properties":
+      {
+        "name":
+        {
           "type": "string"
         },
-        "id": {
+        "id":
+        {
           "type": "integer",
           "format": "int64"
         }
       }
     },
-    "Subscription": {
+    "Subscription":
+    {
       "id": "Subscription",
-      "properties": {
-        "name": {
+      "properties":
+      {
+        "name":
+        {
           "type": "string"
         },
-        "id": {
+        "id":
+        {
           "type": "integer",
           "format": "int64"
         }
       }
     },
-    "ReadingType": {
+    "ReadingType":
+    {
       "id": "ReadingType",
-      "properties": {
-        "name": {
+      "properties":
+      {
+        "name":
+        {
           "type": "string"
         },
-        "id": {
+        "id":
+        {
           "type": "integer",
           "format": "int64"
         }
       }
     },
-    "IntervalBlock": {
+    "IntervalBlock":
+    {
       "id": "IntervalBlock",
-      "properties": {
-        "name": {
+      "properties":
+      {
+        "name":
+        {
           "type": "string"
         },
-        "id": {
+        "id":
+        {
           "type": "integer",
           "format": "int64"
         }
       }
     },
-    "ElectricPowerUsageSummary": {
+    "ElectricPowerUsageSummary":
+    {
       "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
+      "properties":
+      {
+        "name":
+        {
           "type": "string"
         },
-        "id": {
+        "id":
+        {
           "type": "integer",
           "format": "int64"
         }
       }
     },
-    "LocalTime": {
+    "LocalTime":
+    {
       "id": "LocalTime",
-      "properties": {
-        "name": {
+      "properties":
+      {
+        "name":
+        {
           "type": "string"
         },
-        "id": {
+        "id":
+        {
           "type": "integer",
           "format": "int64"
         }

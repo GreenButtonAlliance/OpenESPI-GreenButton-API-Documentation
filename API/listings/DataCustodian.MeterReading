@@ -28,7 +28,6 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -89,7 +88,6 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -154,7 +152,6 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -274,7 +271,6 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -338,7 +334,6 @@
             {
               "name": "Authorization",
               "description": "Access Token",
-              "defaultValue": "Bearer {access_token}",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
