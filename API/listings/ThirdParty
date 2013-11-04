@@ -83,10 +83,6 @@
 							"message" : "OK"
             },
             {
-              "code" : 204,
-              "message" : "Operation Completed, no data is returned"
-            },
-            {
               "code" : 400,
               "message" : "Bad Request"
             }

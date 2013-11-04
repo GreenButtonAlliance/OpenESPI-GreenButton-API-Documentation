@@ -59,10 +59,6 @@
 						  "code" : 200,
 							"message" : "OK"
 						},
-						{
-              "code" : 204,
-              "message" : "Operation Completed with No response body"
-            },
             {
               "code" : 400,
               "message" : "Bad Request"
@@ -214,10 +210,6 @@
 						  "code" : 200,
 							"message" : "OK"
 						},
-						{
-              "code" : 204,
-              "message" : "Action completed with no data returned"
-            },
             {
               "code" : 400,
               "message" : "Bad Request"
