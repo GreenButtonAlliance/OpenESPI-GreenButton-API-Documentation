@@ -46,8 +46,12 @@
           ],
           "responseMessages": [
             {
-              "code": 404,
-              "message": "There are no Subscriptions"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
 	      },
@@ -93,8 +97,12 @@
           ],
           "responseMessages": [
             {
-              "code": 405,
-              "message": "Invalid input"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -209,12 +217,12 @@
           ],
           "responseMessages": [
             {
-              "code": 400,
-              "message": "Invalid Subscription ID supplied"
+              "code": 200,
+              "message" : "OK"
             },
             {
-              "code": 404,
-              "message": "Subscription not found"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -268,16 +276,12 @@
           ],
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid SubscriptionID supplied"
-            },
-            {
-              "code": 404,
-              "message": "Subscription not found"
-            },
-            {
-              "code": 405,
-              "message": "Validation exception"
+              "message": "Bad Request"
             }
           ]
 	},
@@ -323,8 +327,12 @@
           ],
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid Subscription ID"
+              "message": "Bad Request"
             }
           ]
         }
