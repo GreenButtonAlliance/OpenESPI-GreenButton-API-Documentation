@@ -46,10 +46,13 @@
           ],
           "responseMessages": [
             {
-              "code": 404,
-              "message": "There are no Application Informations"
-            }
-          ]
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }          ]
 	      },
         {
           "method": "POST",
@@ -93,10 +96,13 @@
           ],
           "responseMessages": [
             {
-              "code": 405,
-              "message": "Invalid input"
-            }
-          ]
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }          ]
         }
       ]
     },
@@ -209,14 +215,14 @@
           ],
           "responseMessages": [
             {
-              "code": 400,
-              "message": "Invalid Application Information ID supplied"
+              "code": 200,
+              "message" : "OK"
             },
             {
-              "code": 404,
-              "message": "Application Information not found"
+              "code": 400,
+              "message": "Bad Request"
             }
-          ]
+            ]
         },
         {
           "method": "PUT",
@@ -268,18 +274,14 @@
           ],
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid Application InformationID supplied"
-            },
-            {
-              "code": 404,
-              "message": "Application Information not found"
-            },
-            {
-              "code": 405,
-              "message": "Validation exception"
+              "message": "Bad Request"
             }
-          ]
+            ]
 	},
         {
           "method": "DELETE",
@@ -323,8 +325,12 @@
           ],
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid Application Information ID"
+              "message": "Bad Request"
             }
           ]
         }
