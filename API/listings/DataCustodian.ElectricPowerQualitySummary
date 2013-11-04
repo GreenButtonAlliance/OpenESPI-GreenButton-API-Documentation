@@ -70,8 +70,12 @@
           ],
           "responseMessages": [
             {
-              "code": 404,
-              "message": "There are no Electric Power Quality Summarys"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
 	      },
@@ -133,8 +137,12 @@
           ],
           "responseMessages": [
             {
-              "code": 405,
-              "message": "Invalid input"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -257,12 +265,12 @@
           ],
           "responseMessages": [
             {
-              "code": 400,
-              "message": "Invalid ElectricPowerQualitySummary ID supplied"
+              "code": 200,
+              "message" : "OK"
             },
             {
-              "code": 404,
-              "message": "ElectricPowerQualitySummary not found"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -326,16 +334,12 @@
           ],
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid ElectricPowerQualitySummaryID supplied"
-            },
-            {
-              "code": 404,
-              "message": "Electric Power Quality Summary not found"
-            },
-            {
-              "code": 405,
-              "message": "Validation exception"
+              "message": "Bad Request"
             }
           ]
 	},
@@ -399,8 +403,12 @@
           ],
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid Electric Power Quality Summary ID"
+              "message": "Bad Request"
             }
           ]
         }
