@@ -43,8 +43,12 @@
           ],
           "responseMessages": [
             {
-              "code": 404,
-              "message": "There are no Reading Types"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
 	      },
@@ -84,8 +88,12 @@
           ],
           "responseMessages": [
             {
-              "code": 405,
-              "message": "Invalid input"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -200,12 +208,12 @@
           ],
           "responseMessages": [
             {
-              "code": 400,
-              "message": "Invalid ReadingType ID supplied"
+              "code": 200,
+              "message" : "OK"
             },
             {
-              "code": 404,
-              "message": "ReadingType not found"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -245,16 +253,12 @@
           ],
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid ReadingTypeID supplied"
-            },
-            {
-              "code": 404,
-              "message": "Reading Type not found"
-            },
-            {
-              "code": 405,
-              "message": "Validation exception"
+              "message": "Bad Request"
             }
           ]
 	},
@@ -294,12 +298,12 @@
           ],
           "responseMessages": [
             {
-              "code": 404,
-              "message": "Reading Type not found"
+              "code": 200,
+              "message" : "OK"
             },
             {
               "code": 400,
-              "message": "Invalid Reading Type ID"
+              "message": "Bad Request"
             }
           ]
         }
