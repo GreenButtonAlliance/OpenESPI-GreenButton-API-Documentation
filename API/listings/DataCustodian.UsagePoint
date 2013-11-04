@@ -49,10 +49,13 @@
               "paramType": "path"
             }
           ],
-          "responseMessages":[
             {
-              "code": 204,
-              "message": "There are no Usage Points"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
 	      },
@@ -100,8 +103,12 @@
           ],
           "responseMessages":[
             {
-              "code": 405,
-              "message": "Invalid input"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -219,13 +226,13 @@
             }
           ],
           "responseMessages":[
-            {
-              "code": 400,
-              "message": "Invalid UsagePoint ID supplied"
+             {
+              "code": 200,
+              "message" : "OK"
             },
             {
-              "code": 404,
-              "message": "UsagePoint not found"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -286,15 +293,7 @@
             },
             {
               "code": 400,
-              "message": "Invalid UsagePointID supplied"
-            },
-            {
-              "code": 404,
-              "message": "Usage Point not found"
-            },
-            {
-              "code": 405,
-              "message": "Validation exception"
+              "message": "Bad Request"
             }
           ]
         },
@@ -347,7 +346,7 @@
             },
             {
               "code": 400,
-              "message": "Invalid UsagePointID"
+              "message": "Bad Request"
             }
           ]
         }
