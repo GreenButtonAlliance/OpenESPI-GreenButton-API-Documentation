@@ -29,8 +29,8 @@
 							"message" : "OK"
             },
             {
-              "code" : 404,
-              "message" : "Service Not Available"
+              "code" : 400,
+              "message" : "Bad Request"
             }
           ]
         },
@@ -64,8 +64,8 @@
               "message" : "Operation Completed with No response body"
             },
             {
-              "code" : 404,
-              "message" : "Service Not Available"
+              "code" : 400,
+              "message" : "Bad Request"
             }
           ]
         }
@@ -107,8 +107,8 @@
               "message" : "OK"
             },
             {
-              "code": 404,
-              "message": "Service Not Available"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -148,8 +148,8 @@
               "message" : "OK"
             },
             {
-              "code": 404,
-              "message": "Service Not Available"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -184,8 +184,8 @@
 							"message": "OK"
             },
             {
-              "code" : 404,
-              "message": "Service Not Available"
+              "code" : 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -219,8 +219,8 @@
               "message" : "Action completed with no data returned"
             },
             {
-              "code" : 404,
-              "message" : "Service Not Available"
+              "code" : 400,
+              "message" : "Bad Request"
             }
           ]
         }

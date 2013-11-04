@@ -47,8 +47,8 @@
               "message" : "OK"
             },
             {
-              "code" : 404,
-              "message" : "Service Not Available"
+              "code" : 400,
+              "message" : "Bad Request"
             }
           ]
         }
@@ -87,8 +87,8 @@
               "message" : "Operation Completed, no data is returned"
             },
             {
-              "code" : 404,
-              "message" : "Service Not Available"
+              "code" : 400,
+              "message" : "Bad Request"
             }
           ]
         }
