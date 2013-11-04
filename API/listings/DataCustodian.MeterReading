@@ -62,8 +62,12 @@
           ],
           "responseMessages": [
             {
-              "code": 404,
-              "message": "Invalid Usage Point"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -119,8 +123,12 @@
           ],
           "responseMessages": [
             {
-              "code": 404,
-              "message": "Usage Point Not Found"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -244,12 +252,12 @@
           ],
           "responseMessages": [
             {
-              "code": 400,
-              "message": "Invalid UsagePoint ID or Meter Reading IDsupplied"
+              "code": 200,
+              "message" : "OK"
             },
             {
-              "code": 404,
-              "message": "UsagePoint or Meter Reading not found"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -307,21 +315,13 @@
             }
           ],
           "responseMessages": [
-	    {
-	      "code": 200,
-	      "message" : "OK"
-	    },
+            {
+              "code": 200,
+              "message" : "OK"
+            },
             {
               "code": 400,
-              "message": "Invalid UsagePointID or MeterReadingID supplied"
-            },
-            {
-              "code": 404,
-              "message": "Usage Point or Meter Reading not found"
-            },
-            {
-              "code": 405,
-              "message": "Validation exception"
+              "message": "Bad Request"
             }
           ]
 	},
@@ -371,13 +371,13 @@
             }
           ],
           "responseMessages": [
-	    {
-	      "code": 200,
-	      "message" : "OK"
-	    },
+            {
+              "code": 200,
+              "message" : "OK"
+            },
             {
               "code": 400,
-              "message": "Invalid UsagePointID or MeterReadingID"
+              "message": "Bad Request"
             }
           ]
         }
