@@ -502,19 +502,6 @@
           "format": "int64"
         }
       }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
     }
-
   }
 }

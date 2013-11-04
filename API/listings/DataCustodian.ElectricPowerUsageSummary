@@ -322,16 +322,6 @@
               "paramType": "path"
             }
           ],
-          "parameters": [
-            {
-              "name": "ElectricPowerUsageSummary",
-              "description": "A Electric Power Usage Summary object that needs to be updated",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "ElectricPowerUsageSummary",
-              "paramType": "ElectricPowerUsageSummary"
-            }
-          ],
           "responseMessages": [
             {
               "code": 200,
@@ -389,16 +379,6 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
-            }
-          ],
-          "parameters": [
-            {
-              "name": "ElectricPowerUsageSummary",
-              "description": "A Electric Power Usage Summary object that needs to be updated",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "ElectricPowerUsageSummary",
-              "paramType": "ElectricPowerUsageSummary"
             }
           ],
           "responseMessages": [
@@ -552,19 +532,6 @@
           "format": "int64"
         }
       }
-    },
-    "ElectricPowerUsageSummary": {
-      "id": "ElectricPowerUsageSummary",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
     }
-
   }
 }

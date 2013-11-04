@@ -397,7 +397,7 @@
           "format": "int64"
         }
       }
-    },      
+    },
     "MeterReading": {
       "id": "MeterReading",
       "properties": {
@@ -419,13 +419,13 @@
     },
     "MeterReadings" : {
       "id": "MeterReadings",
-      "description": "A List of Meter Readings", 
+      "description": "A List of Meter Readings",
       "properties": {
          "MeterReadingCollection" : {
             "type": "list",
             "items": {
               "$ref": "MeterReading"
-  	    }
+            }
          }
        }
     },

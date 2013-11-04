@@ -3,38 +3,38 @@
   "swaggerVersion": "1.3",
   "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/",
-  "produces": 
+  "produces":
 	[
     "application/xml",
     "application/json",
     "text/plain",
     "text/html"
   ],
-  "apis": 
+  "apis":
   [
     {
       "path": "/home",
-      "operations" : 
+      "operations":
       [
         {
           "method": "GET",
           "summary": "The Data Custodian Portal's Home Screen",
           "notes": "The requesting browser displays the Data Custodian Portal's Home Screen. The response SHOULD provide the Retail Customer the opportunity to Login.",
           "responseClass" : "text/html",
-          "nickname" : "getDataCustodianPortalHome",
-          "produces" : 
+          "nickname": "getDataCustodianPortalHome",
+          "produces":
 					[
             "text/html"
           ],
-          "responseMessages" : 
+          "responseMessages":
 					[
             {
-              "code" : 200,
-              "message" : "OK"
+              "code": 200,
+              "message": "OK"
             },
             {
-              "code" : 404,
-              "message" : "Service Not Available"
+              "code": 404,
+              "message": "Service Not Available"
             }
           ]
         }
@@ -42,27 +42,27 @@
     },
     {
       "path": "/login",
-      "operations" : 
+      "operations":
       [
         {
           "method": "GET",
           "summary": "The Data Custodian Portal's Login Screen",
           "notes": "The Retail Customer's browser displays the Data Custodian Portal's Login Screen. The expected result is a Login POST which is processed by the Data Custodian.",
           "responseClass" : "text/html",
-          "nickname" : "getDataCustodianPortalLogin",
-          "produces" : 
+          "nickname": "getDataCustodianPortalLogin",
+          "produces":
           [
             "text/html"
           ],
-          "responseMessages" : 
+          "responseMessages":
           [
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 404,
-              "message" : "Service Not Available"
+              "code": 404,
+              "message": "Service Not Available"
             }
           ]
         }
@@ -70,19 +70,19 @@
     },
     {
       "path": "/RetailCustomer/{RetailCustomerID}/home",
-      "operations" : 
+      "operations":
       [
         {
           "method": "GET",
           "summary": "The Data Custodian Portal's Retail Customer's Home Screen.",
           "notes": "The requesting browser displays the Data Custodian Portal's Retail Customer's Home Screen, which is shown after the Retail Customer successfully completes the Login process.",
           "responseClass" : "text/html",
-          "nickname" : "retailCustomerHome",
-          "produces" : 
+          "nickname": "retailCustomerHome",
+          "produces":
 					[
             "text/html"
           ],
-          "parameters": 
+          "parameters":
           [
             {
               "name": "RetailCustomerID",
@@ -94,15 +94,15 @@
               "paramType": "path"
             }
           ],
-          "responseMessages" : 
+          "responseMessages":
           [
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 404,
-              "message" : "Service Not Available"
+              "code": 404,
+              "message": "Service Not Available"
             }
           ]
         }
@@ -110,19 +110,19 @@
     },
     {
       "path": "/RetailCustomer/{RetailCustomerID}/ThirdPartyList",
-      "operations" : 
+      "operations":
       [
         {
           "method": "POST",
           "summary": "[ESPI] The Data Custodian Portal's supported Third Party Applications Screen",
           "notes": "The requesting browser is to display a Retail Customer home Screen of the portal. It is assumed that this will contain a Select your Third Part for Green Button sharing as well as a Download My Data Green button page",
           "responseClass" : "text/html",
-          "nickname" : "getPortalHome",
-          "produces" : 
+          "nickname": "getPortalHome",
+          "produces":
           [
             "text/html"
           ],
-          "parameters": 
+          "parameters":
           [
             {
               "name": "RetailCustomerID",
@@ -134,15 +134,15 @@
               "paramType": "path"
             }
           ],
-          "responseMessages" : 
+          "responseMessages":
           [
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 404,
-              "message" : "Service Not Available"
+              "code": 404,
+              "message": "Service Not Available"
             }
           ]
         }

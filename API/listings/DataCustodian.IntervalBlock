@@ -97,7 +97,7 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "header"
-            },					
+            },
 	    {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
@@ -153,9 +153,6 @@
           "notes": "Returns a Interval Block",
           "responseClass": "IntervalBlock",
           "nickname": "getIntervalBlock",
-          "produces": [
-            "application/xml"
-          ],
           "produces": [
             "application/atom+xml"
           ],
