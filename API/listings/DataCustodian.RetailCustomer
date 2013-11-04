@@ -33,11 +33,13 @@
             }
           ],
          "responseMessages" : [
-            {"code" : 200
+            {
+              "code": 200,
+              "message" : "OK"
             },
             {
-             "code" : 404,
-             "message" : "Service Not Available"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -71,12 +73,13 @@
             }
          ],
          "responseMessages" : [
-            {"code" : 204,
-	     "Message" : "Operation Completed with No response body"
+            {
+              "code": 200,
+              "message" : "OK"
             },
             {
-             "code" : 404,
-             "message" : "Service Not Available"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -122,13 +125,14 @@
                 "text/html"
             ],
             "responseMessages": [
-                {
-                    "code": 200
-                },
-                {
-                    "code": 404,
-                    "message": "Service Not Available"
-                }
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
 	    ]
         }
        ]
@@ -173,13 +177,14 @@
                 "text/html"
             ],
             "responseMessages": [
-                {
-                    "code": 200
-                },
-                {
-                    "code": 404,
-                    "message": "Service Not Available"
-                }
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
 	    ]
         }
        ]
@@ -222,14 +227,14 @@
                 "text/html"
             ],
             "responseMessages": [
-                {
-                    "code": 200,
-                    "message" : "OK"
-                },
-                {
-                    "code": 404,
-                    "message": "Service Not Available"
-                }
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
 	    ]
         }
        ]
@@ -267,11 +272,13 @@
             }
           ],
          "responseMessages" : [
-            {"code" : 200
+            {
+              "code": 200,
+              "message" : "OK"
             },
             {
-             "code" : 404,
-             "message" : "Service Not Available"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -305,11 +312,13 @@
             }
           ],
          "responseMessages" : [
-            {"code" : 200
+            {
+              "code": 200,
+              "message" : "OK"
             },
             {
-             "code" : 404,
-             "message" : "Service Not Available"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -343,12 +352,13 @@
             }
           ],
          "responseMessages" : [
-            {"code" : 204,
-	     "message" : "Action completed with no data returned"
+            {
+              "code": 200,
+              "message" : "OK"
             },
             {
-             "code" : 404,
-             "message" : "Service Not Available"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
       }
