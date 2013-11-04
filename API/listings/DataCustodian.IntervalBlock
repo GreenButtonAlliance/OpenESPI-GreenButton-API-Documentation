@@ -70,8 +70,12 @@
           ],
           "responseMessages": [
             {
-              "code": 404,
-              "message": "There are no Interval Blocks"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
 	      },
@@ -129,8 +133,12 @@
           ],
           "responseMessages": [
             {
-              "code": 405,
-              "message": "Invalid input"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -264,12 +272,12 @@
           ],
           "responseMessages": [
             {
-              "code": 400,
-              "message": "Invalid IntervalBlock ID supplied"
+              "code": 200,
+              "message" : "OK"
             },
             {
-              "code": 404,
-              "message": "IntervalBlock not found"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -303,16 +311,12 @@
           ],
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid IntervalBlockID supplied"
-            },
-            {
-              "code": 404,
-              "message": "Interval Block not found"
-            },
-            {
-              "code": 405,
-              "message": "Validation exception"
+              "message": "Bad Request"
             }
           ]
 	},
@@ -346,8 +350,12 @@
           ],
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid UsagePont ID"
+              "message": "Bad Request"
             }
           ]
         }
