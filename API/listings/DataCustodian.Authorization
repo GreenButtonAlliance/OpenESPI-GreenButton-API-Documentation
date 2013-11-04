@@ -46,8 +46,12 @@
           ],
           "responseMessages": [
             {
-              "code": 404,
-              "message": "There are no Authorizations"
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
 	      }
@@ -162,12 +166,12 @@
           ],
           "responseMessages": [
             {
-              "code": 400,
-              "message": "Invalid Authorization ID supplied"
+              "code": 200,
+              "message" : "OK"
             },
             {
-              "code": 404,
-              "message": "Authorization not found"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         },
@@ -222,16 +226,12 @@
           "responseClass": "void",
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid AuthorizationID supplied"
-            },
-            {
-              "code": 404,
-              "message": "Authorization not found"
-            },
-            {
-              "code": 405,
-              "message": "Validation exception"
+              "message": "Bad Request"
             }
           ]
 	},
@@ -277,8 +277,12 @@
           ],
           "responseMessages": [
             {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
               "code": 400,
-              "message": "Invalid Authorization ID"
+              "message": "Bad Request"
             }
           ]
         }
