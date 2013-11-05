@@ -1,24 +1,28 @@
 {
   "apiVersion": "1.0.0",
-  "swaggerVersion": "1.3",
+  "swaggerVersion": "1.3.0",
   "basePath": "http://54.200.90.158:8080/ThirdParty",
   "resourcePath": "/",
-  "produces":[
+  "produces":
+	[
     "application/xml",
     "text/plain",
     "text/html"
   ],
-  "apis":[
+  "apis":
+	[
     {
       "path": "/espi/1_1/OAuthCallBack",
-      "operations":[
+      "operations":
+			[
         {
           "method": "GET",
           "summary": "OAuth 2.0 Authorization Code callback URI",
           "notes": "The DataCustodian uses this URI to return an OAuth 2.0 Authorization Code to the Third Party Application during the OAuth 2.0 Authorization Code flow process.",
           "responseClass" : "text/html",
           "nickname" : "getAuthorizationCallback",
-          "parameters":[
+          "parameters":
+					[
             {
               "name": "code",
               "description": "OAuth 2.0 authorization code assigned by the Authorization Server after authenticating a Retail Customer and obtaining their authorization for the Third Party to access their energy usage information (EUI).",
@@ -36,59 +40,74 @@
               "paramType": "query"
             }
           ],
-          "produces":[
+          "produces":
+					[
             "text/html",
             "application/xhtml+xml",
             "application/xml"
           ],
-          "responseMessages":[
+          "responseMessages":
+					[
             {
-              "code" : 200,
-              "message" : "OK"
+              "code": 200,
+              "message": "OK"
             },
             {
-              "code" : 400,
-              "message" : "Bad Request"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
       ]
     },
     {
-      "path": "/espi/1_1/Notify_SubscriptionAvailable",
-      "operations":[
+      "path": "/espi/1_1/Notification",
+      "operations":
+			[
         {
           "method": "POST",
-          "summary": "The URI used to notify the Third Party that a particular subscription is available for retrieval from the DataCustodian",
-          "notes": "The DataCustodian will use this to notify the Third Party of the availability of a subscription",
+          "summary": "Notify Third Party data is available for retrieval from the Data Custodian",
+          "notes": "The Data Custodian uses this URL to notify the Third Party there is subscription data available.",
           "responseClass" : "text/html",
-          "nickname" : "notifySubscription",
-          "parameters":[
+          "nickname": "notifySubscription",
+					"consumes": ["application/xml"],
+          "parameters":
+					[
             {
-              "<BatchList>" : "The Data Custodian URL to be used to retrieve the specific list of available resources",
-              "<Resource>" : "The Third Party may use this URL to retrieve the specific subscription data",
-              "description" : "A <BatchList> <Resource>{URL}</Resource> ... </Batchlistdd representation of that will be called via HTTP GET when the Data Custodian has a new delivery of usage information available.",
+              "name": "BatchList",
+              "description" : "An atom/XML feed containing 1 to n Subscription URI entries.",
               "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "postdata"
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
             }
           ],
-          "produces":[
+          "produces":
+					[
             "text/html"
           ],
-          "responseMessages":[
+          "responseMessages":
+					[
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 400,
-              "message" : "Bad Request"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
       ]
     }
-  ]
+  ],
+	"models":
+	{
+    "id" : "BatchList",
+    "description": "1 to n URL entries for Subscriptions with data available.",
+    "properties":
+    {
+      "resourceURL" : "String"
+    }
+  }
 }
