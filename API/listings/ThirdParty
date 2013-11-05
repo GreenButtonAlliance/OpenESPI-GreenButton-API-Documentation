@@ -66,11 +66,11 @@
 			[
         {
           "method": "POST",
+          "nickname": "notifySubscription",					
           "summary": "Notify Third Party data is available for retrieval from the Data Custodian",
           "notes": "The Data Custodian uses this URL to notify the Third Party there is subscription data available.",
           "responseClass" : "text/html",
-          "nickname": "notifySubscription",
-					"consumes": ["application/xml"],
+					"consumes": ["application/xml"],					
           "parameters":
 					[
             {
