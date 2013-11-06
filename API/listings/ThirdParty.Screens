@@ -1,37 +1,36 @@
 {
   "apiVersion": "1.0.0",
-  "swaggerVersion": "1.3",
+  "swaggerVersion": "1.3.0",
   "basePath": "http://54.200.90.158:8080/ThirdParty",
   "resourcePath": "/resources",
-  "produces": 
+  "produces":
 	[
     "text/html"
   ],
-  "apis": 
+  "apis":
 	[
     {
       "path": "/home",
-      "operations" : 
+      "operations":
       [
         {
           "method": "GET",
-          "summary": "The Third Party Portal's Home Screen",
+          "summary": "The Third Party's Home Screen",
           "notes": "The requesting browser displays the Third Party Portal's Home Screen. The response SHOULD provide the Retail Customer the opportunity to Login.",
-          "responseClass" : "text/html",
-          "nickname" : "getPortalHome",
-          "produces" : 
+          "nickname": "getPortalHome",
+          "produces":
           [
             "text/html"
           ],
-          "responseMessages" : 
+          "responseMessages":
           [
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 400,
-              "message" : "Bad Request"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -39,27 +38,26 @@
     },
     {
       "path": "/login",
-      "operations" : 
+      "operations":
       [
         {
           "method": "GET",
-          "summary": "The Third Party Portal's Login Screen",
+          "summary": "The Third Party's Login Screen",
           "notes": "The Retail Customer's browser displays the Third Party Portal's Login Screen. The expected result is a Login POST which is processed by the Third Party.",
-          "responseClass" : "text/html",
-          "nickname" : "portalSignin",
-          "produces" : 
+          "nickname": "portalSignin",
+          "produces":
           [
             "text/html"
           ],
-          "responseMessages" : 
+          "responseMessages":
           [
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 400,
-              "message" : "Bad Request"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -67,67 +65,64 @@
     },
     {
       "path": "/RetailCustomer/{RetailCustomerID}/home",
-      "operations" : 
+      "operations":
       [
         {
           "method": "GET",
-          "summary": "[ESPI] The Third Party Portal's Retail Customer's Home Screen",
+          "summary": "[ESPI] The Third Party's Retail Customer's Home Screen",
           "notes": "The requesting browser displays the Third Party Portal's Retail Customer's Home Screen, which is shown after the Retail Customer successfully completes the Login process.",
-          "responseClass" : "text/html",
-          "nickname" : "getRetailCustomerHome",
-          "produces" : 
+          "nickname": "getRetailCustomerHome",
+          "produces":
           [
             "text/html"
           ],
-          "parameters": 
+          "parameters":
           [
             {
               "name": "RetailCustomerID",
-              "description": "The ThirdParty's RetailCustomerID",
-              "defaultValue": "",
+              "description": "The Retail Customer's ID",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             }
           ],
-          "responseMessages" : 
+          "responseMessages":
           [
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 400,
-              "message" : "Bad Request"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
       ]
-    },		
+    },
     {
       "path": "/TermsOfService",
-      "operations" : 
+      "operations":
       [
         {
           "method": "GET",
-          "summary": "Third Party Application's Terms of Service Screen",
+          "summary": "Third Party's Terms of Service Screen",
           "notes": "The Third Party Application's Terms of Service SHOULD be presented to the Retail Customer by the Data Custodian's Authorization Server during the process of authorizing the Third Party Application access to the Retail Customer's energy usage information.",
-          "responseClass" : "text/html",
-          "nickname" : "termsOfService",
-          "produces" : 
+          "nickname": "termsOfService",
+          "produces":
           [
             "text/html"
           ],
-          "responseMessages" : 
+          "responseMessages":
           [
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 400,
-              "message" : "Bad Request"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -135,27 +130,26 @@
     },
     {
       "path": "/UsagePolicy",
-      "operations" : 
+      "operations":
       [
         {
           "method": "GET",
-          "summary": "Third Party Application's Usage Policy Screen",
+          "summary": "Third Party's Usage Policy Screen",
           "notes": "The Third Party Application's Usage Policy SHOULD be presented to the Retail Customer by the Data Custodian's Authorization Server during the process of authorizing the Third Party Application access to the Retail Customer's energy usage information.",
-          "responseClass" : "text/html",
-          "nickname" : "usagePolicy",
-          "produces" : 
+          "nickname": "usagePolicy",
+          "produces":
           [
             "text/html"
           ],
-          "responseMessages" : 
+          "responseMessages":
           [
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 400,
-              "message" : "Bad Request"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -163,40 +157,37 @@
     },
     {
       "path": "/RetailCustomer/{RetailCustomerID}/DataCustodianList",
-      "operations" : 
+      "operations":
       [
         {
           "method": "GET",
-          "summary": "[ESPI] The Third Party Portal's supported Data Custodians Screen",
-          "notes": "The requesting browser is to display a Retail Customer home Screen of the port",
-          "notes": "The Retail Customer is allowed to see and select a Data Custodian from which the Third Party is to be approved to access Data",
-          "responseClass" : "text/html",
-          "nickname" : "getPortalHome",
-          "produces" : 
+          "summary": "[ESPI] The Third Party's supported Data Custodian Screen",
+          "notes": "The Third Party displays a Retail Customer a list of supported Data Custodians from which the Retail Customer selects a Data Custodian the Third Party will be authorized to access",
+          "nickname": "getPortalHome",
+          "produces":
 					[
             "text/html"
           ],
-          "parameters": 
+          "parameters":
           [
             {
               "name": "RetailCustomerID",
-              "description": "The DataCustodian's RetailCustomerID",
-              "defaultValue": "",
+              "description": "The Retail Customer's ID",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             }
           ],
-          "responseMessages" : 
+          "responseMessages":
           [
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 400,
-              "message" : "Bad Request"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }
@@ -204,39 +195,37 @@
     },
     {
       "path": "/RetailCustomer/{RetailCustomerID}/ScopeSelection",
-      "operations" : 
+      "operations":
       [
         {
           "method": "GET",
-          "summary": "[ESPI] Third Party Portal's Retail Customer's SCOPE Selection Screen",
-          "notes": "The is to display a Retail Customer a screen that allows for the selection of the types of data access for which the Data Custodian will approve access",
-          "responseClass" : "text/html",
-          "nickname" : "getPortalHome",
-          "produces" : 
+          "summary": "[ESPI] Third Party's Retail Customer's SCOPE Selection Screen",
+          "notes": "The Third Party displays a Retail Customer a screen that allows them to select the types of Data Custodian data to be accessed by the Third Party",
+          "nickname": "getPortalHome",
+          "produces":
           [
             "text/html"
           ],
-          "parameters": 
+          "parameters":
           [
             {
               "name": "RetailCustomerID",
-              "description": "The ThirdParty's RetailCustomerID",
-              "defaultValue": "",
+              "description": "The Retail Customer's ID",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             }
           ],
-          "responseMessages" : 
+          "responseMessages":
           [
             {
-              "code" : 200,
-							"message" : "OK"
+              "code": 200,
+							"message": "OK"
             },
             {
-              "code" : 400,
-              "message" : "Bad Request"
+              "code": 400,
+              "message": "Bad Request"
             }
           ]
         }

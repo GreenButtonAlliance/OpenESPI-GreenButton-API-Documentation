@@ -1,27 +1,31 @@
 {
   "apiVersion": "1.0.0",
-  "swaggerVersion": "1.3",
+  "swaggerVersion": "1.3.0",
   "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/usagepoint",
-  "produces": [
+  "produces":
+	[
     "application/xml",
     "text/plain",
     "text/html"
   ],
-  "apis": [
+  "apis":
+	[
     {
       "path": "/espi/1_1/resource/ReadingType",
-      "operations": [
+      "operations":
+			[
         {
           "method": "GET",
           "summary": "[ESPI] Finds all Reading Types",
           "notes": "An XML representation of all Reading Types will be returned",
-          "responseClass": "<feed> ... </feed>",
           "nickname": "findReadingTypes",
-          "produces": [
+          "produces":
+					[
             "application/atom+xml"
           ],
-      "parameters" : [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -40,10 +44,11 @@
               "paramType": "header"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -53,11 +58,11 @@
 	      },
         {
           "method": "POST",
-          "summary": "Add a new Reading Type to the Data Custodian",
-          "notes": "The New Reading Type will be added",
-          "responseClass": "void",
+          "summary": "Add a new Reading Type",
+					"consumes": ["application/xml"],
           "nickname": "addReadingType",
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -68,7 +73,7 @@
             },
             {
               "name": "Accept",
-              "description": "Accept type for the Request",
+              "description": "Accept type for the Request.",
               "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
@@ -77,17 +82,18 @@
             },
             {
               "name": "ReadingType",
-              "description": "0 or more ReadingTypes that need to be added to the ReadingType",
+              "description": "1 or more Reading Types to be added.",
               "required": false,
               "allowMultiple": true,
-              "dataType": "ReadingType",
-              "paramType": "ReadingType"
+              "dataType": "string",
+              "paramType": "body"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -99,20 +105,22 @@
     },
     {
       "path": "/espi/1_1/resource/ReadingType/{ReadingTypeID}",
-      "operations": [
+      "operations":
+			[
         {
           "method": "GET",
-          "summary": "[ESPI] Retrieve a ReadingType Using it's ID",
-          "notes": "Returns a Reading Type",
-          "responseClass": "ReadingType",
+          "summary": "[ESPI] Retrieve a Reading Type Using it's ID",
           "nickname": "getReadingType",
-          "produces": [
+          "produces":
+					[
             "application/xml"
           ],
-          "authorizations": [
+          "authorizations":
+					[
             "oauth2"
           ],
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -132,81 +140,81 @@
             },
             {
               "name": "ReadingTypeID",
-              "description": "ID of the ReadingType that needs to be fetched",
+              "description": "ID of the Reading Type.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
-	    {
+            {
               "name": "published-max",
-              "description": "The upper bound on the published date of the referenced resource",
+              "description": "The upper bound on the published date of the Reading Type.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "published-min",
-              "description": "The lower bound on the published date of the referenced resource",
+              "description": "The lower bound on the published date of the Reading Type.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "updated-max",
-              "description": "The upper bound on the updated date of the referenced resource",
+              "description": "The upper bound on the updated date of the Reading Type.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "updated-min",
-              "description": "The lower bound on the updated date of the referenced resource",
+              "description": "The lower bound on the updated date of the Reading Type.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "max-results",
-              "description": "The upper bound on the number of entries to be contained in a reply to this response",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
               "paramType": "query"
             },
-	    {
+            {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transfered as the first entry of this request.",
+              "description": "The one based offset in the DataCustodian's collection of Reading Types that should be transferred as the first entry of the response.",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
               "paramType": "query"
             },
-	    {
+            {
               "name": "depth",
-              "description": "The maximum number of entries to be transfered in the response to this request",
+              "description": "The maximum number of entries to be transferred in the response.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
               "paramType": "query"
             }
-
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -216,11 +224,12 @@
         },
         {
           "method": "PUT",
-          "summary": "Update an existing Reading Type within the DataCustodian",
+          "summary": "Update an existing Reading Type",
           "notes": "The Reading Type must exist",
-          "responseClass": "void",
+					"consumes": ["application/xml"],
           "nickname": "updateReadingType",
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -231,7 +240,7 @@
             },
             {
               "name": "Accept",
-              "description": "Accept type for the Request",
+              "description": "Accept type for the Request.",
               "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
@@ -240,31 +249,31 @@
             },
             {
               "name": "ReadingType",
-              "description": "A Reading Type object that needs to be updated",
+              "description": "The Reading Type to be updated.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "ReadingType",
-              "paramType": "ReadingType"
+              "dataType": "string",
+              "paramType": "body"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
               "message": "Bad Request"
             }
           ]
-	},
+        },
         {
           "method": "DELETE",
-          "summary": "Deletes a Reading Type",
-          "notes": "",
-          "responseClass": "void",
+          "summary": "Delete a Reading Type",
           "nickname": "deleteReadingType",
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -275,7 +284,7 @@
             },
             {
               "name": "Accept",
-              "description": "Accept type for the Request",
+              "description": "Accept type for the Request.",
               "defaultValue": "application/atom+xml",
               "required": true,
               "allowMultiple": false,
@@ -284,17 +293,18 @@
             },
             {
               "name": "ReadingTypeID",
-              "description": "Reading Type id to delete",
+              "description": "ID of Reading Type to delete",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -309,18 +319,6 @@
   "models": {
     "Authorization": {
       "id": "Authorization",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    },
-    "ReadingType": {
-      "id": "ReadingType",
       "properties": {
         "name": {
           "type": "string"

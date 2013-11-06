@@ -1,30 +1,35 @@
 {
   "apiVersion": "1.0.0",
-  "swaggerVersion": "1.3",
+  "swaggerVersion": "1.3.0",
   "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/resources",
-  "produces": [
+  "produces":
+	[
     "application/xml",
     "text/plain",
     "text/html"
   ],
-  "apis": [
+  "apis":
+	[
     {
       "path": "/espi/1_1/resource/ApplicationInformation",
-      "operations": [
+      "operations":
+			[
         {
           "method": "GET",
           "summary": "[ESPI] Finds all Application Informations",
           "notes": "An XML representation of all Application Informations will be returned",
-          "responseClass": "<feed> ... </feed>",
           "nickname": "findApplicationInformations",
-          "produces": [
+          "produces":
+					[
             "application/xml+atom"
           ],
-          "authorizations": [
+          "authorizations":
+					[
             "oauth2"
           ],
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -43,29 +48,32 @@
               "paramType": "header"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
               "message": "Bad Request"
-            }          ]
+            }
+					]
 	      },
         {
           "method": "POST",
-          "summary": "Add a new Application Information to the Data Custodian",
-          "notes": "The New Application Information will be added",
-          "responseClass": "void",
+          "summary": "Add a new Application Information",
           "nickname": "addApplicationInformation",
-          "produces": [
+          "produces":
+					[
             "application/xml+atom"
           ],
-          "authorizations": [
+          "authorizations":
+					[
             "oauth2"
           ],
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -85,41 +93,45 @@
             },
             {
               "name": "ApplicationInformation",
-              "description": "The ApplicationInformation object to create",
-              "required": false,
+              "description": "The new Application Information",
+              "required": true,
               "allowMultiple": true,
               "dataType": "String",
               "paramType": "form"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
               "message": "Bad Request"
-            }          ]
+            }
+					]
         }
       ]
     },
     {
       "path": "/espi/1_1/resource/ApplicationInformation/{ApplicationInformationID}",
-      "operations": [
+      "operations":
+			[
         {
           "method": "GET",
-          "summary": "[ESPI] Retrieve a Application Information Using it's ID",
-          "notes": "Returns a Application Information",
-          "responseClass": "ApplicationInformation",
+          "summary": "[ESPI] Retrieve an Application Information Using it's ID",
           "nickname": "getApplicationInformation",
-          "produces": [
+          "produces":
+					[
             "application/xml+atom"
           ],
-          "authorizations": [
+          "authorizations":
+					[
             "oauth2"
           ],
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -139,81 +151,18 @@
             },
             {
               "name": "ApplicationInformationID",
-              "description": "The ApplicationInformationID of the requested object",
-              "required": false,
+              "description": "The ID of the Application Information",
+              "required": true,
               "allowMultiple": true,
               "dataType": "String",
               "paramType": "path"
-            },
-	    {
-              "name": "published-max",
-              "description": "The upper bound on the published date of the referenced resource",
-              "defaultValue": "All",
-              "required": false,
-              "allowMultiple": false,
-              "dataType": "Date",
-              "paramType": "query"
-            },
-	    {
-              "name": "published-min",
-              "description": "The lower bound on the published date of the referenced resource",
-              "defaultValue": "All",
-              "required": false,
-              "allowMultiple": false,
-              "dataType": "Date",
-              "paramType": "query"
-            },
-	    {
-              "name": "updated-max",
-              "description": "The upper bound on the updated date of the referenced resource",
-              "defaultValue": "All",
-              "required": false,
-              "allowMultiple": false,
-              "dataType": "Date",
-              "paramType": "query"
-            },
-	    {
-              "name": "updated-min",
-              "description": "The lower bound on the updated date of the referenced resource",
-              "defaultValue": "All",
-              "required": false,
-              "allowMultiple": false,
-              "dataType": "Date",
-              "paramType": "query"
-            },
-	    {
-              "name": "max-results",
-              "description": "The upper bound on the number of entries to be contained in a reply to this response",
-              "defaultValue": "All",
-              "required": false,
-              "allowMultiple": false,
-              "dataType": "long",
-              "paramType": "query"
-            },
-	    {
-              "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transfered as the first entry of this request.",
-              "defaultValue": "1",
-              "required": false,
-              "allowMultiple": false,
-              "dataType": "long",
-              "paramType": "query"
-            },
-	    {
-              "name": "depth",
-              "description": "The maximum number of entries to be transfered in the response to this request",
-              "defaultValue": "All",
-              "required": false,
-              "allowMultiple": false,
-              "dataType": "long",
-              "paramType": "query"
             }
-
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -223,9 +172,8 @@
         },
         {
           "method": "PUT",
-          "summary": "Update an existing Application Information within the DataCustodian",
+          "summary": "Update an existing Application Information",
           "notes": "The Application Information must exist",
-          "responseClass": "void",
           "nickname": "updateApplicationInformation",
           "produces": [
             "application/xml+atom"
@@ -253,45 +201,46 @@
             },
             {
               "name": "ApplicationInformationID",
-              "description": "The ApplicationInformationID of the requested object",
-              "required": false,
+              "description": "The ID of the Application Information",
+              "required": true,
               "allowMultiple": true,
               "dataType": "String",
               "paramType": "path"
             },
             {
               "name": "ApplicationInformation",
-              "description": "Application Information information to be used with the update",
+              "description": "The updated Application Information",
               "required": true,
               "allowMultiple": false,
-              "dataType": "ApplicationInformation",
+              "dataType": "string",
               "paramType": "form"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
               "message": "Bad Request"
             }
-            ]
-	},
+          ]
+	      },
         {
           "method": "DELETE",
-          "summary": "Deletes an Application Information",
-          "notes": "",
-          "responseClass": "void",
+          "summary": "Delete an Application Information",
           "nickname": "deleteApplicationInformation",
           "produces": [
             "application/xml+atom"
           ],
-          "authorizations": [
+          "authorizations":
+					[
             "oauth2"
           ],
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -311,17 +260,18 @@
             },
             {
               "name": "ApplicationInformationID",
-              "description": "The ApplicationInformationID of the requested object",
-              "required": false,
+              "description": "The ID of the Application Information",
+              "required": true,
               "allowMultiple": true,
               "dataType": "String",
               "paramType": "path"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -329,19 +279,22 @@
             }
           ]
         }
-
       ]
     }
-
   ],
-  "models": {
-    "Authorization": {
+  "models":
+	{
+    "Authorization":
+		{
       "id": "Authorization",
-      "properties": {
-        "name": {
+      "properties":
+			{
+        "name":
+				{
           "type": "string"
         },
-        "id": {
+        "id":
+				{
           "type": "integer",
           "format": "int64"
         }

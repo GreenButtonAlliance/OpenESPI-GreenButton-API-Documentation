@@ -1,30 +1,56 @@
 {
   "apiVersion": "1.0.0",
-  "swaggerVersion": "1.3",
+  "swaggerVersion": "1.3.0",
   "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/resources",
-  "produces": [
+  "produces":
+	[
     "application/xml",
     "text/plain",
     "text/html"
   ],
-  "apis": [
+  "authorizations":
+	{
+    "oauth2":
+		{
+      "type":"oauth2",
+      "scopes":["PUBLIC"],
+      "grantTypes":
+      {
+        "authorization_code":
+				{
+          "tokenRequestEndpoint":
+					{
+            "url":"http://54.200.90.158:8080/DataCustodian/oauth/token",
+            "clientIdName":"client_id",
+            "clientSecretName":"client_secret"
+          },
+          "tokenEndpoint":
+					{
+            "url":"http://54.200.90.158:8080/DataCustodian/oauth/token",
+            "tokenName":"access_code"
+          }
+        }
+			}
+		}
+	},
+  "apis":
+	[
     {
       "path": "/espi/1_1/resource/Subscription",
-      "operations": [
+      "operations":
+			[
         {
           "method": "GET",
           "summary": "[ESPI] Finds all Subscriptions",
           "notes": "An XML representation of all Subscriptions will be returned",
-          "responseClass": "<feed> ... </feed>",
           "nickname": "findSubscriptions",
-          "produces": [
+          "produces":
+					[
             "application/xml+atom"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -43,10 +69,11 @@
               "paramType": "header"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -56,17 +83,19 @@
 	      },
         {
           "method": "POST",
-          "summary": "Add a new Subscription to the Data Custodian",
-          "notes": "The New Subscription will be added",
-          "responseClass": "void",
+          "summary": "Add a new Subscription",
           "nickname": "addSubscription",
-          "produces": [
+					"consumes": ["application/xml"],
+          "produces":
+					[
             "application/xml+atom"
           ],
-          "authorizations": [
+          "authorizations":
+					[
             "oauth2"
           ],
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -86,17 +115,18 @@
             },
             {
               "name": "Subscription",
-              "description": "0 or more Subscriptions that need to be added to the Subscription",
-              "required": false,
+              "description": "1 or more Subscriptions to be added",
+              "required": true,
               "allowMultiple": true,
-              "dataType": "Subscription",
-              "paramType": "form"
+              "dataType": "string",
+              "paramType": "body"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -108,20 +138,22 @@
     },
     {
       "path": "/espi/1_1/resource/Subscription/{SubscriptionID}",
-      "operations": [
+      "operations":
+			[
         {
           "method": "GET",
           "summary": "[ESPI] Retrieve a Subscription Using it's ID",
-          "notes": "Returns a Subscription",
-          "responseClass": "Subscription",
           "nickname": "getSubscription",
-          "produces": [
+          "produces":
+					[
             "application/xml+atom"
           ],
-          "authorizations": [
+          "authorizations":
+					[
             "oauth2"
           ],
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -141,69 +173,69 @@
             },
             {
               "name": "SubscriptionID",
-              "description": "ID of the Subscription that needs to be fetched",
+              "description": "ID of the Subscription",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
-	    {
+            {
               "name": "published-max",
-              "description": "The upper bound on the published date of the referenced resource",
+              "description": "The upper bound on the published date of the Subscription",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "published-min",
-              "description": "The lower bound on the published date of the referenced resource",
+              "description": "The lower bound on the published date of the Subscription",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "updated-max",
-              "description": "The upper bound on the updated date of the referenced resource",
+              "description": "The upper bound on the updated date of the Subscription",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "updated-min",
-              "description": "The lower bound on the updated date of the referenced resource",
+              "description": "The lower bound on the updated date of the Subscription",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "max-results",
-              "description": "The upper bound on the number of entries to be contained in a reply to this response",
+              "description": "The upper bound on the number of entries to be contained in a reply",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
               "paramType": "query"
             },
-	    {
+            {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transfered as the first entry of this request.",
+              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of the response",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
               "paramType": "query"
             },
-	    {
+            {
               "name": "depth",
-              "description": "The maximum number of entries to be transfered in the response to this request",
+              "description": "The maximum number of entries to be transferred in the response",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -212,10 +244,11 @@
             }
 
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -225,17 +258,20 @@
         },
         {
           "method": "PUT",
-          "summary": "Update an existing Subscription within the DataCustodian",
+          "summary": "Update an existing Subscription",
           "notes": "The Subscription must exist",
-          "responseClass": "void",
           "nickname": "updateSubscription",
-          "produces": [
+					"consumes": ["application/xml"],
+          "produces":
+					[
             "application/xml+atom"
           ],
-          "authorizations": [
+          "authorizations":
+					[
             "oauth2"
           ],
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -255,7 +291,7 @@
             },
             {
               "name": "SubscriptionID",
-              "description": "A SubscriptionID that needs to be updated",
+              "description": "ID of the Subscription",
               "required": true,
               "allowMultiple": false,
               "dataType": "Subscription",
@@ -263,37 +299,39 @@
             },
             {
               "name": "Subscription",
-              "description": "A Subscription object that needs to be updated",
+              "description": "The updated Subscription",
               "required": true,
               "allowMultiple": false,
-              "dataType": "Subscription",
-              "paramType": "form"
+              "dataType": "string",
+              "paramType": "body"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
               "message": "Bad Request"
             }
           ]
-	},
+        },
         {
           "method": "DELETE",
-          "summary": "Deletes a Subscription",
-          "notes": "",
-          "responseClass": "void",
+          "summary": "Delete a Subscription",
           "nickname": "deleteSubscription",
-          "produces": [
+          "produces":
+					[
             "application/xml+atom"
           ],
-          "authorizations": [
+          "authorizations":
+					[
             "oauth2"
           ],
-          "parameters": [
+          "parameters":
+					[
             {
               "name": "Authorization",
               "description": "Access Token",
@@ -313,17 +351,18 @@
             },
             {
               "name": "SubscriptionID",
-              "description": "Subscription id to delete",
+              "description": "ID of the Subscription",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -335,14 +374,19 @@
       ]
     }
   ],
-  "models": {
-    "Authorization": {
+  "models":
+	{
+    "Authorization":
+		{
       "id": "Authorization",
-      "properties": {
-        "name": {
+      "properties":
+			{
+        "name":
+				{
           "type": "string"
         },
-        "id": {
+        "id":
+				{
           "type": "integer",
           "format": "int64"
         }

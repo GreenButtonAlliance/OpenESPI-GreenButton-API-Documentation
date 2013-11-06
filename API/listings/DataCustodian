@@ -19,7 +19,7 @@
 			[
         {
           "method": "POST",
-          "summary": "Third Party Application registers with a Data Custodian.",
+          "summary": "Third Party Application registration",
           "notes": "Follows the proposed OAuth 2.0 Dynamic Client Registration Protocol -- Draft 14 with modifications based on the Energy Services Provider Interface (ESPI) 1.0 standard.  The parameters are Third Party Application metadata values required to complete the  registration process.",
           "responseClass": "Registration Information Response",
           "nickname": "registerThirdParty",
@@ -265,7 +265,7 @@
 			[
         {
           "method": "GET",
-          "summary": "Third Party Application obtains an OAuth 2.0 authorization code.",
+          "summary": "Third Party Application obtains an OAuth 2.0 authorization code",
           "responseClass": "OAuth 2.0 Authorization Response",
           "nickname": "getAuthorizationCode",
           "parameters":
@@ -350,7 +350,7 @@
 						}
 					},
           "method": "POST",
-          "summary": "Third Party Application obtains an OAuth 2.0 access token based on authorization code flow.",
+          "summary": "Third Party Application obtains an OAuth 2.0 access token based on authorization code flow",
           "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
           "responseClass" : "OAuth 2.0 Access Token Authorization Code & Refresh Token Response",
           "nickname" : "getAccessTokenAuthCode",
@@ -434,7 +434,7 @@
 						}
 					},
           "method": "POST",
-          "summary": "Third Party Application obtains an OAuth 2.0 access token based on client credentials flow.",
+          "summary": "Third Party Application obtains an OAuth 2.0 access token based on client credentials flow",
           "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
           "responseClass": "OAuth 2.0 Access Token Client Credentials Response",
           "nickname": "getAccessTokenClientCredentials",
@@ -507,7 +507,7 @@
 						}
 					},
           "method": "POST",
-          "summary": "Third Party Application obtains an OAuth 2.0 access token based on refresh token flow.",
+          "summary": "Third Party Application obtains an OAuth 2.0 access token based on refresh token flow",
           "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
           "responseClass" : "OAuth 2.0 Access Token Authorization Code & Refresh Token Response",
           "nickname" : "getAccessTokenRefreshToken",

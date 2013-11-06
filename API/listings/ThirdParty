@@ -3,12 +3,6 @@
   "swaggerVersion": "1.3.0",
   "basePath": "http://54.200.90.158:8080/ThirdParty",
   "resourcePath": "/",
-  "produces":
-	[
-    "application/xml",
-    "text/plain",
-    "text/html"
-  ],
   "apis":
 	[
     {
@@ -66,16 +60,16 @@
 			[
         {
           "method": "POST",
-          "nickname": "notifySubscription",					
+          "nickname": "notifySubscription",
           "summary": "Notify Third Party data is available for retrieval from the Data Custodian",
           "notes": "The Data Custodian uses this URL to notify the Third Party there is subscription data available.",
           "responseClass" : "text/html",
-					"consumes": ["application/xml"],					
+					"consumes": ["application/xml"],
           "parameters":
 					[
             {
               "name": "BatchList",
-              "description" : "An atom/XML feed containing 1 to n Subscription URI entries.",
+              "description": "An atom/XML feed containing 1 to n Subscription URI entries.",
               "required": true,
               "allowMultiple": true,
               "dataType": "string",
@@ -100,14 +94,5 @@
         }
       ]
     }
-  ],
-	"models":
-	{
-    "id" : "BatchList",
-    "description": "1 to n URL entries for Subscriptions with data available.",
-    "properties":
-    {
-      "resourceURL" : "String"
-    }
-  }
+  ]
 }

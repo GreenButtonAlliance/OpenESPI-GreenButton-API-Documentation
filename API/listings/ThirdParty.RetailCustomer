@@ -1,6 +1,6 @@
 {
   "apiVersion": "1.0.0",
-  "swaggerVersion": "1.3",
+  "swaggerVersion": "1.3.0",
   "basePath": "http://54.200.90.158:8080/ThirdParty",
   "resourcePath": "/",
   "produces":[
@@ -14,9 +14,7 @@
       "operations":[
         {
           "method": "GET",
-          "summary": "Returns a feed representing the collection of all Retail Customers of the Third Party.",
-          "notes":  "Returns a feed representing the collection of all Retail Customers of the Third Party.",
-          "responseClass" : "application/atom+xml",
+          "summary": "Returns a feed representing the collection of all Retail Customers",
           "nickname": "getRetailCustomerCollection",
           "produces":[
             "text/html"
@@ -36,16 +34,14 @@
         },
         {
           "method": "POST",
-          "summary": "Adds a new Retail Customer to the ThirdParty",
-          "notes":  "Returns a feed representing the collection of all Retail Customers of the Third Party.",
-          "responseClass" : "application/atom+xml",
+          "summary": "Adds a new Retail Customer",
           "nickname": "getRetailCustomerCollection",
           "produces":[
             "text/html"
           ],
           "parameters":[
             {
-              "name": "RetailCustomerURIs",
+              "name": "RetailCustomerURLs",
               "description": "The ThirdParty's client access token",
               "defaultValue": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
               "required": true,
@@ -72,22 +68,21 @@
       "operations":[
         {
           "method": "GET",
-          "summary": "Allows a Green Button DownloadMyData .xml file to be downloaded to the retail customer",
-          "responseClass": "application/atom+xml",
+          "summary": "Download a Green Button XML file",
           "nickname": "downloadMyData",
           "parameters":[
             {
               "name": "Content-Disposition",
-              "description": "Controling the browser actions on receipt of the file",
-              "defaultValue": "attachment; filename=<file name.ext>",
+              "description": "Controls the browser actions on receipt of the file",
+              "defaultValue": "attachment; file name=<file name.ext>",
+							"required": false,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "head"
             },
             {
               "name": "RetailCustomerID",
-              "description": "The ThirdParty's RetailCustomerID",
-              "defaultValue": "",
+              "description": "The Retail Customer's ID",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -115,13 +110,13 @@
       "operations":[
         {
           "method": "PUT",
-          "summary": "Allows a Green Button XML file to be uploaded by the retail customer",
+          "summary": "Upload a Green Button XML file",
           "nickname": "uploadMyData",
+					"consumes": ["application/xml"],
           "parameters":[
             {
               "name": "RetailCustomerID",
-              "description": "The ThirdParty's RetailCustomerID",
-              "defaultValue": "",
+              "description": "The Retail Customer's ID",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -129,10 +124,11 @@
             },
             {
               "name": "xmlFile",
-              "description": "theContents of the file being uploaded",
+              "description": "The Green Button XML file being uploaded",
+							"required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "paramType": "form"
+              "paramType": "body"
             }
           ],
           "produces":[
@@ -155,10 +151,39 @@
       "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
       "operations":[
         {
+          "method": "GET",
+          "summary": "Retrieve a Retail Customer using the Customer's ID",
+          "nickname": "getRetailCustomer",
+          "produces":
+          [
+            "application/atom+xml"
+          ],
+          "parameters":
+          [
+            {
+              "name": "RetailCustomerID",
+              "description": "The Retail Customer's ID",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
           "method": "PUT",
-          "summary": "Retrieve a specific Retail Customer",
-          "notes": "A Data Custodian’s representation of the specific Retail Customer is returned.",
-          "responseClass" : "application/atom+xml",
+          "summary": "Update a Retail Customer",
           "nickname": "getRetailCustomer",
           "produces":[
             "application/atom+xml"
@@ -166,8 +191,7 @@
           "parameters":[
             {
               "name": "RetailCustomerID",
-              "description": "The DataCustodian's RetailCustomerID",
-              "defaultValue": "",
+              "description": "The Retail Customer's ID",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -187,9 +211,7 @@
         },
         {
           "method": "DELETE",
-          "summary": "Delete specific Retail Customer",
-          "notes": "Delete a Data Custodian’s representation of the specific Retail Customer.",
-          "responseClass" : "application/atom+xml",
+          "summary": "Delete a Retail Customer",
           "nickname": "getRetailCustomer",
           "produces":[
             "application/atom+xml"
@@ -197,8 +219,7 @@
           "parameters":[
             {
               "name": "RetailCustomerID",
-              "description": "The DataCustodian's RetailCustomerID",
-              "defaultValue": "",
+              "description": "The Retail Customer's ID",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
