@@ -13,7 +13,6 @@
           "method": "GET",
           "summary": "OAuth 2.0 Authorization Code callback URI",
           "notes": "The DataCustodian uses this URI to return an OAuth 2.0 Authorization Code to the Third Party Application during the OAuth 2.0 Authorization Code flow process.",
-          "responseClass" : "text/html",
           "nickname" : "getAuthorizationCallback",
           "parameters":
 					[
@@ -61,9 +60,7 @@
         {
           "method": "POST",
           "nickname": "notifySubscription",
-          "summary": "Notify Third Party data is available for retrieval from the Data Custodian",
-          "notes": "The Data Custodian uses this URL to notify the Third Party there is subscription data available.",
-          "responseClass" : "text/html",
+          "summary": "Notify Third Party Data Custodian has Subscription data available",
 					"consumes": ["application/xml"],
           "parameters":
 					[

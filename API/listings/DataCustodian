@@ -1,6 +1,6 @@
 {
   "apiVersion": "1.0.0",
-  "swaggerVersion": "1.3",
+  "swaggerVersion": "1.3.0",
   "authorizations": [],
   "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/",
@@ -729,22 +729,6 @@
   ],
   "models":
 	{
-    "Authorization":
-    {
-      "id": "Authorization",
-      "properties":
-      {
-        "name":
-				{
-          "type": "string",
-					"defaultValue": "Bearer"
-        },
-        "id":
-				{
-          "type": "string"
-        }
-      }
-    },
     "Registration Information Response":
 		{
       "properties":

@@ -35,7 +35,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -88,7 +88,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -162,7 +162,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -284,7 +284,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -347,7 +347,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -394,21 +394,22 @@
   ],
   "models":
 	{
-    "Authorization":
-		{
-      "id": "Authorization",
+    "OAuth 2.0 Access Token":{
       "properties":
 			{
-        "name":
+        "Type":
 				{
-          "type": "string"
+          "type": "string",
+					"required": true,
+					"defaultValue": "Bearer"
         },
-        "id":
+        "accessToken":
 				{
-          "type": "integer",
-          "format": "int64"
+          "type": "string",
+					"required": true
         }
-      }
+      },
+      "id": "OAuth 2.0 Access Token"
     }
   }
 }

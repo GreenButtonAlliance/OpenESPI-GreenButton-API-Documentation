@@ -31,7 +31,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -68,7 +68,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -126,7 +126,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -235,7 +235,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -279,7 +279,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -316,18 +316,24 @@
       ]
     }
   ],
-  "models": {
-    "Authorization": {
-      "id": "Authorization",
-      "properties": {
-        "name": {
-          "type": "string"
+  "models":
+	{
+    "OAuth 2.0 Access Token":{
+      "properties":
+			{
+        "Type":
+				{
+          "type": "string",
+					"required": true,
+					"defaultValue": "Bearer"
         },
-        "id": {
-          "type": "integer",
-          "format": "int64"
+        "accessToken":
+				{
+          "type": "string",
+					"required": true
         }
-      }
+      },
+      "id": "OAuth 2.0 Access Token"
     }
   }
 }

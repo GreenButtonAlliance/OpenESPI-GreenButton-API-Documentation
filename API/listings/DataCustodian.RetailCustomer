@@ -30,7 +30,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "head"
             }
           ],
@@ -61,7 +61,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "head"
             },
             {
@@ -198,7 +198,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "head"
             },
             {
@@ -237,7 +237,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "head"
             },
             {
@@ -276,7 +276,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "head"
             },
             {
@@ -304,23 +304,23 @@
     }
   ],
   "models":
-  {
-    "Authorization":
-    {
-      "id": "Authorization",
+	{
+    "OAuth 2.0 Access Token":{
       "properties":
-      {
-        "name":
-        {
+			{
+        "Type":
+				{
           "type": "string",
-          "defaultValue": "Bearer"
+					"required": true,
+					"defaultValue": "Bearer"
         },
-        "id":
-        {
-          "type": "integer",
-          "format": "int64"
+        "accessToken":
+				{
+          "type": "string",
+					"required": true
         }
-      }
+      },
+      "id": "OAuth 2.0 Access Token"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "apiVersion": "1.0.0",
-  "swaggerVersion": "1.3",
+  "swaggerVersion": "1.3.0",
   "basePath": "http://54.200.90.158:8080/DataCustodian",
   "resourcePath": "/usagepoint",
   "produces": [
@@ -29,7 +29,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -91,7 +91,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -159,7 +159,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -286,7 +286,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -322,7 +322,7 @@
               "description": "Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "String",
+              "dataType": "OAuth 2.0 Access Token",
               "paramType": "header"
             },
             {
@@ -349,18 +349,24 @@
       ]
     }
   ],
-  "models": {
-    "Authorization": {
-      "id": "Authorization",
-      "properties": {
-        "name": {
-          "type": "string"
+  "models":
+	{
+    "OAuth 2.0 Access Token":{
+      "properties":
+			{
+        "Type":
+				{
+          "type": "string",
+					"required": true,
+					"defaultValue": "Bearer"
         },
-        "id": {
-          "type": "integer",
-          "format": "int64"
+        "accessToken":
+				{
+          "type": "string",
+					"required": true
         }
-      }
+      },
+      "id": "OAuth 2.0 Access Token"
     }
   }
 }
