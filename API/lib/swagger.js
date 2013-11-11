@@ -6,7 +6,7 @@
   SwaggerApi = (function() {
     SwaggerApi.prototype.url = "http://api.wordnik.com/v4/resources.json";
 
-    SwaggerApi.prototype.debug = false;
+    SwaggerApi.prototype.debug = true;
 
     SwaggerApi.prototype.basePath = null;
 

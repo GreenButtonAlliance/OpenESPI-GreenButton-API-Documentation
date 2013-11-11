@@ -1,16 +1,8 @@
 {
   "apiVersion": "1.0.0",
   "swaggerVersion": "1.2",
-  "authorizations":
-  {
-    "basicAuth":
-    {
-      "type": "Basic",
-      "value": "string",
-      "passAs": "header"
-    }
-  },
-  "basePath": "http://54.200.90.158:8080/DataCustodian",
+  "authorizations": ["basic"],
+  "basePath": "http://services.energyos.org:8080/DataCustodian",
   "resourcePath": "/",
   "produces":
 	[
@@ -40,7 +32,7 @@
               "description": "A URI to be used in the OAuth 2.0 authorization code flow sequence. This MUST be an absolute URI as defined by [RFC3986] Section 4.3.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://54.200.90.158:8080/ThirdParty/OAuthCallBack",
+              "defaultValue": "http://services.energyos.org:8080/ThirdParty/OAuthCallBack",
               "dataType": "string"
             },
             {
@@ -58,7 +50,7 @@
               "description" : "A URI that points to the homepage of the Third Party Application.  The value of this field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://54.200.90.158:8080/ThirdParty/home",
+              "defaultValue": "http://services.energyos.org:8080/ThirdParty/home",
               "dataType": "string"
             },
             {
@@ -67,7 +59,7 @@
               "description" : "A URI that points to a logo for the Third Party Application.  The value of this field MUST point to a valid image file.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://54.200.90.158:8080/ThirdParty/image.jpg",
+              "defaultValue": "http://services.energyos.org:8080/ThirdParty/image.jpg",
               "dataType": "string"
             },
             {
@@ -88,7 +80,7 @@
               "description" : "A URI that points to a human-readable Terms of Service document for the Third Party Application.  The Terms of Service usually describes a contractual relationship between the Retail Customer and the Third Party Application that the Retail Customer accepts when authorizing access to the Third Party Application.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://54.200.90.158:8080/ThirdParty/TermsOfService",
+              "defaultValue": "http://services.energyos.org:8080/ThirdParty/TermsOfService",
               "dataType": "string"
             },
             {
@@ -97,7 +89,7 @@
               "description": "A URI that points to a human-readable Policy document for the Third Party Application.  The policy usually describes how a Retail Customer's energy usage information will be used by the Third Party Application.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://54.200.90.158:8080/ThirdParty/UsagePolicy",
+              "defaultValue": "http://services.energyos.org:8080/ThirdParty/UsagePolicy",
               "dataType": "string"
             },
             {
@@ -207,7 +199,7 @@
               "description": "** ESPI ** -- The default endpoint for Third Party notification of Batch data availability that is then requested from the Data Custodian via the Batch resource.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/Notify_SubscriptionAvailable",
+              "defaultValue" : "http://services.energyos.org:8080/ThirdParty/Notify_SubscriptionAvailable",
               "dataType": "string"
             },
             {
@@ -216,7 +208,7 @@
               "description": "** ESPI ** -- URL of Third Party's supported Data Custodian Selection web page.  The field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/RetailCustomer/{RetailCustomerID}/DataCustodianList",
+              "defaultValue" : "http://services.energyos.org:8080/ThirdParty/RetailCustomer/{RetailCustomerID}/DataCustodianList",
               "dataType": "string"
             },
             {
@@ -225,7 +217,7 @@
               "description": "** ESPI ** -- URL of the Login Screen used by the Third Party to authenticate the identity of the Retail Customer.  The field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/login",
+              "defaultValue" : "http://services.energyos.org:8080/ThirdParty/login",
               "dataType": "string"
             },
             {
@@ -234,7 +226,7 @@
               "description": "** ESPI ** -- URL of the Scope Selection Screen used by the Retail Customer to select the characteristics of the Green Button data to be shared with the ThirdParty.  The field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/RetailCustomer/{RetailCustomerID}/ScopeSelection",
+              "defaultValue" : "http://services.energyos.org:8080/ThirdParty/RetailCustomer/{RetailCustomerID}/ScopeSelection",
               "dataType": "string"
             },
             {
@@ -243,7 +235,7 @@
               "description": "** ESPI ** -- URL of a Third Party's web page the Retail Customer user-agent is returned to after authorizing the Third Party access to the Retail Customer's energy usage information (EUI).  The field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/RetailCustomer/{RetailCustomerID}/home",
+              "defaultValue" : "http://services.energyos.org:8080/ThirdParty/RetailCustomer/{RetailCustomerID}/home",
               "dataType": "string"
             }
           ],
@@ -304,7 +296,7 @@
               "description": "A Third Party Application URI used to return the OAuth 2.0 authorization code.  This MUST be the same URI the Third Party supplied during the registration process (metadata field \"redirect-uris\".",
               "required": true,
               "allowMultiple": false,
-              "defaultValue" : "http://54.200.90.158:8080/ThirdParty/OAuthCallBack",
+              "defaultValue" : "http://services.energyos.org:8080/ThirdParty/OAuthCallBack",
               "dataType": "string"
             },
             {
@@ -360,13 +352,21 @@
           "parameters":
 					[
             {
-						  "name": "Authorization",
-							"description": "OAuth 2.0 Basic Authorization.",
+              "name": "username",
+              "description": "OAuth 2.0 client ID assigned by the Data Custodian during the application registration process.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "OAuth 2.0 Basic Authorization",
+              "dataType": "string",
               "paramType": "header"
             },
+            {
+              "name": "password",
+              "description": "OAuth 2.0 client secret assigned by the Data Custodian during the application registration process.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "header"
+            },						
             {
               "name": "grant_type",
               "description": "OAuth 2.0 grant type.  Value MUST be set to authorization_code.",
@@ -390,7 +390,7 @@
               "description": "The redirect_uri parameter supplied in the authorization request. Their values MUST be identical.",
               "required": true,
               "allowMultiple": false,
-              "defaultValue": "http://54.200.90.158:8080/ThirdParty/OAuthCallBack",
+              "defaultValue": "http://services.energyos.org:8080/ThirdParty/OAuthCallBack",
               "dataType": "string",
               "paramType": "header"
             }

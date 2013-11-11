@@ -38,7 +38,24 @@
       },
       docExpansion: "none"
     });
-
+		
+    $('#input_apiKey').change(function() {
+      var key = $('#input_apiKey')[0].value;
+      console.log("key: " + key);
+      if(key && key.trim() != "") {
+        console.log("added key " + key);
+        // if basic, use PasswordAuthorization
+        // window.authorizations.add("basic", new PasswordAuthorization("basic", username, password));
+				if (key = "basic") {
+				  window.authorizations.add("basic", new PasswordAuthorization("basic", "third_party", "secret"));
+					}
+        // else use header
+        // window.authorizations.add("bearer", new ApiKeyAuthorization("bearer", "Bearer", token));
+				else if (key = "bearer") {
+          window.authorizations.add("bearer", new ApiKeyAuthorization("bearer", "Bearer", token));				
+        }
+      }})
+		
     window.swaggerUi.load();
   });
 
