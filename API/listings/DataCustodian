@@ -364,7 +364,7 @@
 							"description": "OAuth 2.0 Basic Authorization.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "basicAuth",
+              "dataType": "OAuth 2.0 Basic Authorization",
               "paramType": "header"
             },
             {
