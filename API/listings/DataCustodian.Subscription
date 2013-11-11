@@ -1,39 +1,12 @@
 {
   "apiVersion": "1.0.0",
-  "swaggerVersion": "1.3.0",
+  "swaggerVersion": "1.2",
   "basePath": "http://54.200.90.158:8080/DataCustodian",
-  "resourcePath": "/resources",
+  "resourcePath": "/espi/1_1/resource",
   "produces":
 	[
-    "application/xml",
-    "text/plain",
-    "text/html"
-  ],
-  "authorizations":
-	{
-    "oauth2":
-		{
-      "type":"oauth2",
-      "scopes":["PUBLIC"],
-      "grantTypes":
-      {
-        "authorization_code":
-				{
-          "tokenRequestEndpoint":
-					{
-            "url":"http://54.200.90.158:8080/DataCustodian/oauth/token",
-            "clientIdName":"client_id",
-            "clientSecretName":"client_secret"
-          },
-          "tokenEndpoint":
-					{
-            "url":"http://54.200.90.158:8080/DataCustodian/oauth/token",
-            "tokenName":"access_code"
-          }
-        }
-			}
-		}
-	},
+    "application/xml+atom"
+  ],	
   "apis":
 	[
     {
@@ -42,21 +15,17 @@
 			[
         {
           "method": "GET",
-          "summary": "[ESPI] Finds all Subscriptions",
-          "notes": "An XML representation of all Subscriptions will be returned",
           "nickname": "findSubscriptions",
-          "produces":
-					[
-            "application/xml+atom"
-          ],
+          "summary": "[ESPI] Finds all Subscriptions",
+          "notes": "An XML representation of all Subscriptions will be returned",				
           "parameters":
 					[
             {
               "name": "Authorization",
-              "description": "Access Token",
+              "description": "Oauth 2.0 Bearer Access Token",
               "required": true,
               "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
+              "dataType": "Oauth 2.0 Bearer Access Token",
               "paramType": "header"
             },
             {
@@ -86,19 +55,11 @@
           "summary": "Add a new Subscription",
           "nickname": "addSubscription",
 					"consumes": ["application/xml"],
-          "produces":
-					[
-            "application/xml+atom"
-          ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
           "parameters":
 					[
             {
               "name": "Authorization",
-              "description": "Access Token",
+              "description": "Oauth 2.0 Bearer Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "OAuth 2.0 Access Token",
@@ -144,19 +105,11 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve a Subscription Using it's ID",
           "nickname": "getSubscription",
-          "produces":
-					[
-            "application/xml+atom"
-          ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
           "parameters":
 					[
             {
               "name": "Authorization",
-              "description": "Access Token",
+              "description": "Oauth 2.0 Bearer Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "OAuth 2.0 Access Token",
@@ -242,7 +195,6 @@
               "dataType": "long",
               "paramType": "query"
             }
-
           ],
           "responseMessages":
 					[
@@ -262,19 +214,11 @@
           "notes": "The Subscription must exist",
           "nickname": "updateSubscription",
 					"consumes": ["application/xml"],
-          "produces":
-					[
-            "application/xml+atom"
-          ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
           "parameters":
 					[
             {
               "name": "Authorization",
-              "description": "Access Token",
+              "description": "Oauth 2.0 Bearer Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "OAuth 2.0 Access Token",
@@ -322,19 +266,11 @@
           "method": "DELETE",
           "summary": "Delete a Subscription",
           "nickname": "deleteSubscription",
-          "produces":
-					[
-            "application/xml+atom"
-          ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
           "parameters":
 					[
             {
               "name": "Authorization",
-              "description": "Access Token",
+              "description": "Oauth 2.0 Bearer Access Token",
               "required": true,
               "allowMultiple": false,
               "dataType": "OAuth 2.0 Access Token",
@@ -370,7 +306,6 @@
             }
           ]
         }
-
       ]
     }
   ],
@@ -383,7 +318,7 @@
 				{
           "type": "string",
 					"required": true,
-					"defaultValue": "Bearer"
+					"enum": ["Bearer"]
         },
         "accessToken":
 				{

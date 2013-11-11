@@ -39,14 +39,6 @@
       docExpansion: "none"
     });
 
-    $('#input_apiKey').change(function() {
-      var key = $('#input_apiKey')[0].value;
-      console.log("key: " + key);
-      if(key && key.trim() != "") {
-        console.log("added key " + key);
-        window.authorizations.add("key", new ApiKeyAuthorization("api_key", key, "query"));
-      }
-    })
     window.swaggerUi.load();
   });
 
@@ -57,10 +49,6 @@
 <div id='header'>
   <div class="swagger-ui-wrap">
     <a id="logo" href="http://greenbuttondata.org">Green Button API</a>
-    <div style="float:right">
-        <img id="show-pet-store-icon" src="images/pet_store_api.png" title="Green Button APIs">
-        <img id="show-wordnik-dev-icon" src="images/wordnik_api.png" title="An EnergyOS Implementation">
-      </div>
   </div>
 </div>
 <div class="swagger-ui-wrap">
