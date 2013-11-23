@@ -341,7 +341,7 @@ exports.extname = function(path) {
 });
 
 require.define("/shred.js", function (require, module, exports, __dirname, __filename) {
-    // Shred is an HTTP client library intended to simplify the use of Node's
+// Shred is an HTTP client library intended to simplify the use of Node's
 // built-in HTTP library. In particular, we wanted to make it easier to interact
 // with HTTP-based APIs.
 // 
@@ -360,7 +360,8 @@ var Shred = function(options) {
   options = (options||{});
   this.agent = options.agent;
   this.defaults = options.defaults||{};
-  this.log = options.logger||(new Ax({ level: "info" }));
+//  this.log = options.logger||(new Ax({ level: "info" }));
+  this.log = options.logger||(new Ax({ level: "debug" }));
   this._sharedCookieJar = new CookieJar();
   this.logCurl = options.logCurl || false;
 };

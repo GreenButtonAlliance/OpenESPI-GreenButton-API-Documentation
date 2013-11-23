@@ -18,12 +18,11 @@
   <script src='swagger-ui.js' type='text/javascript'></script>
   <script src='lib/highlight.7.3.pack.js' type='text/javascript'></script>
   <script type="text/javascript">
+	
     $(function () {
       window.swaggerUi = new SwaggerUi({
       url: "/OpenESPI-GreenButton-API-Documentation/API/api-docs",
       dom_id: "swagger-ui-container",
-      supportedSubmitMethods: ['GET', 'POST', 'PUT', 'DELETE'],
-			supportHeaderParams: true,
       onComplete: function(swaggerApi, swaggerUi){
         if(console) {
           console.log("Loaded SwaggerUI")
@@ -39,23 +38,43 @@
       docExpansion: "none"
     });
 		
-    $('#input_apiKey').change(function() {
-      var key = $('#input_apiKey')[0].value;
-      console.log("key: " + key);
-      if(key && key.trim() != "") {
-        console.log("added key " + key);
-        // if basic, use PasswordAuthorization
-        // window.authorizations.add("basic", new PasswordAuthorization("basic", username, password));
-				if (key = "basic") {
-				  window.authorizations.add("basic", new PasswordAuthorization("basic", "third_party", "secret"));
-					}
-        // else use header
-        // window.authorizations.add("bearer", new ApiKeyAuthorization("bearer", "Bearer", token));
-				else if (key = "bearer") {
-          window.authorizations.add("bearer", new ApiKeyAuthorization("bearer", "Bearer", token));				
-        }
+    $('#input_clientID').change(function() {
+      console.log("Handler for Client ID .change() called...");
+      var password = $('#input_clientSecret') [0].value;
+      if(password.trim() == "") {
+        password = "secret";
+      }				
+      var username = $('#input_clientID')[0].value;
+      console.log("input: " + username);
+      if(username && username.trim() != "") {
+        console.log("Client ID: " + username);
+        console.log("Client Secret: " + password);
+        window.authorizations.add("Basic", new PasswordAuthorization("Basic", username, password));
+      }})				
+			
+    $('#input_clientSecret').change(function() {
+      console.log("Handler for Client Secret .change() called...");
+      var username = $('#input_clientID')[0].value;
+      if(username.trim() == "") {
+        username = "third_party";
+      }
+      var password = $('#input_clientSecret')[0].value;
+      console.log("input: " + password);
+      if(password && password.trim() != "") {
+        console.log("Client Secret: " + password);
+        console.log("Client ID: " + username);
+        window.authorizations.add("basic", new PasswordAuthorization("basic", username, password));
       }})
-		
+			
+    $('#input_accessToken').change(function() {
+      console.log("Handler for Access Token .change() called...");
+      var token = $('#input_accessToken')[0].value;
+      console.log("input: " + token);
+      if(token && token.trim() != "") {
+        console.log("Access Token: " + token);
+        window.authorizations.add("oauth2", new ApiKeyAuthorization("oauth2", token, "Bearer"));				
+      }})
+	
     window.swaggerUi.load();
   });
 
@@ -63,23 +82,44 @@
 </head>
 
 <body>
-<div id='header'>
-  <div class="swagger-ui-wrap">
-    <a id="logo" href="http://greenbuttondata.org">Green Button API</a>
+  <div id='header'>
+    <div class="swagger-ui-wrap">
+      <a id="logo" href="http://greenbuttondata.org">Green Button API</a>
+			
+      <form id='api_selector'>
+        <div class='input'>
+				  <label for="input_clientID">Client ID: </label>
+					<input type="text" size="23" name="username" id="input_clientID"/>
+				</div>
+        <div class='input'>
+				  <label for="input_clientSecret">Client Secret: </label>				
+				  <input type="text" size="23" name="password" id="input_clientSecret"/>
+				</div>			
+			  <div class='input'>
+				  <label for="input_accessToken">Access Token: </label>			
+				  <input type="text" size="40" name="token" id="input_accessToken"/>
+				</div>
+      </form>				
+			<br />
+			<br />						
+    </div>
   </div>
-</div>
-<div class="swagger-ui-wrap">
-<br />
+  <div class="swagger-ui-wrap">
+      <br />
 The Green Button API provides access to RESTful services provided by Data Custodians and Third Partys for the purpose of exchanging Retail Customer Energy Usage Information. 
-<div>
-<div id="message-bar" class="swagger-ui-wrap">
+    <div>
+      <div id="message-bar" class="swagger-ui-wrap">
   &nbsp;
-</div>
+      </div>
 
-<div id="swagger-ui-container" class="swagger-ui-wrap">
+      <div id="swagger-ui-container" class="swagger-ui-wrap">
 
-</div>
+      </div>
 
-</body>
+	  </div>
+		
+	</div>
+
+</body>	
 
 </html>
