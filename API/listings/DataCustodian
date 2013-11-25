@@ -1,7 +1,7 @@
 {
   "apiVersion": "1.0.0",
   "swaggerVersion": "1.2",
-  "basePath": "http://services.greenbuttondata.org/DataCustodian",
+  "basePath": "http://services.energyos.org:8080/DataCustodian",
   "resourcePath": "/",
   "produces":
 	[
@@ -245,15 +245,12 @@
           "responseMessages":
 					[
             {
+              "code": 200,
+              "message": "OK"
+            },
+            {
               "code": 400,
-              "message": "Bad Request",
-              "parameters":
-							[
-                {
-                  "error": "[\"invalid_client_metadata\", \"invalid_redirect_uri\", \"invalid_client_id\"]",
-                  "error_description": "A Human-readable text description of the error for debugging."
-                }
-              ]
+              "message": "Bad Request"
             }
           ]
         }
@@ -268,7 +265,7 @@
           "summary": "Third Party Application obtains an OAuth 2.0 authorization code",
           "responseClass": "OAuth 2.0 Authorization Response",
           "nickname": "getAuthorizationCode",
-					"authorizations": [],					
+					"authorizations": [],
           "parameters":
 					[
             {
@@ -324,15 +321,12 @@
           "responseMessages":
 					[
             {
+              "code": 200,
+              "message": "OK"
+            },
+            {
               "code": 400,
-              "message": "Bad Request",
-              "parameters":
-							[
-                {
-                  "error": "[\"invalid_request\", \"unauthorized_client\", \"access_denied\", \"unsupported_response_type\", \"invalid_scope\", \"server_error\", \"temporarily_unavailable\"]",
-                  "error_description": "A Human-readable text description of the error for debugging."
-                }
-              ]
+              "message": "Bad Request"
             }
           ]
         }
@@ -345,12 +339,12 @@
         {
           "method": "POST",
           "summary": "Third Party Application obtains an OAuth 2.0 access token based on authorization code flow",
-          "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
+          "notes": "To provide the required HTTP BASIC Authorization header, enter your \"Client ID\" & \"Client Secret\" in the appropriate fields at the top of the page!",
           "responseClass" : "OAuth 2.0 Access Token Authorization Code & Refresh Token Response",
           "nickname" : "getAccessTokenAuthCode",
 					"authorizations": ["basic"],
           "parameters":
-					[				
+					[
             {
               "name": "grant_type",
               "description": "OAuth 2.0 grant type.  Value MUST be set to authorization_code.",
@@ -359,7 +353,7 @@
               "defaultValue": "authorization_code",
               "dataType": "string",
               "enum": ["authorization_code"],
-              "paramType": "header"
+              "paramType": "query"
             },
             {
               "name": "code",
@@ -367,7 +361,7 @@
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "paramType": "header"
+              "paramType": "query"
             },
             {
               "name": "redirect_uri",
@@ -376,7 +370,7 @@
               "allowMultiple": false,
               "defaultValue": "http://services.greenbuttondata.org/ThirdParty/OAuthCallBack",
               "dataType": "string",
-              "paramType": "header"
+              "paramType": "query"
             }
           ],
           "produces":
@@ -387,18 +381,7 @@
 					[
             {
               "code": 200,
-              "message": "OK",
-              "parameters":
-							[
-                {
-                  "access_token": "The access token issued by the authorization server",
-                  "token_type": "Bearer",
-                  "expires_in": "The lifetime in seconds of the access token",
-                  "refresh_token": "The refresh token, which can be used to obtain new access tokens using the same authorization code provided by the authorization server",
-                  "resourceURI": "The URI of the resource to which access is being granted",
-                  "AuthorizationURI": "The URI of the authorization which contains the issued access token"
-                }
-              ]
+              "message": "OK"
             },
             {
               "code" : 400,
@@ -415,10 +398,10 @@
         {
           "method": "POST",
           "summary": "Third Party Application obtains an OAuth 2.0 access token based on client credentials flow",
-          "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
+          "notes": "To provide the required HTTP BASIC Authorization header, enter your \"Client ID\" & \"Client Secret\" in the appropriate fields at the top of the page!",
           "responseClass": "OAuth 2.0 Access Token Client Credentials Response",
           "nickname": "getAccessTokenClientCredentials",
-					"authorizations": ["basic"],					
+					"authorizations": ["basic"],
           "parameters":
 					[
             {
@@ -429,7 +412,7 @@
               "defaultValue": "client_credentials",
               "dataType": "string",
               "enum": ["client_credentials"],
-              "paramType": "header"
+              "paramType": "query"
             },
             {
               "name" : "scope",
@@ -437,7 +420,7 @@
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "paramType": "header"
+              "paramType": "query"
             }
           ],
           "produces":[
@@ -447,17 +430,7 @@
 					[
             {
               "code": 200,
-              "message": "OK",
-              "parameters":
-							[
-                {
-                  "access_token": "The access token issued by the authorization server",
-                  "token_type": "Bearer",
-                  "expires_in": "The lifetime in seconds of the access token",
-                  "resourceURI": "The URI of the resource to which access is being granted",
-                  "AuthorizationURI": "The URI of the authorization which contains the issued access token"
-                }
-              ]
+              "message": "OK"
             },
             {
               "code" : 400,
@@ -474,7 +447,7 @@
         {
           "method": "POST",
           "summary": "Third Party Application obtains an OAuth 2.0 access token based on refresh token flow",
-          "notes": "The HTTP header must contain the Authorization: Basic {DataCustodianAuthorizationString}. This is typically an APIKey -  A string assigned by the DataCustodian {AuthorizationServer} used to authenticate the Third Party.  The Third Party utilizes the HTTP Basic authentication scheme [RFC2617] to submit this string.",
+          "notes": "To provide the required HTTP BASIC Authorization header, enter your \"Client ID\" & \"Client Secret\" in the appropriate fields at the top of the page!",
           "responseClass" : "OAuth 2.0 Access Token Authorization Code & Refresh Token Response",
           "nickname" : "getAccessTokenRefreshToken",
 					"authorizations": ["basic"],
@@ -488,7 +461,7 @@
               "defaultValue": "refresh_token",
               "dataType": "string",
               "enum": ["refresh_token"],
-              "paramType": "header"
+              "paramType": "query"
             },
             {
               "name": "refresh_token",
@@ -496,7 +469,7 @@
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "paramType": "header"
+              "paramType": "query"
             },
             {
               "name": "scope",
@@ -504,7 +477,7 @@
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "paramType": "header"
+              "paramType": "query"
             }
           ],
           "produces":
@@ -515,18 +488,7 @@
 					[
             {
               "code": 200,
-              "message": "OK",
-              "parameters":
-							[
-                {
-                  "access_token": "The access token issued by the authorization server",
-                  "token_type": "Bearer",
-                  "expires_in": "The lifetime in seconds of the access token",
-                  "refresh_token": "The refresh token, which can be used to obtain new access tokens using the same authorization code provided by the authorization server",
-                  "resourceURI": "The URI of the resource to which access is being granted",
-                  "AuthorizationURI": "The URI of the authorization which contains the issued access token"
-                }
-              ]
+              "message": "OK"
             },
             {
               "code": 400,
@@ -543,6 +505,7 @@
         {
           "method": "GET",
           "summary": "Obtain the Data Custodian Resource Server Status",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter your \"Access Token\" in the appropriate field at the top of the page!",					
           "responseClass": "application/atom+xml",
           "nickname": "getServiceStatus",
           "produces": ["application/xml"],
@@ -586,10 +549,11 @@
         {
           "method": "GET",
           "summary": "A Third Party requests the GET of a Batch.",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter your \"Access Token\" in the appropriate field at the top of the page!",								
           "responseClass" : "ESPI XML structure of Batch feed",
           "nickname": "getBatch",
           "produces":["application/atom+xml"],
-					"authorizations": ["oauth2"],					
+					"authorizations": ["oauth2"],
           "parameters":
 					[
             {
