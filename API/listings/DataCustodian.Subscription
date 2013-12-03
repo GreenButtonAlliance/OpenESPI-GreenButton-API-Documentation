@@ -6,7 +6,7 @@
   "produces":
 	[
     "application/xml+atom"
-  ],	
+  ],
   "apis":
 	[
     {
@@ -18,7 +18,7 @@
           "nickname": "findSubscriptions",
           "summary": "[ESPI] Finds all Subscriptions",
           "notes": "An XML representation of all Subscriptions will be returned",
-          "authorizations": ["oauth2"],					
+          "authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages":
 					[

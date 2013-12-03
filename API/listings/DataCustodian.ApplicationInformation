@@ -117,8 +117,8 @@
             "application/xml+atom"
           ],
           "authorizations": ["oauth2"],
-          "parameters": [
-            {
+          "parameters":
+					[
             {
               "name": "ApplicationInformationID",
               "description": "The ID of the Application Information",

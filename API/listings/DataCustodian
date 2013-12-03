@@ -341,7 +341,7 @@
           "notes": "To provide the required HTTP BASIC Authorization header, enter your \"Client ID\" & \"Client Secret\" in the appropriate fields at the top of the page!",
           "responseClass" : "OAuth 2.0 Access Token Authorization Code & Refresh Token Response",
           "nickname": "getAccessTokenAuthCode",
-          "consumes": "x-www-form-urlencoded",					
+          "consumes": "x-www-form-urlencoded",
 					"authorizations": ["basic"],
           "parameters":
 					[
