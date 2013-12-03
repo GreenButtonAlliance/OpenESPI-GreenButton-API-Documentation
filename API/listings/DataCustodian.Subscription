@@ -17,27 +17,9 @@
           "method": "GET",
           "nickname": "findSubscriptions",
           "summary": "[ESPI] Finds all Subscriptions",
-          "notes": "An XML representation of all Subscriptions will be returned",				
-          "parameters":
-					[
-            {
-              "name": "Authorization",
-              "description": "Oauth 2.0 Bearer Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "Oauth 2.0 Bearer Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            }
-          ],
+          "notes": "An XML representation of all Subscriptions will be returned",
+          "authorizations": ["oauth2"],					
+          "parameters": [],
           "responseMessages":
 					[
             {
@@ -55,25 +37,9 @@
           "summary": "Add a new Subscription",
           "nickname": "addSubscription",
 					"consumes": ["application/xml"],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Oauth 2.0 Bearer Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "Subscription",
               "description": "1 or more Subscriptions to be added",
@@ -105,25 +71,9 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve a Subscription Using it's ID",
           "nickname": "getSubscription",
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Oauth 2.0 Bearer Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "SubscriptionID",
               "description": "ID of the Subscription",
@@ -214,25 +164,9 @@
           "notes": "The Subscription must exist",
           "nickname": "updateSubscription",
 					"consumes": ["application/xml"],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Oauth 2.0 Bearer Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "SubscriptionID",
               "description": "ID of the Subscription",
@@ -266,25 +200,9 @@
           "method": "DELETE",
           "summary": "Delete a Subscription",
           "nickname": "deleteSubscription",
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Oauth 2.0 Bearer Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "SubscriptionID",
               "description": "ID of the Subscription",
@@ -308,25 +226,5 @@
         }
       ]
     }
-  ],
-  "models":
-	{
-    "OAuth 2.0 Access Token":{
-      "properties":
-			{
-        "Type":
-				{
-          "type": "string",
-					"required": true,
-					"enum": ["Bearer"]
-        },
-        "accessToken":
-				{
-          "type": "string",
-					"required": true
-        }
-      },
-      "id": "OAuth 2.0 Access Token"
-    }
-  }
+  ]
 }

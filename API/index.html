@@ -75,9 +75,14 @@
         window.authorizations.add("oauth2", new ApiKeyAuthorization("oauth2", token, "Bearer"));				
       }})
 	
+	  var username = "third_party";
+		var password = "secret";
+    var token = "ae4e33b9-457d-43b4-8815-856b6c8b7a72";		
+	
+	  window.authorizations.add("basic", new PasswordAuthorization("basic", username, password));
+		window.authorizations.add("oauth2", new ApiKeyAuthorization("oauth2", token, "Bearer"));
     window.swaggerUi.load();
   });
-
   </script>
 </head>
 

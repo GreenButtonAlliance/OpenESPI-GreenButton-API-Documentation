@@ -16,9 +16,7 @@
           "method": "GET",
           "summary": "Returns a feed representing the collection of all Retail Customers",
           "nickname": "getRetailCustomerCollection",
-          "produces":[
-            "text/html"
-          ],
+          "produces":["text/html"],
           "parameters":[
           ],
           "responseMessages":[
@@ -36,9 +34,7 @@
           "method": "POST",
           "summary": "Adds a new Retail Customer",
           "nickname": "getRetailCustomerCollection",
-          "produces":[
-            "text/html"
-          ],
+          "produces":["text/html"],
           "parameters":[
             {
               "name": "RetailCustomerURLs",
@@ -154,10 +150,7 @@
           "method": "GET",
           "summary": "Retrieve a Retail Customer using the Customer's ID",
           "nickname": "getRetailCustomer",
-          "produces":
-          [
-            "application/atom+xml"
-          ],
+          "produces": ["application/atom+xml"],
           "parameters":
           [
             {
@@ -185,9 +178,7 @@
           "method": "PUT",
           "summary": "Update a Retail Customer",
           "nickname": "getRetailCustomer",
-          "produces":[
-            "application/atom+xml"
-          ],
+          "produces":["application/atom+xml"],
           "parameters":[
             {
               "name": "RetailCustomerID",
@@ -213,9 +204,7 @@
           "method": "DELETE",
           "summary": "Delete a Retail Customer",
           "nickname": "getRetailCustomer",
-          "produces":[
-            "application/atom+xml"
-          ],
+          "produces":["application/atom+xml"],
           "parameters":[
             {
               "name": "RetailCustomerID",

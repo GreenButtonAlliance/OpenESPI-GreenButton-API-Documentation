@@ -21,28 +21,8 @@
           "produces": [
             "application/xml+atom"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            }
-          ],
+          "authorizations": ["oauth2"],
+          "parameters": [],
           "responseMessages": [
             {
               "code": 200,
@@ -68,27 +48,9 @@
           "produces": [
             "application/xml+atom"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
             {
               "name": "AuthorizationID",
               "description": "ID of the Authorization that needs to be fetched",
@@ -181,27 +143,9 @@
           "produces": [
             "application/xml+atom"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
             {
               "name": "AuthorizationID",
               "description": "An Authorization object that needs to be updated",
@@ -241,27 +185,9 @@
           "produces": [
             "application/xml+atom"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
             {
               "name": "AuthorizationID",
               "description": "Authorization id to delete",
@@ -285,25 +211,5 @@
 
       ]
     }
-  ],
-  "models":
-	{
-    "OAuth 2.0 Access Token":{
-      "properties":
-			{
-        "Type":
-				{
-          "type": "string",
-					"required": true,
-					"defaultValue": "Bearer"
-        },
-        "accessToken":
-				{
-          "type": "string",
-					"required": true
-        }
-      },
-      "id": "OAuth 2.0 Access Token"
-    }
-  }
+  ]
 }

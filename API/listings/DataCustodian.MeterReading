@@ -24,29 +24,9 @@
 					[
             "application/atom+xml"
           ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer the Meter Reading references.",
@@ -83,23 +63,6 @@
 					"consumes": ["application/xml"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer the Meter Reading references.",
@@ -151,29 +114,9 @@
 					[
             "application/xml"
           ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "usagePointID",
               "description": "ID of the UsagePoint the Meter Reading references.",
@@ -273,29 +216,9 @@
           "notes": "The Usage Point and Meter Reading must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateMeterReading",
-          "authorizations":
-					[
-            "oauth2"
-          ],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer the Meter Reading references.",
@@ -336,29 +259,9 @@
           "method": "DELETE",
           "summary": "Delete a Meter Reading from Usage Point",
           "nickname": "deleteMeterReading",
-          "authorizations":
-					[
-            "oauth2"
-          ],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "UsagePointID",
               "description": "ID of Usage Point containing the Meter Reading.",
@@ -388,29 +291,8 @@
             }
           ]
         }
-
       ]
     }
-  ],
-  "models":
-	{
-    "OAuth 2.0 Access Token":{
-      "properties":
-			{
-        "Type":
-				{
-          "type": "string",
-					"required": true,
-					"defaultValue": "Bearer"
-        },
-        "accessToken":
-				{
-          "type": "string",
-					"required": true
-        }
-      },
-      "id": "OAuth 2.0 Access Token"
-    }
-  }
+  ]
 }
 

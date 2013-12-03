@@ -20,26 +20,8 @@
           "summary": "Finds all Application Informations",
           "notes": "An XML representation of all Application Informations will be returned",
           "nickname": "findApplicationInformations",
-          "produces":
-          [
-            "application/xml+atom"
-          ],
-          "authorizations":
-          [
-            "oauth2"
-          ],
-          "parameters":
-          [
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            }
-          ],
+          "produces": ["application/xml+atom"],
+          "parameters": [],
           "responseMessages":
           [
             {
@@ -56,25 +38,9 @@
           "method": "POST",
           "summary": "Add a new Application Information",
           "nickname": "addApplicationInformation",
-          "produces":
-          [
-            "application/xml+atom"
-          ],
-          "authorizations":
-          [
-            "oauth2"
-          ],
+          "produces": ["application/xml+atom"],
           "parameters":
           [
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ApplicationInformation",
               "description": "The new Application Information",
@@ -106,25 +72,9 @@
           "method": "GET",
           "summary": "Retrieve an Application Information Using its ID",
           "nickname": "getApplicationInformation",
-          "produces":
-          [
-            "application/xml+atom"
-          ],
-          "authorizations":
-          [
-            "oauth2"
-          ],
+          "produces": ["application/xml+atom"],
           "parameters":
           [
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ApplicationInformationID",
               "description": "The ID of the Application Information",
@@ -151,25 +101,9 @@
           "summary": "Update an existing Application Information",
           "notes": "The Application Information must exist",
           "nickname": "updateApplicationInformation",
-          "produces":
-          [
-            "application/xml+atom"
-          ],
-          "authorizations":
-          [
-            "oauth2"
-          ],
+          "produces": ["application/xml+atom"],
           "parameters":
           [
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ApplicationInformationID",
               "description": "The ID of the Application Information",
@@ -203,25 +137,9 @@
           "method": "DELETE",
           "summary": "Delete an Application Information",
           "nickname": "deleteApplicationInformation",
-          "produces":
-          [
-            "application/xml+atom"
-          ],
-          "authorizations":
-          [
-            "oauth2"
-          ],
+          "produces": ["application/xml+atom"],
           "parameters":
           [
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ApplicationInformationID",
               "description": "The ID of the Application Information",
@@ -246,24 +164,5 @@
 
       ]
     }
-  ],
-  "models":
-  {
-    "ApplicationInformation":
-    {
-      "id": "ApplicationInformation",
-      "properties":
-      {
-        "name":
-        {
-          "type": "string"
-        },
-        "id":
-        {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    }
-  }
+  ]
 }

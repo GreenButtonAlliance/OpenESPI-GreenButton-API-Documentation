@@ -24,30 +24,8 @@
 					[
             "application/xml+atom"
           ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
-          "parameters":
-					[
-            {
-              "name": "Authorization",
-              "description": "OAuth 2.0 Bearer Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Bearer Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            }
-          ],
+          "authorizations": ["oauth2"],
+          "parameters": [],
           "responseMessages":
 					[
             {
@@ -68,29 +46,9 @@
 					[
             "application/xml+atom"
           ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "OAuth 2.0 Bearer Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Bearer Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ApplicationInformation",
               "description": "The new Application Information",
@@ -126,29 +84,9 @@
 					[
             "application/xml+atom"
           ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "OAuth 2.0 Bearer Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Bearer Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ApplicationInformationID",
               "description": "The ID of the Application Information",
@@ -178,27 +116,9 @@
           "produces": [
             "application/xml+atom"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
+          "authorizations": ["oauth2"],
           "parameters": [
             {
-              "name": "Authorization",
-              "description": "OAuth 2.0 Bearer Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Bearer Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ApplicationInformationID",
               "description": "The ID of the Application Information",
@@ -235,29 +155,9 @@
           "produces": [
             "application/xml+atom"
           ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "OAuth 2.0 Bearer Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Bearer Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ApplicationInformationID",
               "description": "The ID of the Application Information",
@@ -281,25 +181,5 @@
         }
       ]
     }
-  ],
-  "models":
-	{
-    "OAuth 2.0 Bearer Access Token":{
-      "properties":
-			{
-        "Type":
-				{
-          "type": "string",
-					"required": true,
-					"enum": ["Bearer"]
-        },
-        "accessToken":
-				{
-          "type": "string",
-					"required": true
-        }
-      },
-      "id": "OAuth 2.0 Bearer Access Token"
-    }
-  }
+  ]
 }

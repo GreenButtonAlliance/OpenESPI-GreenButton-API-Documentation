@@ -20,26 +20,8 @@
           "summary": "[ESPI] Find all Authorizations",
           "notes": "An XML representation of all Authorizations will be returned",
           "nickname": "findAuthorizations",
-          "produces":
-          [
-            "application/xml+atom"
-          ],
-          "authorizations":
-          [
-            "oauth2"
-          ],
-          "parameters":
-          [
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            }
-          ],
+          "produces": ["application/xml+atom"],
+          "parameters": [],
           "responseMessages":
           [
             {
@@ -62,25 +44,9 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve an Authorization Using its ID",
           "nickname": "getAuthorization",
-          "produces":
-          [
-            "application/xml+atom"
-          ],
-          "authorizations":
-          [
-            "oauth2"
-          ],
+          "produces": ["application/xml+atom"],
           "parameters":
           [
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "AuthorizationID",
               "description": "ID of the Authorization",
@@ -107,25 +73,9 @@
           "summary": "Update an existing Authorization",
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
-          "produces":
-          [
-            "application/xml+atom"
-          ],
-          "authorizations":
-          [
-            "oauth2"
-          ],
+          "produces": ["application/xml+atom"],
           "parameters":
           [
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "AuthorizationID",
               "description": "The ID of the Authorization",
@@ -162,25 +112,9 @@
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteAuthorization",
-          "produces":
-          [
-            "application/xml+atom"
-          ],
-          "authorizations":
-          [
-            "oauth2"
-          ],
+          "produces": ["application/xml+atom"],
           "parameters":
           [
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "AuthorizationID",
               "description": "The ID of the Authorization",
@@ -204,24 +138,5 @@
         }
       ]
     }
-  ],
-  "models":
-  {
-    "Authorization":
-    {
-      "id": "Authorization",
-      "properties":
-      {
-        "name":
-        {
-          "type": "string"
-        },
-        "id":
-        {
-          "type": "integer",
-          "format": "int64"
-        }
-      }
-    }
-  }
+  ]
 }

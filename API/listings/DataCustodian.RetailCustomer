@@ -19,21 +19,9 @@
           "method": "GET",
           "summary": "Returns a feed representing the collection of all Retail Customers",
           "nickname": "getRetailCustomerCollection",
-          "produces":
-          [
-            "text/html"
-          ],
-          "parameters":
-          [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "head"
-            }
-          ],
+          "produces": ["text/html"],
+          "authorizations": ["oauth2"],
+          "parameters": [],
           "responseMessages":
           [
             {
@@ -50,20 +38,10 @@
           "method": "POST",
           "summary": "Add a new Retail Customer",
           "nickname": "addRetailCustomer",
-          "produces":
-          [
-            "text/html"
-          ],
+          "produces": ["text/html"],
+          "authorizations": ["oauth2"],
           "parameters":
           [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "head"
-            },
             {
               "name": "RetailCustomerURLs",
               "description": "The ThirdParty's client access token",
@@ -187,20 +165,10 @@
           "method": "GET",
           "summary": "Retrieve a Retail Customer using the Customer's ID",
           "nickname": "getRetailCustomer",
-          "produces":
-          [
-            "application/atom+xml"
-          ],
+          "produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],
           "parameters":
           [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "head"
-            },
             {
               "name": "RetailCustomerID",
               "description": "The Retail Customer's ID",
@@ -226,20 +194,10 @@
           "method": "PUT",
           "summary": "Update a Retail Customer",
           "nickname": "getRetailCustomer",
-          "produces":
-          [
-            "application/atom+xml"
-          ],
+          "produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],
           "parameters":
           [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "head"
-            },
             {
               "name": "RetailCustomerID",
               "description": "The Retail Customer's ID",
@@ -265,20 +223,10 @@
           "method": "DELETE",
           "summary": "Delete a Retail Customer",
           "nickname": "getRetailCustomer",
-          "produces":
-          [
-            "application/atom+xml"
-          ],
+          "produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],
           "parameters":
           [
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "head"
-            },
             {
               "name": "RetailCustomerID",
               "description": "The Retail Customer's ID",
@@ -302,25 +250,5 @@
         }
       ]
     }
-  ],
-  "models":
-	{
-    "OAuth 2.0 Access Token":{
-      "properties":
-			{
-        "Type":
-				{
-          "type": "string",
-					"required": true,
-					"defaultValue": "Bearer"
-        },
-        "accessToken":
-				{
-          "type": "string",
-					"required": true
-        }
-      },
-      "id": "OAuth 2.0 Access Token"
-    }
-  }
+  ]
 }

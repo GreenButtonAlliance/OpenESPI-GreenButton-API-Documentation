@@ -24,26 +24,8 @@
 					[
             "application/atom+xml"
           ],
-          "parameters":
-					[
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            }
-          ],
+          "authorizations": ["oauth2"],					
+          "parameters": [],
           "responseMessages":
 					[
             {
@@ -61,25 +43,9 @@
           "summary": "Add a new Reading Type",
 					"consumes": ["application/xml"],
           "nickname": "addReadingType",
+          "authorizations": ["oauth2"],					
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request.",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ReadingType",
               "description": "1 or more Reading Types to be added.",
@@ -111,33 +77,10 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve a Reading Type Using it's ID",
           "nickname": "getReadingType",
-          "produces":
-					[
-            "application/xml"
-          ],
-          "authorizations":
-					[
-            "oauth2"
-          ],
+          "produces": ["application/xml"],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ReadingTypeID",
               "description": "ID of the Reading Type.",
@@ -228,25 +171,9 @@
           "notes": "The Reading Type must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateReadingType",
+          "authorizations": ["oauth2"],					
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request.",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ReadingType",
               "description": "The Reading Type to be updated.",
@@ -272,25 +199,9 @@
           "method": "DELETE",
           "summary": "Delete a Reading Type",
           "nickname": "deleteReadingType",
+          "authorizations": ["oauth2"],					
           "parameters":
 					[
-            {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request.",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
             {
               "name": "ReadingTypeID",
               "description": "ID of Reading Type to delete",
@@ -315,25 +226,5 @@
 
       ]
     }
-  ],
-  "models":
-	{
-    "OAuth 2.0 Access Token":{
-      "properties":
-			{
-        "Type":
-				{
-          "type": "string",
-					"required": true,
-					"defaultValue": "Bearer"
-        },
-        "accessToken":
-				{
-          "type": "string",
-					"required": true
-        }
-      },
-      "id": "OAuth 2.0 Access Token"
-    }
-  }
+  ]
 }

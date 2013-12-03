@@ -11,7 +11,8 @@
   "apis": [
     {
       "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySumary",
-      "operations": [
+      "operations":
+			[
         {
           "method": "GET",
           "summary": "[ESPI] Finds all Electric Power Quality Summarys",
@@ -21,28 +22,10 @@
           "produces": [
             "application/atom+xml"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
             {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
-	    {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
               "required": true,
@@ -50,7 +33,7 @@
               "dataType": "string",
               "paramType": "path"
             },
-	    {
+            {
               "name": "UsagePointID",
               "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
               "required": true,
@@ -87,28 +70,10 @@
           "produces": [
             "application/atom+xml"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
             {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
-	    {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
               "required": true,
@@ -116,7 +81,7 @@
               "dataType": "string",
               "paramType": "path"
             },
-	    {
+            {
               "name": "UsagePointID",
               "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
               "required": true,
@@ -148,7 +113,8 @@
     },
     {
       "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySumary/{ElectricPowerQualitySummaryID}",
-      "operations": [
+      "operations":
+			[
         {
           "method": "GET",
           "summary": "[ESPI] Retrieve a ElectricPowerQualitySummary Using it's ID",
@@ -158,28 +124,10 @@
           "produces": [
             "application/atom+xml"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
             {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
-	    {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
               "required": true,
@@ -187,7 +135,7 @@
               "dataType": "string",
               "paramType": "path"
             },
-	    {
+            {
               "name": "UsagePointID",
               "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
               "required": true,
@@ -195,7 +143,7 @@
               "dataType": "string",
               "paramType": "path"
             },
-	    {
+            {
               "name": "published-max",
               "description": "The upper bound on the published date of the referenced resource",
               "defaultValue": "All",
@@ -204,7 +152,7 @@
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "published-min",
               "description": "The lower bound on the published date of the referenced resource",
               "defaultValue": "All",
@@ -213,7 +161,7 @@
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "updated-max",
               "description": "The upper bound on the updated date of the referenced resource",
               "defaultValue": "All",
@@ -222,7 +170,7 @@
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "updated-min",
               "description": "The lower bound on the updated date of the referenced resource",
               "defaultValue": "All",
@@ -231,7 +179,7 @@
               "dataType": "Date",
               "paramType": "query"
             },
-	    {
+            {
               "name": "max-results",
               "description": "The upper bound on the number of entries to be contained in a reply to this response",
               "defaultValue": "All",
@@ -240,7 +188,7 @@
               "dataType": "long",
               "paramType": "query"
             },
-	    {
+            {
               "name": "start-index",
               "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transfered as the first entry of this request.",
               "defaultValue": "1",
@@ -249,7 +197,7 @@
               "dataType": "long",
               "paramType": "query"
             },
-	    {
+            {
               "name": "depth",
               "description": "The maximum number of entries to be transfered in the response to this request",
               "defaultValue": "All",
@@ -280,28 +228,10 @@
           "produces": [
             "application/atom+xml"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
             {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
-	    {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
               "required": true,
@@ -309,7 +239,7 @@
               "dataType": "string",
               "paramType": "path"
             },
-	    {
+            {
               "name": "UsagePointID",
               "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
               "required": true,
@@ -328,7 +258,7 @@
               "message": "Bad Request"
             }
           ]
-	},
+        },
         {
           "method": "DELETE",
           "summary": "Deletes a Electric Power Quality Summary",
@@ -338,28 +268,10 @@
           "produces": [
             "application/atom+xml"
           ],
-          "authorizations": [
-            "oauth2"
-          ],
-          "parameters": [
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
             {
-              "name": "Authorization",
-              "description": "Access Token",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "OAuth 2.0 Access Token",
-              "paramType": "header"
-            },
-            {
-              "name": "Accept",
-              "description": "Accept type for the Request",
-              "defaultValue": "application/atom+xml",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "header"
-            },
-	    {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
               "required": true,
@@ -367,7 +279,7 @@
               "dataType": "string",
               "paramType": "path"
             },
-	    {
+            {
               "name": "UsagePointID",
               "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
               "required": true,
@@ -387,27 +299,7 @@
             }
           ]
         }
-
       ]
     }
-  ],
-  "models":	{
-    "OAuth 2.0 Access Token":{
-      "properties":
-			{
-        "Type":
-				{
-          "type": "string",
-					"required": true,
-					"defaultValue": "Bearer"
-        },
-        "accessToken":
-				{
-          "type": "string",
-					"required": true
-        }
-      },
-      "id": "OAuth 2.0 Access Token"
-    }
-  }
+  ]
 }

@@ -363,7 +363,8 @@ var Shred = function(options) {
 //  this.log = options.logger||(new Ax({ level: "info" }));
   this.log = options.logger||(new Ax({ level: "debug" }));
   this._sharedCookieJar = new CookieJar();
-  this.logCurl = options.logCurl || false;
+//  this.logCurl = options.logCurl || false;    DFC 11/24/2013
+  this.logCurl = options.logCurl || true;
 };
 
 // Most of the real work is done in the request and response classes.
