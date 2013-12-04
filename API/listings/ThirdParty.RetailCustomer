@@ -17,8 +17,7 @@
           "summary": "Returns a feed representing the collection of all Retail Customers",
           "nickname": "getRetailCustomerCollection",
           "produces":["text/html"],
-          "parameters":[
-          ],
+          "parameters":[],
           "responseMessages":[
             {
               "code" : 200,
@@ -34,16 +33,16 @@
           "method": "POST",
           "summary": "Adds a new Retail Customer",
           "nickname": "getRetailCustomerCollection",
+					"consumes": ["application/xml"],
           "produces":["text/html"],
           "parameters":[
             {
-              "name": "RetailCustomerURLs",
-              "description": "The ThirdParty's client access token",
-              "defaultValue": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
+              "name": "RetailCustomerData",
+              "description": "The new Retail Customer's data",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
-              "paramType": "query"
+              "paramType": "body"
             }
           ],
           "responseMessages":[
@@ -78,7 +77,7 @@
             },
             {
               "name": "RetailCustomerID",
-              "description": "The Retail Customer's ID",
+              "description": "The ID of the Retail Customer.",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -112,7 +111,7 @@
           "parameters":[
             {
               "name": "RetailCustomerID",
-              "description": "The Retail Customer's ID",
+              "description": "The ID of the Retail Customer.",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -120,9 +119,9 @@
             },
             {
               "name": "xmlFile",
-              "description": "The Green Button XML file being uploaded",
+              "description": "The Green Button XML file contents being uploaded",
 							"required": true,
-              "allowMultiple": false,
+              "allowMultiple": true,
               "dataType": "string",
               "paramType": "body"
             }
@@ -155,7 +154,7 @@
           [
             {
               "name": "RetailCustomerID",
-              "description": "The Retail Customer's ID",
+              "description": "The ID of the Retail Customer to be retrieved.",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -178,16 +177,25 @@
           "method": "PUT",
           "summary": "Update a Retail Customer",
           "nickname": "getRetailCustomer",
-          "produces":["application/atom+xml"],
+					"consumes": ["application/xml"],
+          "produces":[],
           "parameters":[
             {
               "name": "RetailCustomerID",
-              "description": "The Retail Customer's ID",
+              "description": "The ID of the Retail Customer to be updated.",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
-            }
+            },
+            {
+              "name": "RetailCustomerData",
+              "description": "The Retail Customer's data to be updated.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "String",
+              "paramType": "body"
+            }						
           ],
           "responseMessages":[
             {
@@ -208,7 +216,7 @@
           "parameters":[
             {
               "name": "RetailCustomerID",
-              "description": "The Retail Customer's ID",
+              "description": "The ID of the Retail Customer to be deleted.",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",

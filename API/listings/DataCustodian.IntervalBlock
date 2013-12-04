@@ -91,7 +91,7 @@
               "paramType": "path"
             },
             {
-              "name": "IntervalBlock",
+              "name": "IntervalBlockData",
               "description": "1 or more IntervalBlocks to be added.",
               "required": true,
               "allowMultiple": true,
@@ -148,6 +148,14 @@
               "dataType": "string",
               "paramType": "path"
             },
+            {
+              "name": "IntervalBlockID",
+              "description": "ID of the Interval Block to be retrieved.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },						
             {
               "name": "published-max",
               "description": "The upper bound on the published date of the Interval Block.",
@@ -233,8 +241,40 @@
           "parameters":
 					[
             {
-              "name": "IntervalBlock",
-              "description": "The Interval Block to be updated",
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Interval Block references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint the Interval Block references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "MeterReadingID",
+              "description": "ID of the MeterReading the Interval Block references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "IntervalBlockID",
+              "description": "ID of the Interval Block to be updated.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },					
+            {
+              "name": "IntervalBlockData",
+              "description": "The Interval Block data to be updated.",
               "required": true,
               "allowMultiple": true,
               "dataType": "string",
@@ -260,8 +300,32 @@
           "parameters":
 					[
             {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Interval Block references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint the Interval Block references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "MeterReadingID",
+              "description": "ID of the MeterReading the Interval Block references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },			
+            {
               "name": "IntervalBlockID",
-              "description": "ID of the Interval Block to delete",
+              "description": "ID of the Interval Block to be deleted.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",

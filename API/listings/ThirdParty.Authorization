@@ -17,8 +17,8 @@
       [
         {
           "method": "GET",
-          "summary": "[ESPI] Find all Authorizations",
-          "notes": "An XML representation of all Authorizations will be returned",
+          "summary": "[ESPI] Find all Authorizations.",
+          "notes": "An XML representation of all Authorizations will be returned.",
           "nickname": "findAuthorizations",
           "produces": ["application/xml+atom"],
           "parameters": [],
@@ -42,14 +42,14 @@
       [
         {
           "method": "GET",
-          "summary": "[ESPI] Retrieve an Authorization Using its ID",
+          "summary": "[ESPI] Retrieve an Authorization Using its ID.",
           "nickname": "getAuthorization",
           "produces": ["application/xml+atom"],
           "parameters":
           [
             {
               "name": "AuthorizationID",
-              "description": "ID of the Authorization",
+              "description": "ID of the Authorization.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -70,27 +70,28 @@
         },
         {
           "method": "PUT",
-          "summary": "Update an existing Authorization",
+          "summary": "Update an existing Authorization.",
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
-          "produces": ["application/xml+atom"],
+					"consumes": ["application/xml"],
+          "produces": [],
           "parameters":
           [
             {
               "name": "AuthorizationID",
-              "description": "The ID of the Authorization",
+              "description": "The ID of the Authorization.",
               "required": true,
               "allowMultiple": false,
               "dataType": "Authorization",
               "paramType": "path"
             },
             {
-              "name": "Authorization",
-              "description": "The updated Authorization information",
+              "name": "AuthorizationData",
+              "description": "The Authorization information data to be updated.",
               "required": true,
-              "allowMultiple": false,
+              "allowMultiple": true,
               "dataType": "string",
-              "paramType": "form"
+              "paramType": "body"
             }
           ],
           "responseClass": "void",

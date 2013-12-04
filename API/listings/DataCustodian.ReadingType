@@ -47,7 +47,7 @@
           "parameters":
 					[
             {
-              "name": "ReadingType",
+              "name": "ReadingTypeData",
               "description": "1 or more Reading Types to be added.",
               "required": false,
               "allowMultiple": true,
@@ -175,7 +175,15 @@
           "parameters":
 					[
             {
-              "name": "ReadingType",
+              "name": "ReadingTypeID",
+              "description": "ID of Reading Type to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },					
+            {
+              "name": "ReadingTypeData",
               "description": "The Reading Type to be updated.",
               "required": true,
               "allowMultiple": false,

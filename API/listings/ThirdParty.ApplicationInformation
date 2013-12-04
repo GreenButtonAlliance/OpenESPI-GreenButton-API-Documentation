@@ -36,18 +36,19 @@
         },
         {
           "method": "POST",
-          "summary": "Add a new Application Information",
+          "summary": "Add a new Application Information.",
           "nickname": "addApplicationInformation",
-          "produces": ["application/xml+atom"],
+					"consumes": ["application/xml"],
+          "produces": [],
           "parameters":
           [
             {
               "name": "ApplicationInformation",
-              "description": "The new Application Information",
+              "description": "The new Application Information.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
-              "paramType": "form"
+              "paramType": "body"
             }
           ],
           "responseMessages":
@@ -70,14 +71,14 @@
       [
         {
           "method": "GET",
-          "summary": "Retrieve an Application Information Using its ID",
+          "summary": "Retrieve an Application Information Using its ID.",
           "nickname": "getApplicationInformation",
           "produces": ["application/xml+atom"],
           "parameters":
           [
             {
               "name": "ApplicationInformationID",
-              "description": "The ID of the Application Information",
+              "description": "The ID of the Application Information.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
@@ -101,12 +102,13 @@
           "summary": "Update an existing Application Information",
           "notes": "The Application Information must exist",
           "nickname": "updateApplicationInformation",
-          "produces": ["application/xml+atom"],
+					"consumes": ["application/xml"],
+          "produces": [],
           "parameters":
           [
             {
               "name": "ApplicationInformationID",
-              "description": "The ID of the Application Information",
+              "description": "The ID of the Application Information.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
@@ -114,11 +116,11 @@
             },
             {
               "name": "ApplicationInformation",
-              "description": "The updated Application Information",
+              "description": "The Application Information to be updated.",
               "required": true,
-              "allowMultiple": false,
+              "allowMultiple": true,
               "dataType": "string",
-              "paramType": "form"
+              "paramType": "body"
             }
           ],
           "responseMessages":
@@ -137,12 +139,12 @@
           "method": "DELETE",
           "summary": "Delete an Application Information",
           "nickname": "deleteApplicationInformation",
-          "produces": ["application/xml+atom"],
+          "produces": [],
           "parameters":
           [
             {
               "name": "ApplicationInformationID",
-              "description": "The ID of the Application Information",
+              "description": "The ID of the Application Information to be deleted.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",

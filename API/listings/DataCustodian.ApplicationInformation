@@ -17,13 +17,10 @@
 			[
         {
           "method": "GET",
-          "summary": "[ESPI] Finds all Application Informations",
+          "summary": "[ESPI] Finds all Application Informations.",
           "notes": "An XML representation of all Application Informations will be returned",
           "nickname": "findApplicationInformations",
-          "produces":
-					[
-            "application/xml+atom"
-          ],
+          "produces": ["application/xml+atom"],
           "authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages":
@@ -40,22 +37,20 @@
 	      },
         {
           "method": "POST",
-          "summary": "Add a new Application Information",
+          "summary": "Add a new Application Information.",
           "nickname": "addApplicationInformation",
-          "produces":
-					[
-            "application/xml+atom"
-          ],
+					"consumes": ["application/xml"],
+          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "ApplicationInformation",
-              "description": "The new Application Information",
+              "name": "ApplicationInformationData",
+              "description": "The new Application Information data.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
-              "paramType": "form"
+              "paramType": "body"
             }
           ],
           "responseMessages":
@@ -78,18 +73,15 @@
 			[
         {
           "method": "GET",
-          "summary": "[ESPI] Retrieve an Application Information Using it's ID",
+          "summary": "[ESPI] Retrieve an Application Information Using it's ID.",
           "nickname": "getApplicationInformation",
-          "produces":
-					[
-            "application/xml+atom"
-          ],
+          "produces": ["application/xml+atom"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "ApplicationInformationID",
-              "description": "The ID of the Application Information",
+              "description": "The ID of the Application Information to be retrieved.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
@@ -110,30 +102,29 @@
         },
         {
           "method": "PUT",
-          "summary": "Update an existing Application Information",
+          "summary": "Update an existing Application Information.",
           "notes": "The Application Information must exist",
           "nickname": "updateApplicationInformation",
-          "produces": [
-            "application/xml+atom"
-          ],
+					"consumes": ["application/xml"],
+          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "ApplicationInformationID",
-              "description": "The ID of the Application Information",
+              "description": "The ID of the Application Information.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "ApplicationInformation",
-              "description": "The updated Application Information",
+              "name": "ApplicationInformationData",
+              "description": "The Application Information data to be updated.",
               "required": true,
-              "allowMultiple": false,
+              "allowMultiple": true,
               "dataType": "string",
-              "paramType": "form"
+              "paramType": "body"
             }
           ],
           "responseMessages":
@@ -150,7 +141,7 @@
 	      },
         {
           "method": "DELETE",
-          "summary": "Delete an Application Information",
+          "summary": "Delete Application Information.",
           "nickname": "deleteApplicationInformation",
           "produces": [
             "application/xml+atom"
@@ -160,7 +151,7 @@
 					[
             {
               "name": "ApplicationInformationID",
-              "description": "The ID of the Application Information",
+              "description": "The ID of the Application Information to be deleted.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",

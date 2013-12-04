@@ -10,13 +10,13 @@
   ],
   "apis": [
     {
-      "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySumary",
+      "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySummary",
       "operations":
 			[
         {
           "method": "GET",
-          "summary": "[ESPI] Finds all Electric Power Quality Summarys",
-          "notes": "An XML representation of all Electric Power Quality Summarys will be returned",
+          "summary": "[ESPI] Finds all Electric Power Quality Summaries",
+          "notes": "An XML representation of all Electric Power Quality Summaries will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findElectricPowerQualitySummarys",
           "produces": [
@@ -27,7 +27,7 @@
 					[
             {
               "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -35,19 +35,11 @@
             },
             {
               "name": "UsagePointID",
-              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "description": "ID of the UsagePoint the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
-            },
-            {
-              "name": "ElectricPowerQualitySummary",
-              "description": "A Electric Power Quality Summary object that needs to be updated",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "ElectricPowerQualitySummary",
-              "paramType": "body"
             }
           ],
           "responseMessages": [
@@ -65,17 +57,15 @@
           "method": "POST",
           "summary": "Add a new Electric Power Quality Summary to the Data Custodian",
           "notes": "The New Electric Power Quality Summary will be added",
-          "responseClass": "void",
           "nickname": "addElectricPowerQualitySummary",
-          "produces": [
-            "application/atom+xml"
-          ],
+          "consumes": ["application/xml"],					
+          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -83,18 +73,18 @@
             },
             {
               "name": "UsagePointID",
-              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "description": "ID of the UsagePoint the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "ElectricPowerQualitySummary",
-              "description": "A Electric Power Quality Summary object that needs to be updated",
+              "name": "ElectricPowerQualitySummaryData",
+              "description": "A Electric Power Quality Summary data.",
               "required": true,
-              "allowMultiple": false,
-              "dataType": "ElectricPowerQualitySummary",
+              "allowMultiple": true,
+              "dataType": "string",
               "paramType": "body"
             }
           ],
@@ -112,7 +102,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySumary/{ElectricPowerQualitySummaryID}",
+      "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySummary/{ElectricPowerQualitySummaryID}",
       "operations":
 			[
         {
@@ -129,7 +119,7 @@
 					[
             {
               "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -137,12 +127,20 @@
             },
             {
               "name": "UsagePointID",
-              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "description": "ID of the Usage Point the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
+            {
+              "name": "ElectricPowerQualitySummaryID",
+              "description": "ID of the Electric Power Quality Summary to be retrieved.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },						
             {
               "name": "published-max",
               "description": "The upper bound on the published date of the referenced resource",
@@ -190,7 +188,7 @@
             },
             {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transfered as the first entry of this request.",
+              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of this request.",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
@@ -199,7 +197,7 @@
             },
             {
               "name": "depth",
-              "description": "The maximum number of entries to be transfered in the response to this request",
+              "description": "The maximum number of entries to be transferred in the response to this request",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -223,17 +221,15 @@
           "method": "PUT",
           "summary": "Update an existing Electric Power Quality Summary within the DataCustodian",
           "notes": "The Electric Power Quality Summary must exist",
-          "responseClass": "void",
+					"consumes": ["application/xml"],
           "nickname": "updateElectricPowerQualitySummary",
-          "produces": [
-            "application/atom+xml"
-          ],
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -241,12 +237,28 @@
             },
             {
               "name": "UsagePointID",
-              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "description": "ID of the UsagePoint the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
-            }
+            },
+            {
+              "name": "ElectricPowerQualitySummaryID",
+              "description": "ID of the Electric Power Quality Summary to be updated.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ElectricPowerQualitySummaryData",
+              "description": "ID of the Electric Power Quality Summary data.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }							
           ],
           "responseMessages": [
             {
@@ -273,7 +285,7 @@
 					[
             {
               "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -281,12 +293,20 @@
             },
             {
               "name": "UsagePointID",
-              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "description": "ID of the UsagePoint the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
-            }
+            },
+            {
+              "name": "ElectricPowerQualitySummaryID",
+              "description": "ID of the Electric Power Quality Summary to be deleted.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }						
           ],
           "responseMessages": [
             {

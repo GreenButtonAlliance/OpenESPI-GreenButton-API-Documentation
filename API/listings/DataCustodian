@@ -545,7 +545,17 @@
           "nickname": "getBatch",
           "produces":["application/atom+xml"],
 					"authorizations": ["oauth2"],
-          "parameters": [],
+          "parameters":
+					[
+            {
+              "name": "ThirdPartyID",
+              "description": "The Third Party's assigned Client ID",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }					
+					],
           "responseMessages":
 					[
             {

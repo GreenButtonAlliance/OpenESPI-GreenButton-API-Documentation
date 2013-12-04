@@ -14,13 +14,11 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "[ESPI] Find  all Data Custodian Authorizations",
+          "summary": "[ESPI] Find  all Data Custodian Authorizations.",
           "notes": "An XML representation of all Authorizations will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
-          "produces": [
-            "application/xml+atom"
-          ],
+          "produces": ["application/xml+atom"],
           "authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages": [
@@ -41,19 +39,17 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "[ESPI] Retrieve a Data Custodian Authorization Using it's ID",
+          "summary": "[ESPI] Retrieve a Data Custodian Authorization Using it's ID.",
           "notes": "Returns a Authorization",
           "responseClass": "Authorization",
           "nickname": "getAuthorization",
-          "produces": [
-            "application/xml+atom"
-          ],
+          "produces": ["application/xml+atom"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "AuthorizationID",
-              "description": "ID of the Authorization that needs to be fetched",
+              "description": "ID of the Authorization to be retrieved.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -61,7 +57,7 @@
             },
 	    {
               "name": "published-max",
-              "description": "The upper bound on the published date of the referenced resource",
+              "description": "The upper bound on the published date of the referenced resource.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -70,7 +66,7 @@
             },
 	    {
               "name": "published-min",
-              "description": "The lower bound on the published date of the referenced resource",
+              "description": "The lower bound on the published date of the referenced resource.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -79,7 +75,7 @@
             },
 	    {
               "name": "updated-max",
-              "description": "The upper bound on the updated date of the referenced resource",
+              "description": "The upper bound on the updated date of the referenced resource.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -88,7 +84,7 @@
             },
 	    {
               "name": "updated-min",
-              "description": "The lower bound on the updated date of the referenced resource",
+              "description": "The lower bound on the updated date of the referenced resource.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -97,7 +93,7 @@
             },
 	    {
               "name": "max-results",
-              "description": "The upper bound on the number of entries to be contained in a reply to this response",
+              "description": "The upper bound on the number of entries to be contained in a reply to this response.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -115,7 +111,7 @@
             },
 	    {
               "name": "depth",
-              "description": "The maximum number of entries to be transferred in the response to this request",
+              "description": "The maximum number of entries to be transferred in the response to this request.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -140,27 +136,26 @@
           "summary": "Update an existing Data Custodian Authorization",
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
-          "produces": [
-            "application/xml+atom"
-          ],
+					"consumes": ["application/xml"],
+          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "AuthorizationID",
-              "description": "An Authorization object that needs to be updated",
+              "description": "ID of Authorization to be updated.",
               "required": true,
               "allowMultiple": false,
               "dataType": "Authorization",
               "paramType": "path"
             },
             {
-              "name": "Authorization",
-              "description": "The updated Authorization information",
+              "name": "AuthorizationData",
+              "description": "The Authorization's updated data.",
               "required": true,
-              "allowMultiple": false,
+              "allowMultiple": true,
               "dataType": "string",
-              "paramType": "form"
+              "paramType": "body"
             }
 
           ],
@@ -178,19 +173,17 @@
 	},
         {
           "method": "DELETE",
-          "summary": "Delete an existing Data Custodian Authorization",
+          "summary": "Delete an existing Data Custodian Authorization.",
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteAuthorization",
-          "produces": [
-            "application/xml+atom"
-          ],
+          "produces": ["application/xml+atom"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "AuthorizationID",
-              "description": "Authorization id to delete",
+              "description": "ID of Authorization to be deleted.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",

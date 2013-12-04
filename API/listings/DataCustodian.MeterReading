@@ -118,7 +118,15 @@
           "parameters":
 					[
             {
-              "name": "usagePointID",
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Meter Reading references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },					
+            {
+              "name": "UsagePointID",
               "description": "ID of the UsagePoint the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
@@ -236,6 +244,14 @@
               "paramType": "path"
             },
             {
+              "name": "MeterReadingID",
+              "description": "ID of the Meter Reading.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },						
+            {
               "name": "UpdatedMeterReading",
               "description": "The Updated Information to be placed in the existing MeterReading",
               "required": true,
@@ -262,6 +278,14 @@
           "authorizations": ["oauth2"],
           "parameters":
 					[
+            {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Meter Reading references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },					
             {
               "name": "UsagePointID",
               "description": "ID of Usage Point containing the Meter Reading.",

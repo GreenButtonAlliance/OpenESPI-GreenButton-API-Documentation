@@ -17,8 +17,8 @@
 			[
         {
           "method": "GET",
-          "summary": "[ESPI] Finds all Electric Power Usage Summarys",
-          "notes": "An XML representation of all Electric Power Usage Summarys will be returned",
+          "summary": "[ESPI] Finds all Electric Power Usage Summaries",
+          "notes": "An XML representation of all Electric Power Usage Summaries will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findElectricPowerUsageSummarys",
           "produces": [
@@ -29,7 +29,7 @@
 					[
             {
               "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "description": "ID of the Retail Customer the Electric Power Usage Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -37,19 +37,11 @@
             },
             {
               "name": "UsagePointID",
-              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "description": "ID of the UsagePoint the Electric Power Usage Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
-            },
-            {
-              "name": "ElectricPowerUsageSummary",
-              "description": "A Electric Power Usage Summary object that needs to be updated",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "ElectricPowerUsageSummary",
-              "paramType": "body"
             }
           ],
           "responseMessages": [
@@ -67,17 +59,15 @@
           "method": "POST",
           "summary": "Add a new Electric Power Usage Summary to the Data Custodian",
           "notes": "The New Electric Power Usage Summary will be added",
-          "responseClass": "void",
+          "consumes": ["application/xml"],
           "nickname": "addElectricPowerUsageSummary",
-          "produces": [
-            "application/atom+xml"
-          ],
+          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "description": "ID of the Retail Customer the Electric Power Usage Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -85,18 +75,18 @@
             },
             {
               "name": "UsagePointID",
-              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "description": "ID of the UsagePoint the Electric Power Usage Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "ElectricPowerUsageSummary",
-              "description": "A Electric Power Usage Summary object that needs to be updated",
+              "name": "ElectricPowerUsageSummaryData",
+              "description": "Electric Power Usage Summary data.",
               "required": true,
-              "allowMultiple": false,
-              "dataType": "ElectricPowerUsageSummary",
+              "allowMultiple": true,
+              "dataType": "string",
               "paramType": "body"
             }
           ],
@@ -123,15 +113,13 @@
           "notes": "Returns a Electric Power Usage Summary",
           "responseClass": "ElectricPowerUsageSummary",
           "nickname": "getElectricPowerUsageSummary",
-          "produces": [
-            "application/atom+xml"
-          ],
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "description": "ID of the Retail Customer the Electric Power Usage Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -139,7 +127,15 @@
             },
             {
               "name": "UsagePointID",
-              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "description": "ID of the UsagePoint the Electric Power Usage Summary references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ElectricPowerUsageSummaryID",
+              "description": "ID of the Electric Power Usage Summary to be retrieved.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -192,7 +188,7 @@
             },
             {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transfered as the first entry of this request.",
+              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of this request.",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
@@ -201,7 +197,7 @@
             },
             {
               "name": "depth",
-              "description": "The maximum number of entries to be transfered in the response to this request",
+              "description": "The maximum number of entries to be transferred in the response to this request",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -225,17 +221,15 @@
           "method": "PUT",
           "summary": "Update an existing Electric Power Usage Summary within the DataCustodian",
           "notes": "The Electric Power Usage Summary must exist",
-          "responseClass": "void",
+          "consumes": ["application/xml"],
           "nickname": "updateElectricPowerUsageSummary",
-          "produces": [
-            "application/atom+xml"
-          ],
+          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "description": "ID of the Retail Customer the Electric Power Usage Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -243,11 +237,27 @@
             },
             {
               "name": "UsagePointID",
-              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "description": "ID of the UsagePoint the Electric Power Usage Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
+            },
+            {
+              "name": "ElectricPowerUsageSummaryID",
+              "description": "ID of the Electric Power Usage Summary to be updated.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ElectricPowerUsageSummaryData",
+              "description": "Electric Power Usage Summary data to be updated.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
             }
           ],
           "responseMessages": [
@@ -275,7 +285,7 @@
 					[
             {
               "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer that contains the Interval Block to be Fetched",
+              "description": "ID of the Retail Customer the Electric Power Usage Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -283,7 +293,15 @@
             },
             {
               "name": "UsagePointID",
-              "description": "ID of the UsagePoint that contains the Interval Block to be Fetched",
+              "description": "ID of the UsagePoint the Electric Power Usage Summary references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ElectricPowerUsageSummaryID",
+              "description": "ID of the Electric Power Usage Summary to be deleted.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",

@@ -3,10 +3,7 @@
   "swaggerVersion": "1.2",
   "basePath": "http://services.greenbuttondata.org/DataCustodian",
   "resourcePath": "/espi/1_1/resource",
-  "produces":
-	[
-    "application/xml+atom"
-  ],
+  "produces": ["application/xml+atom"],
   "apis":
 	[
     {
@@ -16,7 +13,7 @@
         {
           "method": "GET",
           "nickname": "findSubscriptions",
-          "summary": "[ESPI] Finds all Subscriptions",
+          "summary": "[ESPI] Finds all Subscriptions.",
           "notes": "An XML representation of all Subscriptions will be returned",
           "authorizations": ["oauth2"],
           "parameters": [],
@@ -41,8 +38,8 @@
           "parameters":
 					[
             {
-              "name": "Subscription",
-              "description": "1 or more Subscriptions to be added",
+              "name": "SubscriptionData",
+              "description": "1 or more Subscriptions to be added.",
               "required": true,
               "allowMultiple": true,
               "dataType": "string",
@@ -76,7 +73,7 @@
 					[
             {
               "name": "SubscriptionID",
-              "description": "ID of the Subscription",
+              "description": "ID of the Subscription.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -84,7 +81,7 @@
             },
             {
               "name": "published-max",
-              "description": "The upper bound on the published date of the Subscription",
+              "description": "The upper bound on the published date of the Subscription.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -93,7 +90,7 @@
             },
             {
               "name": "published-min",
-              "description": "The lower bound on the published date of the Subscription",
+              "description": "The lower bound on the published date of the Subscription.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -102,7 +99,7 @@
             },
             {
               "name": "updated-max",
-              "description": "The upper bound on the updated date of the Subscription",
+              "description": "The upper bound on the updated date of the Subscription.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -111,7 +108,7 @@
             },
             {
               "name": "updated-min",
-              "description": "The lower bound on the updated date of the Subscription",
+              "description": "The lower bound on the updated date of the Subscription.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -120,7 +117,7 @@
             },
             {
               "name": "max-results",
-              "description": "The upper bound on the number of entries to be contained in a reply",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -129,7 +126,7 @@
             },
             {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of the response",
+              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of the response.",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
@@ -160,7 +157,7 @@
         },
         {
           "method": "PUT",
-          "summary": "Update an existing Subscription",
+          "summary": "Update an existing Subscription.",
           "notes": "The Subscription must exist",
           "nickname": "updateSubscription",
 					"consumes": ["application/xml"],
@@ -169,15 +166,15 @@
 					[
             {
               "name": "SubscriptionID",
-              "description": "ID of the Subscription",
+              "description": "ID of the Subscription to be updated.",
               "required": true,
               "allowMultiple": false,
               "dataType": "Subscription",
               "paramType": "path"
             },
             {
-              "name": "Subscription",
-              "description": "The updated Subscription",
+              "name": "SubscriptionData",
+              "description": "The Subscription data to be updated.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -198,14 +195,14 @@
         },
         {
           "method": "DELETE",
-          "summary": "Delete a Subscription",
+          "summary": "Delete a Subscription.",
           "nickname": "deleteSubscription",
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "SubscriptionID",
-              "description": "ID of the Subscription",
+              "description": "ID of the Subscription to be deleted.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",

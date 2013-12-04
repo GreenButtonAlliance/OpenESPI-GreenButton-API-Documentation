@@ -38,18 +38,18 @@
           "method": "POST",
           "summary": "Add a new Retail Customer",
           "nickname": "addRetailCustomer",
-          "produces": ["text/html"],
+					"consumes": ["application/xml"],
+          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
           [
             {
-              "name": "RetailCustomerURLs",
-              "description": "The ThirdParty's client access token",
-              "defaultValue": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
+              "name": "RetailCustomerData",
+              "description": "The new Data Custodian Retail Customer data.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
-              "paramType": "query"
+              "paramType": "body"
             }
           ],
           "responseMessages":
@@ -194,7 +194,8 @@
           "method": "PUT",
           "summary": "Update a Retail Customer",
           "nickname": "getRetailCustomer",
-          "produces": ["application/atom+xml"],
+					"consumes": ["application/xml"],
+          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
           [
@@ -205,7 +206,15 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
-            }
+            },
+            {
+              "name": "RetailCustomerData",
+              "description": "The Retail Customer's data to be updated.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "String",
+              "paramType": "body"
+            }						
           ],
           "responseMessages":
           [
