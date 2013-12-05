@@ -49,6 +49,9 @@
       "path": "/../listings/DataCustodian.IntervalBlock"
     },
     {
+      "path": "/../listings/DataCustodian.LocalTimeParameters"
+    },		
+    {
       "path": "/../listings/DataCustodian.ElectricPowerQualitySummary"
     },
     {
