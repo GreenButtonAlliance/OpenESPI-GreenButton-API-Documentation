@@ -3,13 +3,7 @@
   "swaggerVersion": "1.2",
   "basePath": "http://services.greenbuttondata.org/DataCustodian",
   "resourcePath": "/",
-  "produces":
-	[
-    "application/xml",
-    "application/json",
-    "text/plain",
-    "text/html"
-  ],
+  "produces":	[],
   "apis":
 	[
     {
@@ -26,216 +20,215 @@
           "parameters":
 					[
             {
-              "paramType": "form",
               "name": "redirect_uri",
               "description": "A URI to be used in the OAuth 2.0 authorization code flow sequence. This MUST be an absolute URI as defined by [RFC3986] Section 4.3.",
               "required": true,
               "allowMultiple": false,
               "defaultValue": "http://services.greenbuttondata.org/ThirdParty/OAuthCallBack",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "client_name",
               "description" : "A human-readable name of the Third Party Application to be displayed to the Retail Customer.",
               "required": true,
               "defaultValue": "OpenESPI Green Button Third Party Application",
               "allowMultiple": false,
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "client_uri",
               "description" : "A URI that points to the homepage of the Third Party Application.  The value of this field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
               "defaultValue": "http://services.greenbuttondata.org/ThirdParty/home",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "logo_uri",
               "description" : "A URI that points to a logo for the Third Party Application.  The value of this field MUST point to a valid image file.",
               "required": true,
               "allowMultiple": false,
               "defaultValue": "http://services.greenbuttondata.org/ThirdParty/image.jpg",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "contacts",
               "description" : "An array of email addresses for people responsible for the Third Party Application.  The authorization server MAY make these addresses available to Retail Customers for support requests for the Third Party Application.  An authorization server MAY use these email addresses as identifiers for an administrative page for the Third Party Application.",
               "required": true,
-              "allowMultiple": false,
+              "allowMultiple": true,
               "dataType": "array",
               "items":
 							{
                 "type": "string"
-              }
+              },
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "tos_uri",
               "description" : "A URI that points to a human-readable Terms of Service document for the Third Party Application.  The Terms of Service usually describes a contractual relationship between the Retail Customer and the Third Party Application that the Retail Customer accepts when authorizing access to the Third Party Application.",
               "required": true,
               "allowMultiple": false,
               "defaultValue": "http://services.greenbuttondata.org/ThirdParty/TermsOfService",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "policy_uri",
               "description": "A URI that points to a human-readable Policy document for the Third Party Application.  The policy usually describes how a Retail Customer's energy usage information will be used by the Third Party Application.",
               "required": true,
               "allowMultiple": false,
               "defaultValue": "http://services.greenbuttondata.org/ThirdParty/UsagePolicy",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "token_endpoint_auth_method",
               "description": "The requested authentication method to be used by the OAuth 2.0 token endpoint. The only accepted value is 'client_server_basic' (the OAuth 2.0 token endpoint uses the HTTP Basic authentication scheme as defined in [RFC2617] to authenticate with the authorization server.",
               "defaultValue": "client_secret_basic",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "enum": ["client_secret_basic"]
+              "enum": ["client_secret_basic"],
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "scope",
               "description": "A space separated list of scope values the Third Party Application can use when requesting access tokens. *** NEED TO DOCUMENT SCOPE STRING CONTENTS ***",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "grant_types",
               "description": "Array of OAuth 2.0 grant types the Third Party Application may request. The supported OAuth 2.0 grant types are: [\"authorization_code\", \"client_credentials\",\"refresh_token\"].",
               "required": true,
               "allowMultiple": true,
-              "defaultValue": "authorization_code, refresh_token",
               "dataType": "array",
               "items":
 							{
                 "type": "string"
               },
-              "enum": ["authorization_code","client_credentials","refresh_token"]
+              "enum": ["authorization_code","client_credentials","refresh_token"],
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "response_types",
               "description": "The OAuth 2.0 response types the Third Party Application may request.  The supported OAuth 2.0 response type is [\"code\"].",
               "required": true,
               "defaultValue" : "code",
               "allowMultiple": false,
               "dataType": "string",
-              "enum": ["code"]
+              "enum": ["code"],
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "software_id",
               "description": "An identifier for the software that comprises the Third Party Application.  The software_id is asserted by the Third Party software and is intended to be shared between all copies of the Third Party software.  The value of this field MAY be a UUID {RFC4122].",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "software_version",
               "description": "A version identifier for the software that comprises a Third Party Application.  The value of this field is a string that is intended to be compared using string equality matching.  The value of the string software_version SHOULD change on any update to the Third Party software.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "third_party_application_description",
               "description": "** ESPI ** -- A description of the application.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "third_party_application_type",
               "description": "** ESPI ** -- A code indicating the type of Third Party Application.  The defined values are: [\"1 - Web Application\", \"2 - Desktop Application\", \"3 - Mobile Application\"].",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "enum": ["1","2","3"]
+              "enum": ["1","2","3"],
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "third_party_application_use",
               "description": "** ESPI ** -- A code indicating the expected use of the Third Party Application.  The defined values are: [\"1 - Energy Management\", \"2 - Comparisons\", \"3 - Government\", \"4 - Academic\", \"5 - Law Enforcement\"].",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "enum": ["1","2","3","4","5"]
+              "enum": ["1","2","3","4","5"],
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "third_party_application_status",
               "description": "** ESPI ** -- A code indicating the current status of the Third Party Application.  The defined values are: [\"1 - Development\", \"2 - Review/Test\", \"3 - Production (Live)\", \"4 - Retired (Remove)\"].",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
-              "enum": ["1","2","3","4"]
+              "enum": ["1","2","3","4"],
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "third_party_phone",
               "description": "** ESPI ** -- The phone number of the Third Party organization to which access will be granted. (For debugging -- not to be shared with customers).",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "third_party_notify_uri",
               "description": "** ESPI ** -- The default endpoint for Third Party notification of Batch data availability that is then requested from the Data Custodian via the Batch resource.",
               "required": true,
               "allowMultiple": false,
               "defaultValue" : "http://services.greenbuttondata.org/ThirdParty/Notify_SubscriptionAvailable",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "third_party_data_custodian_selection_screen_uri",
               "description": "** ESPI ** -- URL of Third Party's supported Data Custodian Selection web page.  The field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
               "defaultValue" : "http://services.greenbuttondata.org/ThirdParty/RetailCustomer/{RetailCustomerID}/DataCustodianList",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "third_party_login_screen_uri",
               "description": "** ESPI ** -- URL of the Login Screen used by the Third Party to authenticate the identity of the Retail Customer.  The field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
               "defaultValue" : "http://services.greenbuttondata.org/ThirdParty/login",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "third_party_scope_selection_screen_uri",
               "description": "** ESPI ** -- URL of the Scope Selection Screen used by the Retail Customer to select the characteristics of the Green Button data to be shared with the ThirdParty.  The field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
               "defaultValue" : "http://services.greenbuttondata.org/ThirdParty/RetailCustomer/{RetailCustomerID}/ScopeSelection",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             },
             {
-              "paramType": "form",
               "name": "third_party_user_portal_screen_uri",
               "description": "** ESPI ** -- URL of a Third Party's web page the Retail Customer user-agent is returned to after authorizing the Third Party access to the Retail Customer's energy usage information (EUI).  The field MUST be a valid web page.",
               "required": true,
               "allowMultiple": false,
               "defaultValue" : "http://services.greenbuttondata.org/ThirdParty/RetailCustomer/{RetailCustomerID}/home",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "body"
             }
           ],
           "produces":
@@ -269,47 +262,47 @@
           "parameters":
 					[
             {
-              "paramType": "query",
               "name": "response_type",
               "description": "OAuth 2.0 response type.  Value MUST be set to code.",
               "required": true,
               "allowMultiple": false,
               "defaultValue": "code",
               "dataType": "string",
-              "enum": ["code"]
+              "enum": ["code"],
+              "paramType": "query"
             },
             {
-              "paramType": "query",
               "name": "client_id",
               "description": "OAuth 2.0 client id value assigned to Third Party Application during registration process.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "query"
             },
             {
-              "paramType": "query",
               "name": "redirect_uri",
               "description": "A Third Party Application URI used to return the OAuth 2.0 authorization code.  This MUST be the same URI the Third Party supplied during the registration process (metadata field \"redirect-uris\".",
               "required": true,
               "allowMultiple": false,
               "defaultValue" : "http://services.greenbuttondata.org/ThirdParty/OAuthCallBack",
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "query"
             },
             {
-              "paramType": "query",
               "name": "scope",
               "description" : "A space separated list of scope values the Third Party Application can use when requesting access tokens. *** NEED TO DOCUMENT SCOPE STRING CONTENTS ***",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "query"
             },
             {
-              "paramType": "query",
               "name": "state",
               "description" : "An opaque value used by the Third Party Application to maintain state between the request and callback.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string"
+              "dataType": "string",
+              "paramType": "query"
             }
           ],
           "produces":
@@ -543,7 +536,7 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
-            }					
+            }
 					],
           "responseMessages":
 					[
