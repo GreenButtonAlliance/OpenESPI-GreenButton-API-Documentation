@@ -4,13 +4,43 @@
   "espiVersion": "1.1",
   "apis": [
     {
+      "path": "/../listings/DataCustodian"
+    },
+    {
+      "path": "/../listings/DataCustodian.ApplicationInformation"
+    },
+    {
+      "path": "/../listings/DataCustodian.Authorization"
+    },
+    {
+      "path": "/../listings/DataCustodian.ElectricPowerQualitySummary"
+    },
+    {
+      "path": "/../listings/DataCustodian.ElectricPowerUsageSummary"
+    },
+    {
+      "path": "/../listings/DataCustodian.IntervalBlock"
+    },
+    {
+      "path": "/../listings/DataCustodian.LocalTimeParameters"
+    },
+    {
+      "path": "/../listings/DataCustodian.MeterReading"
+    },
+    {
+      "path": "/../listings/DataCustodian.ReadingType"
+    },		
+	  {
+      "path": "/../listings/DataCustodian.RetailCustomer"
+    },
+    {
+      "path": "/../listings/DataCustodian.Subscription"
+    },
+    {
+      "path": "/../listings/DataCustodian.UsagePoint"
+    },		
+    {
       "path": "/../listings/ThirdParty"
-    },
-    {
-      "path": "/../listings/ThirdParty.Screens"
-    },
-    {
-      "path": "/../listings/ThirdParty.RetailCustomer"
     },
     {
       "path": "/../listings/ThirdParty.ApplicationInformation"
@@ -19,43 +49,7 @@
       "path": "/../listings/ThirdParty.Authorization"
     },
     {
-      "path": "/../listings/DataCustodian"
-    },
-    {
-      "path": "/../listings/DataCustodian.Screens"
-    },
-    {
-      "path": "/../listings/DataCustodian.RetailCustomer"
-    },
-    {
-      "path": "/../listings/DataCustodian.ApplicationInformation"
-    },
-    {
-      "path": "/../listings/DataCustodian.Subscription"
-    },
-    {
-      "path": "/../listings/DataCustodian.Authorization"
-    },
-    {
-      "path": "/../listings/DataCustodian.UsagePoint"
-    },
-    {
-      "path": "/../listings/DataCustodian.MeterReading"
-    },
-    {
-      "path": "/../listings/DataCustodian.ReadingType"
-    },
-    {
-      "path": "/../listings/DataCustodian.IntervalBlock"
-    },
-    {
-      "path": "/../listings/DataCustodian.LocalTimeParameters"
-    },		
-    {
-      "path": "/../listings/DataCustodian.ElectricPowerQualitySummary"
-    },
-    {
-      "path": "/../listings/DataCustodian.ElectricPowerUsageSummary"
-    }
+      "path": "/../listings/ThirdParty.RetailCustomer"
+    }	
   ]
 }

@@ -3,7 +3,7 @@
   "swaggerVersion": "1.2",
   "basePath": "http://services.greenbuttondata.org/DataCustodian",
   "resourcePath": "/espi/1_1/resource",
-  "produces": ["application/xml+atom"],
+  "produces": ["application/xml"],
   "apis":
 	[
     {

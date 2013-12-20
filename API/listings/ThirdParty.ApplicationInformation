@@ -20,7 +20,7 @@
           "summary": "Finds all Application Informations",
           "notes": "An XML representation of all Application Informations will be returned",
           "nickname": "findApplicationInformations",
-          "produces": ["application/xml+atom"],
+          "produces": ["application/xml"],
 					"authorizations": [],
           "parameters": [],
           "responseMessages":
@@ -75,7 +75,7 @@
           "method": "GET",
           "summary": "Retrieve an Application Information Using its ID.",
           "nickname": "getApplicationInformation",
-          "produces": ["application/xml+atom"],
+          "produces": ["application/xml"],
 					"authorizations": [],
           "parameters":
           [

@@ -23,6 +23,7 @@
           "nickname": "getDataCustodianPortalHome",
           "produces": ["text/html"],
           "authorizations": [],
+					"parameters": [],
           "responseMessages":
 					[
             {

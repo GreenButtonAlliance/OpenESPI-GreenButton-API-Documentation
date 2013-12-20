@@ -20,7 +20,7 @@
           "summary": "[ESPI] Finds all Application Informations.",
           "notes": "An XML representation of all Application Informations will be returned",
           "nickname": "findApplicationInformations",
-          "produces": ["application/xml+atom"],
+          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages":
@@ -75,7 +75,7 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve an Application Information Using it's ID.",
           "nickname": "getApplicationInformation",
-          "produces": ["application/xml+atom"],
+          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -144,7 +144,7 @@
           "summary": "Delete Application Information.",
           "nickname": "deleteApplicationInformation",
           "produces": [
-            "application/xml+atom"
+            "application/xml"
           ],
           "authorizations": ["oauth2"],
           "parameters":

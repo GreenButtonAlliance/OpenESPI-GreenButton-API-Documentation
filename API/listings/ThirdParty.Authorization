@@ -20,7 +20,7 @@
           "summary": "[ESPI] Find all Authorizations.",
           "notes": "An XML representation of all Authorizations will be returned.",
           "nickname": "findAuthorizations",
-          "produces": ["application/xml+atom"],
+          "produces": ["application/xml"],
 					"authorizations": [],
           "parameters": [],
           "responseMessages":
@@ -45,7 +45,7 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve an Authorization Using its ID.",
           "nickname": "getAuthorization",
-          "produces": ["application/xml+atom"],
+          "produces": ["application/xml"],
 					"authorizations": [],
           "parameters":
           [
@@ -116,7 +116,7 @@
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteAuthorization",
-          "produces": ["application/xml+atom"],
+          "produces": ["application/xml"],
 					"authorizations": [],
           "parameters":
           [
