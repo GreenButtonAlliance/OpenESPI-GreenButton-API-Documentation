@@ -235,7 +235,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}/LocalTimeParameter",
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameter",
       "operations":
 			[
         {
@@ -258,14 +258,6 @@
             {
               "name": "UsagePointID",
               "description": "ID of the UsagePoint the Local Time Parameter references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Local Time Parameter references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -309,14 +301,6 @@
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Local Time Parameter references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
               "name": "LocalTimeParameterData",
               "description": "1 or more Local Time Parameters to be added.",
               "required": false,
@@ -340,7 +324,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}/LocalTimeParameter/{LocalTimeParameterID}",
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameter/{LocalTimeParameterID}",
       "operations":
 			[
         {
@@ -362,14 +346,6 @@
             {
               "name": "UsagePointID",
               "description": "ID of the UsagePoint the Local Time Parameter references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Local Time Parameter references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -485,14 +461,6 @@
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Local Time Parameter references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
               "name": "LocalTimeParameterID",
               "description": "ID of Local Time Parameter to delete",
               "required": true,
@@ -539,14 +507,6 @@
             {
               "name": "UsagePointID",
               "description": "ID of the UsagePoint the Local Time Parameter references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Local Time Parameter references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",

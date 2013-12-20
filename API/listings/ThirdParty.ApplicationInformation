@@ -21,6 +21,7 @@
           "notes": "An XML representation of all Application Informations will be returned",
           "nickname": "findApplicationInformations",
           "produces": ["application/xml+atom"],
+					"authorizations": [],
           "parameters": [],
           "responseMessages":
           [
@@ -40,6 +41,7 @@
           "nickname": "addApplicationInformation",
 					"consumes": ["application/xml"],
           "produces": [],
+					"authorizations": [],
           "parameters":
           [
             {
@@ -74,6 +76,7 @@
           "summary": "Retrieve an Application Information Using its ID.",
           "nickname": "getApplicationInformation",
           "produces": ["application/xml+atom"],
+					"authorizations": [],
           "parameters":
           [
             {
@@ -104,6 +107,7 @@
           "nickname": "updateApplicationInformation",
 					"consumes": ["application/xml"],
           "produces": [],
+					"authorizations": [],
           "parameters":
           [
             {
@@ -140,6 +144,7 @@
           "summary": "Delete an Application Information",
           "nickname": "deleteApplicationInformation",
           "produces": [],
+					"authorizations": [],
           "parameters":
           [
             {

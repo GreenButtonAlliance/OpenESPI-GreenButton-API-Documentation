@@ -17,6 +17,7 @@
           "summary": "Returns a feed representing the collection of all Retail Customers",
           "nickname": "getRetailCustomerCollection",
           "produces":["text/html"],
+					"authorizations": [],
           "parameters":[],
           "responseMessages":[
             {
@@ -35,6 +36,7 @@
           "nickname": "getRetailCustomerCollection",
 					"consumes": ["application/xml"],
           "produces":["text/html"],
+					"authorizations": [],
           "parameters":[
             {
               "name": "RetailCustomerData",
@@ -65,6 +67,7 @@
           "method": "GET",
           "summary": "Download a Green Button XML file",
           "nickname": "downloadMyData",
+					"authorizations": [],
           "parameters":[
             {
               "name": "Content-Disposition",
@@ -108,6 +111,7 @@
           "summary": "Upload a Green Button XML file",
           "nickname": "uploadMyData",
 					"consumes": ["application/xml"],
+					"authorizations": [],
           "parameters":[
             {
               "name": "RetailCustomerID",
@@ -150,6 +154,7 @@
           "summary": "Retrieve a Retail Customer using the Customer's ID",
           "nickname": "getRetailCustomer",
           "produces": ["application/atom+xml"],
+					"authorizations": [],
           "parameters":
           [
             {
@@ -179,6 +184,7 @@
           "nickname": "getRetailCustomer",
 					"consumes": ["application/xml"],
           "produces":[],
+					"authorizations": [],
           "parameters":[
             {
               "name": "RetailCustomerID",
@@ -195,7 +201,7 @@
               "allowMultiple": true,
               "dataType": "String",
               "paramType": "body"
-            }						
+            }
           ],
           "responseMessages":[
             {
@@ -213,6 +219,7 @@
           "summary": "Delete a Retail Customer",
           "nickname": "getRetailCustomer",
           "produces":["application/atom+xml"],
+					"authorizations": [],
           "parameters":[
             {
               "name": "RetailCustomerID",

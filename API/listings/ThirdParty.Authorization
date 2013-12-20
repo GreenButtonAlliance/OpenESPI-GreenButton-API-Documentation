@@ -21,6 +21,7 @@
           "notes": "An XML representation of all Authorizations will be returned.",
           "nickname": "findAuthorizations",
           "produces": ["application/xml+atom"],
+					"authorizations": [],
           "parameters": [],
           "responseMessages":
           [
@@ -45,6 +46,7 @@
           "summary": "[ESPI] Retrieve an Authorization Using its ID.",
           "nickname": "getAuthorization",
           "produces": ["application/xml+atom"],
+					"authorizations": [],
           "parameters":
           [
             {
@@ -74,6 +76,7 @@
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
 					"consumes": ["application/xml"],
+					"authorizations": [],
           "produces": [],
           "parameters":
           [
@@ -114,6 +117,7 @@
           "responseClass": "void",
           "nickname": "deleteAuthorization",
           "produces": ["application/xml+atom"],
+					"authorizations": [],
           "parameters":
           [
             {
