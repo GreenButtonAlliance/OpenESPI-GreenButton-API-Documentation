@@ -37,34 +37,6 @@
       },
       docExpansion: "none"
     });
-		
-    $('#input_clientID').change(function() {
-      console.log("Handler for Client ID .change() called...");
-      var password = $('#input_clientSecret') [0].value;
-      if(password.trim() == "") {
-        password = "secret";
-      }				
-      var username = $('#input_clientID')[0].value;
-      console.log("input: " + username);
-      if(username && username.trim() != "") {
-        console.log("Client ID: " + username);
-        console.log("Client Secret: " + password);
-        window.authorizations.add("Basic", new PasswordAuthorization("Basic", username, password));
-      }})				
-			
-    $('#input_clientSecret').change(function() {
-      console.log("Handler for Client Secret .change() called...");
-      var username = $('#input_clientID')[0].value;
-      if(username.trim() == "") {
-        username = "third_party";
-      }
-      var password = $('#input_clientSecret')[0].value;
-      console.log("input: " + password);
-      if(password && password.trim() != "") {
-        console.log("Client Secret: " + password);
-        console.log("Client ID: " + username);
-        window.authorizations.add("basic", new PasswordAuthorization("basic", username, password));
-      }})
 			
     $('#input_accessToken').change(function() {
       console.log("Handler for Access Token .change() called...");
@@ -72,15 +44,12 @@
       console.log("input: " + token);
       if(token && token.trim() != "") {
         console.log("Access Token: " + token);
-        window.authorizations.add("oauth2", new ApiKeyAuthorization("oauth2", token, "Bearer"));				
+        window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));				
       }})
+
+    var token = "Bearer ae4e33b9-457d-43b4-8815-856b6c8b7a72";		
 	
-	  var username = "third_party";
-		var password = "secret";
-    var token = "ae4e33b9-457d-43b4-8815-856b6c8b7a72";		
-	
-	  window.authorizations.add("basic", new PasswordAuthorization("basic", username, password));
-		window.authorizations.add("oauth2", new ApiKeyAuthorization("oauth2", token, "Bearer"));
+		window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));
     window.swaggerUi.load();
   });
   </script>
@@ -91,15 +60,7 @@
     <div class="swagger-ui-wrap">
       <a id="logo" href="http://greenbuttondata.org">Green Button API</a>
 			
-      <form id='api_selector'>
-        <div class='input'>
-				  <label for="input_clientID">Client ID: </label>
-					<input type="text" size="23" name="username" id="input_clientID"/>
-				</div>
-        <div class='input'>
-				  <label for="input_clientSecret">Client Secret: </label>				
-				  <input type="text" size="23" name="password" id="input_clientSecret"/>
-				</div>			
+      <form id='api_selector'>		
 			  <div class='input'>
 				  <label for="input_accessToken">Access Token: </label>			
 				  <input type="text" size="40" name="token" id="input_accessToken"/>
