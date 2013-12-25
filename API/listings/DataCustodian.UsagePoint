@@ -6,8 +6,8 @@
   "produces":
 	[
 		"application/atom+xml",
-    "application/xml",		
-    "text/html"		
+    "application/xml",
+    "text/html",
     "text/plain"
   ],
   "apis":
