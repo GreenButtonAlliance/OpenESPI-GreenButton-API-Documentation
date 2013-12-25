@@ -5,14 +5,15 @@
   "resourcePath": "/espi/1_1/resource",
   "produces":
 	[
-    "application/xml",
-    "text/plain",
-    "text/html"
+		"application/atom+xml",
+    "application/xml",		
+    "text/html"		
+    "text/plain"
   ],
   "apis":
 	[
     {
-      "path": "/espi/1_1/resource/UsagePoint",
+      "path": "/espi/1_1/resource/UsagePoint/",
       "operations":
 			[
         {
@@ -22,7 +23,7 @@
           "nickname": "findUsagePoints",
           "authorizations": ["oauth2"],
           "parameters": [],
-          "produces": ["application/xml"],
+          "produces": ["application/atom+xml"],
           "responseMessages":
           [
             {
@@ -74,7 +75,7 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve a Usage Point Using it's ID",
           "nickname": "getUsagePoint",
-          "produces": ["application/xml"],
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -252,7 +253,7 @@
               "paramType": "path"
             }
           ],
-          "produces": ["application/xml"],
+          "produces": ["application/atom+xml"],
           "responseMessages":
           [
             {
@@ -312,7 +313,7 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve a Usage Point Using it's ID",
           "nickname": "getUsagePoint",
-          "produces": ["application/xml"],
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
