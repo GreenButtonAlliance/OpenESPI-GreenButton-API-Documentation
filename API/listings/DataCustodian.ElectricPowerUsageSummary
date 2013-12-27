@@ -19,11 +19,8 @@
           "method": "GET",
           "summary": "[ESPI] Finds all Electric Power Usage Summaries",
           "notes": "An XML representation of all Electric Power Usage Summaries will be returned",
-          "responseClass": "<feed> ... </feed>",
-          "nickname": "findElectricPowerUsageSummarys",
-          "produces": [
-            "application/atom+xml"
-          ],
+          "nickname": "findElectricPowerUsageSummaries",
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -111,7 +108,6 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve a ElectricPowerUsageSummary Using it's ID",
           "notes": "Returns a Electric Power Usage Summary",
-          "responseClass": "ElectricPowerUsageSummary",
           "nickname": "getElectricPowerUsageSummary",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -274,12 +270,8 @@
         {
           "method": "DELETE",
           "summary": "Deletes a Electric Power Usage Summary",
-          "notes": "",
-          "responseClass": "void",
           "nickname": "deleteElectricPowerUsageSummary",
-          "produces": [
-            "application/atom+xml"
-          ],
+          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[

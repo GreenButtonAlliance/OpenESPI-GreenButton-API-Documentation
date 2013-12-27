@@ -18,7 +18,7 @@
           "notes": "An XML representation of all Authorizations will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
-          "produces": ["application/xml"],
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages": [
@@ -43,7 +43,7 @@
           "notes": "Returns a Authorization",
           "responseClass": "Authorization",
           "nickname": "getAuthorization",
-          "produces": ["application/xml"],
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[

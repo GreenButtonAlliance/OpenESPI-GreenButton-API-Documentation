@@ -296,6 +296,7 @@
           "method": "DELETE",
           "summary": "Delete an Interval Block",
           "nickname": "deleteIntervalBlock",
+					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[

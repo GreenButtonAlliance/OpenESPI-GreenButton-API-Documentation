@@ -16,7 +16,7 @@
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter your \"Access Token\" in the appropriate field at the top of the page!",
           "responseClass": "application/atom+xml",
           "nickname": "getServiceStatus",
-          "produces": ["application/xml"],
+          "produces": ["application/atom+xml"],
 					"authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages":

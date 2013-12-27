@@ -21,9 +21,9 @@
           "summary": "[ESPI] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
+          "produces": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
           "parameters": [],
-          "produces": ["application/atom+xml"],
           "responseMessages":
           [
             {
@@ -41,6 +41,7 @@
           "summary": "Add a new Usage Point",
           "nickname": "addUsagePoint",
 					"consumes": ["application/xml"],
+					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -169,6 +170,7 @@
           "notes": "The Usage Point must exist",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/xml"],
+					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -205,6 +207,7 @@
           "method": "DELETE",
           "summary": "Delete a Usage Point",
           "nickname": "deleteUsagePoint",
+					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -241,6 +244,7 @@
           "summary": "[ESPI] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
+					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -271,6 +275,7 @@
           "summary": "Add a new Usage Point.",
           "nickname": "addUsagePoint",
 					"consumes": ["application/xml"],
+					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -415,6 +420,7 @@
           "notes": "The Usage Point must exist",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/xml"],
+					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -459,6 +465,7 @@
           "method": "DELETE",
           "summary": "Delete a Usage Point",
           "nickname": "deleteUsagePoint",
+					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[

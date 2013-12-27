@@ -18,10 +18,10 @@
         {
           "method": "GET",
           "summary": "Returns a feed representing the collection of all Retail Customers",
-          "authorizations": ["oauth2"],
           "nickname": "getRetailCustomerCollection",
+          "produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],					
           "parameters": [],
-          "produces": ["text/html"],
           "responseMessages":
           [
             {
@@ -39,7 +39,7 @@
           "summary": "Add a new Retail Customer",
           "nickname": "addRetailCustomer",
 					"consumes": ["application/xml"],
-          "produces": ["text/html"],
+          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [
@@ -104,7 +104,7 @@
           "summary": "Update a Retail Customer",
           "nickname": "getRetailCustomer",
 					"consumes": ["application/xml"],
-          "produces": ["application/atom+xml"],
+          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [
@@ -141,7 +141,7 @@
           "method": "DELETE",
           "summary": "Delete a Retail Customer",
           "nickname": "getRetailCustomer",
-          "produces": ["application/atom+xml"],
+          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [
@@ -176,6 +176,7 @@
           "method": "GET",
           "summary": "Download a Green Button XML file",
           "nickname": "downloadMyData",
+					"produces": ["application/atom+xml"],
           "parameters":
           [
             {
@@ -218,7 +219,7 @@
           "method": "PUT",
           "summary": "Upload a Green Button XML file",
 					"consumes": ["application/xml"],
-          "produces": ["text/html"],
+          "produces": ["application/xml"],
           "nickname": "uploadMyData",
           "parameters":
           [

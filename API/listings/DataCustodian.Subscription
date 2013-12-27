@@ -15,6 +15,7 @@
           "nickname": "findSubscriptions",
           "summary": "[ESPI] Finds all Subscriptions.",
           "notes": "An XML representation of all Subscriptions will be returned",
+					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages":
@@ -68,6 +69,7 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve a Subscription Using it's ID",
           "nickname": "getSubscription",
+					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -197,6 +199,7 @@
           "method": "DELETE",
           "summary": "Delete a Subscription.",
           "nickname": "deleteSubscription",
+					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[

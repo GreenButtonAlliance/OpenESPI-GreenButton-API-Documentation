@@ -20,10 +20,7 @@
           "summary": "[ESPI] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
-          "produces":
-					[
-            "application/atom+xml"
-          ],
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -53,6 +50,7 @@
           "summary": "Add a new Meter Reading to an existing Usage Point",
           "nickname": "addMeterReading",
 					"consumes": ["application/xml"],
+					"authorizations": ["oauth2"],
           "parameters":
 					[
             {
@@ -94,10 +92,7 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "nickname": "getMeterReading",
-          "produces":
-					[
-            "application/xml"
-          ],
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -243,6 +238,7 @@
           "method": "DELETE",
           "summary": "Delete a Meter Reading from Usage Point",
           "nickname": "deleteMeterReading",
+					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -286,10 +282,7 @@
           "summary": "[ESPI] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
-          "produces":
-					[
-            "application/atom+xml"
-          ],
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -327,6 +320,7 @@
           "summary": "Add a new Meter Reading to an existing Usage Point",
           "nickname": "addMeterReading",
 					"consumes": ["application/xml"],
+					"authorizations": ["oauth2"],
           "parameters":
 					[
             {
@@ -376,10 +370,7 @@
           "method": "GET",
           "summary": "[ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "nickname": "getMeterReading",
-          "produces":
-					[
-            "application/xml"
-          ],
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -541,6 +532,7 @@
           "method": "DELETE",
           "summary": "Delete a Meter Reading from Usage Point",
           "nickname": "deleteMeterReading",
+					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
