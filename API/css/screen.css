@@ -259,7 +259,8 @@ table {
 .swagger-ui-wrap .content > .content-type > div > label {
   clear: both;
   display: block;
-  color: #0F6AB4;
+#  color: #0F6AB4;
+  color: green;
   font-size: 1.1em;
   margin: 0;
   padding: 15px 0 5px;
@@ -1007,14 +1008,14 @@ table {
   color: black;
 }
 #header {
-  background-color: #89bf04;
+  background-color: green;
   padding: 14px;
 }
 #header a#logo {
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
-  background: transparent url(../images/logo_small.png) no-repeat left center;
+  background: transparent url(http://services.greenbuttondata.org/resources/ico/favicon.png) no-repeat left center;
   padding: 20px 0 20px 40px;
   color: white;
 }
