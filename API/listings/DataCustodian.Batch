@@ -54,6 +54,11 @@
         }
       ]
     },
+    {
+      "path": "/espi/1_1/resource/Batch/Bulk/{BulkID}",
+      "operations":
+      [
+
         {
           "method": "GET",
           "summary": "Request a Bulk transfer from the DataCustodian",
@@ -90,12 +95,18 @@
               "message": "Bad Request"
             }
           ]
-        },
+        }
+	]
+      },
+    {
+      "path": "/espi/1_1/resource/Batch/RetailCustomer/{retailCustomerID}",
+      "operations":
+      [
         {
           "method": "GET",
           "summary": "Download a Green Button XML file",
           "nickname": "downloadMyData",
-					"produces": ["application/atom+xml"],
+	  "produces": ["application/atom+xml"],
           "parameters":
           [
             {
@@ -128,10 +139,6 @@
             }
           ]
         },
-    {
-      "path": "/espi/1_1/resource/Batch/RetailCustomer/{RetailCustomerID}",
-      "operations":
-      [
         {
           "method": "PUT",
           "summary": "Upload a Green Button XML file",
