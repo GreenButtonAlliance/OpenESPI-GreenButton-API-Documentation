@@ -90,9 +90,7 @@
               "message": "Bad Request"
             }
           ]
-        }
-      ]
-    },
+        },
         {
           "method": "GET",
           "summary": "Download a Green Button XML file",
@@ -129,9 +127,7 @@
               "message": "Bad Request"
             }
           ]
-        }
-      ]
-    },
+        },
     {
       "path": "/espi/1_1/resource/Batch/RetailCustomer/{RetailCustomerID}",
       "operations":
