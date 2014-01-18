@@ -142,7 +142,7 @@
           ]
         },
         {
-          "method": "PUT",
+          "method": "POST",
           "summary": "Upload a Green Button XML file",
 					"consumes": ["application/xml"],
           "produces": ["application/xml"],
