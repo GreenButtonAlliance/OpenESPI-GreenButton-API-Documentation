@@ -19,7 +19,8 @@
           "method": "GET",
           "summary": "Request a Greenbutton Subscription from a DataCustodian",
           "nickname": "ConnectMyDataFeed",
-	  "produces": ["application/atom+xml"],
+					"produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],					
           "parameters":
           [
             {
@@ -32,7 +33,7 @@
             },
             {
               "name": "SubscriptionID",
-              "description": "The Subcriptions's ID",
+              "description": "The Subcription's ID",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -63,7 +64,8 @@
           "method": "GET",
           "summary": "Request a Bulk transfer from the DataCustodian",
           "nickname": "downloadMyData",
-	  "produces": ["application/atom+xml"],
+					"produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],					
           "parameters":
           [
             {
@@ -106,7 +108,7 @@
           "method": "GET",
           "summary": "Download a Green Button XML file",
           "nickname": "downloadMyData",
-	  "produces": ["application/atom+xml"],
+					"produces": ["application/atom+xml"],
           "parameters":
           [
             {
