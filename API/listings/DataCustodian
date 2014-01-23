@@ -32,43 +32,6 @@
           ]
         }
       ]
-    },
-    {
-      "path": "/espi/1_1/resource/ThirdParty/{ThirdPartyID}/Batch",
-      "operations":
-			[
-        {
-          "method": "GET",
-          "summary": "A Third Party requests the GET of a Batch.",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter your \"Access Token\" in the appropriate field at the top of the page!",
-          "responseClass" : "ESPI XML structure of Batch feed",
-          "nickname": "getBatch",
-          "produces":["application/atom+xml"],
-					"authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "ThirdPartyID",
-              "description": "The Third Party's assigned Client ID",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            }
-					],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message": "OK"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            }
-          ]
-        }
-      ]
     }
   ]
 }
