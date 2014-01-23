@@ -12,7 +12,7 @@
   "apis":
 	[
     {
-      "path": "/espi/1_1/resource/UsagePoint/{UsagePointID}/MeterReading",
+      "path": "/espi/1_1/resource/MeterReading",
       "operations":
 			[
         {
@@ -21,17 +21,7 @@
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Meter Reading references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            }
+          "authorizations": ["oauth2"]
           ],
           "responseMessages":
 					[
@@ -53,14 +43,6 @@
 					"authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Meter Reading references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
             {
               "name": "MeterReadingData",
               "description": "1 or more MeterReadings to be added.",
@@ -85,7 +67,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}",
+      "path": "/espi/1_1/resource/MeterReading/{MeterReadingID}",
       "operations":
 			[
         {
@@ -96,14 +78,6 @@
           "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Meter Reading references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
             {
               "name": "MeterReadingID",
               "description": "ID of the Meter Reading.",
@@ -242,14 +216,6 @@
           "authorizations": ["oauth2"],
           "parameters":
 					[
-            {
-              "name": "UsagePointID",
-              "description": "ID of Usage Point containing the Meter Reading.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
             {
               "name": "MeterReadingID",
               "description": "ID of the Meter Reading.",
