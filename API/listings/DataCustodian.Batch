@@ -85,12 +85,12 @@
 	]
       },
     {
-      "path": "/espi/1_1/resource/Batch/RetailCustomer/{retailCustomerID}",
+      "path": "/espi/1_1/resource/Batch/RetailCustomer/{retailCustomerID}/UsagePoint",
       "operations":
       [
         {
           "method": "GET",
-          "summary": "Download a Green Button XML file",
+          "summary": "Download a Green Button XML file containing the collection of UsagePoints for thsi RetailCustomer",
           "nickname": "downloadMyData",
 					"produces": ["application/atom+xml"],
           "parameters":
@@ -150,6 +150,42 @@
               "paramType": "body"
             }
           ],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+        {
+      "path": "/espi/1_1/resource/Batch/RetailCustomer/{retailCustomerID}/UsagePoint/{usagePointID}",
+      "operations":
+      [
+        {
+          "method": "GET",
+          "summary": "RDownload a Green Button XML file containing the specific of UsagePoint for thsi RetailCustomer",
+          "nickname": "DownloadMyData",
+					"produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],					
+          "parameters":
+          [
+            {
+              "name": "SubscriptionID",
+              "description": "The Subcription's ID",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "produces": ["text/html"],
           "responseMessages":
           [
             {
