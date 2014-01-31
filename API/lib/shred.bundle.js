@@ -341,7 +341,7 @@ exports.extname = function(path) {
 });
 
 require.define("/shred.js", function (require, module, exports, __dirname, __filename) {
-// Shred is an HTTP client library intended to simplify the use of Node's
+    // Shred is an HTTP client library intended to simplify the use of Node's
 // built-in HTTP library. In particular, we wanted to make it easier to interact
 // with HTTP-based APIs.
 // 
@@ -360,14 +360,12 @@ var Shred = function(options) {
   options = (options||{});
   this.agent = options.agent;
   this.defaults = options.defaults||{};
-//  this.log = options.logger||(new Ax({ level: "info" }));
-  this.log = options.logger||(new Ax({ level: "debug" }));
+  this.log = options.logger||(new Ax({ level: "info" }));
   this._sharedCookieJar = new CookieJar();
-//  this.logCurl = options.logCurl || false;    DFC 11/24/2013
-  this.logCurl = options.logCurl || true;
+  this.logCurl = options.logCurl || false;
 };
 
-// Most of the real work is done in the request and response classes.
+// Most of the real work is done in the request and reponse classes.
  
 Shred.Request = require("./shred/request");
 Shred.Response = require("./shred/response");
@@ -417,7 +415,7 @@ require.define("/node_modules/ax/lib/ax.js", function (require, module, exports,
 
 
 // this is a quick-and-dirty logger. there are other nicer loggers out there
-// but the ones I found were also somewhat involved. this one has a Ruby
+// but the ones i found were also somewhat involved. this one has a Ruby
 // logger type interface
 //
 // we can easily replace this, provide the info, debug, etc. methods are the
@@ -769,7 +767,7 @@ CookieJar.prototype.setCookies = function setCookies(cookies) {
 });
 
 require.define("/shred/request.js", function (require, module, exports, __dirname, __filename) {
-// The request object encapsulates a request, creating a Node.js HTTP request and
+    // The request object encapsulates a request, creating a Node.js HTTP request and
 // then handling the response.
 
 var HTTP = require("http")
@@ -1084,7 +1082,7 @@ var processOptions = function(request,options) {
     }
   }
 
-  // Make sure we were given a URL or a host
+  // Make sure we were give a URL or a host
   if (!options.url && !options.host) {
     request.emitter.emit("request_error",
         new Error("No url or url options (host, port, etc.)"));
