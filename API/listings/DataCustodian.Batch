@@ -177,8 +177,16 @@
           "parameters":
           [
             {
-              "name": "SubscriptionID",
-              "description": "The Subcription's ID",
+              "name": "retailCustomerID",
+              "description": "The Retail Customer's ID",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            },
+            {
+              "name": "usagePointID",
+              "description": "The desired UsagePointID",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
