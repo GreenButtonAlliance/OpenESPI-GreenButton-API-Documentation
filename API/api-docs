@@ -12,9 +12,7 @@
     {
       "path": "/../listings/DataCustodian.Authorization"
     },
-    {
-      "path": "/../listings/DataCustodian.Batch"
-    },
+
     {
       "path": "/../listings/DataCustodian.ElectricPowerQualitySummary"
     },
