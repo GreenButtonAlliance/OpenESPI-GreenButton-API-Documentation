@@ -1815,7 +1815,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
     OperationView.prototype.showStatus = function(data) {
       var code, content, contentType, headers, pre, response_body;
-      content = data.content.data;
+      content = data.data;
       headers = data.getHeaders();
       contentType = headers["Content-Type"];
       if (content === void 0) {
@@ -1824,7 +1824,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
       } else if (contentType.indexOf("application/json") === 0 || contentType.indexOf("application/hal+json") === 0) {
         code = $('<code />').text(JSON.stringify(JSON.parse(content), null, 2));
         pre = $('<pre class="json" />').append(code);
-      } else if (contentType.indexOf("application/xml") === 0) {
+      } else if ((contentType.indexOf("application/xml") === 0) || (contentType.indexOf("application/atom+xml") === 0)){
         code = $('<code />').text(this.formatXml(content));
         pre = $('<pre class="xml" />').append(code);
       } else if (contentType.indexOf("text/html") === 0) {
