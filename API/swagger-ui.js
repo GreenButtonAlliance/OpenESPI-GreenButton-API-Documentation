@@ -1816,7 +1816,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     OperationView.prototype.showStatus = function(data) {
       var code, content, contentType, headers, pre, response_body;
       content = data.data;
-      headers = data.getHeaders();
+      headers = data.headers;
       contentType = headers["Content-Type"];
       if (content === void 0) {
         code = $('<code />').text("no content");
