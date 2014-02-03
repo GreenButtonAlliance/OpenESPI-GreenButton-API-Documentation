@@ -1,0 +1,317 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://services.greenbuttondata.org/DataCustodian",
+  "resourcePath": "/usagepoint",
+  "produces":
+	[
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis":
+	[
+    {
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameter",
+      "operations":
+			[
+        {
+          "method": "GET",
+          "summary": "[ESPI] Finds all Local Time Parameters",
+          "notes": "An XML representation of all Local Time Parameters will be returned",
+          "nickname": "findLocalTimeParameters",
+          "produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Local Time Parameter references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint the Local Time Parameter references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+					],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+	      },
+        {
+          "method": "POST",
+          "summary": "Add a new Local Time Parameter",
+					"consumes": ["application/xml"],
+          "nickname": "addLocalTimeParameter",
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Local Time Parameter references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint the Local Time Parameter references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "LocalTimeParameterData",
+              "description": "1 or more Local Time Parameters to be added.",
+              "required": false,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameter/{LocalTimeParameterID}",
+      "operations":
+			[
+        {
+          "method": "GET",
+          "summary": "[ESPI] Retrieve a Local Time Parameter Using it's ID",
+          "nickname": "getLocalTimeParameter",
+          "produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Local Time Parameter references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint the Local Time Parameter references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "LocalTimeParameterID",
+              "description": "ID of the Local Time Parameter.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Local Time Parameter.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Local Time Parameter.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Local Time Parameter.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Local Time Parameter.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Local Time Parameters that should be transferred as the first entry of the response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            }
+          ],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Update an existing Local Time Parameter",
+          "notes": "The Local Time Parameter must exist",
+					"consumes": ["application/xml"],
+          "nickname": "updateLocalTimeParameter",
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Local Time Parameter references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint the Local Time Parameter references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "LocalTimeParameterID",
+              "description": "ID of Local Time Parameter to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "LocalTimeParameterData",
+              "description": "The Local Time Parameter to be updated.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete a Local Time Parameter",
+          "nickname": "deleteLocalTimeParameter",
+					"produces": ["application/xml"],
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Local Time Parameter references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint the Local Time Parameter references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "LocalTimeParameterID",
+              "description": "ID of Local Time Parameter to delete",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

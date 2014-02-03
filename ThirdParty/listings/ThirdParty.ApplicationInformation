@@ -1,0 +1,175 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://services.greenbuttondata.org/ThirdParty",
+  "resourcePath": "/resources",
+  "produces":
+	[
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis":
+  [
+    {
+      "path": "/espi/1_1/resource/ApplicationInformation",
+      "operations":
+      [
+        {
+          "method": "GET",
+          "summary": "Finds all Application Informations",
+          "notes": "An XML representation of all Application Informations will be returned",
+          "nickname": "findApplicationInformations",
+          "produces": ["application/xml"],
+					"authorizations": [],
+          "parameters": [],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+							"message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "Add a new Application Information.",
+          "nickname": "addApplicationInformation",
+					"consumes": ["application/xml"],
+          "produces": [],
+					"authorizations": [],
+          "parameters":
+          [
+            {
+              "name": "ApplicationInformation",
+              "description": "The new Application Information.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "String",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+							"message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/espi/1_1/resource/ApplicationInformation/{ApplicationInformationID}",
+      "operations":
+      [
+        {
+          "method": "GET",
+          "summary": "Retrieve an Application Information Using its ID.",
+          "nickname": "getApplicationInformation",
+          "produces": ["application/xml"],
+					"authorizations": [],
+          "parameters":
+          [
+            {
+              "name": "ApplicationInformationID",
+              "description": "The ID of the Application Information.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+							"message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Update an existing Application Information",
+          "notes": "The Application Information must exist",
+          "nickname": "updateApplicationInformation",
+					"consumes": ["application/xml"],
+          "produces": [],
+					"authorizations": [],
+          "parameters":
+          [
+            {
+              "name": "ApplicationInformationID",
+              "description": "The ID of the Application Information.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "String",
+              "paramType": "path"
+            },
+            {
+              "name": "ApplicationInformation",
+              "description": "The Application Information to be updated.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete an Application Information",
+          "nickname": "deleteApplicationInformation",
+          "produces": [],
+					"authorizations": [],
+          "parameters":
+          [
+            {
+              "name": "ApplicationInformationID",
+              "description": "The ID of the Application Information to be deleted.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages":
+          [
+            {
+              "code" : 200,
+							"message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

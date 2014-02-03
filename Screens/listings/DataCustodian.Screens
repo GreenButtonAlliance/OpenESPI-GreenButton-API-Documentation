@@ -1,0 +1,141 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://services.greenbuttondata.org/DataCustodian",
+  "resourcePath": "/",
+  "produces":
+	[
+    "application/xml",
+    "application/json",
+    "text/plain",
+    "text/html"
+  ],
+  "apis":
+  [
+    {
+      "path": "/home",
+      "operations":
+      [
+        {
+          "method": "GET",
+          "summary": "The Data Custodian's Home Screen",
+          "notes": "The requesting browser displays the Data Custodian Portal's Home Screen. The response SHOULD provide the Retail Customer the opportunity to Login.",
+          "nickname": "getDataCustodianPortalHome",
+          "produces": ["text/html"],
+          "authorizations": [],
+					"parameters": [],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/login",
+      "operations":
+      [
+        {
+          "method": "GET",
+          "summary": "The Data Custodian's Login Screen",
+          "notes": "The Retail Customer's browser displays the Data Custodian Portal's Login Screen. The expected result is a Login POST which is processed by the Data Custodian.",
+          "nickname": "getDataCustodianPortalLogin",
+          "produces": ["text/html"],
+          "authorizations": [],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+							"message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/RetailCustomer/{RetailCustomerID}/home",
+      "operations":
+      [
+        {
+          "method": "GET",
+          "summary": "The Data Custodian's Retail Customer's Home Screen.",
+          "notes": "The requesting browser displays the Data Custodian Portal's Retail Customer's Home Screen, which is shown after the Retail Customer successfully completes the Login process.",
+          "nickname": "retailCustomerHome",
+          "produces": ["text/html"],
+          "authorizations": [],
+          "parameters":
+          [
+            {
+              "name": "RetailCustomerID",
+              "description": "The Retail Customer's ID",
+              "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+							"message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/RetailCustomer/{RetailCustomerID}/ThirdPartyList",
+      "operations":
+      [
+        {
+          "method": "POST",
+          "summary": "[ESPI] The Data Custodian's supported Third Party Application Screen",
+          "notes": "The requesting browser is to display a Retail Customer home Screen of the portal. It is assumed that this will contain a Select your Third Party for Green Button sharing as well as a Download My Data Green button page",
+          "nickname": "getPortalHome",
+          "produces": ["text/html"],
+          "authorizations": [],
+          "parameters":
+          [
+            {
+              "name": "RetailCustomerID",
+              "description": "The Retail Customer's ID",
+              "defaultValue": "",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+							"message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://services.greenbuttondata.org/DataCustodian",
+  "resourcePath": "/usagepoint",
+  "produces": [
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis": [
+    {
+      "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySummary",
+      "operations":
+			[
+        {
+          "method": "POST",
+          "summary": "Add a new Electric Power Quality Summary to the Data Custodian",
+          "notes": "The New Electric Power Quality Summary will be added",
+          "nickname": "addElectricPowerQualitySummary",
+          "consumes": ["application/xml"],					
+          "produces": [],
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint the Electric Power Quality Summary references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ElectricPowerQualitySummaryData",
+              "description": "A Electric Power Quality Summary data.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySummary/{ElectricPowerQualitySummaryID}",
+      "operations":
+        {
+          "method": "PUT",
+          "summary": "Update an existing Electric Power Quality Summary within the DataCustodian",
+          "notes": "The Electric Power Quality Summary must exist",
+					"consumes": ["application/xml"],
+          "nickname": "updateElectricPowerQualitySummary",
+          "produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint the Electric Power Quality Summary references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ElectricPowerQualitySummaryID",
+              "description": "ID of the Electric Power Quality Summary to be updated.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ElectricPowerQualitySummaryData",
+              "description": "ID of the Electric Power Quality Summary data.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }							
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Deletes a Electric Power Quality Summary",
+          "notes": "",
+          "nickname": "deleteElectricPowerQualitySummary",
+          "produces": ["application/xml"],
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "RetailCustomerID",
+              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "UsagePointID",
+              "description": "ID of the UsagePoint the Electric Power Quality Summary references.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ElectricPowerQualitySummaryID",
+              "description": "ID of the Electric Power Quality Summary to be deleted.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }						
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

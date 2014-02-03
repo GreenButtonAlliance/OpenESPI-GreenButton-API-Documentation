@@ -1,0 +1,10 @@
+{
+  "apiVersion": "1.1",
+	"swaggerVersion":"1.2",
+  "espiVersion": "1.1",
+  "apis": [
+    {
+      "path": "/../listings/DataCustodian.Batch"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "apiVersion": "1.0",
+  "apis": [{
+    "description": "Green Button API",
+    "path": "/developer/datacustodian/"
+  }],
+  "basePath": "http://www.greenbuttondata.org/developer",
+  "swaggerVersion": "1.2"
+}
