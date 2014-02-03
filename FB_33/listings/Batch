@@ -1,0 +1,175 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://services.greenbuttondata.org/DataCustodian",
+  "resourcePath": "/resources",
+  "produces":
+  [
+    "application/xml",
+    "application/atom+xml",
+    "text/html"
+  ],
+  "apis":
+  [
+    {
+      "path": "/espi/1_1/resource/Batch/",
+      "operations":
+      [
+
+        {
+          "method": "POST",
+          "summary": "Upload a Green Button Data File containing multiple retail customers and usagepoints",
+          "nickname": "Import Data",
+					"produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],					
+          "parameters":
+          [
+            {
+              "name": "xmlFile",
+              "description": "Contents of the file being uploaded", "required": true,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "produces": ["text/html"],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+	]
+      },
+    {
+      "path": "/espi/1_1/resource/Batch/RetailCustomer/{retailCustomerID}/UsagePoint",
+      "operations":
+      [
+        {
+          "method": "GET",
+          "summary": "Download a Green Button XML file containing the collection of UsagePoints for thsi RetailCustomer",
+          "nickname": "downloadMyData",
+					"produces": ["application/atom+xml"],
+          "parameters":
+          [
+            {
+              "name": "Content-Disposition",
+              "description": "Controls the browser action on receipt of the file",
+              "defaultValue": "attachment; file name=<file name.ext>",
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "head"
+            },
+            {
+              "name": "RetailCustomerID",
+              "description": "The Retail Customer's ID",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "produces": ["text/html"],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "Upload a Green Button XML file",
+					"consumes": ["application/xml"],
+          "produces": ["application/xml"],
+          "nickname": "uploadMyData",
+          "parameters":
+          [
+            {
+              "name": "RetailCustomerID",
+              "description": "The Retail Customer's ID",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            },
+            {
+              "name": "xmlFile",
+              "description": "Contents of the file being uploaded",
+							"required": true,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+        {
+      "path": "/espi/1_1/resource/Batch/RetailCustomer/{retailCustomerID}/UsagePoint/{usagePointID}",
+      "operations":
+      [
+        {
+          "method": "GET",
+          "summary": "RDownload a Green Button XML file containing the specific of UsagePoint for thsi RetailCustomer",
+          "nickname": "DownloadMyData",
+					"produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],					
+          "parameters":
+          [
+            {
+              "name": "retailCustomerID",
+              "description": "The Retail Customer's ID",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            },
+            {
+              "name": "usagePointID",
+              "description": "The desired UsagePointID",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "produces": ["text/html"],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

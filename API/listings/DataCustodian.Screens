@@ -18,6 +18,7 @@
       [
         {
           "method": "GET",
+	  "functionBlock": "FB_Screens",
           "summary": "The Data Custodian's Home Screen",
           "notes": "The requesting browser displays the Data Custodian Portal's Home Screen. The response SHOULD provide the Retail Customer the opportunity to Login.",
           "nickname": "getDataCustodianPortalHome",
@@ -44,6 +45,7 @@
       [
         {
           "method": "GET",
+	  "functionBlock": "FB_Screens",
           "summary": "The Data Custodian's Login Screen",
           "notes": "The Retail Customer's browser displays the Data Custodian Portal's Login Screen. The expected result is a Login POST which is processed by the Data Custodian.",
           "nickname": "getDataCustodianPortalLogin",
@@ -69,6 +71,7 @@
       [
         {
           "method": "GET",
+	  "functionBlock": "FB_Screens",
           "summary": "The Data Custodian's Retail Customer's Home Screen.",
           "notes": "The requesting browser displays the Data Custodian Portal's Retail Customer's Home Screen, which is shown after the Retail Customer successfully completes the Login process.",
           "nickname": "retailCustomerHome",
@@ -106,6 +109,7 @@
       [
         {
           "method": "POST",
+	  "functionBlock": "FB_Screens",
           "summary": "[ESPI] The Data Custodian's supported Third Party Application Screen",
           "notes": "The requesting browser is to display a Retail Customer home Screen of the portal. It is assumed that this will contain a Select your Third Party for Green Button sharing as well as a Download My Data Green button page",
           "nickname": "getPortalHome",

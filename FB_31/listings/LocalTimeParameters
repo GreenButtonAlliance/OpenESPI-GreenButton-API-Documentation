@@ -1,0 +1,140 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://services.greenbuttondata.org/DataCustodian",
+  "resourcePath": "/usagepoint",
+  "produces":
+	[
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis":
+	[
+    {
+      "path": "/espi/1_1/resource/LocalTimeParameter",
+      "operations":
+			[
+        {
+          "method": "GET",
+          "summary": "[ESPI] Finds all Local Time Parameters",
+          "notes": "An XML representation of all Local Time Parameters will be returned",
+          "nickname": "findLocalTimeParameters",
+          "produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],
+          "parameters": [],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+	}
+      ]
+    },
+    {
+      "path": "/espi/1_1/resource/LocalTimeParameter/{LocalTimeParameterID}",
+      "operations":
+			[
+        {
+          "method": "GET",
+          "summary": "[ESPI] Retrieve a Local Time Parameter Using it's ID",
+          "nickname": "getLocalTimeParameter",
+          "produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "LocalTimeParameterID",
+              "description": "ID of the Local Time Parameter.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Local Time Parameter.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Local Time Parameter.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Local Time Parameter.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Local Time Parameter.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Local Time Parameters that should be transferred as the first entry of the response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            }
+          ],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}

@@ -17,6 +17,7 @@
       [
         {
           "method": "GET",
+	  "functionBlock": "FB_33",
           "summary": "Returns a feed representing the collection of all Retail Customers",
           "nickname": "getRetailCustomerCollection",
           "produces": ["application/atom+xml"],
@@ -36,6 +37,7 @@
         },
         {
           "method": "POST",
+	  "functionBlock": "FB_33",
           "summary": "Add a new Retail Customer",
           "nickname": "addRetailCustomer",
 					"consumes": ["application/xml"],
@@ -72,6 +74,7 @@
       [
         {
           "method": "GET",
+	  "functionBlock": "FB_33",
           "summary": "Retrieve a Retail Customer using the Customer's ID",
           "nickname": "getRetailCustomer",
           "produces": ["application/atom+xml"],
@@ -101,6 +104,7 @@
         },
         {
           "method": "PUT",
+	  "functionBlock": "FB_33",
           "summary": "Update a Retail Customer",
           "nickname": "getRetailCustomer",
 					"consumes": ["application/xml"],
@@ -139,6 +143,7 @@
         },
         {
           "method": "DELETE",
+	  "functionBlock": "FB_33",
           "summary": "Delete a Retail Customer",
           "nickname": "getRetailCustomer",
           "produces": ["application/xml"],

@@ -1,0 +1,138 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://services.greenbuttondata.org/DataCustodian",
+  "resourcePath": "/espi/1_1/resource",
+  "produces": ["application/xml"],
+  "apis":
+	[
+    {
+      "path": "/espi/1_1/resource/Subscription",
+      "operations":
+			[
+        {
+          "method": "GET",
+          "nickname": "findSubscriptions",
+          "summary": "[ESPI] Finds all Subscriptions.",
+          "notes": "An XML representation of all Subscriptions will be returned",
+					"produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],
+          "parameters": [],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+	      },
+        {
+          "method": "POST",
+          "summary": "Add a new Subscription",
+          "nickname": "addSubscription",
+					"consumes": ["application/xml"],
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "SubscriptionData",
+              "description": "1 or more Subscriptions to be added.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}",
+      "operations":
+			[
+        {
+          "method": "PUT",
+          "summary": "Update an existing Subscription.",
+          "notes": "The Subscription must exist",
+          "nickname": "updateSubscription",
+					"consumes": ["application/xml"],
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "SubscriptionID",
+              "description": "ID of the Subscription to be updated.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "Subscription",
+              "paramType": "path"
+            },
+            {
+              "name": "SubscriptionData",
+              "description": "The Subscription data to be updated.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete a Subscription.",
+          "nickname": "deleteSubscription",
+					"produces": ["application/xml"],
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "SubscriptionID",
+              "description": "ID of the Subscription to be deleted.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

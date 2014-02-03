@@ -1,0 +1,40 @@
+{
+  "apiVersion": "1.1",
+	"swaggerVersion":"1.2",
+  "espiVersion": "1.1",
+  "apis": [
+    {
+      "path": "/../listings/DataCustodian.ApplicationInformation"
+    },
+    {
+      "path": "/../listings/DataCustodian.Authorization"
+    },
+    {
+      "path": "/../listings/DataCustodian.Batch"
+    },
+    {
+      "path": "/../listings/DataCustodian.ElectricPowerQualitySummary"
+    },
+    {
+      "path": "/../listings/DataCustodian.ElectricPowerUsageSummary"
+    },
+    {
+      "path": "/../listings/DataCustodian.IntervalBlock"
+    },
+    {
+      "path": "/../listings/DataCustodian.LocalTimeParameters"
+    },
+    {
+      "path": "/../listings/DataCustodian.MeterReading"
+    },
+    {
+      "path": "/../listings/DataCustodian.ReadingType"
+    },		
+    {
+      "path": "/../listings/DataCustodian.Subscription"
+    },
+    {
+      "path": "/../listings/DataCustodian.UsagePoint"
+    }	
+  ]
+}

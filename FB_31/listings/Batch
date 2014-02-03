@@ -1,0 +1,51 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://services.greenbuttondata.org/DataCustodian",
+  "resourcePath": "/resources",
+  "produces":
+  [
+    "application/xml",
+    "application/atom+xml",
+    "text/html"
+  ],
+  "apis":
+  [
+    {
+      "path": "/espi/1_1/resource/Batch/Subscription/{SubscriptionID}",
+      "operations":
+      [
+        {
+          "method": "GET",
+          "summary": "Request a Greenbutton Subscription from a DataCustodian",
+          "nickname": "ConnectMyDataFeed",
+					"produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],					
+          "parameters":
+          [
+            {
+              "name": "SubscriptionID",
+              "description": "The Subcription's ID",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "produces": ["text/html"],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

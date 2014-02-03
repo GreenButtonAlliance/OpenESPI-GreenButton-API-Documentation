@@ -17,6 +17,7 @@
       [
         {
           "method": "GET",
+	  "functionBlock": "FB_31",
           "summary": "Request a Greenbutton Subscription from a DataCustodian",
           "nickname": "ConnectMyDataFeed",
 					"produces": ["application/atom+xml"],
@@ -54,6 +55,7 @@
 
         {
           "method": "GET",
+	  "functionBlock": "FB_35",
           "summary": "Request a Bulk transfer from the DataCustodian",
           "nickname": "downloadMyData",
 					"produces": ["application/atom+xml"],
@@ -85,11 +87,50 @@
 	]
       },
     {
+      "path": "/espi/1_1/resource/Batch",
+      "operations":
+      [
+
+        {
+          "method": "POST",
+	  "functionBlock": "FB_XX",
+          "summary": "Upload an file with multiple Retail Customers and Multiple UsagePoints",
+          "nickname": "Import Data",
+					"produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],					
+          "parameters":
+          [
+            {
+              "name": "xmlFile",
+              "description": "Contents of the file being uploaded",
+							"required": true,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "produces": ["text/html"],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+	]
+      },
+    {
       "path": "/espi/1_1/resource/Batch/RetailCustomer/{retailCustomerID}/UsagePoint",
       "operations":
       [
         {
           "method": "GET",
+	  "functionBlock": "FB_33",
           "summary": "Download a Green Button XML file containing the collection of UsagePoints for thsi RetailCustomer",
           "nickname": "downloadMyData",
 					"produces": ["application/atom+xml"],
@@ -127,6 +168,7 @@
         },
         {
           "method": "POST",
+	  "functionBlock": "FB_33",
           "summary": "Upload a Green Button XML file",
 					"consumes": ["application/xml"],
           "produces": ["application/xml"],
@@ -170,6 +212,7 @@
       [
         {
           "method": "GET",
+	  "functionBlock": "FB_XX",
           "summary": "RDownload a Green Button XML file containing the specific of UsagePoint for thsi RetailCustomer",
           "nickname": "DownloadMyData",
 					"produces": ["application/atom+xml"],

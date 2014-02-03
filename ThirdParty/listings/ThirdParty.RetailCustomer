@@ -1,0 +1,247 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://services.greenbuttondata.org/ThirdParty",
+  "resourcePath": "/",
+  "produces":[
+    "application/xml",
+    "text/plain",
+    "text/html"
+  ],
+  "apis":[
+    {
+      "path": "/espi/1_1/resource/RetailCustomer",
+      "operations":[
+        {
+          "method": "GET",
+          "summary": "Returns a feed representing the collection of all Retail Customers",
+          "nickname": "getRetailCustomerCollection",
+          "produces":["text/html"],
+					"authorizations": [],
+          "parameters":[],
+          "responseMessages":[
+            {
+              "code" : 200,
+							"message" : "OK"
+            },
+            {
+              "code" : 400,
+              "message" : "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "Adds a new Retail Customer",
+          "nickname": "getRetailCustomerCollection",
+					"consumes": ["application/xml"],
+          "produces":["text/html"],
+					"authorizations": [],
+          "parameters":[
+            {
+              "name": "RetailCustomerData",
+              "description": "The new Retail Customer's data",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "String",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages":[
+            {
+						  "code" : 200,
+							"message" : "OK"
+						},
+            {
+              "code" : 400,
+              "message" : "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
+      "operations":[
+        {
+          "method": "GET",
+          "summary": "Retrieve a Retail Customer using the Customer's ID",
+          "nickname": "getRetailCustomer",
+          "produces": ["application/atom+xml"],
+					"authorizations": [],
+          "parameters":
+          [
+            {
+              "name": "RetailCustomerID",
+              "description": "The ID of the Retail Customer to be retrieved.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages":
+          [
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Update a Retail Customer",
+          "nickname": "getRetailCustomer",
+					"consumes": ["application/xml"],
+          "produces":[],
+					"authorizations": [],
+          "parameters":[
+            {
+              "name": "RetailCustomerID",
+              "description": "The ID of the Retail Customer to be updated.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            },
+            {
+              "name": "RetailCustomerData",
+              "description": "The Retail Customer's data to be updated.",
+              "required": true,
+              "allowMultiple": true,
+              "dataType": "String",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages":[
+            {
+              "code" : 200,
+							"message": "OK"
+            },
+            {
+              "code" : 400,
+              "message": "Bad Request"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete a Retail Customer",
+          "nickname": "getRetailCustomer",
+          "produces":["application/atom+xml"],
+					"authorizations": [],
+          "parameters":[
+            {
+              "name": "RetailCustomerID",
+              "description": "The ID of the Retail Customer to be deleted.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages":[
+            {
+						  "code" : 200,
+							"message" : "OK"
+						},
+            {
+              "code" : 400,
+              "message" : "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/DownloadMyData",
+      "operations":[
+        {
+          "method": "GET",
+          "summary": "Download a Green Button XML file",
+          "nickname": "downloadMyData",
+					"authorizations": [],
+          "parameters":[
+            {
+              "name": "Content-Disposition",
+              "description": "Controls the browser actions on receipt of the file",
+              "defaultValue": "attachment; file name=<file name.ext>",
+							"required": false,
+              "allowMultiple": false,
+              "dataType": "string",
+              "paramType": "head"
+            },
+            {
+              "name": "RetailCustomerID",
+              "description": "The ID of the Retail Customer.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            }
+          ],
+          "produces":[
+            "text/html"
+          ],
+          "responseMessages":[
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UploadMyData",
+      "operations":[
+        {
+          "method": "PUT",
+          "summary": "Upload a Green Button XML file",
+          "nickname": "uploadMyData",
+					"consumes": ["application/xml"],
+					"authorizations": [],
+          "parameters":[
+            {
+              "name": "RetailCustomerID",
+              "description": "The ID of the Retail Customer.",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "path"
+            },
+            {
+              "name": "xmlFile",
+              "description": "The Green Button XML file contents being uploaded",
+							"required": true,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "produces":[
+            "text/html"
+          ],
+          "responseMessages":[
+            {
+              "code": 200,
+              "message" : "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
