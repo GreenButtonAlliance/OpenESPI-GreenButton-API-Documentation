@@ -21,7 +21,7 @@
           "summary": "[ESPI] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
-          "produces": ["application/atom+xml"],					
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages":
@@ -152,7 +152,6 @@
           "summary": "[ESPI] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
-					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[

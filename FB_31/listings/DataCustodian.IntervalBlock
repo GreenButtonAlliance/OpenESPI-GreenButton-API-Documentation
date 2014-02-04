@@ -14,10 +14,11 @@
       "operations":
 			[
         {
-          "method": "POST",
-          "summary": "Add a new Interval Block to the Data Custodian",
-					"consumes": ["application/xml"],
-          "nickname": "addIntervalBlock",
+          "method": "GET",
+          "summary": "[ESPI] Finds all Interval Blocks",
+          "notes": "An XML representation of all Interval Blocks will be returned",
+          "nickname": "findIntervalBlocks",
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -44,14 +45,6 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
-            },
-            {
-              "name": "IntervalBlockData",
-              "description": "1 or more IntervalBlocks to be added.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
             }
           ],
           "responseMessages": [
@@ -64,7 +57,7 @@
               "message": "Bad Request"
             }
           ]
-        }
+	}
       ]
     },
     {
@@ -72,11 +65,10 @@
       "operations":
 			[
         {
-          "method": "PUT",
-          "summary": "Update an existing Interval Block",
-          "notes": "The Interval Block must exist",
-					"consumes": ["application/xml"],
-          "nickname": "updateIntervalBlock",
+          "method": "GET",
+          "summary": "[ESPI] Retrieve an IntervalBlock Using it's ID",
+          "nickname": "getIntervalBlock",
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -106,71 +98,74 @@
             },
             {
               "name": "IntervalBlockID",
-              "description": "ID of the Interval Block to be updated.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },					
-            {
-              "name": "IntervalBlockData",
-              "description": "The Interval Block data to be updated.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 200,
-              "message" : "OK"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            }
-          ]
-        },
-        {
-          "method": "DELETE",
-          "summary": "Delete an Interval Block",
-          "nickname": "deleteIntervalBlock",
-					"produces": ["application/xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Interval Block references.",
+              "description": "ID of the Interval Block to be retrieved.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Interval Block references.",
-              "required": true,
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Interval Block.",
+              "defaultValue": "All",
+              "required": false,
               "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
+              "dataType": "Date",
+              "paramType": "query"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Interval Block references.",
-              "required": true,
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Interval Block.",
+              "defaultValue": "All",
+              "required": false,
               "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },			
+              "dataType": "Date",
+              "paramType": "query"
+            },
             {
-              "name": "IntervalBlockID",
-              "description": "ID of the Interval Block to be deleted.",
-              "required": true,
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Interval Block.",
+              "defaultValue": "All",
+              "required": false,
               "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Interval Block.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Interval Blocks that should be transferred as the first entry of the response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages": [

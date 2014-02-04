@@ -18,7 +18,7 @@
           "summary": "Add a new Electric Power Quality Summary to the Data Custodian",
           "notes": "The New Electric Power Quality Summary will be added",
           "nickname": "addElectricPowerQualitySummary",
-          "consumes": ["application/xml"],					
+          "consumes": ["application/xml"],
           "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
@@ -64,6 +64,7 @@
     {
       "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySummary/{ElectricPowerQualitySummaryID}",
       "operations":
+			[
         {
           "method": "PUT",
           "summary": "Update an existing Electric Power Quality Summary within the DataCustodian",
@@ -105,7 +106,7 @@
               "allowMultiple": true,
               "dataType": "string",
               "paramType": "body"
-            }							
+            }
           ],
           "responseMessages": [
             {
@@ -150,7 +151,7 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
-            }						
+            }
           ],
           "responseMessages": [
             {

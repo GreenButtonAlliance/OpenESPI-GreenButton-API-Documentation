@@ -20,8 +20,7 @@
           "method": "POST",
           "summary": "Upload a Green Button Data File containing multiple retail customers and usagepoints",
           "nickname": "Import Data",
-					"produces": ["application/atom+xml"],
-          "authorizations": ["oauth2"],					
+          "authorizations": ["oauth2"],
           "parameters":
           [
             {
@@ -32,7 +31,7 @@
               "paramType": "body"
             }
           ],
-          "produces": ["text/html"],
+					"produces": ["application/atom+xml"],
           "responseMessages":
           [
             {
@@ -55,7 +54,6 @@
           "method": "GET",
           "summary": "Download a Green Button XML file containing the collection of UsagePoints for thsi RetailCustomer",
           "nickname": "downloadMyData",
-					"produces": ["application/atom+xml"],
           "parameters":
           [
             {
@@ -75,7 +73,7 @@
               "paramType": "path"
             }
           ],
-          "produces": ["text/html"],
+					"produces": ["application/atom+xml"],
           "responseMessages":
           [
             {
@@ -135,8 +133,7 @@
           "method": "GET",
           "summary": "RDownload a Green Button XML file containing the specific of UsagePoint for thsi RetailCustomer",
           "nickname": "DownloadMyData",
-					"produces": ["application/atom+xml"],
-          "authorizations": ["oauth2"],					
+          "authorizations": ["oauth2"],
           "parameters":
           [
             {
@@ -156,7 +153,7 @@
               "paramType": "path"
             }
           ],
-          "produces": ["text/html"],
+					"produces": ["application/atom+xml"],
           "responseMessages":
           [
             {

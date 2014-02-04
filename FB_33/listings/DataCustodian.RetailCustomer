@@ -20,7 +20,7 @@
           "summary": "Returns a feed representing the collection of all Retail Customers",
           "nickname": "getRetailCustomerCollection",
           "produces": ["application/atom+xml"],
-          "authorizations": ["oauth2"],					
+          "authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages":
           [
