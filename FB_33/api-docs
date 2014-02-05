@@ -4,40 +4,40 @@
   "espiVersion": "1.1",
   "apis": [
     {
-      "path": "/../listings/DataCustodian.ApplicationInformation"
+      "path": "/../listings/ApplicationInformation"
     },
     {
-      "path": "/../listings/DataCustodian.Authorization"
+      "path": "/../listings/Authorization"
     },
     {
-      "path": "/../listings/DataCustodian.Batch"
+      "path": "/../listings/Batch"
     },
     {
-      "path": "/../listings/DataCustodian.ElectricPowerQualitySummary"
+      "path": "/../listings/ElectricPowerQualitySummary"
     },
     {
-      "path": "/../listings/DataCustodian.ElectricPowerUsageSummary"
+      "path": "/../listings/ElectricPowerUsageSummary"
     },
     {
-      "path": "/../listings/DataCustodian.IntervalBlock"
+      "path": "/../listings/IntervalBlock"
     },
     {
-      "path": "/../listings/DataCustodian.LocalTimeParameters"
+      "path": "/../listings/LocalTimeParameters"
     },
     {
-      "path": "/../listings/DataCustodian.MeterReading"
+      "path": "/../listings/MeterReading"
     },
     {
-      "path": "/../listings/DataCustodian.ReadingType"
+      "path": "/../listings/ReadingType"
     },
 	  {
-      "path": "/../listings/DataCustodian.RetailCustomer"
+      "path": "/../listings/RetailCustomer"
     },
     {
-      "path": "/../listings/DataCustodian.Subscription"
+      "path": "/../listings/Subscription"
     },
     {
-      "path": "/../listings/DataCustodian.UsagePoint"
+      "path": "/../listings/UsagePoint"
     }
   ]
 }

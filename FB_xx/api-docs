@@ -4,13 +4,13 @@
   "espiVersion": "1.1",
   "apis": [
     {
-      "path": "/../listings/DataCustodian.Batch"
+      "path": "/../listings/Batch"
     },
     {
-      "path": "/../listings/DataCustodian.LocalTimeParameters"
+      "path": "/../listings/LocalTimeParameters"
     },
     {
-      "path": "/../listings/DataCustodian.ReadingType"
+      "path": "/../listings/ReadingType"
     }		
   ]
 }
