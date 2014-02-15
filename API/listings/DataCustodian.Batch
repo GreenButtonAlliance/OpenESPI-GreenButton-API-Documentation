@@ -17,7 +17,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "Request a Greenbutton Subscription from a DataCustodian",
           "nickname": "ConnectMyDataFeed",
 					"produces": ["application/atom+xml"],
@@ -55,7 +55,7 @@
 
         {
           "method": "GET",
-	  "functionBlock": "FB_35",
+          "functionBlock": "FB_35",
           "summary": "Request a Bulk transfer from the DataCustodian",
           "nickname": "downloadMyData",
 					"produces": ["application/atom+xml"],
@@ -93,7 +93,7 @@
 
         {
           "method": "POST",
-	  "functionBlock": "FB_XX",
+          "functionBlock": "FB_XX",
           "summary": "Upload an file with multiple Retail Customers and Multiple UsagePoints",
           "nickname": "Import Data",
 					"produces": ["application/atom+xml"],
@@ -130,7 +130,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Download a Green Button XML file containing the collection of UsagePoints for thsi RetailCustomer",
           "nickname": "downloadMyData",
 					"produces": ["application/atom+xml"],
@@ -168,7 +168,7 @@
         },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Upload a Green Button XML file",
 					"consumes": ["application/xml"],
           "produces": ["application/xml"],
@@ -212,7 +212,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_XX",
+          "functionBlock": "FB_XX",
           "summary": "RDownload a Green Button XML file containing the specific of UsagePoint for thsi RetailCustomer",
           "nickname": "DownloadMyData",
 					"produces": ["application/atom+xml"],

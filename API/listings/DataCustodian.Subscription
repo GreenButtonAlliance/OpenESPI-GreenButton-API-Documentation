@@ -12,7 +12,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "nickname": "findSubscriptions",
           "summary": "[ESPI] Finds all Subscriptions.",
           "notes": "An XML representation of all Subscriptions will be returned",
@@ -33,7 +33,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Subscription",
           "nickname": "addSubscription",
 					"consumes": ["application/xml"],
@@ -69,7 +69,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Retrieve a Subscription Using it's ID",
           "nickname": "getSubscription",
 					"produces": ["application/atom+xml"],
@@ -162,7 +162,7 @@
         },
         {
           "method": "PUT",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Update an existing Subscription.",
           "notes": "The Subscription must exist",
           "nickname": "updateSubscription",
@@ -201,7 +201,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Delete a Subscription.",
           "nickname": "deleteSubscription",
 					"produces": ["application/xml"],

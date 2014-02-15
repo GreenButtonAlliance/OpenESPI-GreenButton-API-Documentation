@@ -18,7 +18,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "[ESPI] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
@@ -39,7 +39,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Usage Point",
           "nickname": "addUsagePoint",
 					"consumes": ["application/xml"],
@@ -76,7 +76,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "[ESPI] Retrieve a Usage Point Using it's ID",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
@@ -169,7 +169,7 @@
         },
         {
           "httpMethod": "PUT",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Update an existing Usage Point.",
           "notes": "The Usage Point must exist",
           "nickname": "updateUsagePoint",
@@ -209,7 +209,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Delete a Usage Point",
           "nickname": "deleteUsagePoint",
 					"produces": ["application/xml"],
@@ -246,7 +246,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
@@ -278,7 +278,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Usage Point.",
           "nickname": "addUsagePoint",
 					"consumes": ["application/xml"],

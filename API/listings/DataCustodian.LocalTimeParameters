@@ -12,12 +12,12 @@
   "apis":
 	[
     {
-      "path": "/espi/1_1/resource/LocalTimeParameter",
+      "path": "/espi/1_1/resource/LocalTimeParameters",
       "operations":
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Finds all Local Time Parameters",
           "notes": "An XML representation of all Local Time Parameters will be returned",
           "nickname": "findLocalTimeParameters",
@@ -38,7 +38,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Local Time Parameter",
 					"consumes": ["application/xml"],
           "nickname": "addLocalTimeParameter",
@@ -69,12 +69,12 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/LocalTimeParameter/{LocalTimeParameterID}",
+      "path": "/espi/1_1/resource/LocalTimeParameters/{LocalTimeParameterID}",
       "operations":
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Retrieve a Local Time Parameter Using it's ID",
           "nickname": "getLocalTimeParameter",
           "produces": ["application/atom+xml"],
@@ -167,7 +167,7 @@
         },
         {
           "method": "PUT",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Update an existing Local Time Parameter",
           "notes": "The Local Time Parameter must exist",
 					"consumes": ["application/xml"],
@@ -206,7 +206,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Delete a Local Time Parameter",
           "nickname": "deleteLocalTimeParameter",
 					"produces": ["application/xml"],
@@ -238,12 +238,12 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameter",
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameters",
       "operations":
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_xx",
+          "functionBlock": "FB_xx",
           "summary": "[ESPI] Finds all Local Time Parameters",
           "notes": "An XML representation of all Local Time Parameters will be returned",
           "nickname": "findLocalTimeParameters",
@@ -282,7 +282,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_xx",
+          "functionBlock": "FB_xx",
           "summary": "Add a new Local Time Parameter",
 					"consumes": ["application/xml"],
           "nickname": "addLocalTimeParameter",
@@ -329,12 +329,12 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameter/{LocalTimeParameterID}",
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameters/{LocalTimeParameterID}",
       "operations":
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_xx",
+          "functionBlock": "FB_xx",
           "summary": "[ESPI] Retrieve a Local Time Parameter Using it's ID",
           "nickname": "getLocalTimeParameter",
           "produces": ["application/atom+xml"],
@@ -443,7 +443,7 @@
         },
         {
           "method": "PUT",
-	  "functionBlock": "FB_xx",
+          "functionBlock": "FB_xx",
           "summary": "Update an existing Local Time Parameter",
           "notes": "The Local Time Parameter must exist",
 					"consumes": ["application/xml"],
@@ -498,7 +498,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_xx",
+          "functionBlock": "FB_xx",
           "summary": "Delete a Local Time Parameter",
           "nickname": "deleteLocalTimeParameter",
 					"produces": ["application/xml"],

@@ -12,7 +12,7 @@
   "apis":
 	[
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameter",
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameters",
       "operations":
 			[
         {
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameter/{LocalTimeParameterID}",
+      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/LocalTimeParameters/{LocalTimeParameterID}",
       "operations":
 			[
         {

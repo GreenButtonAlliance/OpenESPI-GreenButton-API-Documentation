@@ -17,7 +17,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "[ESPI] Finds all Application Informations.",
           "notes": "An XML representation of all Application Informations will be returned",
           "nickname": "findApplicationInformations",
@@ -38,7 +38,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Application Information.",
           "nickname": "addApplicationInformation",
 					"consumes": ["application/xml"],
@@ -75,7 +75,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Retrieve an Application Information Using it's ID.",
           "nickname": "getApplicationInformation",
           "produces": ["application/atom+xml"],
@@ -105,7 +105,7 @@
         },
         {
           "method": "PUT",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "Update an existing Application Information.",
           "notes": "The Application Information must exist",
           "nickname": "updateApplicationInformation",
@@ -145,7 +145,7 @@
 	      },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "Delete Application Information.",
           "nickname": "deleteApplicationInformation",
           "produces": ["application/xml"],

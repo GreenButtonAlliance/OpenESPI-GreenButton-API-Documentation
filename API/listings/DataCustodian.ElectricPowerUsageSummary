@@ -17,7 +17,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Finds all Electric Power Usage Summaries",
           "notes": "An XML representation of all Electric Power Usage Summaries will be returned",
           "nickname": "findElectricPowerUsageSummaries",
@@ -55,7 +55,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Electric Power Usage Summary to the Data Custodian",
           "notes": "The New Electric Power Usage Summary will be added",
           "consumes": ["application/xml"],
@@ -108,7 +108,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Retrieve a ElectricPowerUsageSummary Using it's ID",
           "notes": "Returns a Electric Power Usage Summary",
           "nickname": "getElectricPowerUsageSummary",
@@ -218,7 +218,7 @@
         },
         {
           "method": "PUT",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Update an existing Electric Power Usage Summary within the DataCustodian",
           "notes": "The Electric Power Usage Summary must exist",
           "consumes": ["application/xml"],
@@ -273,7 +273,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Deletes a Electric Power Usage Summary",
           "nickname": "deleteElectricPowerUsageSummary",
           "produces": ["application/xml"],

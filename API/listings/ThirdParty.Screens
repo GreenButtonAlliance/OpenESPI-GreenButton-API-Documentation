@@ -15,7 +15,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_TPScreen",
+          "functionBlock": "FB_TPScreen",
           "summary": "The Third Party's Home Screen",
           "notes": "The requesting browser displays the Third Party Portal's Home Screen. The response SHOULD provide the Retail Customer the opportunity to Login.",
           "nickname": "getPortalHome",
@@ -42,7 +42,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_TPScreen",
+          "functionBlock": "FB_TPScreen",
           "summary": "The Third Party's Login Screen",
           "notes": "The Retail Customer's browser displays the Third Party Portal's Login Screen. The expected result is a Login POST which is processed by the Third Party.",
           "nickname": "portalSignin",
@@ -69,7 +69,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_TPScreen",
+          "functionBlock": "FB_TPScreen",
           "summary": "[ESPI] The Third Party's Retail Customer's Home Screen",
           "notes": "The requesting browser displays the Third Party Portal's Retail Customer's Home Screen, which is shown after the Retail Customer successfully completes the Login process.",
           "nickname": "getRetailCustomerHome",
@@ -106,7 +106,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_TPScreen",
+          "functionBlock": "FB_TPScreen",
           "summary": "Third Party's Terms of Service Screen",
           "notes": "The Third Party Application's Terms of Service SHOULD be presented to the Retail Customer by the Data Custodian's Authorization Server during the process of authorizing the Third Party Application access to the Retail Customer's energy usage information.",
           "nickname": "termsOfService",
@@ -133,7 +133,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_TPScreen",
+          "functionBlock": "FB_TPScreen",
           "summary": "Third Party's Usage Policy Screen",
           "notes": "The Third Party Application's Usage Policy SHOULD be presented to the Retail Customer by the Data Custodian's Authorization Server during the process of authorizing the Third Party Application access to the Retail Customer's energy usage information.",
           "nickname": "usagePolicy",
@@ -160,7 +160,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_TPScreen",
+          "functionBlock": "FB_TPScreen",
           "summary": "[ESPI] The Third Party's supported Data Custodian Screen",
           "notes": "The Third Party displays a Retail Customer a list of supported Data Custodians from which the Retail Customer selects a Data Custodian the Third Party will be authorized to access",
           "nickname": "getPortalHome",
@@ -197,7 +197,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_TPScreen",
+          "functionBlock": "FB_TPScreen",
           "summary": "[ESPI] Third Party's Retail Customer's SCOPE Selection Screen",
           "notes": "The Third Party displays a Retail Customer a screen that allows them to select the types of Data Custodian data to be accessed by the Third Party",
           "nickname": "getPortalHome",

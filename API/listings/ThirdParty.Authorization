@@ -17,7 +17,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_TP",
+          "functionBlock": "FB_TP",
           "summary": "[ESPI] Find all Authorizations.",
           "notes": "An XML representation of all Authorizations will be returned.",
           "nickname": "findAuthorizations",
@@ -44,7 +44,7 @@
       [
         {
           "method": "GET",
-	  "functionBlock": "FB_TP",
+          "functionBlock": "FB_TP",
           "summary": "[ESPI] Retrieve an Authorization Using its ID.",
           "nickname": "getAuthorization",
           "produces": ["application/xml"],
@@ -74,7 +74,7 @@
         },
         {
           "method": "PUT",
-	  "functionBlock": "FB_TP",
+          "functionBlock": "FB_TP",
           "summary": "Update an existing Authorization.",
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
@@ -115,7 +115,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_TP",
+          "functionBlock": "FB_TP",
           "summary": "Delete an Authorization",
           "notes": "",
           "responseClass": "void",

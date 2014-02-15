@@ -17,14 +17,14 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "responseMessages":
-	  [
+          [
             {
               "code": 200,
               "message" : "OK"
@@ -37,7 +37,7 @@
         },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Meter Reading to an existing Usage Point",
           "nickname": "addMeterReading",
 					"consumes": ["application/xml"],
@@ -73,7 +73,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
@@ -167,7 +167,7 @@
         },
         {
           "httpMethod": "PUT",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Update an existing Meter Reading within Usage Point",
           "notes": "The Usage Point and Meter Reading must exist",
 					"consumes": ["application/xml"],
@@ -213,7 +213,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Delete a Meter Reading from Usage Point",
           "nickname": "deleteMeterReading",
 					"produces": ["application/xml"],
@@ -249,7 +249,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
@@ -288,7 +288,7 @@
         },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Meter Reading to an existing Usage Point",
           "nickname": "addMeterReading",
 					"consumes": ["application/xml"],
@@ -340,7 +340,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
@@ -450,7 +450,7 @@
         },
         {
           "httpMethod": "PUT",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Update an existing Meter Reading within Usage Point",
           "notes": "The Usage Point and Meter Reading must exist",
 					"consumes": ["application/xml"],
@@ -504,7 +504,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Delete a Meter Reading from Usage Point",
           "nickname": "deleteMeterReading",
 					"produces": ["application/xml"],

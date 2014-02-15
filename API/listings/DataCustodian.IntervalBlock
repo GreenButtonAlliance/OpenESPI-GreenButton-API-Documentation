@@ -15,7 +15,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Finds all Interval Blocks",
           "notes": "An XML representation of all Interval Blocks will be returned",
           "nickname": "findIntervalBlocks",
@@ -61,7 +61,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Interval Block to the Data Custodian",
 					"consumes": ["application/xml"],
           "nickname": "addIntervalBlock",
@@ -120,7 +120,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Retrieve an IntervalBlock Using it's ID",
           "nickname": "getIntervalBlock",
           "produces": ["application/atom+xml"],
@@ -236,7 +236,7 @@
         },
         {
           "method": "PUT",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Update an existing Interval Block",
           "notes": "The Interval Block must exist",
 					"consumes": ["application/xml"],
@@ -298,7 +298,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Delete an Interval Block",
           "nickname": "deleteIntervalBlock",
 					"produces": ["application/xml"],

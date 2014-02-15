@@ -17,7 +17,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Finds all Reading Types",
           "notes": "An XML representation of all Reading Types will be returned",
           "nickname": "findReadingTypes",
@@ -38,7 +38,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Reading Type",
 					"consumes": ["application/xml"],
           "nickname": "addReadingType",
@@ -74,7 +74,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Retrieve a Reading Type Using it's ID",
           "nickname": "getReadingType",
           "produces": ["application/atom+xml"],
@@ -167,7 +167,7 @@
         },
         {
           "method": "PUT",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Update an existing Reading Type",
           "notes": "The Reading Type must exist",
 					"consumes": ["application/xml"],
@@ -206,7 +206,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Delete a Reading Type",
           "nickname": "deleteReadingType",
 					"produces": ["application/xml"],
@@ -243,7 +243,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_xx",
+          "functionBlock": "FB_xx",
           "summary": "[ESPI] Finds all Reading Types",
           "notes": "An XML representation of all Reading Types will be returned",
           "nickname": "findReadingTypes",
@@ -290,7 +290,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_xx",
+          "functionBlock": "FB_xx",
           "summary": "Add a new Reading Type",
 					"consumes": ["application/xml"],
           "nickname": "addReadingType",
@@ -350,7 +350,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_xx",
+          "functionBlock": "FB_xx",
           "summary": "[ESPI] Retrieve a Reading Type Using it's ID",
           "nickname": "getReadingType",
           "produces": ["application/atom+xml"],
@@ -467,7 +467,7 @@
         },
         {
           "method": "PUT",
-	  "functionBlock": "FB_xx",
+          "functionBlock": "FB_xx",
           "summary": "Update an existing Reading Type",
           "notes": "The Reading Type must exist",
 					"consumes": ["application/xml"],
@@ -530,7 +530,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_xx",
+          "functionBlock": "FB_xx",
           "summary": "Delete a Reading Type",
           "nickname": "deleteReadingType",
 					"produces": ["application/xml"],

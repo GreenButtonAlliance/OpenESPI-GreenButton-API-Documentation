@@ -12,7 +12,7 @@
   "apis":
 	[
     {
-      "path": "/espi/1_1/resource/LocalTimeParameter",
+      "path": "/espi/1_1/resource/LocalTimeParameters",
       "operations":
 			[
         {
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/LocalTimeParameter/{LocalTimeParameterID}",
+      "path": "/espi/1_1/resource/LocalTimeParameters/{LocalTimeParameterID}",
       "operations":
 			[
         {

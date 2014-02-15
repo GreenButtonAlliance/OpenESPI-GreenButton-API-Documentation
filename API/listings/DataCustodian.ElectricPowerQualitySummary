@@ -15,7 +15,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Finds all Electric Power Quality Summaries",
           "notes": "An XML representation of all Electric Power Quality Summaries will be returned",
           "nickname": "findElectricPowerQualitySummaries",
@@ -53,7 +53,7 @@
 	      },
         {
           "method": "POST",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Add a new Electric Power Quality Summary to the Data Custodian",
           "notes": "The New Electric Power Quality Summary will be added",
           "nickname": "addElectricPowerQualitySummary",
@@ -106,7 +106,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_31",
           "summary": "[ESPI] Retrieve a ElectricPowerQualitySummary Using it's ID",
           "notes": "Returns a Electric Power Quality Summary",
           "nickname": "getElectricPowerQualitySummary",
@@ -216,7 +216,7 @@
         },
         {
           "method": "PUT",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Update an existing Electric Power Quality Summary within the DataCustodian",
           "notes": "The Electric Power Quality Summary must exist",
 					"consumes": ["application/xml"],
@@ -271,14 +271,14 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Deletes a Electric Power Quality Summary",
           "notes": "",
           "nickname": "deleteElectricPowerQualitySummary",
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
- 	  [
+          [
             {
               "name": "RetailCustomerID",
               "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
