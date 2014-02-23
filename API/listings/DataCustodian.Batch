@@ -87,7 +87,7 @@
 	]
       },
     {
-      "path": "/espi/1_1/resource/Batch",
+      "path": "/espi/1_1/resource/Batch/RetailCustomer",
       "operations":
       [
 
