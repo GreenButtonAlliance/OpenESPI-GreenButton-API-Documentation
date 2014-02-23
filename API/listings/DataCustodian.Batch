@@ -96,7 +96,8 @@
           "functionBlock": "FB_XX",
           "summary": "Upload an file with multiple Retail Customers and Multiple UsagePoints",
           "nickname": "Import Data",
-					"produces": ["application/atom+xml"],
+          "consumes": ["application/xml"],
+	  "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],					
           "parameters":
           [
@@ -170,7 +171,7 @@
           "method": "POST",
           "functionBlock": "FB_33",
           "summary": "Upload a Green Button XML file",
-					"consumes": ["application/xml"],
+	  "consumes": ["application/xml"],
           "produces": ["application/xml"],
           "nickname": "uploadMyData",
           "parameters":
