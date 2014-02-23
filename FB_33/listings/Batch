@@ -12,7 +12,7 @@
   "apis":
   [
     {
-      "path": "/espi/1_1/resource/Batch/",
+      "path": "/espi/1_1/resource/Batch/RetailCustomer",
       "operations":
       [
 
@@ -31,7 +31,8 @@
               "paramType": "body"
             }
           ],
-					"produces": ["application/atom+xml"],
+          "consumes": ["application/xml"],
+	  "produces": ["application/atom+xml"],
           "responseMessages":
           [
             {
@@ -89,7 +90,7 @@
         {
           "method": "POST",
           "summary": "Upload a Green Button XML file",
-					"consumes": ["application/xml"],
+	  "consumes": ["application/xml"],
           "produces": ["application/xml"],
           "nickname": "uploadMyData",
           "parameters":
