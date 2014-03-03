@@ -21,19 +21,18 @@
           "summary": "Request a Greenbutton Subscription from a DataCustodian",
           "nickname": "ConnectMyDataFeed",
 					"produces": ["application/atom+xml"],
-          "authorizations": ["oauth2"],					
+          "authorizations": ["oauth2"],
           "parameters":
           [
             {
               "name": "SubscriptionID",
-              "description": "The Subcription's ID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             }
           ],
-          "produces": ["text/html"],
           "responseMessages":
           [
             {
@@ -59,7 +58,7 @@
           "summary": "Request a Bulk transfer from the DataCustodian",
           "nickname": "downloadMyData",
 					"produces": ["application/atom+xml"],
-          "authorizations": ["oauth2"],					
+          "authorizations": ["oauth2"],
           "parameters":
           [
             {
@@ -71,7 +70,6 @@
               "paramType": "path"
             }
           ],
-          "produces": ["text/html"],
           "responseMessages":
           [
             {
@@ -87,18 +85,18 @@
 	]
       },
     {
-      "path": "/espi/1_1/resource/Batch/RetailCustomer",
+      "path": "/espi/1_1/resource/Batch/",
       "operations":
       [
 
         {
           "method": "POST",
-          "functionBlock": "FB_XX",
+          "functionBlock": "FB_33",
           "summary": "Upload an file with multiple Retail Customers and Multiple UsagePoints",
           "nickname": "Import Data",
           "consumes": ["application/xml"],
-	  "produces": ["application/atom+xml"],
-          "authorizations": ["oauth2"],					
+          "produces": ["application/atom+xml"],
+          "authorizations": ["oauth2"],
           "parameters":
           [
             {
@@ -110,7 +108,6 @@
               "paramType": "body"
             }
           ],
-          "produces": ["text/html"],
           "responseMessages":
           [
             {
@@ -131,7 +128,7 @@
       [
         {
           "method": "GET",
-          "functionBlock": "FB_33",
+          "functionBlock": "FB_31",
           "summary": "Download a Green Button XML file containing the collection of UsagePoints for thsi RetailCustomer",
           "nickname": "downloadMyData",
 					"produces": ["application/atom+xml"],
@@ -154,7 +151,6 @@
               "paramType": "path"
             }
           ],
-          "produces": ["text/html"],
           "responseMessages":
           [
             {
@@ -171,7 +167,7 @@
           "method": "POST",
           "functionBlock": "FB_33",
           "summary": "Upload a Green Button XML file",
-	  "consumes": ["application/xml"],
+          "consumes": ["application/xml"],
           "produces": ["application/xml"],
           "nickname": "uploadMyData",
           "parameters":
@@ -213,11 +209,11 @@
       [
         {
           "method": "GET",
-          "functionBlock": "FB_XX",
+          "functionBlock": "FB_31",
           "summary": "RDownload a Green Button XML file containing the specific of UsagePoint for thsi RetailCustomer",
           "nickname": "DownloadMyData",
 					"produces": ["application/atom+xml"],
-          "authorizations": ["oauth2"],					
+          "authorizations": ["oauth2"],
           "parameters":
           [
             {
@@ -237,7 +233,6 @@
               "paramType": "path"
             }
           ],
-          "produces": ["text/html"],
           "responseMessages":
           [
             {

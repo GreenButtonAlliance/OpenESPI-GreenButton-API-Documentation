@@ -15,7 +15,7 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "[ESPI] Finds all Interval Blocks",
           "notes": "An XML representation of all Interval Blocks will be returned",
           "nickname": "findIntervalBlocks",
@@ -120,7 +120,7 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "[ESPI] Retrieve an IntervalBlock Using it's ID",
           "nickname": "getIntervalBlock",
           "produces": ["application/atom+xml"],
@@ -158,7 +158,7 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
-            },						
+            },
             {
               "name": "published-max",
               "description": "The upper bound on the published date of the Interval Block.",
@@ -275,7 +275,7 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
-            },					
+            },
             {
               "name": "IntervalBlockData",
               "description": "The Interval Block data to be updated.",
@@ -328,7 +328,7 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
-            },			
+            },
             {
               "name": "IntervalBlockID",
               "description": "ID of the Interval Block to be deleted.",

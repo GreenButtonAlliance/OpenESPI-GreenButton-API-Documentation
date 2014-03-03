@@ -17,7 +17,7 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "[ESPI] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
@@ -73,7 +73,7 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "[ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
@@ -249,7 +249,7 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "[ESPI] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
@@ -340,7 +340,7 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "[ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],

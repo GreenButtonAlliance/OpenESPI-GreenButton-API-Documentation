@@ -17,7 +17,7 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "[ESPI] Finds all Electric Power Usage Summaries",
           "notes": "An XML representation of all Electric Power Usage Summaries will be returned",
           "nickname": "findElectricPowerUsageSummaries",
@@ -108,7 +108,7 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "[ESPI] Retrieve a ElectricPowerUsageSummary Using it's ID",
           "notes": "Returns a Electric Power Usage Summary",
           "nickname": "getElectricPowerUsageSummary",

@@ -135,7 +135,7 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "Update an existing Data Custodian Authorization",
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
@@ -176,7 +176,7 @@
 	},
         {
           "method": "DELETE",
-          "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "Delete an existing Data Custodian Authorization.",
           "notes": "",
           "responseClass": "void",

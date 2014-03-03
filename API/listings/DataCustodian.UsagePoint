@@ -22,7 +22,7 @@
           "summary": "[ESPI] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
-          "produces": ["application/atom+xml"],					
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages":
@@ -263,7 +263,6 @@
               "paramType": "path"
             }
           ],
-          "produces": ["application/atom+xml"],
           "responseMessages":
           [
             {
@@ -323,7 +322,7 @@
 			[
         {
           "method": "GET",
-	  "functionBlock": "FB_31",
+          "functionBlock": "FB_32",
           "summary": "[ESPI] Retrieve a Usage Point Using it's ID",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
@@ -424,7 +423,7 @@
         },
         {
           "httpMethod": "PUT",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Update an existing Usage Point",
           "notes": "The Usage Point must exist",
           "nickname": "updateUsagePoint",
@@ -472,7 +471,7 @@
         },
         {
           "method": "DELETE",
-	  "functionBlock": "FB_33",
+          "functionBlock": "FB_33",
           "summary": "Delete a Usage Point",
           "nickname": "deleteUsagePoint",
 					"produces": ["application/xml"],
