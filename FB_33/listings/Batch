@@ -53,7 +53,7 @@
       [
         {
           "method": "GET",
-          "summary": "Download a Green Button XML file containing the collection of UsagePoints for thsi RetailCustomer",
+          "summary": "Download a Green Button XML file containing the collection of UsagePoints for this RetailCustomer",
           "nickname": "downloadMyData",
           "parameters":
           [
@@ -132,7 +132,7 @@
       [
         {
           "method": "GET",
-          "summary": "RDownload a Green Button XML file containing the specific of UsagePoint for thsi RetailCustomer",
+          "summary": "Download a Green Button XML file containing the specific of UsagePoint for this RetailCustomer",
           "nickname": "DownloadMyData",
           "authorizations": ["oauth2"],
           "parameters":
