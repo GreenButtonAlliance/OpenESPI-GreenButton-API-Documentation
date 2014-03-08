@@ -1034,6 +1034,8 @@
           log("server can't produce " + responseContentType);
         }
       }
+      responseContentType = this.operation.produces;
+      log ("contentType smashed to: " + responseContentType);
       if (requestContentType && requestContentType.indexOf("application/x-www-form-urlencoded") === 0) {
         fields = {};
         possibleParams = (function() {
