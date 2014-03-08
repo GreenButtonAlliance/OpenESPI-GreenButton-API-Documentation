@@ -21,7 +21,7 @@
           "summary": "[ESPI] Finds all Application Informations.",
           "notes": "An XML representation of all Application Informations will be returned",
           "nickname": "findApplicationInformations",
-          "produces": ["application/atom+xml"],
+
           "authorizations": ["oauth2"],
           "parameters": [],
           "responseMessages":
