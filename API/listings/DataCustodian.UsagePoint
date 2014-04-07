@@ -19,7 +19,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] [ESPI] Finds all Usage Points",
+          "summary": "[FB_33] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
           "produces": ["application/atom+xml"],
@@ -142,7 +142,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] [ESPI] Retrieve a Usage Point Using it's ID",
+          "summary": "[FB_33] Retrieve a Usage Point Using it's ID",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -312,7 +312,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_31",
-          "summary": "[FB_31] [ESPI] Finds all Usage Points",
+          "summary": "[FB_31] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
 					"produces": ["application/atom+xml"],
@@ -451,7 +451,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Retrieve a Usage Point Using it's ID",
+          "summary": "[FB_32] Retrieve a Usage Point Using it's ID",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],

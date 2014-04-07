@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Finds all Local Time Parameters",
+          "summary": "[FB_32] Finds all Local Time Parameters",
           "notes": "An XML representation of all Local Time Parameters will be returned",
           "nickname": "findLocalTimeParameters",
           "produces": ["application/atom+xml"],
@@ -140,7 +140,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Retrieve a Local Time Parameter Using it's ID",
+          "summary": "[FB_32] Retrieve a Local Time Parameter Using it's ID",
           "nickname": "getLocalTimeParameter",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],

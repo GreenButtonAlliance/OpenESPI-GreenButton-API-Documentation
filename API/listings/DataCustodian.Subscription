@@ -14,7 +14,7 @@
           "method": "GET",
           "functionBlock": "FB_33",
           "nickname": "findSubscriptions",
-          "summary": "[FB_33] [ESPI] Finds all Subscriptions.",
+          "summary": "[FB_33] Finds all Subscriptions.",
           "notes": "An XML representation of all Subscriptions will be returned",
 					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -135,7 +135,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_31",
-          "summary": "[FB_31] [ESPI] Retrieve a Subscription Using it's ID",
+          "summary": "[FB_31] Retrieve a Subscription Using it's ID",
           "nickname": "getSubscription",
 					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],

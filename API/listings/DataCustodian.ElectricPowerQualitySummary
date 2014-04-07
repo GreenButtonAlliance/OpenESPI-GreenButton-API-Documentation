@@ -16,7 +16,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Finds all Electric Power Quality Summaries",
+          "summary": "[FB_32] Finds all Electric Power Quality Summaries",
           "notes": "An XML representation of all Electric Power Quality Summaries will be returned",
           "nickname": "findElectricPowerQualitySummaries",
           "produces": ["application/atom+xml"],
@@ -170,7 +170,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Retrieve a ElectricPowerQualitySummary Using it's ID",
+          "summary": "[FB_32] Retrieve a ElectricPowerQualitySummary Using it's ID",
           "notes": "Returns a Electric Power Quality Summary",
           "nickname": "getElectricPowerQualitySummary",
           "produces": ["application/atom+xml"],

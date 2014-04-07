@@ -16,7 +16,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Finds all Interval Blocks",
+          "summary": "[FB_32] Finds all Interval Blocks",
           "notes": "An XML representation of all Interval Blocks will be returned",
           "nickname": "findIntervalBlocks",
           "produces": ["application/atom+xml"],
@@ -184,7 +184,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Retrieve an IntervalBlock Using it's ID",
+          "summary": "[FB_32] Retrieve an IntervalBlock Using it's ID",
           "nickname": "getIntervalBlock",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],

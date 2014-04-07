@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Finds all Electric Power Usage Summaries",
+          "summary": "[FB_32] Finds all Electric Power Usage Summaries",
           "notes": "An XML representation of all Electric Power Usage Summaries will be returned",
           "nickname": "findElectricPowerUsageSummaries",
           "produces": ["application/atom+xml"],
@@ -172,7 +172,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Retrieve a ElectricPowerUsageSummary Using it's ID",
+          "summary": "[FB_32] Retrieve a ElectricPowerUsageSummary Using it's ID",
           "notes": "Returns a Electric Power Usage Summary",
           "nickname": "getElectricPowerUsageSummary",
           "produces": ["application/atom+xml"],

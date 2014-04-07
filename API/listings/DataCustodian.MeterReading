@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Finds all Meter Readings associated with a given Usage Point",
+          "summary": "[FB_32] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
@@ -140,7 +140,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
+          "summary": "[FB_32] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -316,7 +316,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Finds all Meter Readings associated with a given Usage Point",
+          "summary": "[FB_32] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
@@ -470,7 +470,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
+          "summary": "[FB_32] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],

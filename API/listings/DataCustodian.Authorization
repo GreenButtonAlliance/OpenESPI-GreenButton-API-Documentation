@@ -15,7 +15,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] [ESPI] Find  all Data Custodian Authorizations.",
+          "summary": "[FB_33] Find  all Data Custodian Authorizations.",
           "notes": "An XML representation of all Authorizations will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
@@ -106,7 +106,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_31",
-          "summary": "[FB_31] [ESPI] Retrieve a Data Custodian Authorization Using it's ID.",
+          "summary": "[FB_31] Retrieve a Data Custodian Authorization Using it's ID.",
           "notes": "Returns a Authorization",
           "responseClass": "Authorization",
           "nickname": "getAuthorization",

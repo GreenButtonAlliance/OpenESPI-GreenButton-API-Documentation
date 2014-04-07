@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Finds all Reading Types",
+          "summary": "[FB_32] Finds all Reading Types",
           "notes": "An XML representation of all Reading Types will be returned",
           "nickname": "findReadingTypes",
           "produces": ["application/atom+xml"],
@@ -140,7 +140,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] [ESPI] Retrieve a Reading Type Using it's ID",
+          "summary": "[FB_32] Retrieve a Reading Type Using it's ID",
           "nickname": "getReadingType",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
