@@ -1,0 +1,21 @@
+{
+    "apis": [
+        {
+            "name": "Green Button API",
+            "description": "The Green Button API provides access to RESTful services provided by Data Custodian and Third Party Applications. These APIs allow application developers full access, in Green Button Format, to Energy Usage Information for the purpose of developing new Green Button Applications.",
+            "image": "http://services.greenbuttondata.org/resources/ico/favicon.png",
+            "keywords": “energy, power, electricity“,
+            "license": "http://creativecommons.org/licenses/by-sa/3.0/deed.en_US",
+            "attribution": "EnergyOS",
+            "url": "http://www.energyos.org",
+            "definitions": [
+		{
+                    "type": “Swagger”,
+                    "url": "http://energyos.github.io/OpenESPI-GreenButton-API-Documentation/API/api-docs"
+		}
+            ]
+	}
+    ],
+    "tags": "api-commons-manifest",
+    "updated": “01/21/2014”
+}
