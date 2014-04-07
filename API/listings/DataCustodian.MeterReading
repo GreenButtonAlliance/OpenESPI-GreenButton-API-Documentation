@@ -18,11 +18,77 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[ESPI] Finds all Meter Readings associated with a given Usage Point",
+          "summary": "[FB_32] [ESPI] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
+					"parameters":
+					[
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Meter Reading.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Meter Reading.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Meter Reading.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Meter Reading.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Meter Readings that should be transferred as the first entry of the response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            }
+					],
           "responseMessages":
           [
             {
@@ -38,7 +104,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Add a new Meter Reading to an existing Usage Point",
+          "summary": "[FB_33] Add a new Meter Reading to an existing Usage Point",
           "nickname": "addMeterReading",
 					"consumes": ["application/xml"],
 					"authorizations": ["oauth2"],
@@ -74,7 +140,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
+          "summary": "[FB_32] [ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -168,7 +234,7 @@
         {
           "httpMethod": "PUT",
           "functionBlock": "FB_33",
-          "summary": "Update an existing Meter Reading within Usage Point",
+          "summary": "[FB_33] Update an existing Meter Reading within Usage Point",
           "notes": "The Usage Point and Meter Reading must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateMeterReading",
@@ -214,7 +280,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "Delete a Meter Reading from Usage Point",
+          "summary": "[FB_33] Delete a Meter Reading from Usage Point",
           "nickname": "deleteMeterReading",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -250,7 +316,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[ESPI] Finds all Meter Readings associated with a given Usage Point",
+          "summary": "[FB_32] [ESPI] Finds all Meter Readings associated with a given Usage Point",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
@@ -272,6 +338,69 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Meter Reading.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Meter Reading.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Meter Reading.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Meter Reading.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Meter Readings that should be transferred as the first entry of the response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages":
@@ -289,7 +418,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Add a new Meter Reading to an existing Usage Point",
+          "summary": "[FB_33] Add a new Meter Reading to an existing Usage Point",
           "nickname": "addMeterReading",
 					"consumes": ["application/xml"],
 					"authorizations": ["oauth2"],
@@ -341,7 +470,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
+          "summary": "[FB_32] [ESPI] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -434,7 +563,6 @@
               "dataType": "long",
               "paramType": "query"
             }
-
           ],
           "responseMessages":
 					[
@@ -451,7 +579,7 @@
         {
           "httpMethod": "PUT",
           "functionBlock": "FB_33",
-          "summary": "Update an existing Meter Reading within Usage Point",
+          "summary": "[FB_33] Update an existing Meter Reading within Usage Point",
           "notes": "The Usage Point and Meter Reading must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateMeterReading",
@@ -505,7 +633,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "Delete a Meter Reading from Usage Point",
+          "summary": "[FB_33] Delete a Meter Reading from Usage Point",
           "nickname": "deleteMeterReading",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],

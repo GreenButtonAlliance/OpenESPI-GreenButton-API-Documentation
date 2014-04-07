@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_31",
-          "summary": "Request a Greenbutton Subscription from a DataCustodian",
+          "summary": "[FB_31] Request a Greenbutton Subscription from a DataCustodian",
           "nickname": "ConnectMyDataFeed",
 					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -31,6 +31,69 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Subscription.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Subscription.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Subscription.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Subscription.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply to this response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Subscriptions that should be transferred as the first entry of this request.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response to this request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages":
@@ -55,7 +118,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_35",
-          "summary": "Request a Bulk transfer from the DataCustodian",
+          "summary": "[FB_35] Request a Bulk transfer from the DataCustodian",
           "nickname": "downloadMyData",
 					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -68,6 +131,69 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Bulk request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Bulk request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Bulk request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Bulk request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply to this response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Bulk request that should be transferred as the first entry of this request.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response to this request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages":
@@ -92,7 +218,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Upload an file with multiple Retail Customers and Multiple UsagePoints",
+          "summary": "[FB_33] Upload an file with multiple Retail Customers and Multiple UsagePoints",
           "nickname": "Import Data",
           "consumes": ["application/xml"],
           "produces": ["application/atom+xml"],
@@ -129,7 +255,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_31",
-          "summary": "Download a Green Button XML file containing the collection of UsagePoints for thsi RetailCustomer",
+          "summary": "[FB_31] Download a Green Button XML file containing the collection of UsagePoints for this RetailCustomer",
           "nickname": "downloadMyData",
 					"produces": ["application/atom+xml"],
           "parameters":
@@ -149,6 +275,69 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Green Button XML file request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Green Button XML file request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Green Button XML file request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Green Button XML file request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply to this response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Green Button XML file request that should be transferred as the first entry of this request.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response to this request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages":
@@ -166,7 +355,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Upload a Green Button XML file",
+          "summary": "[FB_33] Upload a Green Button XML file",
           "consumes": ["application/xml"],
           "produces": ["application/xml"],
           "nickname": "uploadMyData",
@@ -210,7 +399,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_31",
-          "summary": "RDownload a Green Button XML file containing the specific of UsagePoint for thsi RetailCustomer",
+          "summary": "[FB_31] Download a Green Button XML file containing the specific of UsagePoint for this RetailCustomer",
           "nickname": "DownloadMyData",
 					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -231,6 +420,69 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Green Button XML file request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Green Button XML file request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Green Button XML file request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Green Button XML file request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply to this response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Green Button XML file request that should be transferred as the first entry of this request.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response to this request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages":

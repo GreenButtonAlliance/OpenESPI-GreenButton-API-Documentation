@@ -15,11 +15,67 @@
         {
           "method": "GET",
           "functionBlock": "FB_TP",
-          "summary": "Returns a feed representing the collection of all Retail Customers",
+          "summary": "[FB_TP] Returns a feed representing the collection of all Retail Customers",
           "nickname": "getRetailCustomerCollection",
           "produces":["text/html"],
 					"authorizations": [],
-          "parameters":[],
+          "parameters":
+					[
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Retail Customer that should be transferred as the first entry of the response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            }
+					],
           "responseMessages":[
             {
               "code" : 200,
@@ -34,7 +90,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_TP",
-          "summary": "Adds a new Retail Customer",
+          "summary": "[FB_TP] Adds a new Retail Customer",
           "nickname": "getRetailCustomerCollection",
 					"consumes": ["application/xml"],
           "produces":["text/html"],
@@ -68,7 +124,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_TP",
-          "summary": "Retrieve a Retail Customer using the Customer's ID",
+          "summary": "[FB_TP] Retrieve a Retail Customer using the Customer's ID",
           "nickname": "getRetailCustomer",
           "produces": ["application/atom+xml"],
 					"authorizations": [],
@@ -81,6 +137,60 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Retail Customer that should be transferred as the first entry of the response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages":
@@ -98,7 +208,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_TP",
-          "summary": "Update a Retail Customer",
+          "summary": "[FB_TP] Update a Retail Customer",
           "nickname": "getRetailCustomer",
 					"consumes": ["application/xml"],
           "produces":[],
@@ -135,7 +245,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_TP",
-          "summary": "Delete a Retail Customer",
+          "summary": "[FB_TP] Delete a Retail Customer",
           "nickname": "getRetailCustomer",
           "produces":["application/atom+xml"],
 					"authorizations": [],
@@ -168,7 +278,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_TP",
-          "summary": "Download a Green Button XML file",
+          "summary": "[FB_TP] Download a Green Button XML file",
           "nickname": "downloadMyData",
 					"authorizations": [],
           "parameters":[
@@ -188,6 +298,60 @@
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Retail Customer.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Retail Customer that should be transferred as the first entry of the response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "produces":[
@@ -212,7 +376,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_TP",
-          "summary": "Upload a Green Button XML file",
+          "summary": "[FB_TP] Upload a Green Button XML file",
           "nickname": "uploadMyData",
 					"consumes": ["application/xml"],
 					"authorizations": [],
