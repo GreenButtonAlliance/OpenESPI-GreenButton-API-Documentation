@@ -16,7 +16,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[ESPI] Finds all Interval Blocks",
+          "summary": "[FB_32] Finds all Interval Blocks",
           "notes": "An XML representation of all Interval Blocks will be returned",
           "nickname": "findIntervalBlocks",
           "produces": ["application/atom+xml"],
@@ -46,6 +46,69 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Interval Block.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Interval Block.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Interval Block.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Interval Block.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Interval Blocks that should be transferred as the first entry of the response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages": [
@@ -62,7 +125,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Add a new Interval Block to the Data Custodian",
+          "summary": "[FB_33] Add a new Interval Block to the Data Custodian",
 					"consumes": ["application/xml"],
           "nickname": "addIntervalBlock",
           "authorizations": ["oauth2"],
@@ -121,7 +184,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[ESPI] Retrieve an IntervalBlock Using it's ID",
+          "summary": "[FB_32] Retrieve an IntervalBlock Using it's ID",
           "nickname": "getIntervalBlock",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -237,7 +300,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_33",
-          "summary": "Update an existing Interval Block",
+          "summary": "[FB_33] Update an existing Interval Block",
           "notes": "The Interval Block must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateIntervalBlock",
@@ -299,7 +362,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "Delete an Interval Block",
+          "summary": "[FB_33] Delete an Interval Block",
           "nickname": "deleteIntervalBlock",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],

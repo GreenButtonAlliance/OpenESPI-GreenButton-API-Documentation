@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[ESPI] Finds all Electric Power Usage Summaries",
+          "summary": "[FB_32] Finds all Electric Power Usage Summaries",
           "notes": "An XML representation of all Electric Power Usage Summaries will be returned",
           "nickname": "findElectricPowerUsageSummaries",
           "produces": ["application/atom+xml"],
@@ -40,6 +40,69 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the referenced resource",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the referenced resource",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the referenced resource",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the referenced resource",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply to this response",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of this request.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response to this request",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages": [
@@ -56,7 +119,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Add a new Electric Power Usage Summary to the Data Custodian",
+          "summary": "[FB_33] Add a new Electric Power Usage Summary to the Data Custodian",
           "notes": "The New Electric Power Usage Summary will be added",
           "consumes": ["application/xml"],
           "nickname": "addElectricPowerUsageSummary",
@@ -109,7 +172,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[ESPI] Retrieve a ElectricPowerUsageSummary Using it's ID",
+          "summary": "[FB_32] Retrieve a ElectricPowerUsageSummary Using it's ID",
           "notes": "Returns a Electric Power Usage Summary",
           "nickname": "getElectricPowerUsageSummary",
           "produces": ["application/atom+xml"],
@@ -203,7 +266,6 @@
               "dataType": "long",
               "paramType": "query"
             }
-
           ],
           "responseMessages": [
             {
@@ -219,7 +281,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_33",
-          "summary": "Update an existing Electric Power Usage Summary within the DataCustodian",
+          "summary": "[FB_33] Update an existing Electric Power Usage Summary within the DataCustodian",
           "notes": "The Electric Power Usage Summary must exist",
           "consumes": ["application/xml"],
           "nickname": "updateElectricPowerUsageSummary",
@@ -274,7 +336,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "Deletes a Electric Power Usage Summary",
+          "summary": "[FB_33] Deletes a Electric Power Usage Summary",
           "nickname": "deleteElectricPowerUsageSummary",
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],

@@ -15,13 +15,78 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[ESPI] Find  all Data Custodian Authorizations.",
+          "summary": "[FB_33] Find  all Data Custodian Authorizations.",
           "notes": "An XML representation of all Authorizations will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
-          "parameters": [],
+          "parameters":
+					[
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the referenced resource.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the referenced resource.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the referenced resource.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the referenced resource.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply to this response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of this request.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response to this request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            }
+					],
           "responseMessages": [
             {
               "code": 200,
@@ -41,7 +106,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_31",
-          "summary": "[ESPI] Retrieve a Data Custodian Authorization Using it's ID.",
+          "summary": "[FB_31] Retrieve a Data Custodian Authorization Using it's ID.",
           "notes": "Returns a Authorization",
           "responseClass": "Authorization",
           "nickname": "getAuthorization",
@@ -120,7 +185,6 @@
               "dataType": "long",
               "paramType": "query"
             }
-
           ],
           "responseMessages": [
             {
@@ -136,7 +200,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_32",
-          "summary": "Update an existing Data Custodian Authorization",
+          "summary": "[FB_32] Update an existing Data Custodian Authorization",
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
 					"consumes": ["application/xml"],
@@ -177,7 +241,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_32",
-          "summary": "Delete an existing Data Custodian Authorization.",
+          "summary": "[FB_32] Delete an existing Data Custodian Authorization.",
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteAuthorization",

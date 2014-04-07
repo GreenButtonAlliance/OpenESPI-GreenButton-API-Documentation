@@ -32,7 +32,7 @@
     },
     {
       "path": "/../listings/DataCustodian.ReadingType"
-    },		
+    },
     {
       "path": "/../listings/DataCustodian.RetailCustomer"
     },
@@ -41,24 +41,6 @@
     },
     {
       "path": "/../listings/DataCustodian.UsagePoint"
-    },		
-    {
-      "path": "/../listings/DataCustodian.Screens"
-    },		
-    {
-      "path": "/../listings/ThirdParty"
-    },
-    {
-      "path": "/../listings/ThirdParty.ApplicationInformation"
-    },
-    {
-      "path": "/../listings/ThirdParty.Authorization"
-    },
-    {
-      "path": "/../listings/ThirdParty.RetailCustomer"
-    },	
-    {
-      "path": "/../listings/ThirdParty.Screens"
     }
   ]
 }

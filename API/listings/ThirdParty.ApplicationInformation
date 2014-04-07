@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_TP",
-          "summary": "Finds all Application Informations",
+          "summary": "[FB_TP] Finds all Application Informations",
           "notes": "An XML representation of all Application Informations will be returned",
           "nickname": "findApplicationInformations",
           "produces": ["application/xml"],
@@ -39,7 +39,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_TP",
-          "summary": "Add a new Application Information.",
+          "summary": "[FB_TP] Add a new Application Information.",
           "nickname": "addApplicationInformation",
 					"consumes": ["application/xml"],
           "produces": [],
@@ -76,7 +76,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_TP",
-          "summary": "Retrieve an Application Information Using its ID.",
+          "summary": "[FB_TP] Retrieve an Application Information Using its ID.",
           "nickname": "getApplicationInformation",
           "produces": ["application/xml"],
 					"authorizations": [],
@@ -106,7 +106,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_TP",
-          "summary": "Update an existing Application Information",
+          "summary": "[FB_TP] Update an existing Application Information",
           "notes": "The Application Information must exist",
           "nickname": "updateApplicationInformation",
 					"consumes": ["application/xml"],
@@ -146,7 +146,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_TP",
-          "summary": "Delete an Application Information",
+          "summary": "[FB_TP] Delete an Application Information",
           "nickname": "deleteApplicationInformation",
           "produces": [],
 					"authorizations": [],
@@ -173,7 +173,6 @@
             }
           ]
         }
-
       ]
     }
   ]

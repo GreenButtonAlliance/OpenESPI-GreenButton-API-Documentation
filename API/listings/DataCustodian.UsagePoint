@@ -19,12 +19,77 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[ESPI] Finds all Usage Points",
+          "summary": "[FB_33] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
-          "parameters": [],
+          "parameters":
+					[
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Usage Point",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Usage Point",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Usage Point",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Usage Point",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of this response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            }
+					],
           "responseMessages":
           [
             {
@@ -40,7 +105,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Add a new Usage Point",
+          "summary": "[FB_33] Add a new Usage Point",
           "nickname": "addUsagePoint",
 					"consumes": ["application/xml"],
 					"produces": ["application/xml"],
@@ -77,7 +142,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[ESPI] Retrieve a Usage Point Using it's ID",
+          "summary": "[FB_33] Retrieve a Usage Point Using it's ID",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -170,7 +235,7 @@
         {
           "httpMethod": "PUT",
           "functionBlock": "FB_33",
-          "summary": "Update an existing Usage Point.",
+          "summary": "[FB_33] Update an existing Usage Point.",
           "notes": "The Usage Point must exist",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/xml"],
@@ -210,7 +275,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "Delete a Usage Point",
+          "summary": "[FB_33] Delete a Usage Point",
           "nickname": "deleteUsagePoint",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -247,7 +312,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_31",
-          "summary": "[ESPI] Finds all Usage Points",
+          "summary": "[FB_31] Finds all Usage Points",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
 					"produces": ["application/atom+xml"],
@@ -261,6 +326,69 @@
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Usage Point",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Usage Point",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Usage Point",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Usage Point",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of this response.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages":
@@ -278,7 +406,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Add a new Usage Point.",
+          "summary": "[FB_33] Add a new Usage Point.",
           "nickname": "addUsagePoint",
 					"consumes": ["application/xml"],
 					"produces": ["application/xml"],
@@ -323,7 +451,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[ESPI] Retrieve a Usage Point Using it's ID",
+          "summary": "[FB_32] Retrieve a Usage Point Using it's ID",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -424,7 +552,7 @@
         {
           "httpMethod": "PUT",
           "functionBlock": "FB_33",
-          "summary": "Update an existing Usage Point",
+          "summary": "[FB_33] Update an existing Usage Point",
           "notes": "The Usage Point must exist",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/xml"],
@@ -472,7 +600,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "Delete a Usage Point",
+          "summary": "[FB_33] Delete a Usage Point",
           "nickname": "deleteUsagePoint",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -507,7 +635,6 @@
             }
           ]
         }
-
       ]
     }
   ]
