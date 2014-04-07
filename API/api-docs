@@ -37,10 +37,10 @@
       "path": "/../listings/DataCustodian.RetailCustomer"
     },
     {
-      "path": "/../listings/DataCustodian.Subscription"
+      "path": "/../listings/DataCustodian.UsagePoint"
     },
     {
-      "path": "/../listings/DataCustodian.UsagePoint"
+      "path": "/../listings/ThirdParty"
     }
   ]
 }

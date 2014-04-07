@@ -19,7 +19,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Finds all Usage Points",
+          "summary": "Finds all Usage Points [FB_33]",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
           "produces": ["application/atom+xml"],
@@ -105,7 +105,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Add a new Usage Point",
+          "summary": "Add a new Usage Point [FB_33]",
           "nickname": "addUsagePoint",
 					"consumes": ["application/xml"],
 					"produces": ["application/xml"],
@@ -142,7 +142,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Retrieve a Usage Point Using it's ID",
+          "summary": "Retrieve a Usage Point Using it's ID [FB_33]",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -235,7 +235,7 @@
         {
           "httpMethod": "PUT",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Update an existing Usage Point.",
+          "summary": "Update an existing Usage Point [FB_33]",
           "notes": "The Usage Point must exist",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/xml"],
@@ -275,7 +275,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Delete a Usage Point",
+          "summary": "Delete a Usage Point [FB_33]",
           "nickname": "deleteUsagePoint",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -312,7 +312,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_31",
-          "summary": "[FB_31] Finds all Usage Points",
+          "summary": "Finds all Usage Points [FB_31]",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
 					"produces": ["application/atom+xml"],
@@ -406,7 +406,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Add a new Usage Point.",
+          "summary": "Add a new Usage Point [FB_33]",
           "nickname": "addUsagePoint",
 					"consumes": ["application/xml"],
 					"produces": ["application/xml"],
@@ -451,7 +451,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Retrieve a Usage Point Using it's ID",
+          "summary": "Retrieve a Usage Point Using it's ID [FB_32]",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -552,7 +552,7 @@
         {
           "httpMethod": "PUT",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Update an existing Usage Point",
+          "summary": "Update an existing Usage Point [FB_33]",
           "notes": "The Usage Point must exist",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/xml"],
@@ -600,7 +600,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Delete a Usage Point",
+          "summary": "Delete a Usage Point [FB_33]",
           "nickname": "deleteUsagePoint",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],

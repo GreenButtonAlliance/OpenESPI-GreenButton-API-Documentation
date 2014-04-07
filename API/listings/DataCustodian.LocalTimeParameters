@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Finds all Local Time Parameters",
+          "summary": "Finds all Local Time Parameters [FB_32]",
           "notes": "An XML representation of all Local Time Parameters will be returned",
           "nickname": "findLocalTimeParameters",
           "produces": ["application/atom+xml"],
@@ -104,7 +104,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Add a new Local Time Parameter",
+          "summary": "Add a new Local Time Parameter [FB_33]",
 					"consumes": ["application/xml"],
           "nickname": "addLocalTimeParameter",
           "authorizations": ["oauth2"],
@@ -140,7 +140,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Retrieve a Local Time Parameter Using it's ID",
+          "summary": "Retrieve a Local Time Parameter Using it's ID [FB_32]",
           "nickname": "getLocalTimeParameter",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -233,7 +233,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Update an existing Local Time Parameter",
+          "summary": "Update an existing Local Time Parameter [FB_33]",
           "notes": "The Local Time Parameter must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateLocalTimeParameter",
@@ -272,7 +272,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Delete a Local Time Parameter",
+          "summary": "Delete a Local Time Parameter [FB_33]",
           "nickname": "deleteLocalTimeParameter",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],

@@ -16,7 +16,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Finds all Interval Blocks",
+          "summary": "Finds all Interval Blocks [FB_32]",
           "notes": "An XML representation of all Interval Blocks will be returned",
           "nickname": "findIntervalBlocks",
           "produces": ["application/atom+xml"],
@@ -125,7 +125,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Add a new Interval Block to the Data Custodian",
+          "summary": "Add a new Interval Block to the Data Custodian [FB_33]",
 					"consumes": ["application/xml"],
           "nickname": "addIntervalBlock",
           "authorizations": ["oauth2"],
@@ -184,7 +184,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Retrieve an IntervalBlock Using it's ID",
+          "summary": "Retrieve an IntervalBlock Using it's ID [FB_32]",
           "nickname": "getIntervalBlock",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -300,7 +300,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Update an existing Interval Block",
+          "summary": "Update an existing Interval Block [FB_33]",
           "notes": "The Interval Block must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateIntervalBlock",
@@ -362,7 +362,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Delete an Interval Block",
+          "summary": "Delete an Interval Block [FB_33]",
           "nickname": "deleteIntervalBlock",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],

@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Returns a feed representing the collection of all Retail Customers",
+          "summary": "Returns a feed representing the collection of all Retail Customers [FB_33]",
           "nickname": "getRetailCustomerCollection",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -94,7 +94,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Add a new Retail Customer",
+          "summary": "Add a new Retail Customer [FB_33]",
           "nickname": "addRetailCustomer",
 					"consumes": ["application/xml"],
           "produces": ["application/xml"],
@@ -131,7 +131,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Retrieve a Retail Customer using the Customer's ID",
+          "summary": "Retrieve a Retail Customer using the Customer's ID [FB_33]",
           "nickname": "getRetailCustomer",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -215,7 +215,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Update a Retail Customer",
+          "summary": "Update a Retail Customer [FB_33]",
           "nickname": "getRetailCustomer",
 					"consumes": ["application/xml"],
           "produces": ["application/xml"],
@@ -254,7 +254,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Delete a Retail Customer",
+          "summary": "Delete a Retail Customer [FB_33]",
           "nickname": "getRetailCustomer",
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],

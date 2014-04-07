@@ -11,9 +11,9 @@
 			[
         {
           "method": "POST",
-          "functionBlock": "FB_TP",
+          "functionBlock": "FB_42",
           "nickname": "notifySubscription",
-          "summary": "[FB_TP] Notify Third Party Data Custodian has Subscription data available",
+          "summary": "Notify Third Party Data Custodian has Subscription data available [FB_42]",
 					"consumes": ["application/xml"],
 					"authorizations": [],
           "parameters":

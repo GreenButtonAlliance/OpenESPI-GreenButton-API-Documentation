@@ -14,8 +14,8 @@
       "operations":[
         {
           "method": "GET",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Returns a feed representing the collection of all Retail Customers",
+          "functionBlock": "FB_43",
+          "summary": "Returns a feed representing the collection of all Retail Customers [FB_43]",
           "nickname": "getRetailCustomerCollection",
           "produces":["text/html"],
 					"authorizations": [],
@@ -89,8 +89,8 @@
         },
         {
           "method": "POST",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Adds a new Retail Customer",
+          "functionBlock": "FB_43",
+          "summary": "Adds a new Retail Customer [FB_43]",
           "nickname": "getRetailCustomerCollection",
 					"consumes": ["application/xml"],
           "produces":["text/html"],
@@ -123,8 +123,8 @@
       "operations":[
         {
           "method": "GET",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Retrieve a Retail Customer using the Customer's ID",
+          "functionBlock": "FB_43",
+          "summary": "Retrieve a Retail Customer using the Customer's ID [FB_43]",
           "nickname": "getRetailCustomer",
           "produces": ["application/atom+xml"],
 					"authorizations": [],
@@ -207,8 +207,8 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Update a Retail Customer",
+          "functionBlock": "FB_43",
+          "summary": "Update a Retail Customer [FB_43]",
           "nickname": "getRetailCustomer",
 					"consumes": ["application/xml"],
           "produces":[],
@@ -244,8 +244,8 @@
         },
         {
           "method": "DELETE",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Delete a Retail Customer",
+          "functionBlock": "FB_43",
+          "summary": "Delete a Retail Customer [FB_43]",
           "nickname": "getRetailCustomer",
           "produces":["application/atom+xml"],
 					"authorizations": [],
@@ -277,8 +277,8 @@
       "operations":[
         {
           "method": "GET",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Download a Green Button XML file",
+          "functionBlock": "FB_43",
+          "summary": "Download a Green Button XML file [FB_43]",
           "nickname": "downloadMyData",
 					"authorizations": [],
           "parameters":[
@@ -375,8 +375,8 @@
       "operations":[
         {
           "method": "PUT",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Upload a Green Button XML file",
+          "functionBlock": "FB_43",
+          "summary": "Upload a Green Button XML file [FB_43]",
           "nickname": "uploadMyData",
 					"consumes": ["application/xml"],
 					"authorizations": [],

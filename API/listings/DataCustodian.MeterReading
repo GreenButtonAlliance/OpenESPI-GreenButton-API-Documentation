@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Finds all Meter Readings associated with a given Usage Point",
+          "summary": "Finds all Meter Readings associated with a given Usage Point [FB_32]",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
@@ -104,7 +104,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Add a new Meter Reading to an existing Usage Point",
+          "summary": "Add a new Meter Reading to an existing Usage Point [FB_33]",
           "nickname": "addMeterReading",
 					"consumes": ["application/xml"],
 					"authorizations": ["oauth2"],
@@ -140,7 +140,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
+          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID [FB_32]",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -234,7 +234,7 @@
         {
           "httpMethod": "PUT",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Update an existing Meter Reading within Usage Point",
+          "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
           "notes": "The Usage Point and Meter Reading must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateMeterReading",
@@ -280,7 +280,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Delete a Meter Reading from Usage Point",
+          "summary": "Delete a Meter Reading from Usage Point [FB_33]",
           "nickname": "deleteMeterReading",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -316,7 +316,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Finds all Meter Readings associated with a given Usage Point",
+          "summary": "Finds all Meter Readings associated with a given Usage Point [FB_32]",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
@@ -418,7 +418,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Add a new Meter Reading to an existing Usage Point",
+          "summary": "Add a new Meter Reading to an existing Usage Point [FB_33]",
           "nickname": "addMeterReading",
 					"consumes": ["application/xml"],
 					"authorizations": ["oauth2"],
@@ -470,7 +470,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID",
+          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID [FB_32]",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -579,7 +579,7 @@
         {
           "httpMethod": "PUT",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Update an existing Meter Reading within Usage Point",
+          "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
           "notes": "The Usage Point and Meter Reading must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateMeterReading",
@@ -633,7 +633,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Delete a Meter Reading from Usage Point",
+          "summary": "Delete a Meter Reading from Usage Point [FB_33]",
           "nickname": "deleteMeterReading",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],

@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Finds all Electric Power Usage Summaries",
+          "summary": "Finds all Electric Power Usage Summaries [FB_32]",
           "notes": "An XML representation of all Electric Power Usage Summaries will be returned",
           "nickname": "findElectricPowerUsageSummaries",
           "produces": ["application/atom+xml"],
@@ -119,7 +119,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Add a new Electric Power Usage Summary to the Data Custodian",
+          "summary": "Add a new Electric Power Usage Summary to the Data Custodian [FB_33]",
           "notes": "The New Electric Power Usage Summary will be added",
           "consumes": ["application/xml"],
           "nickname": "addElectricPowerUsageSummary",
@@ -172,7 +172,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Retrieve a ElectricPowerUsageSummary Using it's ID",
+          "summary": "Retrieve a ElectricPowerUsageSummary Using it's ID [FB_32]",
           "notes": "Returns a Electric Power Usage Summary",
           "nickname": "getElectricPowerUsageSummary",
           "produces": ["application/atom+xml"],
@@ -281,7 +281,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Update an existing Electric Power Usage Summary within the DataCustodian",
+          "summary": "Update an existing Electric Power Usage Summary within the DataCustodian [FB_33]",
           "notes": "The Electric Power Usage Summary must exist",
           "consumes": ["application/xml"],
           "nickname": "updateElectricPowerUsageSummary",
@@ -336,7 +336,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Deletes a Electric Power Usage Summary",
+          "summary": "Deletes a Electric Power Usage Summary [FB_33]",
           "nickname": "deleteElectricPowerUsageSummary",
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],

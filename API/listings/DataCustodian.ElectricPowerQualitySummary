@@ -16,7 +16,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Finds all Electric Power Quality Summaries",
+          "summary": "Finds all Electric Power Quality Summaries [FB_32]",
           "notes": "An XML representation of all Electric Power Quality Summaries will be returned",
           "nickname": "findElectricPowerQualitySummaries",
           "produces": ["application/atom+xml"],
@@ -117,7 +117,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Add a new Electric Power Quality Summary to the Data Custodian",
+          "summary": "Add a new Electric Power Quality Summary to the Data Custodian [FB_33]",
           "notes": "The New Electric Power Quality Summary will be added",
           "nickname": "addElectricPowerQualitySummary",
           "consumes": ["application/xml"],
@@ -170,7 +170,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Retrieve a ElectricPowerQualitySummary Using it's ID",
+          "summary": "Retrieve a ElectricPowerQualitySummary Using it's ID [FB_32]",
           "notes": "Returns a Electric Power Quality Summary",
           "nickname": "getElectricPowerQualitySummary",
           "produces": ["application/atom+xml"],
@@ -279,7 +279,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Update an existing Electric Power Quality Summary within the DataCustodian",
+          "summary": "Update an existing Electric Power Quality Summary within the DataCustodian [FB_33]",
           "notes": "The Electric Power Quality Summary must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateElectricPowerQualitySummary",
@@ -334,7 +334,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Deletes a Electric Power Quality Summary",
+          "summary": "Deletes a Electric Power Quality Summary [FB_33]",
           "notes": "",
           "nickname": "deleteElectricPowerQualitySummary",
           "produces": ["application/xml"],

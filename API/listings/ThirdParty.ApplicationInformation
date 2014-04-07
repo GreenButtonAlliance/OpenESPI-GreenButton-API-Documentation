@@ -17,13 +17,78 @@
       [
         {
           "method": "GET",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Finds all Application Informations",
+          "functionBlock": "FB_43",
+          "summary": "[FB_43]Finds all Application Informations [FB_43]",
           "notes": "An XML representation of all Application Informations will be returned",
           "nickname": "findApplicationInformations",
           "produces": ["application/xml"],
 					"authorizations": [],
-          "parameters": [],
+          "parameters":
+					[
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Application Information.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Application Information.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Application Information.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Application Information.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply to this response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Application Information that should be transferred as the first entry of this request.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response to this request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            }
+					],
           "responseMessages":
           [
             {
@@ -38,8 +103,8 @@
         },
         {
           "method": "POST",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Add a new Application Information.",
+          "functionBlock": "FB_43",
+          "summary": "Add a new Application Information [FB_43]",
           "nickname": "addApplicationInformation",
 					"consumes": ["application/xml"],
           "produces": [],
@@ -75,8 +140,8 @@
       [
         {
           "method": "GET",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Retrieve an Application Information Using its ID.",
+          "functionBlock": "FB_43",
+          "summary": "Retrieve an Application Information Using its ID [FB_43]",
           "nickname": "getApplicationInformation",
           "produces": ["application/xml"],
 					"authorizations": [],
@@ -89,6 +154,69 @@
               "allowMultiple": true,
               "dataType": "String",
               "paramType": "path"
+            },
+            {
+              "name": "published-max",
+              "description": "The upper bound on the published date of the Application Information.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "published-min",
+              "description": "The lower bound on the published date of the Application Information.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-max",
+              "description": "The upper bound on the updated date of the Application Information.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "updated-min",
+              "description": "The lower bound on the updated date of the Application Information.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "Date",
+              "paramType": "query"
+            },
+            {
+              "name": "max-results",
+              "description": "The upper bound on the number of entries to be contained in a reply to this response.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "start-index",
+              "description": "The one based offset in the DataCustodian's collection of Application Information that should be transferred as the first entry of this request.",
+              "defaultValue": "1",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
+            },
+            {
+              "name": "depth",
+              "description": "The maximum number of entries to be transferred in the response to this request.",
+              "defaultValue": "All",
+              "required": false,
+              "allowMultiple": false,
+              "dataType": "long",
+              "paramType": "query"
             }
           ],
           "responseMessages":
@@ -105,8 +233,8 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Update an existing Application Information",
+          "functionBlock": "FB_43",
+          "summary": "Update an existing Application Information [FB_43]",
           "notes": "The Application Information must exist",
           "nickname": "updateApplicationInformation",
 					"consumes": ["application/xml"],
@@ -145,8 +273,8 @@
         },
         {
           "method": "DELETE",
-          "functionBlock": "FB_TP",
-          "summary": "[FB_TP] Delete an Application Information",
+          "functionBlock": "FB_43",
+          "summary": "Delete an Application Information [FB_43]",
           "nickname": "deleteApplicationInformation",
           "produces": [],
 					"authorizations": [],

@@ -15,7 +15,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "[FB_33] Find  all Data Custodian Authorizations.",
+          "summary": "Find  all Data Custodian Authorizations [FB_33]",
           "notes": "An XML representation of all Authorizations will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
@@ -25,7 +25,7 @@
 					[
             {
               "name": "published-max",
-              "description": "The upper bound on the published date of the referenced resource.",
+              "description": "The upper bound on the published date of the Authorization.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -34,7 +34,7 @@
             },
             {
               "name": "published-min",
-              "description": "The lower bound on the published date of the referenced resource.",
+              "description": "The lower bound on the published date of the Authorization.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -43,7 +43,7 @@
             },
             {
               "name": "updated-max",
-              "description": "The upper bound on the updated date of the referenced resource.",
+              "description": "The upper bound on the updated date of the Authorization.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -52,7 +52,7 @@
             },
             {
               "name": "updated-min",
-              "description": "The lower bound on the updated date of the referenced resource.",
+              "description": "The lower bound on the updated date of the Authorization.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -70,7 +70,7 @@
             },
             {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of this request.",
+              "description": "The one based offset in the DataCustodian's collection of Authorizations that should be transferred as the first entry of this request.",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
@@ -106,7 +106,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_31",
-          "summary": "[FB_31] Retrieve a Data Custodian Authorization Using it's ID.",
+          "summary": "Retrieve a Data Custodian Authorization Using it's ID [FB_31]",
           "notes": "Returns a Authorization",
           "responseClass": "Authorization",
           "nickname": "getAuthorization",
@@ -124,7 +124,7 @@
             },
             {
               "name": "published-max",
-              "description": "The upper bound on the published date of the referenced resource.",
+              "description": "The upper bound on the published date of the Authorization.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -133,7 +133,7 @@
             },
             {
               "name": "published-min",
-              "description": "The lower bound on the published date of the referenced resource.",
+              "description": "The lower bound on the published date of the Authorization.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -142,7 +142,7 @@
             },
             {
               "name": "updated-max",
-              "description": "The upper bound on the updated date of the referenced resource.",
+              "description": "The upper bound on the updated date of the Authorization.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -151,7 +151,7 @@
             },
             {
               "name": "updated-min",
-              "description": "The lower bound on the updated date of the referenced resource.",
+              "description": "The lower bound on the updated date of the Authorization.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -169,7 +169,7 @@
             },
             {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of referenced resources that should be transferred as the first entry of this request.",
+              "description": "The one based offset in the DataCustodian's collection of Authorizations that should be transferred as the first entry of this request.",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
@@ -200,7 +200,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Update an existing Data Custodian Authorization",
+          "summary": "Update an existing Data Custodian Authorization [FB_32]",
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
 					"consumes": ["application/xml"],
@@ -241,7 +241,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_32",
-          "summary": "[FB_32] Delete an existing Data Custodian Authorization.",
+          "summary": "Delete an existing Data Custodian Authorization [FB_32]",
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteAuthorization",
