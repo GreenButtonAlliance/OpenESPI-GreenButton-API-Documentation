@@ -1,0 +1,261 @@
+<h3>Green Button Resources</h3>
+<p>A <em>DataCustodian</em> will, when authorized by a <em>RetailCustomer</em>, publish a GreenButton data stream. A <em>ThirdParty</em> may then subscribe to that stream. Green Button uses the <a href="http://www.odata.org"><span style="color:blue;">Open Data Protocol (OData)</span></a> standard to serialize the data and the <a href="http://oauth.net/"><span style="color:blue;">OAuth 2.0 Authorization Framework</span></a> protocol to provide secure authorization for accessing the published data stream.
+</p>
+<p>Green Button APIs are designed to support data flows that are both large and small. Many Utilities will schedule bulk transfers of hundreds of thousands of 24 hour data as a batch process. In this case, the Green Button APIs must be able to accomodate blocked transfers, recovery, and restarts. Other use-cases are more driven by frequent transmissions of smaller data sets, for example the hourly usage of a single outlet in your home. Green Button is designed to handle both!</p>
+
+<div id="accordion1">
+<!--
+  <h3>Subscription</h3>
+  <div>
+    <p></p>
+    <pre><code>&lt;Subscription&gt;
+&lt;\Subscription&gt;
+    </code></pre>
+  </div>
+-->
+  <h3>Authorization</h3>
+  <div>
+    <p></p>
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/Authorization/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/Authorization"/&gt;
+  &lt;title&gt;An Authorization to exchange data&lt;/title&gt;
+  &lt;content&gt;
+      &lt;Authorization xmlns="http://naesb.org/espi"&gt;
+           &lt;kind&gt;0&lt;/kind&gt;
+      &lt;/Authorization&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
+    </code></pre>
+  </div>
+  <h3>ApplicationInformation</h3>
+  <div>
+    <p></p>
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/ApplicationInformation/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/ApplicationInformation"/&gt;
+  &lt;title&gt;ApplicationInformation Describing a DataCustodian and ThirdParty relationship&lt;/title&gt;
+  &lt;content&gt;
+      &lt;ApplicationInformation xmlns="http://naesb.org/espi"&gt;
+           &lt;kind&gt;0&lt;/kind&gt;
+      &lt;/ApplicationInformation&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
+    </code></pre>
+    </div>
+  </div>
+
+<div id="accordion">
+  <h3>UsagePoint</h3>
+  <div>
+    <p>A <em>UsagePoint</em> is where a resource is measured. Typically, it is your Utility Smart Meter, but it could be the outlet on the wall as well. UsagePoints provide the reference for all meter readings that are contained within the Green Button data. UsagePoints have a <em>ServiceCategory</em> that defines what <em>kind</em> of resource, such as electricity, gas, or water measurement is being reported. </p>
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/Subscription/9b6c7063/UsagePoint/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/Subscription/9b6c7063/UsagePoint"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/Subscription/9b6c7063/UsagePoint/01/MeterReading"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/Subscription/9b6c7063/UsagePoint/01/ElectricPowerUsageSummary"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/UsagePoint/01/LocalTimeParameters/01"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;UsagePoint xmlns="http://naesb.org/espi"&gt;
+      &lt;ServiceCategory&gt;
+        &lt;kind&gt;0&lt;/kind&gt;
+      &lt;/ServiceCategory&gt;
+    &lt;/UsagePoint&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
+    </code></pre>
+  </div>
+  <h3>ReadingType</h3>
+  <div>
+    <p>A <em>ReadingType</em> provides detail as to the specifics of the reading data that is being obtained. Green Button follows international standards and has the ability to represent large industrial resources as well as those used in a residence.</p>
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/Subscription/9b6c7063/ReadingType/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/Subscription/9b6c7063/ReadingType"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/Subscription/9b6c7063/UsagePoint/01/MeterReading"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;ReadingType xmlns="http://naesb.org/espi"&gt;
+      &lt;accumulationBehaviour&gt;4&lt;/accumulationBehaviour&gt;
+      &lt;commodity&gt;1&lt;/commodity&gt;
+      &lt;currency&gt;840&lt;/currency&gt;
+      &lt;dataQualifier&gt;12&lt;/dataQualifier&gt;
+      &lt;flowDirection&gt;1&lt;/flowDirection&gt;
+      &lt;intervalLength&gt;86400&lt;/intervalLength&gt;
+      &lt;kind&gt;12&lt;/kind&gt;
+      &lt;phase&gt;769&lt;/phase&gt;
+      &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
+      &lt;timeAttribute&gt;0&lt;/timeAttribute&gt;
+      &lt;uom&gt;72&lt;/uom&gt;
+    &lt;/ReadingType&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
+    </code></pre>
+  </div>
+  <h3>MeterReading</h3>
+  <div>
+    <p>A MeterReading is a container for all of the measured <em>IntervalBlocks</em> within the Green Button data captured at a <em>UsagePoint</em>.</p>
+    <pre><code>&lt;MeterReading&gt;
+&lt;\MeterReading&gt;
+    </code></pre>
+  </div>
+  <h3>IntervalBlock</h3>
+  <div>
+    <p><em>IntervalBlock</em>s are the primary data carrier within the Green Button data. IntervalBlocks may have one or more Intervals, each with a start and duration, as well as the specific <em>IntervalReading</em></p>
+
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/Subscription/9b6c7063/IntervalBlock/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/Subscription/9b6c7063IntervalBlock"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/Subscription/9b6c7063/UsagePoint/01/MeterReading/01"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;IntervalBlock xmlns="http://naesb.org/espi"&gt;
+      &lt;interval&gt;
+        &lt;duration&gt;86400&lt;/duration&gt;
+        &lt;start&gt;1330578000&lt;/start&gt;
+        &lt;!-- start date: 3/1/2012 5:00:00 AM --&gt;
+      &lt;/interval&gt;
+      &lt;IntervalReading&gt;
+        &lt;cost&gt;539919&lt;/cost&gt;
+        &lt;timePeriod&gt;
+          &lt;duration&gt;86400&lt;/duration&gt;
+          &lt;start&gt;1330578000&lt;/start&gt;
+          &lt;!-- 3/1/2012 5:00:00 AM  --&gt;
+         &lt;/timePeriod&gt;
+        &lt;value&gt;57751&lt;/value&gt;
+      &lt;/IntervalReading&gt;
+    &lt;/IntervalBlock&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
+    </code></pre>
+  </div>
+  <h3>LocalTimeParameters</h3>
+  <div>
+    <p>The <em>LocalTimeParameters</em> provide a flexible manner to enable <em>Energy Usage Information (EUI)</em> to be provided with a reference to local time, without including any <em>Personal Identifiable Information</em>.  </p>
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/Subscription/9b6c7063/LocalTimeParameters/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/Subscription/9b6c7063/LocalTimeParameters"/&gt;
+  &lt;link rel="related"
+        href="/espi/1_1/resource/Subscription/9b6c7063/UsagePoint/01"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;LocalTimeParameters xmlns="http://naesb.org/espi"&gt;
+      &lt;dstEndRule&gt;B40E2000&lt;/dstEndRule&gt;
+      &lt;dstOffset&gt;3600&lt;/dstOffset&gt;
+      &lt;dstStartRule&gt;360E2000&lt;/dstStartRule&gt;
+      &lt;tzOffset&gt;-18000&lt;/tzOffset&gt;
+    &lt;/LocalTimeParameters&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
+    </code></pre>
+  </div>
+  <h3>ElectricPowerUsageSummary</h3>
+  <div>
+    <p></p>
+    <pre><code>&lt;entry&gt;
+  &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+  &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+  &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+  &lt;link rel="self"
+        href="/espi/1_1/resource/Subscription/9b6c7063/ElectricPowerUsageSummary/01"/&gt;
+  &lt;link rel="up"
+        href="/espi/1_1/resource/Subscription/9b6c7063/ElectricPowerUsageSummary"/&gt;
+  &lt;title&gt;my house&lt;/title&gt;
+  &lt;content&gt;
+    &lt;ElectricPowerUsageSummary xmlns="http://naesb.org/espi"&gt;
+      &lt;billingPeriod&gt;
+        &lt;duration&gt;2588400&lt;/duration&gt;
+        &lt;start&gt;1330578000&lt;/start&gt;
+      &lt;/billingPeriod&gt;
+      &lt;billLastPeriod&gt;20810000&lt;/billLastPeriod&gt;
+      &lt;billToDate&gt;8145000&lt;/billToDate&gt;
+      &lt;costAdditionalLastPeriod&gt;4525000&lt;/costAdditionalLastPeriod&gt;
+      &lt;currency&gt;840&lt;/currency&gt;
+      &lt;overallConsumptionLastPeriod&gt;
+        &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
+        &lt;uom&gt;72&lt;/uom&gt;
+        &lt;value&gt;1951364&lt;/value&gt;
+      &lt;/overallConsumptionLastPeriod&gt;
+      &lt;currentBillingPeriodOverAllConsumption&gt;
+        &lt;powerOfTenMultiplier&gt;0&lt;/powerOfTenMultiplier&gt;
+        &lt;timeStamp&gt;1334462400&lt;/timeStamp&gt;
+        &lt;uom&gt;72&lt;/uom&gt;
+        &lt;value&gt;1006640&lt;/value&gt;
+      &lt;/currentBillingPeriodOverAllConsumption&gt;
+      &lt;qualityOfReading&gt;14&lt;/qualityOfReading&gt;
+      &lt;statusTimeStamp&gt;1334462400&lt;/statusTimeStamp&gt;
+    &lt;/ElectricPowerUsageSummary&gt;
+  &lt;/content&gt;
+&lt;/entry&gt;
+    </code></pre>
+  </div>
+  <h3>ElectricPowerQualitySummary</h3>
+  <div>
+    <p></p>
+    <pre><code> &lt;entry&gt;
+        &lt;id&gt;urn:uuid:DEB0A337-C1B5-4658-99BA-4688E253A99B&lt;/id&gt;
+        &lt;link rel="self" href="Subscription/9b6c7063/ElectricPowerQualitySummary/01"/&gt;
+        &lt;link rel="up" type="" href="Subscription/9b6c7063/UsagePoint/01/ElectricPowerQualitySummary"/&gt;
+        &lt;title&gt;Quality Summary&lt;/title&gt;
+        &lt;content&gt;
+            &lt;ElectricPowerQualitySummary xmlns="http://naesb.org/espi"&gt;
+                &lt;flickerPlt&gt;1&lt;/flickerPlt&gt;
+                &lt;flickerPst&gt;2&lt;/flickerPst&gt;
+                &lt;harmonicVoltage&gt;3&lt;/harmonicVoltage&gt;
+                &lt;longInterruptions&gt;4&lt;/longInterruptions&gt;
+                &lt;mainsVoltage&gt;5&lt;/mainsVoltage&gt;
+                &lt;measurementProtocol&gt;6&lt;/measurementProtocol&gt;
+                &lt;powerFrequency&gt;7&lt;/powerFrequency&gt;
+                &lt;rapidVoltageChanges&gt;8&lt;/rapidVoltageChanges&gt;
+                &lt;shortInterruptions&gt;9&lt;/shortInterruptions&gt;
+                &lt;summaryInterval&gt;
+                    &lt;duration&gt;2119600&lt;/duration&gt;
+                    &lt;start&gt;2330578000&lt;/start&gt;
+                &lt;/summaryInterval&gt;
+                &lt;supplyVoltageDips&gt;10&lt;/supplyVoltageDips&gt;
+                &lt;supplyVoltageImbalance&gt;11&lt;/supplyVoltageImbalance&gt;
+                &lt;supplyVoltageVariations&gt;12&lt;/supplyVoltageVariations&gt;
+                &lt;tempOvervoltage&gt;13&lt;/tempOvervoltage&gt;
+            &lt;/ElectricPowerQualitySummary&gt;
+        &lt;/content&gt;
+        &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+        &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+    &lt;/entry&gt;
+    </code></pre>
+  </div>
+</div>
