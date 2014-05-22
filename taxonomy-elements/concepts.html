@@ -1,0 +1,79 @@
+<h3>Concepts</h3>
+<p>Green Button uses the <a href="http://en.wikipedia.org/wiki/Atom_feed">Atom Syndication Format</a> to represent structured energy usage information in an XML format that may be exchanged on the internet.  Atom is an XML language used for web feeds, while the Atom Publishing Protocol (AtomPub or APP) is a simple HTTP-based protocol for creating and updating web resources.  We also use the <a href="http://www.odata.org"> <span style="color:blue;">Open Data (OData)</span></a> standardized protocol to serialize the structure of Green Button Data.</p>
+
+<p>The resources defined within Green Button, UsagePoints, MeterReadings, etc, are expressed, in XML format, within the Atom feed's <a href="#entry">Entry</a> tags. This results in a uniform way to expose full-featured data APIs that reference a Retail Customer's encapsulated Energy Usage Information.</p>
+
+<p>OData works by placing data within the <em>&lt;entry&gt;</em> tags
+of the Atom stream. Data records are placed within the
+<em>&lt;entry&gt; ... &lt;content&gt;</em> tags, and relationships
+between tables are represented in the
+<em>&lt;link&gt;</em>tags. OData.org will provide you with part of the
+background you need. It describes the usage of the Atom entities, in
+particular, &lt;entry&gt;, &lt;link&gt; and &lt;contents&gt;.
+</p>
+<p>
+The second thing to note is that in the Atom reprsentation, a feed will always represent a collection of 1 or more Green Button resources:
+<pre>
+&lt;feed&gt;
+  ...
+  &lt;entry&gt;
+    ...
+    &lt;content&gt;
+      &lt;espi-resource&gt;
+    &lt;/contents&gt;
+  &lt;/entry&gt;
+  ...
+&lt;/feed&gt;
+</pre>
+
+<div id="accordion2" class="accordion">
+<h3>Relationships</h3>
+<div>
+
+<p>So all the <a
+ href="https://github.com/energyos/OpenESPI-Common-java/blob/master/etc/espiDerived.xsd">espiDerived.xsd</a>
+entities are always contained in a feed and the entry/contents describe the espi entity itself. In
+addtion, you need to construct (during the parse if possible for you:) the associations that need to
+exist between the espi entities.  The <em>&lt;link&gt;</em> tags are quite important for use during
+parsing of the Green Button data. These links allow you to know which <em>MeterReading</em>s are
+related to a specific <em>UsagePoint</em>.
+
+<p>Within the
+<em>&lt;entry&gt;</em>'s the <em>"related"</em> links point to a collection, for example:
+<pre><code>
+&lt;feed xmlns="http://www.w3.org/2005/Atom"
+         xsi:schemaLocation="http://naesb.org/espi espiDerived.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+ &lt;id&gt;urn:uuid:728B5594-414E-471A-A230-08FCCDAC655C&lt;/id&gt;
+ &lt;published&gt;2012-10-24T00:00:00Z&lt;/published&gt;
+ &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+ &lt;title&gt;ThirdPartyX Batch Feed&lt;/title&gt;
+ &lt;updated&gt;2012-10-24T00:00:00Z&lt;/updated&gt;
+ &lt;link rel="self" href="/ThirdParty/83e269c1/Batch"/&gt;
+   &lt;entry&gt;
+   &lt;id&gt;urn:uuid:97EAEBAD-1214-4A58-A3D4-A16A6DE718E1&lt;/id&gt;
+     &lt;link rel="self"
+           href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Subscription/9b6c7063/UsagePoint/01"/&gt;
+     &lt;link rel="up"
+           href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Subscription/9b6c7063/UsagePoint"/&gt;
+     &lt;link rel="related"
+           href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Subscription/9b6c7063/UsagePoint/01/MeterReading"/&gt;
+     &lt;link rel="related"
+           href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/Subscription/9b6c7063/UsagePoint/01/ElectricPowerUsageSummary"/&gt;
+     &lt;link rel="related"
+           href="https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/LocalTimeParameters/01"/&gt;
+     &lt;title&gt;my house&lt;/title&gt;
+     &lt;content&gt;
+       &lt;UsagePoint xmlns="http://naesb.org/espi"&gt;
+         &lt;ServiceCategory&gt;
+           &lt;kind&gt;0&lt;/kind&gt;
+         &lt;/ServiceCategory&gt;
+       &lt;/UsagePoint&gt;
+     &lt;/content&gt;
+   &lt;/entry&gt;
+ &lt;/feed&gt;
+    </code></pre>
+    
+
+  </div>
+
