@@ -13,11 +13,6 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Openespi-greenbuttondeveloper : A repository for the Green Button Connect My Data API Documentation" />
 
-    <script src="jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
-    <script src="jquery-ui-1.10.3.custom/js/ui/jquery-ui.custom.js"></script>
-    <link rel="stylesheet" href="jquery-ui-1.10.3.custom/css/GB_2/jquery-ui.css" />
-    <link rel="stylesheet" href="resources/demos/style.css" />
-
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="http://green-button.github.io/static/css/style.css">
@@ -50,35 +45,24 @@
     </div>
   </div>
 </header>
-<div class="section-container">
+
+<div class="section-container" "content-page">
+  <br />  <br />  <br />  <br />  <br />
   <div class = "section-content">
-<div id="home">
-<h3><img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
-  <a name="welcome-to-green-button-developer" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>
-  Welcome to Green Button Developer</h3>
+    <div id="home">
+<h3>Welcome to Green Button Developer</h3>
 
 <p>The Green Button API provides flexible access to Energy Usage
 Information through a set of RESTful interfaces. These APIs provide access to
 Green Button resources.</p>
 
-<p>Green Button uses the <a href="http://www.odata.org"><span style="color:blue;">Open Data(OData)</span></a>
-standardized protocol for creating and consuming data APIs. OData
-builds on core protocols like HTTP and commonly accepted methodologies
-like REST. This results in a uniform way to expose full-featured data APIs.
-Green Button utilizes the <a href="http://en.wikipedia.org/wiki/Atom_feed">Atom Publishing Standard</a>
-to encapsulate Energy Usage Information.</p>
-
-<p>Green Button uses <a href="API">RESTful APIs</a> to provide
+<p>Green Button represents energy usage information as a set of resources as defined in the ESPI standard and uses <a href="API">RESTful APIs</a> to provide
 standard access to information for metered resources such as
 electricity, gas, and water. These interfaces may be used to access and
 manage the metered data by using atom+xml based streams of Energy
-Usage Information (EUI) encapsulated within an Atom Feed. The tabs
-above allow you to explore more deeply into the Green Button API by
-reviewing example API calls.</p>
+Usage Information (EUI) encapsulated within an Atom Feed.</p>
 
-<h3>
-<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>RetailCustomer, DataCustodian &amp; ThirdParty Actors</h3>
+<h3></span></a>RetailCustomer, DataCustodian &amp; ThirdParty Actors</h3>
 <p>Green Button allows data to be exchanged between Utilities, Customers, and Third Party Services Providers. It uses standard (http) based messaging to accomplish these exchanges. So, starting with the Green Button Actors:
 <dl>
 <dt>RetailCustomer</dt>
@@ -101,9 +85,7 @@ RetailCustomer, allow that data to be shared with a third party.</dd>
 
 <img class="img-responsive" src="images/GreenButton_Actors_transparent.png" style="float:right;" width="400"/>
 
-<h3>
-<img style="float:left; width:24px; margin-top:0px; border:0px;" src="images/GreenButton_only_64x64.png"/>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Relationships Amoungst the Actors</h3>
+<h3>Relationships between the Actors</h3>
 <p>The Actors enter into relationships as depicted in the diagram above. The simplest relationship is the one that exists between the DataCustodian (i.e. the Utility) and their customer (the <em>RetailCustomer</em>). This relationship allows the <em>RetailCustomer</em> to download a file that contains their resource usage information. This simple relationship is the basis for the <a href="#download-my-data">Green Button Download My Data</a> operation. 
 
 </div>
@@ -115,14 +97,11 @@ RetailCustomer, allow that data to be shared with a third party.</dd>
 
 <p>The resources defined within Green Button, UsagePoints, MeterReadings, etc, are expressed, in XML format, within the Atom feed's <a href="#entry">Entry</a> tags. This results in a uniform way to expose full-featured data APIs that reference a Retail Customer's encapsulated Energy Usage Information.</p>
 
-<p>OData works by placing data within the <em>&lt;entry&gt;</em> tags
+<p>Green Button works by placing data within the <em>&lt;entry&gt;</em> tags
 of the Atom stream. Data records are placed within the
 <em>&lt;entry&gt; ... &lt;content&gt;</em> tags, and relationships
 between tables are represented in the
-<em>&lt;link&gt;</em>tags. OData.org will provide you with part of the
-background you need. It describes the usage of the Atom entities, in
-particular, &lt;entry&gt;, &lt;link&gt; and &lt;contents&gt;.
-</p>
+<em>&lt;link&gt;</em>tags.</p>
 <p>
 The second thing to note is that in the Atom reprsentation, a feed will always represent a collection of 1 or more Green Button resources:
 <pre>
@@ -193,7 +172,7 @@ related to a specific <em>UsagePoint</em>.
 
 <div id="data-elements">
 <h3>Green Button Resources</h3>
-<p>A <em>DataCustodian</em> will, when authorized by a <em>RetailCustomer</em>, publish a GreenButton data stream. A <em>ThirdParty</em> may then subscribe to that stream. Green Button uses the <a href="http://www.odata.org"><span style="color:blue;">Open Data Protocol (OData)</span></a> standard to serialize the data and the <a href="http://oauth.net/"><span style="color:blue;">OAuth 2.0 Authorization Framework</span></a> protocol to provide secure authorization for accessing the published data stream.
+<p>A <em>DataCustodian</em> will, when authorized by a <em>RetailCustomer</em>, publish a GreenButton data stream. A <em>ThirdParty</em> may then subscribe to that stream. Green Button uses the <a href="http://oauth.net/"><span style="color:blue;">OAuth 2.0 Authorization Framework</span></a> protocol to provide secure authorization for accessing the published data stream.
 </p>
 <p>Green Button APIs are designed to support data flows that are both large and small. Many Utilities will schedule bulk transfers of hundreds of thousands of 24 hour data as a batch process. In this case, the Green Button APIs must be able to accomodate blocked transfers, recovery, and restarts. Other use-cases are more driven by frequent transmissions of smaller data sets, for example the hourly usage of a single outlet in your home. Green Button is designed to handle both!</p>
 
