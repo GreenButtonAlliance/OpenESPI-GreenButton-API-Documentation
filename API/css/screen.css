@@ -184,8 +184,9 @@ table {
 .swagger-ui-wrap table tbody tr td {
   padding: 6px;
   font-size: 0.9em;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: none;
   vertical-align: top;
+	text-align: center;
   line-height: 1.3em;
 }
 .swagger-ui-wrap ol {
@@ -467,9 +468,14 @@ table {
   color: #89BF04;
 }
 .swagger-ui-wrap caption,
-.swagger-ui-wrap th,
 .swagger-ui-wrap td {
-  text-align: left;
+  text-align: center;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.swagger-ui-wrap th {
+  text-align: center;
+	text-decoration: underline;
   font-weight: normal;
   vertical-align: middle;
 }

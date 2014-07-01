@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Finds all Local Time Parameters [FB_32]",
+          "summary": "Retrieve all Local Time Parameters [FB_32]",
           "notes": "An XML representation of all Local Time Parameters will be returned",
           "nickname": "findLocalTimeParameters",
           "produces": ["application/atom+xml"],

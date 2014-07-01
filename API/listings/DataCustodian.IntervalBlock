@@ -16,8 +16,8 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
-          "summary": "Finds all Interval Blocks [FB_32]",
+          "functionBlock": "FB_33",
+          "summary": "Retrieve all Interval Blocks [FB_33]",
           "notes": "An XML representation of all Interval Blocks will be returned",
           "nickname": "findIntervalBlocks",
           "produces": ["application/atom+xml"],
@@ -137,8 +137,8 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
-          "summary": "Retrieve an IntervalBlock Using it's ID [FB_32]",
+          "functionBlock": "FB_33",
+          "summary": "Retrieve an IntervalBlock Using it's ID [FB_33]",
           "nickname": "findIntervalBlock",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -295,7 +295,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Finds all Interval Blocks [FB_32]",
+          "summary": "Retrieve all Interval Blocks [FB_32]",
           "notes": "An XML representation of all Interval Blocks will be returned",
           "nickname": "findIntervalBlocks",
           "produces": ["application/atom+xml"],

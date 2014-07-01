@@ -19,7 +19,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "Finds all Usage Points [FB_33]",
+          "summary": "Retrieve all Usage Points [FB_33]",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
           "produces": ["application/atom+xml"],
@@ -141,8 +141,8 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_33",
-          "summary": "Retrieve a Usage Point Using it's ID [FB_33]",
+          "functionBlock": "FB_32",
+          "summary": "Retrieve a Usage Point Using it's ID [FB_32]",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -275,7 +275,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "Delete a Usage Point [FB_33]",
+          "summary": "Delete an existing Usage Point [FB_33]",
           "nickname": "deleteUsagePoint",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -306,13 +306,13 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint",
+      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint",
       "operations":
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_31",
-          "summary": "Finds all Usage Points [FB_31]",
+          "functionBlock": "FB_32",
+          "summary": "Retrieve all Usage Points by Subscription ID [FB_32]",
           "notes": "An XML representation of all Usage Points will be returned",
           "nickname": "findUsagePoints",
 					"produces": ["application/atom+xml"],
@@ -320,11 +320,11 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer.",
+              "name": "SubscriptionID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
               "paramType": "path"
             },
             {
@@ -406,7 +406,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Add a new Usage Point [FB_33]",
+          "summary": "Add a new Usage Point by Subscription ID [FB_33]",
           "nickname": "addUsagePoint",
 					"consumes": ["application/xml"],
 					"produces": ["application/xml"],
@@ -414,11 +414,11 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer",
+              "name": "SubscriptionID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
               "paramType": "path"
             },
             {
@@ -445,24 +445,24 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}",
+      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint/{UsagePointID}",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Retrieve a Usage Point Using it's ID [FB_32]",
+          "summary": "Retrieve a Subscription Usage Point by it's ID [FB_32]",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer",
+              "name": "SubscriptionID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
               "paramType": "path"
             },
             {
@@ -552,7 +552,7 @@
         {
           "httpMethod": "PUT",
           "functionBlock": "FB_33",
-          "summary": "Update an existing Usage Point [FB_33]",
+          "summary": "Update an existing Subscription Usage Point [FB_33]",
           "notes": "The Usage Point must exist",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/xml"],
@@ -561,11 +561,11 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer",
+              "name": "SubscriptionID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
               "paramType": "path"
             },
             {
@@ -600,18 +600,18 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "Delete a Usage Point [FB_33]",
+          "summary": "Delete an existing Subscription Usage Point [FB_33]",
           "nickname": "deleteUsagePoint",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer",
+              "name": "SubscriptionID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
               "paramType": "path"
             },
             {
