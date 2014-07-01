@@ -47,7 +47,7 @@
         window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));				
       }})
 
-    var token = "Bearer ae4e33b9-457d-43b4-8815-856b6c8b7a72";		
+    var token = "";		
 	
 		window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));
     window.swaggerUi.load();
@@ -69,20 +69,17 @@ These APIs allow application developers full access, in Green Button Format, to 
 purpose of developing new Green Button Applications. 
       </p>
 <p>
-	The APIs below have a "Try It Out!" button for each RESTful API Call. If you want to try out the APIs, you will need
-	to choose parameters to send to the DataCustodian sandbox. These are:
-	<table border='1' width="40%">
-		<tr><th>userid</th><th>RetailCustomerId</th><th>UsagePoints:</th><th>UsagePointID</th></tr>
-		<tr><td>alan</th><th>1</th><th>UsagePoints:</th><th>1,2,4</th></tr>
-                <tr><td>charles</th><th>2</th><th>UsagePoints:</th><th>5,6</th></tr>
+Access to Green Button APIs require an OAuth2 Access Token.  The following table contains a list of Access Tokens and the various Data Custodian Roles that may be tested using the assigned Access Token.  Insert one the following  Access Tokens in the field labelled "Access Token:" at the top of the page prior to selecting the "Try It Out!" button:
+  <table border='1' width="75%">
+	  <tr><th>Access Token</th><th>Role Being Tested</th></tr>
+		<tr><td>Bearer 688b026c-665f-4994-9139-6b21b13fbeee</td><td>Data Custodian Admin</td></tr>
+		<tr><td>Bearer 809caf03-612e-4e89-94b1-6f86d83b1ef8</td><td>Meter Upload Admin</td></tr>
+		<tr><td>Bearer 75dd9c46-becf-48b5-9cb5-9c3233d718d0</td><td>Third Party Admin</td></tr>
+		<tr><td>Bearer d89bb056-0f02-4d47-9fd2-ec6a19ba8d0c</td><td>Third Party Registration Admin</td></tr>
+    <tr><td>Bearer 93de3a65-30a6-40f1-99b9-8c10dc98ef07</td><td>Role User (alan -- ID=1)</td></tr>
+		<tr><td>Bearer a467535d-7887-41a9-b2cf-c9380441aa60</td><td>Role User (charles -- ID=5)</td></tr>
 	</table>
 </p>
-      <p>
-      <hr />
-Access to Green Button APIs normally require an OAuth2 Access Token. This API sandbox currently does not require 
-a token. In the near future, the API entry's "Try it out!" button will require a valid access token for successful 
-operation. When that occurs, directions will be provided and the token will need to be entered in the input field 
-labelled "Access Token" below. 
 <center>
       <form id='api_selector'>		
 			  <div class='input'>

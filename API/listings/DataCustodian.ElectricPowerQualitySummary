@@ -10,13 +10,13 @@
   ],
   "apis": [
     {
-      "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySummary",
+      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySummary",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Finds all Electric Power Quality Summaries [FB_32]",
+          "summary": "Retrieve all Electric Power Quality Summaries [FB_32]",
           "notes": "An XML representation of all Electric Power Quality Summaries will be returned",
           "nickname": "findElectricPowerQualitySummaries",
           "produces": ["application/atom+xml"],
@@ -24,11 +24,11 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
+              "name": "SubscriptionID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
               "paramType": "path"
             },
             {
@@ -126,11 +126,11 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
+              "name": "SubscriptionID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
               "paramType": "path"
             },
             {
@@ -164,13 +164,13 @@
       ]
     },
     {
-      "path": "/espi/1_1/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySummary/{ElectricPowerQualitySummaryID}",
+      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint/{UsagePointID}/ElectricPowerQualitySummary/{ElectricPowerQualitySummaryID}",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Retrieve a ElectricPowerQualitySummary Using it's ID [FB_32]",
+          "summary": "Retrieve an ElectricPowerQualitySummary Using it's ID [FB_32]",
           "notes": "Returns a Electric Power Quality Summary",
           "nickname": "getElectricPowerQualitySummary",
           "produces": ["application/atom+xml"],
@@ -178,11 +178,11 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
+              "name": "SubscriptionID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
               "paramType": "path"
             },
             {
@@ -279,7 +279,7 @@
         {
           "method": "PUT",
           "functionBlock": "FB_33",
-          "summary": "Update an existing Electric Power Quality Summary within the DataCustodian [FB_33]",
+          "summary": "Update an existing Electric Power Quality Summary [FB_33]",
           "notes": "The Electric Power Quality Summary must exist",
 					"consumes": ["application/xml"],
           "nickname": "updateElectricPowerQualitySummary",
@@ -288,11 +288,11 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
+              "name": "SubscriptionID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
               "paramType": "path"
             },
             {
@@ -334,7 +334,7 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "Deletes a Electric Power Quality Summary [FB_33]",
+          "summary": "Delete an existing Electric Power Quality Summary [FB_33]",
           "notes": "",
           "nickname": "deleteElectricPowerQualitySummary",
           "produces": ["application/xml"],
@@ -342,11 +342,11 @@
           "parameters":
           [
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Electric Power Quality Summary references.",
+              "name": "SubscriptionID",
+              "description": "The Subscription's ID",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "dataType": "String",
               "paramType": "path"
             },
             {

@@ -14,8 +14,8 @@
       "operations": [
         {
           "method": "GET",
-          "functionBlock": "FB_33",
-          "summary": "Find  all Data Custodian Authorizations [FB_33]",
+          "functionBlock": "FB_3",
+          "summary": "Find  all Data Custodian Authorizations [FB_3]",
           "notes": "An XML representation of all Authorizations will be returned",
           "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
@@ -105,8 +105,8 @@
       "operations": [
         {
           "method": "GET",
-          "functionBlock": "FB_31",
-          "summary": "Retrieve a Data Custodian Authorization Using it's ID [FB_31]",
+          "functionBlock": "FB_3",
+          "summary": "Retrieve a Data Custodian Authorization Using it's ID [FB_3]",
           "notes": "Returns a Authorization",
           "responseClass": "Authorization",
           "nickname": "getAuthorization",
@@ -199,8 +199,8 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_32",
-          "summary": "Update an existing Data Custodian Authorization [FB_32]",
+          "functionBlock": "FB_44",
+          "summary": "Update an existing Data Custodian Authorization [FB_44]",
           "notes": "The Authorization must exist",
           "nickname": "updateAuthorization",
 					"consumes": ["application/xml"],
@@ -240,8 +240,8 @@
 	},
         {
           "method": "DELETE",
-          "functionBlock": "FB_32",
-          "summary": "Delete an existing Data Custodian Authorization [FB_32]",
+          "functionBlock": "FB_44",
+          "summary": "Delete an existing Data Custodian Authorization [FB_44]",
           "notes": "",
           "responseClass": "void",
           "nickname": "deleteAuthorization",

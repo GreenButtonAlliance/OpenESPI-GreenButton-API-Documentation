@@ -18,7 +18,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "Finds all Application Informations [FB_33]",
+          "summary": "Retrieve all Application Information Structure contents [FB_33]",
           "notes": "An XML representation of all Application Informations will be returned",
           "nickname": "findApplicationInformations",
           "produces": ["application/atom+xml"],
@@ -104,7 +104,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Add a new Application Information [FB_33]",
+          "summary": "Add a new Application Information Structure [FB_33]",
           "nickname": "addApplicationInformation",
 					"consumes": ["application/xml"],
           "produces": [],
@@ -140,8 +140,8 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
-          "summary": "Retrieve an Application Information Using it's ID [FB_32]",
+          "functionBlock": "FB_3",
+          "summary": "Retrieve an Application Information Structure using it's ID [FB_3]",
           "nickname": "getApplicationInformation",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -170,8 +170,8 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_32",
-          "summary": "Update an existing Application Information [FB_32]",
+          "functionBlock": "FB_41",
+          "summary": "Update an existing Application Information Structure [FB_41]",
           "notes": "The Application Information must exist",
           "nickname": "updateApplicationInformation",
 					"consumes": ["application/xml"],
@@ -210,8 +210,8 @@
 	      },
         {
           "method": "DELETE",
-          "functionBlock": "FB_32",
-          "summary": "Delete Application Information [FB_32]",
+          "functionBlock": "FB_41",
+          "summary": "Delete an Application Information Structure [FB_41]",
           "nickname": "deleteApplicationInformation",
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -219,7 +219,7 @@
 					[
             {
               "name": "ApplicationInformationID",
-              "description": "The ID of the Application Information to be deleted.",
+              "description": "The ID of the Application Information Structure to be deleted.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",

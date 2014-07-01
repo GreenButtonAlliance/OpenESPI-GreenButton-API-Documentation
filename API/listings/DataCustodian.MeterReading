@@ -17,8 +17,8 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
-          "summary": "Finds all Meter Readings associated with a given Usage Point [FB_32]",
+          "functionBlock": "FB_33",
+          "summary": "Retrieve all Meter Readings associated with a given Usage Point [FB_33]",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
@@ -139,8 +139,8 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
-          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID [FB_32]",
+          "functionBlock": "FB_33",
+          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID [FB_33]",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -316,7 +316,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Finds all Meter Readings associated with a given Usage Point [FB_32]",
+          "summary": "Retrieve all Meter Readings associated with a given Usage Point [FB_32]",
           "notes": "An XML representation of all MeterReadingss will be returned",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
@@ -677,7 +677,7 @@
           ]
         }
       ]
-    }
+    }		
   ]
 }
 

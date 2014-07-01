@@ -13,7 +13,7 @@
         {
           "method": "GET",
           "functionBlock": "FB_3",
-          "summary": "Obtain the Data Custodian Resource Server Status [FB_3]",
+          "summary": "Obtain the Data Custodian Resource Server's Status [FB_3]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter your \"Access Token\" in the appropriate field at the top of the page!",
           "responseClass": "application/atom+xml",
           "nickname": "getServiceStatus",
