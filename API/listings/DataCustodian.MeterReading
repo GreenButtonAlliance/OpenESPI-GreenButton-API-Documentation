@@ -19,7 +19,7 @@
           "method": "GET",
           "functionBlock": "FB_33",
           "summary": "Retrieve all Meter Readings associated with a given Usage Point [FB_33]",
-          "notes": "An XML representation of all MeterReadingss will be returned",
+          "notes": "An XML representation of all MeterReadingss will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findMeterReadings",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -106,8 +106,9 @@
           "functionBlock": "FB_33",
           "summary": "Add a new Meter Reading to an existing Usage Point [FB_33]",
           "nickname": "addMeterReading",
-					"consumes": ["application/xml"],
-					"authorizations": ["oauth2"],
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+		  "consumes": ["application/xml"],
+		  "authorizations": ["oauth2"],
           "parameters":
 					[
             {
@@ -141,6 +142,7 @@
           "method": "GET",
           "functionBlock": "FB_33",
           "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID [FB_33]",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -235,8 +237,8 @@
           "httpMethod": "PUT",
           "functionBlock": "FB_33",
           "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
-          "notes": "The Usage Point and Meter Reading must exist",
-					"consumes": ["application/xml"],
+          "notes": "The Usage Point and Meter Reading must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+		  "consumes": ["application/xml"],
           "nickname": "updateMeterReading",
           "authorizations": ["oauth2"],
           "parameters":
@@ -281,6 +283,7 @@
           "method": "DELETE",
           "functionBlock": "FB_33",
           "summary": "Delete a Meter Reading from Usage Point [FB_33]",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteMeterReading",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -310,7 +313,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/MeterReading",
+      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint/{UsagePointID}/MeterReading",
       "operations":
 			[
         {
@@ -324,7 +327,7 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
+              "name": "SubscriptionID",
               "description": "ID of the Retail Customer the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
@@ -425,7 +428,7 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
+              "name": "SubscriptionID",
               "description": "ID of the Retail Customer the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
@@ -464,7 +467,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}",
+      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}",
       "operations":
 			[
         {
@@ -477,7 +480,7 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
+              "name": "SubscriptionID",
               "description": "ID of the Retail Customer the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
@@ -587,7 +590,7 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
+              "name": "SubscriptionID",
               "description": "ID of the Retail Customer the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
@@ -640,7 +643,7 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
+              "name": "SubscriptionID",
               "description": "ID of the Retail Customer the Meter Reading references.",
               "required": true,
               "allowMultiple": false,

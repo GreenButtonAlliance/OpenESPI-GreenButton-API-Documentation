@@ -19,7 +19,7 @@
           "method": "GET",
           "functionBlock": "FB_32",
           "summary": "Retrieve all Local Time Parameters [FB_32]",
-          "notes": "An XML representation of all Local Time Parameters will be returned",
+          "notes": "An XML representation of all Local Time Parameters will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findLocalTimeParameters",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -105,7 +105,8 @@
           "method": "POST",
           "functionBlock": "FB_33",
           "summary": "Add a new Local Time Parameter [FB_33]",
-					"consumes": ["application/xml"],
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+		  "consumes": ["application/xml"],
           "nickname": "addLocalTimeParameter",
           "authorizations": ["oauth2"],
           "parameters":
@@ -141,6 +142,7 @@
           "method": "GET",
           "functionBlock": "FB_32",
           "summary": "Retrieve a Local Time Parameter Using it's ID [FB_32]",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getLocalTimeParameter",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -234,8 +236,8 @@
           "method": "PUT",
           "functionBlock": "FB_33",
           "summary": "Update an existing Local Time Parameter [FB_33]",
-          "notes": "The Local Time Parameter must exist",
-					"consumes": ["application/xml"],
+          "notes": "The Local Time Parameter must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+		  "consumes": ["application/xml"],
           "nickname": "updateLocalTimeParameter",
           "authorizations": ["oauth2"],
           "parameters":
@@ -274,7 +276,8 @@
           "functionBlock": "FB_33",
           "summary": "Delete a Local Time Parameter [FB_33]",
           "nickname": "deleteLocalTimeParameter",
-					"produces": ["application/xml"],
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+		  "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
