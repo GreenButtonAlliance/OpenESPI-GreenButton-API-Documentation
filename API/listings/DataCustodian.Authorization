@@ -17,7 +17,6 @@
           "functionBlock": "FB_3",
           "summary": "Find  all Data Custodian Authorizations [FB_3]",
           "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
-          "responseClass": "<feed> ... </feed>",
           "nickname": "findAuthorizations",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -108,7 +107,6 @@
           "functionBlock": "FB_3",
           "summary": "Retrieve a Data Custodian Authorization Using it's ID [FB_3]",
           "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
-          "responseClass": "Authorization",
           "nickname": "getAuthorization",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -226,7 +224,6 @@
             }
 
           ],
-          "responseClass": "void",
           "responseMessages": [
             {
               "code": 200,
@@ -243,7 +240,6 @@
           "functionBlock": "FB_44",
           "summary": "Delete an existing Data Custodian Authorization [FB_44]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
-          "responseClass": "void",
           "nickname": "deleteAuthorization",
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],
