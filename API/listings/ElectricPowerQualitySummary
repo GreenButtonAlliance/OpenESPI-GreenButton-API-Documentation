@@ -3,39 +3,37 @@
   "swaggerVersion": "1.2",
   "basePath": "https://services.greenbuttondata.org/DataCustodian",
   "resourcePath": "/usagepoint",
-  "produces":
-	[
+  "produces": [
     "application/xml",
     "text/plain",
     "text/html"
   ],
-  "apis":
-	[
+  "apis": [
     {
-      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint/{UsagePointID}/ElectricPowerUsageSumary",
+      "path": "/espi/1_1/resource/Subscription/{subscriptionId}/UsagePoint/{usagePointId}/ElectricPowerQualitySummary",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Retrieve all Electric Power Usage Summaries [FB_32]",
-          "notes": "An XML representation of all Electric Power Usage Summaries will be returned.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
-          "nickname": "findElectricPowerUsageSummaries",
+          "summary": "Retrieve all Electric Power Quality Summaries [FB_32]",
+          "notes": "An XML representation of all Electric Power Quality Summaries will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "nickname": "findElectricPowerQualitySummaries",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Electric Power Usage Summary references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -119,33 +117,33 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Add a new Electric Power Usage Summary [FB_33]",
-          "notes": "The New Electric Power Usage Summary will be added. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "summary": "Add a new Electric Power Quality Summary to the Data Custodian [FB_33]",
+          "notes": "The New Electric Power Quality Summary will be added.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "nickname": "addElectricPowerQualitySummary",
           "consumes": ["application/xml"],
-          "nickname": "addElectricPowerUsageSummary",
           "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Electric Power Usage Summary references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "ElectricPowerUsageSummaryData",
-              "description": "Electric Power Usage Summary data.",
+              "name": "electricPowerQualitySummaryData",
+              "description": "A Electric Power Quality Summary data.",
               "required": true,
               "allowMultiple": true,
               "dataType": "string",
@@ -166,38 +164,38 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint/{UsagePointID}/ElectricPowerUsageSumary/{ElectricPowerUsageSummaryID}",
+      "path": "/espi/1_1/resource/Subscription/{subscriptionId}/UsagePoint/{usagePointId}/ElectricPowerQualitySummary/{electricPowerQualitySummaryId}",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Retrieve an ElectricPowerUsageSummary Using it's ID [FB_32]",
-          "notes": "Returns a Electric Power Usage Summary. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
-          "nickname": "getElectricPowerUsageSummary",
+          "summary": "Retrieve an Electric Power Quality Summary Using it's Id [FB_32]",
+          "notes": "Returns a Electric Power Quality Summary.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "nickname": "getElectricPowerQualitySummary",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Electric Power Usage Summary references.",
+              "name": "usagePointId",
+              "description": "Id of the Usage Point the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "ElectricPowerUsageSummaryID",
-              "description": "ID of the Electric Power Usage Summary to be retrieved.",
+              "name": "electricPowerQualitySummaryId",
+              "description": "Id of the Electric Power Quality Summary to be retrieved.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -281,41 +279,41 @@
         {
           "method": "PUT",
           "functionBlock": "FB_33",
-          "summary": "Update an existing Electric Power Usage Summary [FB_33]",
-          "notes": "The Electric Power Usage Summary must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-          "consumes": ["application/xml"],
-          "nickname": "updateElectricPowerUsageSummary",
-          "produces": [],
+          "summary": "Update an existing Electric Power Quality Summary [FB_33]",
+          "notes": "The Electric Power Quality Summary must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+					"consumes": ["application/xml"],
+          "nickname": "updateElectricPowerQualitySummary",
+          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Electric Power Usage Summary references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "ElectricPowerUsageSummaryID",
-              "description": "ID of the Electric Power Usage Summary to be updated.",
+              "name": "electricPowerQualitySummaryId",
+              "description": "Id of the Electric Power Quality Summary to be updated.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "ElectricPowerUsageSummaryData",
-              "description": "Electric Power Usage Summary data to be updated.",
+              "name": "electricPowerQualitySummaryData",
+              "description": "Id of the Electric Power Quality Summary data.",
               "required": true,
               "allowMultiple": true,
               "dataType": "string",
@@ -336,32 +334,32 @@
         {
           "method": "DELETE",
           "functionBlock": "FB_33",
-          "summary": "Delete an existing Electric Power Usage Summary [FB_33]",
-          "notes": " To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-          "nickname": "deleteElectricPowerUsageSummary",
+          "summary": "Delete an existing Electric Power Quality Summary [FB_33]",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "nickname": "deleteElectricPowerQualitySummary",
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
-					[
+          [
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Electric Power Usage Summary references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Electric Power Quality Summary references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "ElectricPowerUsageSummaryID",
-              "description": "ID of the Electric Power Usage Summary to be deleted.",
+              "name": "electricPowerQualitySummaryId",
+              "description": "Id of the Electric Power Quality Summary to be deleted.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -379,7 +377,6 @@
             }
           ]
         }
-
       ]
     }
   ]

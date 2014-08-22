@@ -112,7 +112,7 @@
           "parameters":
 					[
             {
-              "name": "MeterReadingData",
+              "name": "meterReadingData",
               "description": "1 or more MeterReadings to be added.",
               "required": true,
               "allowMultiple": true,
@@ -135,13 +135,13 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/MeterReading/{MeterReadingID}",
+      "path": "/espi/1_1/resource/MeterReading/{meterReadingId}",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID [FB_33]",
+          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading Id [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
@@ -149,8 +149,8 @@
           "parameters":
 					[
             {
-              "name": "MeterReadingID",
-              "description": "ID of the Meter Reading.",
+              "name": "meterReadingId",
+              "description": "Id of the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -244,23 +244,23 @@
           "parameters":
 					[
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Meter Reading references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the Meter Reading.",
+              "name": "meterReadingId",
+              "description": "Id of the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingData",
+              "name": "meterReadingData",
               "description": "The updated Meter Reading information.",
               "required": true,
               "allowMultiple": true,
@@ -290,8 +290,8 @@
           "parameters":
 					[
             {
-              "name": "MeterReadingID",
-              "description": "ID of the Meter Reading.",
+              "name": "meterReadingId",
+              "description": "Id of the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -313,7 +313,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint/{UsagePointID}/MeterReading",
+      "path": "/espi/1_1/resource/Subscription/{subscriptionId}/UsagePoint/{usagePointId}/MeterReading",
       "operations":
 			[
         {
@@ -327,16 +327,16 @@
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "ID of the Retail Customer the Meter Reading references.",
+              "name": "subscriptionId",
+              "description": "Id of the Retail Customer the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Meter Reading references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -428,23 +428,23 @@
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "ID of the Retail Customer the Meter Reading references.",
+              "name": "subscriptionId",
+              "description": "Id of the Retail Customer the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Meter Reading references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingData",
+              "name": "meterReadingData",
               "description": "1 or more MeterReadings to be added.",
               "required": true,
               "allowMultiple": true,
@@ -467,37 +467,37 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}",
+      "path": "/espi/1_1/resource/Subscription/{subscriptionId}/UsagePoint/{usagePointId}/MeterReading/{meterReadingId}",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading ID [FB_32]",
+          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading Id [FB_32]",
           "nickname": "getMeterReading",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "ID of the Retail Customer the Meter Reading references.",
+              "name": "subscriptionId",
+              "description": "Id of the Retail Customer the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Meter Reading references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the Meter Reading.",
+              "name": "meterReadingId",
+              "description": "Id of the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -590,31 +590,31 @@
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "ID of the Retail Customer the Meter Reading references.",
+              "name": "subscriptionId",
+              "description": "Id of the Retail Customer the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Meter Reading references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the Meter Reading.",
+              "name": "meterReadingId",
+              "description": "Id of the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingData",
+              "name": "meterReadingData",
               "description": "The updated Meter Reading information.",
               "required": true,
               "allowMultiple": true,
@@ -643,24 +643,24 @@
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "ID of the Retail Customer the Meter Reading references.",
+              "name": "subscriptionId",
+              "description": "Id of the Retail Customer the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of Usage Point containing the Meter Reading.",
+              "name": "usagePointId",
+              "description": "Id of Usage Point containing the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the Meter Reading.",
+              "name": "meterReadingId",
+              "description": "Id of the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -680,7 +680,7 @@
           ]
         }
       ]
-    }		
+    }
   ]
 }
 

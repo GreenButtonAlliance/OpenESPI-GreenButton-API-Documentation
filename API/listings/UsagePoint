@@ -114,7 +114,7 @@
           "parameters":
 					[
             {
-              "name": "UsagePointData",
+              "name": "usagePointData",
               "description": "1 or more Usage Points to be added.",
               "required": true,
               "allowMultiple": true,
@@ -137,13 +137,13 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/UsagePoint/{UsagePointID}",
+      "path": "/espi/1_1/resource/UsagePoint/{usagePointId}",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Retrieve a Usage Point Using it's ID [FB_32]",
+          "summary": "Retrieve a Usage Point Using it's Id [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
@@ -151,8 +151,8 @@
           "parameters":
 					[
             {
-              "name": "UsagePointID",
-              "description": "ID of the Usage Point",
+              "name": "usagePointId",
+              "description": "Id of the Usage Point",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -246,15 +246,15 @@
           "parameters":
 					[
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointData",
+              "name": "usagePointData",
               "description": "The updated Usage Point information.",
               "required": true,
               "allowMultiple": true,
@@ -285,8 +285,8 @@
           "parameters":
 					[
             {
-              "name": "UsagePointID",
-              "description": "ID of the Usage Point",
+              "name": "usagePointId",
+              "description": "Id of the Usage Point",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -309,13 +309,13 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint",
+      "path": "/espi/1_1/resource/Subscription/{subscriptionId}/UsagePoint",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Retrieve all Usage Points by Subscription ID [FB_32]",
+          "summary": "Retrieve all Usage Points by Subscription Id [FB_32]",
           "notes": "An XML representation of all Usage Points will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findUsagePoints",
 					"produces": ["application/atom+xml"],
@@ -323,8 +323,8 @@
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -409,7 +409,7 @@
         {
           "method": "POST",
           "functionBlock": "FB_33",
-          "summary": "Add a new Usage Point by Subscription ID [FB_33]",
+          "summary": "Add a new Usage Point by Subscription Id [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addUsagePoint",
 		  "consumes": ["application/xml"],
@@ -418,15 +418,15 @@
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "UsagePointData",
+              "name": "usagePointData",
               "description": "1 or more Usage Points to be added.",
               "required": true,
               "allowMultiple": true,
@@ -449,13 +449,13 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/Subscription/{SubscriptionID}/UsagePoint/{UsagePointID}",
+      "path": "/espi/1_1/resource/Subscription/{subscriptionId}/UsagePoint/{usagePointId}",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Retrieve a Subscription Usage Point by it's ID [FB_32]",
+          "summary": "Retrieve a Subscription Usage Point by it's Id [FB_32]",
           "notes": " To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getUsagePoint",
           "produces": ["application/atom+xml"],
@@ -463,16 +463,16 @@
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the Usage Point",
+              "name": "usagePointId",
+              "description": "Id of the Usage Point",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -566,23 +566,23 @@
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointData",
+              "name": "usagePointData",
               "description": "The updated Usage Point information.",
               "required": true,
               "allowMultiple": true,
@@ -613,16 +613,16 @@
           "parameters":
 					[
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the Usage Point",
+              "name": "usagePointId",
+              "description": "Id of the Usage Point",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",

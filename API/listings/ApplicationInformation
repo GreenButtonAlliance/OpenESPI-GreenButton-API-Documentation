@@ -136,13 +136,13 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/ApplicationInformation/{ApplicationInformationID}",
+      "path": "/espi/1_1/resource/ApplicationInformation/{applicationInformationId}",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_3",
-          "summary": "Retrieve an Application Information Structure using it's ID [FB_3]",
+          "summary": "Retrieve an Application Information Structure using it's Id [FB_3]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"registration_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getApplicationInformation",
           "produces": ["application/atom+xml"],
@@ -150,8 +150,8 @@
           "parameters":
 					[
             {
-              "name": "ApplicationInformationID",
-              "description": "The ID of the Application Information to be retrieved.",
+              "name": "applicationInformationId",
+              "description": "The Id of the Application Information to be retrieved.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
@@ -182,15 +182,15 @@
           "parameters":
 					[
             {
-              "name": "ApplicationInformationID",
-              "description": "The ID of the Application Information.",
+              "name": "applicationInformationId",
+              "description": "The Id of the Application Information.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "ApplicationInformationData",
+              "name": "applicationInformationData",
               "description": "The Application Information data to be updated.",
               "required": true,
               "allowMultiple": true,
@@ -221,8 +221,8 @@
           "parameters":
 					[
             {
-              "name": "ApplicationInformationID",
-              "description": "The ID of the Application Information Structure to be deleted.",
+              "name": "applicationInformationId",
+              "description": "The Id of the Application Information Structure to be deleted.",
               "required": true,
               "allowMultiple": true,
               "dataType": "String",

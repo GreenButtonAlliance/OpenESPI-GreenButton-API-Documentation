@@ -2,29 +2,32 @@
   "apiVersion": "1.0.0",
   "swaggerVersion": "1.2",
   "basePath": "https://services.greenbuttondata.org/DataCustodian",
-  "resourcePath": "/resources",
-  "produces": [
+  "resourcePath": "/usagepoint",
+  "produces":
+	[
     "application/xml",
     "text/plain",
     "text/html"
   ],
-  "apis": [
+  "apis":
+	[
     {
-      "path": "/espi/1_1/resource/Authorization",
-      "operations": [
+      "path": "/espi/1_1/resource/LocalTimeParameters",
+      "operations":
+			[
         {
           "method": "GET",
-          "functionBlock": "FB_3",
-          "summary": "Find  all Data Custodian Authorizations [FB_3]",
-          "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
-          "nickname": "findAuthorizations",
+          "functionBlock": "FB_32",
+          "summary": "Retrieve all Local Time Parameters [FB_32]",
+          "notes": "An XML representation of all Local Time Parameters will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "nickname": "findLocalTimeParameters",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
               "name": "published-max",
-              "description": "The upper bound on the published date of the Authorization.",
+              "description": "The upper bound on the published date of the Local Time Parameter.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -33,7 +36,7 @@
             },
             {
               "name": "published-min",
-              "description": "The lower bound on the published date of the Authorization.",
+              "description": "The lower bound on the published date of the Local Time Parameter.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -42,7 +45,7 @@
             },
             {
               "name": "updated-max",
-              "description": "The upper bound on the updated date of the Authorization.",
+              "description": "The upper bound on the updated date of the Local Time Parameter.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -51,7 +54,7 @@
             },
             {
               "name": "updated-min",
-              "description": "The lower bound on the updated date of the Authorization.",
+              "description": "The lower bound on the updated date of the Local Time Parameter.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -60,7 +63,7 @@
             },
             {
               "name": "max-results",
-              "description": "The upper bound on the number of entries to be contained in a reply to this response.",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -69,7 +72,7 @@
             },
             {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of Authorizations that should be transferred as the first entry of this request.",
+              "description": "The one based offset in the DataCustodian's collection of Local Time Parameters that should be transferred as the first entry of the response.",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
@@ -78,7 +81,7 @@
             },
             {
               "name": "depth",
-              "description": "The maximum number of entries to be transferred in the response to this request.",
+              "description": "The maximum number of entries to be transferred in the response.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -86,35 +89,68 @@
               "paramType": "query"
             }
 					],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
               "message": "Bad Request"
             }
           ]
-	      }
+	      },
+        {
+          "method": "POST",
+          "functionBlock": "FB_33",
+          "summary": "Add a new Local Time Parameter [FB_33]",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+		  "consumes": ["application/xml"],
+          "nickname": "addLocalTimeParameter",
+          "authorizations": ["oauth2"],
+          "parameters":
+					[
+            {
+              "name": "localTimeParameterData",
+              "description": "1 or more Local Time Parameters to be added.",
+              "required": false,
+              "allowMultiple": true,
+              "dataType": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            }
+          ]
+        }
       ]
     },
     {
-      "path": "/espi/1_1/resource/Authorization/{AuthorizationID}",
-      "operations": [
+      "path": "/espi/1_1/resource/LocalTimeParameters/{localTimeParameterId}",
+      "operations":
+			[
         {
           "method": "GET",
-          "functionBlock": "FB_3",
-          "summary": "Retrieve a Data Custodian Authorization Using it's ID [FB_3]",
-          "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
-          "nickname": "getAuthorization",
+          "functionBlock": "FB_32",
+          "summary": "Retrieve a Local Time Parameter Using it's Id [FB_32]",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "nickname": "getLocalTimeParameter",
           "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "AuthorizationID",
-              "description": "ID of the Authorization to be retrieved.",
+              "name": "localTimeParameterId",
+              "description": "Id of the Local Time Parameter.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -122,7 +158,7 @@
             },
             {
               "name": "published-max",
-              "description": "The upper bound on the published date of the Authorization.",
+              "description": "The upper bound on the published date of the Local Time Parameter.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -131,7 +167,7 @@
             },
             {
               "name": "published-min",
-              "description": "The lower bound on the published date of the Authorization.",
+              "description": "The lower bound on the published date of the Local Time Parameter.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -140,7 +176,7 @@
             },
             {
               "name": "updated-max",
-              "description": "The upper bound on the updated date of the Authorization.",
+              "description": "The upper bound on the updated date of the Local Time Parameter.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -149,7 +185,7 @@
             },
             {
               "name": "updated-min",
-              "description": "The lower bound on the updated date of the Authorization.",
+              "description": "The lower bound on the updated date of the Local Time Parameter.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -158,7 +194,7 @@
             },
             {
               "name": "max-results",
-              "description": "The upper bound on the number of entries to be contained in a reply to this response.",
+              "description": "The upper bound on the number of entries to be contained in a reply.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -167,7 +203,7 @@
             },
             {
               "name": "start-index",
-              "description": "The one based offset in the DataCustodian's collection of Authorizations that should be transferred as the first entry of this request.",
+              "description": "The one based offset in the DataCustodian's collection of Local Time Parameters that should be transferred as the first entry of the response.",
               "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
@@ -176,7 +212,7 @@
             },
             {
               "name": "depth",
-              "description": "The maximum number of entries to be transferred in the response to this request.",
+              "description": "The maximum number of entries to be transferred in the response.",
               "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
@@ -184,10 +220,11 @@
               "paramType": "query"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
@@ -197,67 +234,67 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_44",
-          "summary": "Update an existing Data Custodian Authorization [FB_44]",
-          "notes": "The Authorization must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
-          "nickname": "updateAuthorization",
-					"consumes": ["application/xml"],
-          "produces": [],
+          "functionBlock": "FB_33",
+          "summary": "Update an existing Local Time Parameter [FB_33]",
+          "notes": "The Local Time Parameter must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+		  "consumes": ["application/xml"],
+          "nickname": "updateLocalTimeParameter",
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "AuthorizationID",
-              "description": "ID of Authorization to be updated.",
+              "name": "localTimeParameterId",
+              "description": "Id of Local Time Parameter to delete",
               "required": true,
               "allowMultiple": false,
-              "dataType": "Authorization",
+              "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "AuthorizationData",
-              "description": "The Authorization's updated data.",
+              "name": "localTimeParameterData",
+              "description": "The Local Time Parameter to be updated.",
               "required": true,
-              "allowMultiple": true,
+              "allowMultiple": false,
               "dataType": "string",
               "paramType": "body"
             }
-
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,
               "message": "Bad Request"
             }
           ]
-	},
+        },
         {
           "method": "DELETE",
-          "functionBlock": "FB_44",
-          "summary": "Delete an existing Data Custodian Authorization [FB_44]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
-          "nickname": "deleteAuthorization",
-          "produces": ["application/xml"],
+          "functionBlock": "FB_33",
+          "summary": "Delete a Local Time Parameter [FB_33]",
+          "nickname": "deleteLocalTimeParameter",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+		  "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
             {
-              "name": "AuthorizationID",
-              "description": "ID of Authorization to be deleted.",
+              "name": "localTimeParameterId",
+              "description": "Id of Local Time Parameter to delete",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             }
           ],
-          "responseMessages": [
+          "responseMessages":
+					[
             {
               "code": 200,
-              "message" : "OK"
+              "message": "OK"
             },
             {
               "code": 400,

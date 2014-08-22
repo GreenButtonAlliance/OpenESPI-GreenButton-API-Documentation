@@ -12,7 +12,7 @@
   "apis":
   [
     {
-      "path": "/espi/1_1/resource/Batch/Bulk/{BulkID}",
+      "path": "/espi/1_1/resource/Batch/Bulk/{bulkId}",
       "operations":
       [
         {
@@ -26,7 +26,7 @@
           "parameters":
           [
             {
-              "name": "BulkID",
+              "name": "bulkId",
               "description": "The Bulk Id as specified in the OAuth2 SCOPE string",
               "required": true,
               "allowMultiple": false,
@@ -120,7 +120,7 @@
           "parameters":
           [
             {
-              "name": "BulkID",
+              "name": "bulkId",
               "description": "The Bulk Id as specified in the OAuth2 SCOPE string",
               "required": true,
               "allowMultiple": false,
@@ -151,7 +151,7 @@
 	    ]
     },
     {
-      "path": "/espi/1_1/resource/Batch/Subscription/{SubscriptionID}",
+      "path": "/espi/1_1/resource/Batch/Subscription/{subscriptionId}",
       "operations":
       [
         {
@@ -159,14 +159,14 @@
           "functionBlock": "FB_3",
           "summary": "Request a Greenbutton Subscription from a DataCustodian [FB_3]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
-          "nickname": "ConnectMyDataFeed",
+          "nickname": "connectMyDataFeed",
 					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -251,7 +251,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/Batch/RetailCustomer/{retailCustomerID}/UsagePoint",
+      "path": "/espi/1_1/resource/Batch/RetailCustomer/{retailCustomerId}/UsagePoint",
       "operations":
       [
         {
@@ -259,22 +259,22 @@
           "functionBlock": "FB_33",
           "summary": "Download a Green Button XML file containing a specific UsagePoint for this RetailCustomer [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
-          "nickname": "DownloadMyData",
+          "nickname": "downloadMyData",
 					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [
             {
-              "name": "retailCustomerID",
-              "description": "The Retail Customer's ID",
+              "name": "retailCustomerId",
+              "description": "The Retail Customer's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "usagePointID",
-              "description": "The desired UsagePointID",
+              "name": "usagePointId",
+              "description": "The desired UsagePoint Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -367,8 +367,8 @@
           "parameters":
           [
             {
-              "name": "RetailCustomerID",
-              "description": "The Retail Customer's ID",
+              "name": "retailCustomerId",
+              "description": "The Retail Customer's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
@@ -398,7 +398,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/Batch/Subscription/{SubscriptionID}/UsagePoint/{UsagePointId}",
+      "path": "/espi/1_1/resource/Batch/Subscription/{subscriptionId}/UsagePoint/{usagePointId}",
       "operations":
       [
         {
@@ -406,22 +406,22 @@
           "functionBlock": "FB_32",
           "summary": "Request a Greenbutton Subscription from a DataCustodian [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"upload_access_token\" in the appropriate field at the top of this web page!",
-          "nickname": "ConnectMyDataFeed",
+          "nickname": "connectMyDataFeed",
 					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [
             {
-              "name": "SubscriptionID",
-              "description": "The Subscription's ID",
+              "name": "subscriptionId",
+              "description": "The Subscription's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "The UsagePoint's ID",
+              "name": "usagePointId",
+              "description": "The UsagePoint's Id",
               "required": true,
               "allowMultiple": false,
               "dataType": "String",

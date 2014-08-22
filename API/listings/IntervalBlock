@@ -110,8 +110,8 @@
           "parameters":
 					[
             {
-              "name": "IntervalBlockData",
-              "description": "1 or more IntervalBlocks to be added.",
+              "name": "intervalBlockData",
+              "description": "1 or more Interval Blocks to be added.",
               "required": true,
               "allowMultiple": true,
               "dataType": "string",
@@ -133,13 +133,13 @@
 		},
 	  {
 		  "path":
-			"/espi/1_1/resource/IntervalBlock/{IntervalBlockID}",
+			"/espi/1_1/resource/IntervalBlock/{intervalBlockId}",
 			"operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_33",
-          "summary": "Retrieve an IntervalBlock Using it's ID [FB_33]",
+          "summary": "Retrieve an Interval Block Using it's Id [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findIntervalBlock",
           "produces": ["application/atom+xml"],
@@ -147,8 +147,8 @@
           "parameters":
 					[
             {
-              "name": "IntervalBlockID",
-              "description": "ID of the Interval Block to be retrieved.",
+              "name": "intervalBlockId",
+              "description": "Id of the Interval Block to be retrieved.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -240,7 +240,7 @@
           "parameters":
 					[
             {
-              "name": "IntervalBlockData",
+              "name": "intervalBlockData",
               "description": "The Interval Block data to be updated.",
               "required": true,
               "allowMultiple": true,
@@ -270,8 +270,8 @@
           "parameters":
 					[
             {
-              "name": "IntervalBlockID",
-              "description": "ID of the Interval Block to be deleted.",
+              "name": "intervalBlockId",
+              "description": "Id of the Interval Block to be deleted.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -292,7 +292,7 @@
 			]
 		},
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}/IntervalBlock",
+      "path": "/espi/1_1/resource/RetailCustomer/{retailCustomerId}/UsagePoint/{usagePointId}/MeterReading/{meterReadingId}/IntervalBlock",
       "operations":
 			[
         {
@@ -306,24 +306,24 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Interval Block references.",
+              "name": "retailCustomerId",
+              "description": "Id of the Retail Customer the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Interval Block references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Interval Block references.",
+              "name": "meterReadingId",
+              "description": "Id of the MeterReading the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -415,31 +415,31 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Interval Block references.",
+              "name": "retailCustomerId",
+              "description": "Id of the Retail Customer the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Interval Block references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Interval Block references.",
+              "name": "meterReadingId",
+              "description": "Id of the MeterReading the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "IntervalBlockData",
+              "name": "intervalBlockData",
               "description": "1 or more IntervalBlocks to be added.",
               "required": true,
               "allowMultiple": true,
@@ -461,13 +461,13 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}/IntervalBlock/{IntervalBlockID}",
+      "path": "/espi/1_1/resource/RetailCustomer/{retailCustomerId}/UsagePoint/{usagePointId}/MeterReading/{meterReadingId}/IntervalBlock/{intervalBlockId}",
       "operations":
 			[
         {
           "method": "GET",
           "functionBlock": "FB_32",
-          "summary": "Retrieve an IntervalBlock Using it's ID [FB_32]",
+          "summary": "Retrieve an IntervalBlock Using it's Id [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getIntervalBlock",
           "produces": ["application/atom+xml"],
@@ -475,32 +475,32 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Interval Block references.",
+              "name": "retailCustomerId",
+              "description": "Id of the Retail Customer the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Interval Block references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Interval Block references.",
+              "name": "meterReadingId",
+              "description": "Id of the MeterReading the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "IntervalBlockID",
-              "description": "ID of the Interval Block to be retrieved.",
+              "name": "intervalBlockId",
+              "description": "Id of the Interval Block to be retrieved.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -592,39 +592,39 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Interval Block references.",
+              "name": "retailCustomerId",
+              "description": "Id of the Retail Customer the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Interval Block references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Interval Block references.",
+              "name": "meterReadingId",
+              "description": "Id of the MeterReading the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "IntervalBlockID",
-              "description": "ID of the Interval Block to be updated.",
+              "name": "intervalBlockId",
+              "description": "Id of the Interval Block to be updated.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "IntervalBlockData",
+              "name": "intervalBlockData",
               "description": "The Interval Block data to be updated.",
               "required": true,
               "allowMultiple": true,
@@ -654,32 +654,32 @@
           "parameters":
 					[
             {
-              "name": "RetailCustomerID",
-              "description": "ID of the Retail Customer the Interval Block references.",
+              "name": "retailCustomerId",
+              "description": "Id of the Retail Customer the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "UsagePointID",
-              "description": "ID of the UsagePoint the Interval Block references.",
+              "name": "usagePointId",
+              "description": "Id of the UsagePoint the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "MeterReadingID",
-              "description": "ID of the MeterReading the Interval Block references.",
+              "name": "meterReadingId",
+              "description": "Id of the MeterReading the Interval Block references.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
               "paramType": "path"
             },
             {
-              "name": "IntervalBlockID",
-              "description": "ID of the Interval Block to be deleted.",
+              "name": "intervalBlockId",
+              "description": "Id of the Interval Block to be deleted.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
