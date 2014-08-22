@@ -4,9 +4,6 @@
   "espiVersion": "1.1",
   "apis": [
     {
-      "path": "/../listings/ServiceStatus"
-    },
-    {
       "path": "/../listings/ApplicationInformation"
     },
     {
@@ -33,6 +30,9 @@
     {
       "path": "/../listings/ReadingType"
     },
+    {
+      "path": "/../listings/ServiceStatus"
+    },		
     {
       "path": "/../listings/UsagePoint"
     }
