@@ -21,9 +21,10 @@ function SendRequest () {
      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
   }
   xmlhttp.open ("GET", url, true);    // async
-  xmlhttp.setRequestHeader ("Accept", "text/plain");
+  xmlhttp.setRequestHeader ("Accept", "*/*");
   xmlhttp.setRequestHeader ("Content-type", "text/plain");
   xmlhttp.withCredentials = true;
+  xmlhttp.setRequestHeader ("Host", "services.greenbuttondata.org");
   xmlhttp.onreadystatechange = OnStateChange;
   xmlhttp.send (null);
 }
