@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<head>
+<title>Reset Sandbox</title>
+
+<script src='lib/jquery-1.8.0.min.js' type='text/javascript'></script>
+
+<script charset="utf-8">
+
+var xmlhttp = null;
+var url = "https://services.greenbuttondata.org/DataCustodian/management?command=resetDataCustodianDB";
+//var url = "http://localhost:8080/DataCustodian/management?command=resetDataCustodianDB";
+                                               
+function SendRequest () {
+  if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+     xmlhttp=new XMLHttpRequest();
+  } else {// code for IE6, IE5
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  if ('withCredentials' in xmlhttp) {
+      alert("CORS turned on");
+  }
+  xmlhttp.open ("GET", url, true);    // async
+  xmlhttp.setRequestHeader ("Accept", "text/plain");
+  xmlhttp.setRequestHeader ("Content-type", "text/plain");
+  xmlhttp.setRequestHeader ("Authorization", "Bearer 688b026c-665f-4994-9139-6b21b13fbeee");
+  xmlhttp.withCredentials = true;
+  xmlhttp.onreadystatechange = OnStateChange;
+  xmlhttp.send (null);
+}
+                                               
+function OnStateChange () {
+  if (xmlhttp.readyState == 0 || xmlhttp.readyState == 4) {
+
+    alert("Status: " + xmlhttp.status);
+
+    if (IsRequestSuccessful (xmlhttp)) {    // defined in ajax.js
+       alert ("Request complete.");
+    } else {
+       alert ("Operation failed.");
+    }
+  }
+}
+</script>
+</head>
+
+<body>
+<h1>Reset Sandbox</h1>
+   <form>
+    <button onclick="SendRequest ()">Reset Green Button Sandbox</button>
+   </form>
+</body>
+</html>
