@@ -20,13 +20,9 @@ function SendRequest () {
   } else {// code for IE6, IE5
      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
   }
-  if ('withCredentials' in xmlhttp) {
-      alert("CORS turned on");
-  }
   xmlhttp.open ("GET", url, true);    // async
   xmlhttp.setRequestHeader ("Accept", "text/plain");
   xmlhttp.setRequestHeader ("Content-type", "text/plain");
-  xmlhttp.setRequestHeader ("Authorization", "Bearer 688b026c-665f-4994-9139-6b21b13fbeee");
   xmlhttp.withCredentials = true;
   xmlhttp.onreadystatechange = OnStateChange;
   xmlhttp.send (null);
@@ -34,8 +30,6 @@ function SendRequest () {
                                                
 function OnStateChange () {
   if (xmlhttp.readyState == 0 || xmlhttp.readyState == 4) {
-
-    alert("Status: " + xmlhttp.status);
 
     if (IsRequestSuccessful (xmlhttp)) {    // defined in ajax.js
        alert ("Request complete.");
