@@ -134,7 +134,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/ReadingType/{ReadingTypeID}",
+      "path": "/espi/1_1/resource/ReadingType/{readingTypeId}",
       "operations":
 			[
         {

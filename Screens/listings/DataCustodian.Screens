@@ -64,7 +64,7 @@
       ]
     },
     {
-      "path": "/RetailCustomer/{RetailCustomerID}/home",
+      "path": "/RetailCustomer/{retailCustomerId}/home",
       "operations":
       [
         {
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "path": "/RetailCustomer/{RetailCustomerID}/ThirdPartyList",
+      "path": "/RetailCustomer/{retailCustomerId}/ThirdPartyList",
       "operations":
       [
         {

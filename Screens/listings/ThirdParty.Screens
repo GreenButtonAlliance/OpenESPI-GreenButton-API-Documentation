@@ -62,7 +62,7 @@
       ]
     },
     {
-      "path": "/RetailCustomer/{RetailCustomerID}/home",
+      "path": "/RetailCustomer/{retailCustomerId}/home",
       "operations":
       [
         {
@@ -150,7 +150,7 @@
       ]
     },
     {
-      "path": "/RetailCustomer/{RetailCustomerID}/DataCustodianList",
+      "path": "/RetailCustomer/{retailCustomerId}/DataCustodianList",
       "operations":
       [
         {
@@ -186,7 +186,7 @@
       ]
     },
     {
-      "path": "/RetailCustomer/{RetailCustomerID}/ScopeSelection",
+      "path": "/RetailCustomer/{retailCustomerId}/ScopeSelection",
       "operations":
       [
         {

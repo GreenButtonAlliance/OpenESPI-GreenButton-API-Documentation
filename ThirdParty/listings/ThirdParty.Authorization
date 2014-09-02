@@ -38,7 +38,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/Authorization/{AuthorizationID}",
+      "path": "/espi/1_1/resource/Authorization/{authorizationId}",
       "operations":
       [
         {

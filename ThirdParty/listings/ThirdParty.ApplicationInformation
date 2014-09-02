@@ -68,7 +68,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/ApplicationInformation/{ApplicationInformationID}",
+      "path": "/espi/1_1/resource/ApplicationInformation/{applicationInformationId}",
       "operations":
       [
         {

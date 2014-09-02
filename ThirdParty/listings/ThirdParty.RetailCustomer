@@ -61,7 +61,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}",
+      "path": "/espi/1_1/resource/RetailCustomer/{retailCustomerId}",
       "operations":[
         {
           "method": "GET",
@@ -158,7 +158,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/DownloadMyData",
+      "path": "/espi/1_1/resource/RetailCustomer/{retailCustomerId}/DownloadMyData",
       "operations":[
         {
           "method": "GET",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{RetailCustomerID}/UploadMyData",
+      "path": "/espi/1_1/resource/RetailCustomer/{retailCustomerId}/UploadMyData",
       "operations":[
         {
           "method": "PUT",

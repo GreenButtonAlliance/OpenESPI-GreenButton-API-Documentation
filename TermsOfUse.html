@@ -340,7 +340,7 @@ re: &lt;link&gt; ... &lt;/link&gt;
 that allows the relationships (of UsagePoint to MeterReading for example) to be represented in the XML. it is an alternative to the normal hierarchical structure in XML, such as:
 ===
   &lt;UsagePoint&gt;
-       &lt;link rel="self" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}" /&gt;
+       &lt;link rel="self" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{usagePointId}" /&gt;
        &lt;MeterReading&gt;
 
             &lt;IntervalBlock&gt;
@@ -354,8 +354,8 @@ that allows the relationships (of UsagePoint to MeterReading for example) to be 
 Rather, the odata representation uses the &lt;link&gt; tag to represent the relationships. so an equivalent representation would be:
 ===
 &lt;entry&gt;
-  &lt;link rel="self" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}" /&gt;
-  &lt;link rel="related" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}" /&gt;
+  &lt;link rel="self" href="/espi/RetailCustomer/{retailCustomerId/UsagePoint/{usagePointId}/MeterReading/{meterReadingId}" /&gt;
+  &lt;link rel="related" href="/espi/RetailCustomer/{retailCustomerId/UsagePoint/{usagePointId}" /&gt;
    &lt;content&gt;
        &lt;MeterReading&gt;
         ...
@@ -367,8 +367,8 @@ Rather, the odata representation uses the &lt;link&gt; tag to represent the rela
 &lt;entry&gt;
  ...
   &lt;link rel="self"      
-          href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}/IntervalBlock/{IntervalBlockID}" /&gt;
-  &lt;link rel="related" href="/espi/RetailCustomer/{RetailCustomerID/UsagePoint/{UsagePointID}/MeterReading/{MeterReadingID}" /&gt;
+          href="/espi/RetailCustomer/{retailCustomerId/UsagePoint/{usagePointId}/MeterReading/{meterReadingId}/IntervalBlock/{intervalBlockId}" /&gt;
+  &lt;link rel="related" href="/espi/RetailCustomer/{retailCustomerId/UsagePoint/{usagePointId}/MeterReading/{meterReadingId}" /&gt;
   &lt;content&gt;
        &lt;IntervalBlock&gt;
          ...
