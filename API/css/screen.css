@@ -261,7 +261,7 @@ table {
   clear: both;
   display: block;
 #  color: #0F6AB4;
-  color: green;
+  color: rgba(76, 186, 111, 0.9);
   font-size: 1.1em;
   margin: 0;
   padding: 15px 0 5px;
@@ -1014,7 +1014,7 @@ table {
   color: black;
 }
 #header {
-  background-color: green;
+  background-color: rgba(76, 186, 111, 0.9);
   padding: 14px;
 }
 #header a#logo {
