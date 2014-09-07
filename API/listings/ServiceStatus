@@ -28,6 +28,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         }

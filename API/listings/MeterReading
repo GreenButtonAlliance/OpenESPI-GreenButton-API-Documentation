@@ -98,6 +98,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         },
@@ -129,6 +133,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         }
@@ -230,6 +238,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         },
@@ -276,6 +288,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         },
@@ -307,6 +323,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         }
@@ -415,6 +435,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         },
@@ -461,6 +485,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         }
@@ -576,6 +604,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         },
@@ -630,6 +662,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         },
@@ -676,6 +712,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         }

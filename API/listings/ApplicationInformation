@@ -98,6 +98,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
 					]
 	      },
@@ -113,7 +117,7 @@
           "parameters":
 					[
             {
-              "name": "ApplicationInformationData",
+              "name": "applicationInformationData",
               "description": "The new Application Information data.",
               "required": true,
               "allowMultiple": true,
@@ -130,6 +134,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
 					]
         }
@@ -167,6 +175,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
             ]
         },
@@ -207,6 +219,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
 	      },
@@ -238,6 +254,10 @@
             {
               "code": 400,
               "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
             }
           ]
         }
