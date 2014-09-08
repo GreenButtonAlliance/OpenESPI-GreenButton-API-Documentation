@@ -109,7 +109,7 @@
           "method": "POST",
           "functionBlock": "FB_33",
           "summary": "Add a new Reading Type [FB_33]",
-					"consumes": ["application/xml"],
+					"consumes": ["application/atom+xml"],
           "nickname": "addReadingType",
           "authorizations": ["oauth2"],
           "parameters":
@@ -247,7 +247,7 @@
           "functionBlock": "FB_33",
           "summary": "Update an existing Reading Type [FB_33]",
           "notes": "The Reading Type must exist",
-					"consumes": ["application/xml"],
+					"consumes": ["application/atom+xml"],
           "nickname": "updateReadingType",
           "authorizations": ["oauth2"],
           "parameters":

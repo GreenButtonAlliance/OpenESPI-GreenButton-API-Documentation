@@ -209,7 +209,7 @@
           "summary": "Update an existing Data Custodian Authorization [FB_44]",
           "notes": "The Authorization must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateAuthorization",
-					"consumes": ["application/xml"],
+					"consumes": ["application/atom+xml"],
           "produces": [],
           "authorizations": ["oauth2"],
           "parameters":

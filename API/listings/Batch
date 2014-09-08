@@ -285,14 +285,6 @@
               "paramType": "path"
             },
             {
-              "name": "usagePointId",
-              "description": "The desired UsagePoint Id",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            },
-            {
               "name": "published-max",
               "description": "The upper bound on the published date of the Green Button XML file request.",
               "defaultValue": "All",
@@ -377,7 +369,7 @@
           "functionBlock": "FB_33",
           "summary": "Upload a Green Button XML file [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"upload_access_token\" in the appropriate field at the top of this web page!",
-          "consumes": ["application/xml"],
+          "consumes": ["application/atom+xml"],
           "produces": ["application/xml"],
           "nickname": "uploadMyData",
           "parameters":

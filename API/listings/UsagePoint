@@ -112,8 +112,8 @@
           "summary": "Add a new Usage Point [FB_33]",
           "nickname": "addUsagePoint",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-		  "consumes": ["application/xml"],
-		  "produces": ["application/xml"],
+          "consumes": ["application/atom+xml"],
+          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -252,7 +252,7 @@
           "summary": "Update an existing Usage Point [FB_33]",
           "notes": "The Usage Point must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateUsagePoint",
-					"consumes": ["application/xml"],
+					"consumes": ["application/atom+xml"],
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
@@ -435,7 +435,7 @@
           "summary": "Add a new Usage Point by Subscription Id [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addUsagePoint",
-          "consumes": ["application/xml"],
+          "consumes": ["application/atom+xml"],
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
@@ -591,7 +591,7 @@
           "summary": "Update an existing Subscription Usage Point [FB_33]",
           "notes": "The Usage Point must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateUsagePoint",
-					"consumes": ["application/xml"],
+					"consumes": ["application/atom+xml"],
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":

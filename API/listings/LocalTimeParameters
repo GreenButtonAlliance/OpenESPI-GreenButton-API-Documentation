@@ -110,7 +110,7 @@
           "functionBlock": "FB_33",
           "summary": "Add a new Local Time Parameter [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-		  "consumes": ["application/xml"],
+          "consumes": ["application/atom+xml"],
           "nickname": "addLocalTimeParameter",
           "authorizations": ["oauth2"],
           "parameters":
@@ -249,7 +249,7 @@
           "functionBlock": "FB_33",
           "summary": "Update an existing Local Time Parameter [FB_33]",
           "notes": "The Local Time Parameter must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-		  "consumes": ["application/xml"],
+          "consumes": ["application/atom+xml"],
           "nickname": "updateLocalTimeParameter",
           "authorizations": ["oauth2"],
           "parameters":

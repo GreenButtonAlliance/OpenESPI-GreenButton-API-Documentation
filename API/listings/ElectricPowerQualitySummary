@@ -124,7 +124,7 @@
           "summary": "Add a new Electric Power Quality Summary to the Data Custodian [FB_33]",
           "notes": "The New Electric Power Quality Summary will be added.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addElectricPowerQualitySummary",
-          "consumes": ["application/xml"],
+          "consumes": ["application/atom+xml"],
           "produces": [],
           "authorizations": ["oauth2"],
           "parameters":

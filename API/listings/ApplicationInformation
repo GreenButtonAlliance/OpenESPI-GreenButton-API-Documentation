@@ -111,7 +111,7 @@
           "summary": "Add a new Application Information Structure [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addApplicationInformation",
-					"consumes": ["application/xml"],
+					"consumes": ["application/atom+xml"],
           "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
@@ -188,7 +188,7 @@
           "summary": "Update an existing Application Information Structure [FB_41]",
           "notes": "The Application Information must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"registration_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateApplicationInformation",
-					"consumes": ["application/xml"],
+					"consumes": ["application/atom+xml"],
           "produces": [],
           "authorizations": ["oauth2"],
           "parameters":

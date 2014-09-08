@@ -1,10 +1,11 @@
 {
   "apiVersion": "1.0.0",
   "swaggerVersion": "1.2",
-  "basePath": "https://services.greenbuttondata.org/DataCustodian",
+  "basePath": "http://services.greenbuttondata.org/DataCustodian",
   "resourcePath": "/espi/1_1/resource",
   "produces":
 	[
+    "application/atom+xml",
     "application/xml",
     "text/plain",
     "text/html"
@@ -111,7 +112,7 @@
           "summary": "Add a new Meter Reading to an existing Usage Point [FB_33]",
           "nickname": "addMeterReading",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-          "consumes": ["application/xml"],
+          "consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -250,7 +251,7 @@
           "functionBlock": "FB_33",
           "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
           "notes": "The Usage Point and Meter Reading must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-		  "consumes": ["application/xml"],
+          "consumes": ["application/atom+xml"],
           "nickname": "updateMeterReading",
           "authorizations": ["oauth2"],
           "parameters":
@@ -616,7 +617,7 @@
           "functionBlock": "FB_33",
           "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
           "notes": "The Usage Point and Meter Reading must exist",
-					"consumes": ["application/xml"],
+					"consumes": ["application/atom+xml"],
           "nickname": "updateMeterReading",
           "authorizations": ["oauth2"],
           "parameters":
