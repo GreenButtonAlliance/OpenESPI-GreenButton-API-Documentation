@@ -111,8 +111,8 @@
           "summary": "Add a new Meter Reading to an existing Usage Point [FB_33]",
           "nickname": "addMeterReading",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-		  "consumes": ["application/xml"],
-		  "authorizations": ["oauth2"],
+          "consumes": ["application/xml"],
+          "authorizations": ["oauth2"],
           "parameters":
 					[
             {
@@ -447,7 +447,7 @@
           "functionBlock": "FB_33",
           "summary": "Add a new Meter Reading to an existing Usage Point [FB_33]",
           "nickname": "addMeterReading",
-					"consumes": ["application/xml"],
+					"consumes": ["application/atom+xml"],
 					"authorizations": ["oauth2"],
           "parameters":
 					[
