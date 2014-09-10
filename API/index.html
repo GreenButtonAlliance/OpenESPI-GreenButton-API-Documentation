@@ -52,6 +52,12 @@
 		window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));
     window.swaggerUi.load();
   });
+  function doAccessToken(aToken) {
+    var temp = document.getElementById("input_accessToken");
+    temp.value = aToken;
+    temp.focus();
+  }
+
   </script>
 </head>
 
@@ -69,18 +75,57 @@ These APIs allow application developers full access, in Green Button Format, to 
 purpose of developing new Green Button Applications. 
       </p>
 <p>
-Access to Green Button APIs require an OAuth2 Access Token.  The following table contains a list of Access Tokens and the various Data Custodian Roles that may be tested using the assigned Access Token.  Insert one the following  Access Tokens in the field labelled "Access Token:" at the top of the page prior to selecting the "Try It Out!" button:
-  <table border='1' width="100%">
-	  <tr><th>Access Token</th><th>Token Type</th><th>Role Tested</th></tr>
-		<tr><td>Bearer 688b026c-665f-4994-9139-6b21b13fbeee</td><td>datacustodian_access_token</td><td>Data Custodian Admin</td></tr>
-		<tr><td>Bearer 809caf03-612e-4e89-94b1-6f86d83b1ef8</td><td>upload_access_token</td><td>Meter Upload Admin</td></tr>
-		<tr><td>Bearer 75dd9c46-becf-48b5-9cb5-9c3233d718d0</td><td>client_access_token</td><td>Third Party Admin</td></tr>
-		<tr><td>Bearer d89bb056-0f02-4d47-9fd2-ec6a19ba8d0c</td><td>registration_access_token</td><td>Third Party Registration Admin</td></tr>
-                <tr><td>Bearer c59f88ed-26fb-4650-b07e-d5a031bfeb63</td><td>access_token</td><td>Role User (alan -- ID=5)</td></tr>
-		<tr><td>Bearer c1b42255-9ed2-4808-9f06-c38e39e5b3c0</td><td>access_token</td><td>Role User (charles -- ID=6)</td></tr>
-	</table>
-</p>
+Access to Green Button APIs require uuse of an OAuth2 Access Token.  The following table contains a list of <a href="http://www.greenbuttondata.org/espi/access_tokens/">Access Tokens and the various Data Custodian Roles</a> that may be tested using the assigned Access Token.  Insert one the following  Access Tokens in the field labelled "Access Token:" at the top of the page prior to selecting the "Try It Out!" button:
 <center>
+<form>
+  <table border='1' width="80%">
+	  <tr><th style="text-align:left;">Access Token</th><th style="text-align:left;">Token Type</th><th style="text-align:left;">Role Tested</th></tr>
+		<tr><td style="text-align:left;">
+		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer 688b026c-665f-4994-9139-6b21b13fbeee'); return;" />
+		  Bearer 688b026c-665f-4994-9139-6b21b13fbeee
+		  </td>
+		  <td style="text-align:left;">datacustodian_access_token</td>
+		  <td style="text-align:left;">Data Custodian Admin</td></tr>
+		<tr><td style="text-align:left;">
+		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer 809caf03-612e-4e89-94b1-6f86d83b1ef8'); return;" />
+		  Bearer 809caf03-612e-4e89-94b1-6f86d83b1ef8
+		  </td>
+		  <td style="text-align:left;">upload_access_token</td>
+		  <td style="text-align:left;">Meter Upload Admin</td>
+		</tr>
+		<tr><td style="text-align:left;">
+		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer 75dd9c46-becf-48b5-9cb5-9c3233d718d0'); return;" />
+		  Bearer 75dd9c46-becf-48b5-9cb5-9c3233d718d0
+		  </td>
+		  <td style="text-align:left;">client_access_token</td>
+		  <td style="text-align:left;">Third Party Admin</td>
+		</tr>
+		<tr><td style="text-align:left;">
+		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer d89bb056-0f02-4d47-9fd2-ec6a19ba8d0c'); return;" />
+		  Bearer d89bb056-0f02-4d47-9fd2-ec6a19ba8d0c
+		  </td>
+		  <td style="text-align:left;">registration_access_token</td>
+		  <td style="text-align:left;">Third Party Registration Admin</td>
+		</tr>
+                <tr><td style="text-align:left;">
+		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer c59f88ed-26fb-4650-b07e-d5a031bfeb63'); return;" />
+		  Bearer c59f88ed-26fb-4650-b07e-d5a031bfeb63
+		  </td>
+		  <td style="text-align:left;">access_token</td>
+		  <td style="text-align:left;">Role User (alan -- ID=5)</td>
+		</tr>
+		<tr><td style="text-align:left;">
+		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer c1b42255-9ed2-4808-9f06-c38e39e5b3c0'); return;" />
+		  Bearer c1b42255-9ed2-4808-9f06-c38e39e5b3c0
+		  </td>
+		  <td style="text-align:left;">access_token</td>
+		  <td style="text-align:left;">Role User (charles -- ID=6)</td>
+		</tr>
+	</table>
+</form>
+
+</p>
+
       <form id='api_selector'>		
 			  <div class='input'>
 				  <label for="input_accessToken">Access Token: </label>			
