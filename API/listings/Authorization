@@ -4,9 +4,7 @@
   "basePath": "https://services.greenbuttondata.org/DataCustodian",
   "resourcePath": "/resources",
   "produces": [
-    "application/xml",
-    "text/plain",
-    "text/html"
+    "application/atom+xml"
   ],
   "apis": [
     {
@@ -18,7 +16,6 @@
           "summary": "Find  all Data Custodian Authorizations [FB_3]",
           "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findAuthorizations",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -112,7 +109,6 @@
           "summary": "Retrieve a Data Custodian Authorization Using it's Id [FB_3]",
           "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getAuthorization",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -210,7 +206,6 @@
           "notes": "The Authorization must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateAuthorization",
 					"consumes": ["application/atom+xml"],
-          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[

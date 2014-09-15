@@ -5,9 +5,7 @@
   "resourcePath": "/resources",
   "produces":
   [
-    "application/xml",
-    "application/atom+xml",
-    "text/html"
+    "application/atom+xml"
   ],
   "apis":
   [
@@ -21,7 +19,6 @@
           "summary": "Request a Bulk transfer from a DataCustodian [FB_35]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "downloadMyData",
-					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [
@@ -119,7 +116,7 @@
           "summary": "Upload a Bulk transfer file [FB_99]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "downloadMyData",
-					"produces": ["application/atom+xml"],
+					"consumes": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [
@@ -168,7 +165,6 @@
           "summary": "Request a Greenbutton Subscription from a DataCustodian [FB_3]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "connectMyDataFeed",
-					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [
@@ -272,7 +268,6 @@
           "summary": "Download a Green Button XML file containing a specific UsagePoint for this RetailCustomer [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "downloadMyData",
-					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [
@@ -369,8 +364,7 @@
           "functionBlock": "FB_33",
           "summary": "Upload a Green Button XML file [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"upload_access_token\" in the appropriate field at the top of this web page!",
-          "consumes": ["application/atom+xml"],
-          "produces": ["application/xml"],
+          "consumes": ["application/xml"],
           "nickname": "uploadMyData",
           "parameters":
           [
@@ -419,7 +413,6 @@
           "summary": "Request a Greenbutton Subscription from a DataCustodian [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"upload_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "connectMyDataFeed",
-					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
           [

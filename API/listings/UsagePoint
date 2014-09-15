@@ -5,10 +5,7 @@
   "resourcePath": "/espi/1_1/resource",
   "produces":
 	[
-	"application/atom+xml",
-    "application/xml",
-    "text/html",
-    "text/plain"
+	"application/atom+xml"
   ],
   "apis":
 	[
@@ -22,7 +19,6 @@
           "summary": "Retrieve all Usage Points [FB_33]",
           "notes": "An XML representation of all Usage Points will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findUsagePoints",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -113,7 +109,6 @@
           "nickname": "addUsagePoint",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "consumes": ["application/atom+xml"],
-          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -154,7 +149,6 @@
           "summary": "Retrieve a Usage Point Using it's Id [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getUsagePoint",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -253,7 +247,6 @@
           "notes": "The Usage Point must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/atom+xml"],
-					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -337,7 +330,6 @@
           "summary": "Retrieve all Usage Points by Subscription Id [FB_32]",
           "notes": "An XML representation of all Usage Points will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findUsagePoints",
-					"produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -436,7 +428,6 @@
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addUsagePoint",
           "consumes": ["application/atom+xml"],
-          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -485,7 +476,6 @@
           "summary": "Retrieve a Subscription Usage Point by it's Id [FB_32]",
           "notes": " To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getUsagePoint",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -592,7 +582,6 @@
           "notes": "The Usage Point must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/atom+xml"],
-					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -643,7 +632,6 @@
           "summary": "Delete an existing Subscription Usage Point [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteUsagePoint",
-          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[

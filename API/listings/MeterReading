@@ -5,10 +5,7 @@
   "resourcePath": "/espi/1_1/resource",
   "produces":
 	[
-    "application/atom+xml",
-    "application/xml",
-    "text/plain",
-    "text/html"
+    "application/atom+xml"
   ],
   "apis":
 	[
@@ -22,7 +19,6 @@
           "summary": "Retrieve all Meter Readings associated with a given Usage Point [FB_33]",
           "notes": "An XML representation of all MeterReadingss will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findMeterReadings",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
 					"parameters":
 					[
@@ -153,7 +149,6 @@
           "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading Id [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getMeterReading",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -251,8 +246,8 @@
           "functionBlock": "FB_33",
           "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
           "notes": "The Usage Point and Meter Reading must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-          "consumes": ["application/atom+xml"],
           "nickname": "updateMeterReading",
+          "consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -343,7 +338,6 @@
           "summary": "Retrieve all Meter Readings associated with a given Usage Point [FB_32]",
           "notes": "An XML representation of all MeterReadingss will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findMeterReadings",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -506,7 +500,6 @@
           "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading Id [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getMeterReading",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -619,8 +612,8 @@
           "functionBlock": "FB_33",
           "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
           "notes": "The Usage Point and Meter Reading must exist.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-					"consumes": ["application/atom+xml"],
           "nickname": "updateMeterReading",
+					"consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
           "parameters":
 					[

@@ -5,9 +5,7 @@
   "resourcePath": "/usagepoint",
   "produces":
 	[
-    "application/xml",
-    "text/plain",
-    "text/html"
+    "application/atom+xml"
   ],
   "apis":
 	[
@@ -21,7 +19,6 @@
           "summary": "Finds all Reading Types [FB_32]",
           "notes": "An XML representation of all Reading Types will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findReadingTypes",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -110,8 +107,8 @@
           "functionBlock": "FB_33",
           "summary": "Add a new Reading Type [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-					"consumes": ["application/atom+xml"],
           "nickname": "addReadingType",
+					"consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -152,7 +149,6 @@
           "summary": "Retrieve a Reading Type Using it's ID [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getReadingType",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -249,8 +245,8 @@
           "functionBlock": "FB_33",
           "summary": "Update an existing Reading Type [FB_33]",
           "notes": "The Reading Type must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-					"consumes": ["application/atom+xml"],
           "nickname": "updateReadingType",
+					"consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
           "parameters":
 					[

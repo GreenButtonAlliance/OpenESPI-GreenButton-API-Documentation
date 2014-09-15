@@ -5,9 +5,7 @@
   "resourcePath": "/resources",
   "produces":
 	[
-    "application/xml",
-    "text/plain",
-    "text/html"
+    "application/atom+xml"
   ],
   "apis":
 	[
@@ -21,7 +19,6 @@
           "summary": "Retrieve all Application Information Structure contents [FB_33]",
           "notes": "An XML representation of all Application Informations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findApplicationInformations",
-          "produces": ["application/atom+xml"],
           "authorization": ["oauth2"],
           "parameters":
 					[
@@ -112,7 +109,6 @@
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addApplicationInformation",
 					"consumes": ["application/atom+xml"],
-          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -153,7 +149,6 @@
           "summary": "Retrieve an Application Information Structure using it's Id [FB_3]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"registration_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getApplicationInformation",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -189,7 +184,6 @@
           "notes": "The Application Information must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"registration_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateApplicationInformation",
 					"consumes": ["application/atom+xml"],
-          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -232,7 +226,6 @@
           "summary": "Delete an Application Information Structure [FB_41]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"registration_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteApplicationInformation",
-          "produces": ["application/xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[

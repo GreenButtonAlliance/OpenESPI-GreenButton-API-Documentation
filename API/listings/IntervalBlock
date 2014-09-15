@@ -4,9 +4,7 @@
   "basePath": "https://services.greenbuttondata.org/DataCustodian",
   "resourcePath": "/usagepoint",
   "produces": [
-    "application/xml",
-    "text/plain",
-    "text/html"
+    "application/atom+xml"
   ],
   "apis": [
 	  {
@@ -20,7 +18,6 @@
           "summary": "Retrieve all Interval Blocks [FB_33]",
           "notes": "An XML representation of all Interval Blocks will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findIntervalBlocks",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -108,8 +105,8 @@
           "functionBlock": "FB_33",
           "summary": "Add Interval Blocks to the Data Custodian [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-					"consumes": ["application/atom+xml"],
           "nickname": "addIntervalBlocks",
+					"consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -150,7 +147,6 @@
           "summary": "Retrieve an Interval Block Using it's Id [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findIntervalBlock",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -246,8 +242,8 @@
           "functionBlock": "FB_33",
           "summary": "Update an existing Interval Block [FB_33]",
           "notes": "The Interval Block must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-					"consumes": ["application/atom+xml"],
           "nickname": "updateIntervalBlock",
+					"consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -321,7 +317,6 @@
           "summary": "Retrieve all Interval Blocks [FB_32]",
           "notes": "An XML representation of all Interval Blocks will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findIntervalBlocks",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -433,8 +428,8 @@
           "functionBlock": "FB_33",
           "summary": "Add a new Interval Block to the Data Custodian [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-          "consumes": ["application/atom+xml"],
           "nickname": "addIntervalBlock",
+          "consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -498,7 +493,6 @@
           "summary": "Retrieve an IntervalBlock Using it's Id [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getIntervalBlock",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -618,8 +612,8 @@
           "functionBlock": "FB_33",
           "summary": "Update an existing Interval Block [FB_33]",
           "notes": "The Interval Block must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-          "consumes": ["application/atom+xml"],
           "nickname": "updateIntervalBlock",
+          "consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
           "parameters":
 					[

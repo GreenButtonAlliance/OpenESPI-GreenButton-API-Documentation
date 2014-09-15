@@ -4,9 +4,7 @@
   "basePath": "https://services.greenbuttondata.org/DataCustodian",
   "resourcePath": "/usagepoint",
   "produces": [
-    "application/xml",
-    "text/plain",
-    "text/html"
+    "application/atom+xml"
   ],
   "apis": [
     {
@@ -19,7 +17,6 @@
           "summary": "Retrieve all Electric Power Quality Summaries [FB_32]",
           "notes": "An XML representation of all Electric Power Quality Summaries will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findElectricPowerQualitySummaries",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -125,7 +122,6 @@
           "notes": "The New Electric Power Quality Summary will be added.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addElectricPowerQualitySummary",
           "consumes": ["application/atom+xml"],
-          "produces": [],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -181,7 +177,6 @@
           "summary": "Retrieve an Electric Power Quality Summary Using it's Id [FB_32]",
           "notes": "Returns a Electric Power Quality Summary.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getElectricPowerQualitySummary",
-          "produces": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
@@ -293,9 +288,8 @@
           "functionBlock": "FB_33",
           "summary": "Update an existing Electric Power Quality Summary [FB_33]",
           "notes": "The Electric Power Quality Summary must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
-					"consumes": ["application/xml"],
           "nickname": "updateElectricPowerQualitySummary",
-          "produces": ["application/atom+xml"],
+          "consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
 					[
