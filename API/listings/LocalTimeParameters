@@ -15,7 +15,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
           "summary": "Retrieve all Local Time Parameters [FB_32]",
           "notes": "An XML representation of all Local Time Parameters will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findLocalTimeParameters",
@@ -104,7 +103,6 @@
 	      },
         {
           "method": "POST",
-          "functionBlock": "FB_33",
           "summary": "Add a new Local Time Parameter [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addLocalTimeParameter",
@@ -145,7 +143,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
           "summary": "Retrieve a Local Time Parameter Using it's Id [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getLocalTimeParameter",
@@ -242,7 +239,6 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_33",
           "summary": "Update an existing Local Time Parameter [FB_33]",
           "notes": "The Local Time Parameter must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateLocalTimeParameter",
@@ -285,7 +281,6 @@
         },
         {
           "method": "DELETE",
-          "functionBlock": "FB_33",
           "summary": "Delete a Local Time Parameter [FB_33]",
           "nickname": "deleteLocalTimeParameter",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",

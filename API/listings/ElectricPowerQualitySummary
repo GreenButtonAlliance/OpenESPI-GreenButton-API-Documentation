@@ -13,7 +13,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
           "summary": "Retrieve all Electric Power Quality Summaries [FB_32]",
           "notes": "An XML representation of all Electric Power Quality Summaries will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findElectricPowerQualitySummaries",
@@ -117,7 +116,6 @@
 	      },
         {
           "method": "POST",
-          "functionBlock": "FB_33",
           "summary": "Add a new Electric Power Quality Summary to the Data Custodian [FB_33]",
           "notes": "The New Electric Power Quality Summary will be added.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addElectricPowerQualitySummary",
@@ -173,7 +171,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
           "summary": "Retrieve an Electric Power Quality Summary Using it's Id [FB_32]",
           "notes": "Returns a Electric Power Quality Summary.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getElectricPowerQualitySummary",
@@ -285,7 +282,6 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_33",
           "summary": "Update an existing Electric Power Quality Summary [FB_33]",
           "notes": "The Electric Power Quality Summary must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateElectricPowerQualitySummary",
@@ -343,7 +339,6 @@
         },
         {
           "method": "DELETE",
-          "functionBlock": "FB_33",
           "summary": "Delete an existing Electric Power Quality Summary [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteElectricPowerQualitySummary",

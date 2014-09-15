@@ -15,7 +15,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
           "summary": "Finds all Reading Types [FB_32]",
           "notes": "An XML representation of all Reading Types will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findReadingTypes",
@@ -104,7 +103,6 @@
 	      },
         {
           "method": "POST",
-          "functionBlock": "FB_33",
           "summary": "Add a new Reading Type [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addReadingType",
@@ -145,7 +143,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
           "summary": "Retrieve a Reading Type Using it's ID [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getReadingType",
@@ -242,7 +239,6 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_33",
           "summary": "Update an existing Reading Type [FB_33]",
           "notes": "The Reading Type must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateReadingType",
@@ -285,7 +281,6 @@
         },
         {
           "method": "DELETE",
-          "functionBlock": "FB_33",
           "summary": "Delete a Reading Type [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteReadingType",

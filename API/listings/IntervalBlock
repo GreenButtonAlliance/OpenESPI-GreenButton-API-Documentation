@@ -14,7 +14,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_33",
           "summary": "Retrieve all Interval Blocks [FB_33]",
           "notes": "An XML representation of all Interval Blocks will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findIntervalBlocks",
@@ -102,7 +101,6 @@
 	      },
         {
           "method": "POST",
-          "functionBlock": "FB_33",
           "summary": "Add Interval Blocks to the Data Custodian [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addIntervalBlocks",
@@ -143,7 +141,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_33",
           "summary": "Retrieve an Interval Block Using it's Id [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findIntervalBlock",
@@ -239,7 +236,6 @@
 	      },
         {
           "method": "PUT",
-          "functionBlock": "FB_33",
           "summary": "Update an existing Interval Block [FB_33]",
           "notes": "The Interval Block must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateIntervalBlock",
@@ -273,7 +269,6 @@
         },
         {
           "method": "DELETE",
-          "functionBlock": "FB_33",
           "summary": "Delete an Interval Block [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteIntervalBlock",
@@ -313,7 +308,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
           "summary": "Retrieve all Interval Blocks [FB_32]",
           "notes": "An XML representation of all Interval Blocks will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findIntervalBlocks",
@@ -425,7 +419,6 @@
 	      },
         {
           "method": "POST",
-          "functionBlock": "FB_33",
           "summary": "Add a new Interval Block to the Data Custodian [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addIntervalBlock",
@@ -489,7 +482,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
           "summary": "Retrieve an IntervalBlock Using it's Id [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getIntervalBlock",
@@ -609,7 +601,6 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_33",
           "summary": "Update an existing Interval Block [FB_33]",
           "notes": "The Interval Block must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateIntervalBlock",
@@ -675,7 +666,6 @@
         },
         {
           "method": "DELETE",
-          "functionBlock": "FB_33",
           "summary": "Delete an Interval Block [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteIntervalBlock",

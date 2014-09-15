@@ -12,7 +12,6 @@
       "operations": [
         {
           "method": "GET",
-          "functionBlock": "FB_3",
           "summary": "Find  all Data Custodian Authorizations [FB_3]",
           "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findAuthorizations",
@@ -105,7 +104,6 @@
       "operations": [
         {
           "method": "GET",
-          "functionBlock": "FB_3",
           "summary": "Retrieve a Data Custodian Authorization Using it's Id [FB_3]",
           "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getAuthorization",
@@ -201,7 +199,6 @@
         },
         {
           "method": "PUT",
-          "functionBlock": "FB_44",
           "summary": "Update an existing Data Custodian Authorization [FB_44]",
           "notes": "The Authorization must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateAuthorization",
@@ -244,7 +241,6 @@
 	},
         {
           "method": "DELETE",
-          "functionBlock": "FB_44",
           "summary": "Delete an existing Data Custodian Authorization [FB_44]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteAuthorization",

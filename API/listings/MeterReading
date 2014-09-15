@@ -15,7 +15,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_33",
           "summary": "Retrieve all Meter Readings associated with a given Usage Point [FB_33]",
           "notes": "An XML representation of all MeterReadingss will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findMeterReadings",
@@ -104,7 +103,6 @@
         },
         {
           "method": "POST",
-          "functionBlock": "FB_33",
           "summary": "Add a new Meter Reading to an existing Usage Point [FB_33]",
           "nickname": "addMeterReading",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
@@ -145,7 +143,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_33",
           "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading Id [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getMeterReading",
@@ -243,7 +240,6 @@
         },
         {
           "httpMethod": "PUT",
-          "functionBlock": "FB_33",
           "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
           "notes": "The Usage Point and Meter Reading must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateMeterReading",
@@ -293,7 +289,6 @@
         },
         {
           "method": "DELETE",
-          "functionBlock": "FB_33",
           "summary": "Delete a Meter Reading from Usage Point [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteMeterReading",
@@ -334,7 +329,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
           "summary": "Retrieve all Meter Readings associated with a given Usage Point [FB_32]",
           "notes": "An XML representation of all MeterReadingss will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findMeterReadings",
@@ -439,7 +433,6 @@
         },
         {
           "method": "POST",
-          "functionBlock": "FB_33",
           "summary": "Add a new Meter Reading to an existing Usage Point [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "addMeterReading",
@@ -496,7 +489,6 @@
 			[
         {
           "method": "GET",
-          "functionBlock": "FB_32",
           "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading Id [FB_32]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getMeterReading",
@@ -609,7 +601,6 @@
         },
         {
           "httpMethod": "PUT",
-          "functionBlock": "FB_33",
           "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
           "notes": "The Usage Point and Meter Reading must exist.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateMeterReading",
@@ -667,7 +658,6 @@
         },
         {
           "method": "DELETE",
-          "functionBlock": "FB_33",
           "summary": "Delete a Meter Reading from Usage Point [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteMeterReading",
