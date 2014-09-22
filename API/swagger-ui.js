@@ -340,7 +340,7 @@ function program5(depth0,data) {
 function program7(depth0,data) {
   
   
-  return "\n          <div style='margin:0;padding:0;display:inline'></div>\n          <h4>Error Status Codes</h4>\n          <table class='fullwidth'>\n            <thead>\n            <tr>\n              <th>HTTP Status Code</th>\n              <th>Reason</th>\n            </tr>\n            </thead>\n            <tbody class=\"operation-status\">\n            \n            </tbody>\n          </table>\n          ";
+  return "\n          <div style='margin:0;padding:0;display:inline'></div>\n          <h4>Response Messages</h4>\n          <table class='fullwidth'>\n            <thead>\n            <tr>\n              <th>HTTP Status Code</th>\n              <th>Reason</th>\n              <th>Response Model</th>            </tr>\n            </thead>\n            <tbody class=\"operation-status\">\n            \n            </tbody>\n          </table>\n          ";
   }
 
 function program9(depth0,data) {
@@ -1175,7 +1175,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (stack1 = helpers.message) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.message; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</td>\n";
+  buffer += "</td>\n<td width='50%'><span class=\"model-signature\" /></td>";
   return buffer;
   });
 })();
@@ -1821,7 +1821,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
       if (content === void 0) {
         code = $('<code />').text("no content");
         pre = $('<pre class="json" />').append(code);
-      } else if (contentType.indexOf("application/json") === 0 || contentType.indexOf("application/hal+json") === 0) {
+      } else if ((contentType.indexOf("application/json") === 0) || (contentType.indexOf("application/hal+json") === 0)) {
         code = $('<code />').text(JSON.stringify(JSON.parse(content), null, 2));
         pre = $('<pre class="json" />').append(code);
       } else if ((contentType.indexOf("application/xml") === 0) || (contentType.indexOf("application/atom+xml") === 0)){
