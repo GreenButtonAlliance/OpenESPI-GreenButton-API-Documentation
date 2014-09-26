@@ -10,7 +10,7 @@
   "apis":
 	[
     {
-      "path": "/espi/1_1/resource/Subscription/{subscriptionId}/UsagePoint/{usagePointId}/ElectricPowerUsageSumary",
+      "path": "/espi/1_1/resource/Subscription/{subscriptionId}/UsagePoint/{usagePointId}/ElectricPowerUsageSummary",
       "operations":
 			[
         {
