@@ -303,7 +303,7 @@
 			]
 		},
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{retailCustomerId}/UsagePoint/{usagePointId}/MeterReading/{meterReadingId}/IntervalBlock",
+      "path": "/espi/1_1/resource/Subscription/{subscriptionId}/UsagePoint/{usagePointId}/MeterReading/{meterReadingId}/IntervalBlock",
       "operations":
 			[
         {
@@ -315,7 +315,7 @@
           "parameters":
 					[
             {
-              "name": "retailCustomerId",
+              "name": "subscriptionId",
               "description": "Id of the Retail Customer the Interval Block references.",
               "required": true,
               "allowMultiple": false,
@@ -427,7 +427,7 @@
           "parameters":
 					[
             {
-              "name": "retailCustomerId",
+              "name": "subscriptionId",
               "description": "Id of the Retail Customer the Interval Block references.",
               "required": true,
               "allowMultiple": false,
@@ -477,7 +477,7 @@
       ]
     },
     {
-      "path": "/espi/1_1/resource/RetailCustomer/{retailCustomerId}/UsagePoint/{usagePointId}/MeterReading/{meterReadingId}/IntervalBlock/{intervalBlockId}",
+      "path": "/espi/1_1/resource/Subscription/{subscriptionId}/UsagePoint/{usagePointId}/MeterReading/{meterReadingId}/IntervalBlock/{intervalBlockId}",
       "operations":
 			[
         {
@@ -489,7 +489,7 @@
           "parameters":
 					[
             {
-              "name": "retailCustomerId",
+              "name": "subscriptionId",
               "description": "Id of the Retail Customer the Interval Block references.",
               "required": true,
               "allowMultiple": false,
@@ -609,7 +609,7 @@
           "parameters":
 					[
             {
-              "name": "retailCustomerId",
+              "name": "subscriptionId",
               "description": "Id of the Retail Customer the Interval Block references.",
               "required": true,
               "allowMultiple": false,
@@ -674,7 +674,7 @@
           "parameters":
 					[
             {
-              "name": "retailCustomerId",
+              "name": "subscriptionId",
               "description": "Id of the Retail Customer the Interval Block references.",
               "required": true,
               "allowMultiple": false,
