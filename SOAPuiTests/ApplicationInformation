@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://energyos.github.io/OpenESPI-GreenButton-API-Documentation/API/" />
+<title>ApplicationInformation</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ApplicationInformation</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/OpenESPI-GreenButton-API-Documentation/API/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input_accessToken</td>
+	<td>Bearer 688b026c-665f-4994-9139-6b21b13fbeee</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=ApplicationInformation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=/espi/1_1/resource/ApplicationInformation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;?xml-stylesheet type=&quot;text/xsl&quot; href=&quot;GreenButtonDataStyleSheet.xslt&quot;?&gt; &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&nbsp;&nbsp;&nbsp;&lt;id&gt;urn:uuid:a80ddc3c-fd8f-420a-86f1-7f7116dc13b0&lt;/id&gt;&nbsp;&nbsp;&nbsp;&lt;title&gt;Green Button Usage Feed&lt;/title&gt;&nbsp;&nbsp;&nbsp;&lt;updated&gt;2014-09-22T16:46:06Z&lt;/updated&gt;&nbsp;&nbsp;&nbsp;&lt;link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation&quot; rel=&quot;self&quot;/&gt;&nbsp;&nbsp;&nbsp;&lt;ns3:entry xmlns:espi=&quot;http://naesb.org/espi&quot; xmlns:ns3=&quot;http://www.w3.org/2005/Atom&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:id&gt;urn:uuid:185c9c3f-5b4a-44a9-8959-3ae79e60a9f5&lt;/ns3:id&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation&quot; rel=&quot;up&quot;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/1&quot; rel=&quot;self&quot;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:title&gt;GreenButtonData.org&nbsp;&nbsp;Data Custodian Admin Application&lt;/ns3:title&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:content&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:ApplicationInformation&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianApplicationStatus&gt;1&lt;/espi:dataCustodianApplicationStatus&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyNotifyUri&gt;https://services.greenbuttondata.org/ThirdParty/espi/1_1/Notification&lt;/espi:thirdPartyNotifyUri&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianBulkRequestURI&gt;&lt;/espi:dataCustodianBulkRequestURI&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianResourceEndpoint&gt;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource&lt;/espi:dataCustodianResourceEndpoint&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_secret&gt;secret&lt;/espi:client_secret&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_id&gt;data_custodian_admin&lt;/espi:client_id&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:contacts&gt;john.teeter@nist.gov,martin.burns@nist.gov,donald.coffin@reminetworks.com&lt;/espi:contacts&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:token_endpoint_auth_method&gt;client_secret_basic&lt;/espi:token_endpoint_auth_method&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:scope&gt;FB=3_19_32_33_34_35_36_37_38_41_44_45&lt;/espi:scope&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:grant_types&gt;client_credentials&lt;/espi:grant_types&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianId&gt;data_custodian&lt;/espi:dataCustodianId&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyApplicationName&gt;Data Custodian Admin (localhost)&lt;/espi:thirdPartyApplicationName&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/espi:ApplicationInformation&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ns3:content&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:published&gt;2014-01-02T10:00:00Z&lt;/ns3:published&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:updated&gt;2014-01-02T10:00:00Z&lt;/ns3:updated&gt;&nbsp;&nbsp;&nbsp;&lt;/ns3:entry&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:entry xmlns:espi=&quot;http://naesb.org/espi&quot; xmlns:ns3=&quot;http://www.w3.org/2005/Atom&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:id&gt;urn:uuid:af6e8b03-0299-467e-972a-a883ecdcc575&lt;/ns3:id&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation&quot; rel=&quot;up&quot;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/2&quot; rel=&quot;self&quot;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:title&gt;GreenButtonData.org&nbsp;&nbsp;ThirdParty Application&lt;/ns3:title&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:content&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:ApplicationInformation&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianApplicationStatus&gt;1&lt;/espi:dataCustodianApplicationStatus&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyNotifyUri&gt;https://services.greenbuttondata.org/ThirdParty/espi/1_1/Notification&lt;/espi:thirdPartyNotifyUri&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianBulkRequestURI&gt;&lt;/espi:dataCustodianBulkRequestURI&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianResourceEndpoint&gt;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource&lt;/espi:dataCustodianResourceEndpoint&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyScopeSelectionScreenURI&gt;https://services.greenbuttondata.org/ThirdParty/RetailCustomer/ScopeSelection&lt;/espi:thirdPartyScopeSelectionScreenURI&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_secret&gt;secret&lt;/espi:client_secret&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:redirect_uri&gt;https://services.greenbuttondata.org/ThirdParty/espi/1_1/OAuthCallBack&lt;/espi:redirect_uri&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_id&gt;third_party&lt;/espi:client_id&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:contacts&gt;john.teeter@nist.gov,martin.burns@nist.gov,donald.coffin@reminetworks.com&lt;/espi:contacts&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:token_endpoint_auth_method&gt;client_secret_basic&lt;/espi:token_endpoint_auth_method&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:scope&gt;FB=4_5_15;IntervalDuration=900;BlockDuration=monthly;HistoryLength=13&lt;/espi:scope&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:scope&gt;FB=4_5_15;IntervalDuration=3600;BlockDuration=monthly;HistoryLength=13&lt;/espi:scope&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:scope&gt;FB=4_5_12_15_16;IntervalDuration=3600;BlockDuration=monthly;HistoryLength=13&lt;/espi:scope&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:grant_types&gt;authorization_code,refresh_token&lt;/espi:grant_types&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianId&gt;data_custodian&lt;/espi:dataCustodianId&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyApplicationName&gt;Third Party (localhost)&lt;/espi:thirdPartyApplicationName&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianScopeSelectionScreenURI&gt;https://services.greenbuttondata.org/DataCustodian/RetailCustomer/ScopeSelectionList&lt;/espi:dataCustodianScopeSelectionScreenURI&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/espi:ApplicationInformation&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ns3:content&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:published&gt;2014-01-02T10:00:00Z&lt;/ns3:published&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:updated&gt;2014-01-02T10:00:00Z&lt;/ns3:updated&gt;&nbsp;&nbsp;&nbsp;&lt;/ns3:entry&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:entry xmlns:espi=&quot;http://naesb.org/espi&quot; xmlns:ns3=&quot;http://www.w3.org/2005/Atom&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:id&gt;urn:uuid:185c9c3f-5b4a-44a9-8959-3ae79e60a9f7&lt;/ns3:id&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation&quot; rel=&quot;up&quot;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/3&quot; rel=&quot;self&quot;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:title&gt;GreenButtonData.org&nbsp;&nbsp;MDM Upload Application&lt;/ns3:title&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:content&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:ApplicationInformation&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianApplicationStatus&gt;1&lt;/espi:dataCustodianApplicationStatus&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyNotifyUri&gt;https://services.greenbuttondata.org/ThirdParty/espi/1_1/Notification&lt;/espi:thirdPartyNotifyUri&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianBulkRequestURI&gt;&lt;/espi:dataCustodianBulkRequestURI&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianResourceEndpoint&gt;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource&lt;/espi:dataCustodianResourceEndpoint&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_secret&gt;secret&lt;/espi:client_secret&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_id&gt;upload_admin&lt;/espi:client_id&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:contacts&gt;john.teeter@nist.gov,martin.burns@nist.gov,donald.coffin@reminetworks.com&lt;/espi:contacts&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:token_endpoint_auth_method&gt;client_secret_basic&lt;/espi:token_endpoint_auth_method&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:scope&gt;FB=45&lt;/espi:scope&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:grant_types&gt;client_credentials&lt;/espi:grant_types&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianId&gt;data_custodian&lt;/espi:dataCustodianId&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyApplicationName&gt;MDM Upload (localhost)&lt;/espi:thirdPartyApplicationName&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/espi:ApplicationInformation&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ns3:content&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:published&gt;2014-01-02T10:00:00Z&lt;/ns3:published&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:updated&gt;2014-01-02T10:00:00Z&lt;/ns3:updated&gt;&nbsp;&nbsp;&nbsp;&lt;/ns3:entry&gt; &lt;/feed&gt;&nbsp;&nbsp;Response Code</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/OpenESPI-GreenButton-API-Documentation/API/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input_accessToken</td>
+	<td>Bearer 688b026c-665f-4994-9139-6b21b13fbeee</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=/espi/1_1/resource/ApplicationInformation/{applicationInformationId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=applicationInformationId</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ApplicationInformation_getApplicationInformation_get_2_content &gt; form.sandbox &gt; div.sandbox_header &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td> &lt;ns3:entry xmlns:espi=&quot;http://naesb.org/espi&quot; xmlns:ns3=&quot;http://www.w3.org/2005/Atom&quot;&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:id&gt;urn:uuid:185c9c3f-5b4a-44a9-8959-3ae79e60a9f5&lt;/ns3:id&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation&quot; rel=&quot;up&quot;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/1&quot; rel=&quot;self&quot;/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:title&gt;GreenButtonData.org&nbsp;&nbsp;Data Custodian Admin Application&lt;/ns3:title&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:content&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:ApplicationInformation&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianApplicationStatus&gt;1&lt;/espi:dataCustodianApplicationStatus&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyNotifyUri&gt;https://services.greenbuttondata.org/ThirdParty/espi/1_1/Notification&lt;/espi:thirdPartyNotifyUri&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianBulkRequestURI&gt;&lt;/espi:dataCustodianBulkRequestURI&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianResourceEndpoint&gt;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource&lt;/espi:dataCustodianResourceEndpoint&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_secret&gt;secret&lt;/espi:client_secret&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_id&gt;data_custodian_admin&lt;/espi:client_id&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:contacts&gt;john.teeter@nist.gov,martin.burns@nist.gov,donald.coffin@reminetworks.com&lt;/espi:contacts&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:token_endpoint_auth_method&gt;client_secret_basic&lt;/espi:token_endpoint_auth_method&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:scope&gt;FB=3_19_32_33_34_35_36_37_38_41_44_45&lt;/espi:scope&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:grant_types&gt;client_credentials&lt;/espi:grant_types&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianId&gt;data_custodian&lt;/espi:dataCustodianId&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyApplicationName&gt;Data Custodian Admin (localhost)&lt;/espi:thirdPartyApplicationName&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/espi:ApplicationInformation&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ns3:content&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:published&gt;2014-01-02T10:00:00Z&lt;/ns3:published&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:updated&gt;2014-01-02T10:00:00Z&lt;/ns3:updated&gt; &lt;/ns3:entry&gt;&nbsp;&nbsp;Response Code</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/OpenESPI-GreenButton-API-Documentation/API/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=input_accessToken</td>
+	<td>Bearer 688b026c-665f-4994-9139-6b21b13fbeee</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ApplicationInformation_addApplicationInformation_post_1 &gt; div.heading &gt; h3 &gt; span.path &gt; a.toggleOperation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ApplicationInformation_addApplicationInformation_post_1 &gt; div.heading &gt; h3 &gt; span.path &gt; a.toggleOperation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=applicationInformationData</td>
+	<td>&nbsp;&nbsp;&lt;ns3:entry xmlns:espi=&quot;http://naesb.org/espi&quot; xmlns:ns3=&quot;http://www.w3.org/2005/Atom&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:id&gt;urn:uuid:185c9c3f-5b4a-44a9-8959-3ae79e60a9ff&lt;/ns3:id&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation&quot; rel=&quot;up&quot;/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/3&quot; rel=&quot;self&quot;/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:title&gt;GreenButtonData.org&nbsp;&nbsp;MDM Upload Application&lt;/ns3:title&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:content&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:ApplicationInformation&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianApplicationStatus&gt;1&lt;/espi:dataCustodianApplicationStatus&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyNotifyUri&gt;https://services.greenbuttondata.org/ThirdParty/espi/1_1/Notification&lt;/espi:thirdPartyNotifyUri&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianBulkRequestURI&gt;&lt;/espi:dataCustodianBulkRequestURI&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianResourceEndpoint&gt;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource&lt;/espi:dataCustodianResourceEndpoint&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_secret&gt;secret&lt;/espi:client_secret&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_id&gt;upload_admin&lt;/espi:client_id&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:contacts&gt;john.teeter@nist.gov,martin.burns@nist.gov,donald.coffin@reminetworks.com&lt;/espi:contacts&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:token_endpoint_auth_method&gt;client_secret_basic&lt;/espi:token_endpoint_auth_method&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:scope&gt;FB=45&lt;/espi:scope&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:grant_types&gt;client_credentials&lt;/espi:grant_types&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianId&gt;data_custodian&lt;/espi:dataCustodianId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyApplicationName&gt;MDM Upload (localhost)&lt;/espi:thirdPartyApplicationName&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/espi:ApplicationInformation&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ns3:content&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:published&gt;2014-01-02T10:00:00Z&lt;/ns3:published&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:updated&gt;2014-01-02T10:00:00Z&lt;/ns3:updated&gt;<br />&nbsp;&nbsp;&lt;/ns3:entry&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ApplicationInformation_addApplicationInformation_post_1_content &gt; form.sandbox &gt; div.sandbox_header &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//textarea[@name='applicationInformationData'])[2]</td>
+	<td><br />&lt;ns3:entry xmlns:espi=&quot;http://naesb.org/espi&quot; xmlns:ns3=&quot;http://www.w3.org/2005/Atom&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:id&gt;urn:uuid:185c9c3f-5b4a-44a9-8959-3ae79e60a9ff&lt;/ns3:id&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation&quot; rel=&quot;up&quot;/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:link href=&quot;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource/ApplicationInformation/4&quot; rel=&quot;self&quot;/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:title&gt;GreenButtonData.org&nbsp;&nbsp;MDM Upload Application&lt;/ns3:title&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:content&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:ApplicationInformation&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianApplicationStatus&gt;1&lt;/espi:dataCustodianApplicationStatus&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyNotifyUri&gt;https://services.greenbuttondata.org/ThirdParty/espi/1_1/Notification&lt;/espi:thirdPartyNotifyUri&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianBulkRequestURI&gt;&lt;/espi:dataCustodianBulkRequestURI&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianResourceEndpoint&gt;https://services.greenbuttondata.org/DataCustodian/espi/1_1/resource&lt;/espi:dataCustodianResourceEndpoint&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_secret&gt;secret&lt;/espi:client_secret&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:client_id&gt;upload_admin&lt;/espi:client_id&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:contacts&gt;foo.bar@nist.gov,martin.burns@nist.gov,donald.coffin@reminetworks.com&lt;/espi:contacts&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:token_endpoint_auth_method&gt;client_secret_basic&lt;/espi:token_endpoint_auth_method&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:scope&gt;FB=45&lt;/espi:scope&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:grant_types&gt;client_credentials&lt;/espi:grant_types&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:dataCustodianId&gt;data_custodian&lt;/espi:dataCustodianId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;espi:thirdPartyApplicationName&gt;MDM Upload (localhost)&lt;/espi:thirdPartyApplicationName&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/espi:ApplicationInformation&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ns3:content&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:published&gt;2014-01-02T10:00:00Z&lt;/ns3:published&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns3:updated&gt;2014-01-02T10:00:00Z&lt;/ns3:updated&gt;<br />&lt;/ns3:entry&gt;</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ApplicationInformation_updateApplicationInformation_put_3_content &gt; form.sandbox &gt; div.sandbox_header &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=/espi/1_1/resource/ApplicationInformation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ApplicationInformation_addApplicationInformation_post_1 &gt; div.heading &gt; h3 &gt; span.path &gt; a.toggleOperation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=/espi/1_1/resource/ApplicationInformation/{applicationInformationId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=applicationInformationId</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ApplicationInformation_getApplicationInformation_get_2_content &gt; form.sandbox &gt; div.sandbox_header &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=/espi/1_1/resource/ApplicationInformation/{applicationInformationId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>foo.bar@nist.gov</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=/espi/1_1/resource/ApplicationInformation/{applicationInformationId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ApplicationInformation_updateApplicationInformation_put_3 &gt; div.heading &gt; h3 &gt; span.path &gt; a.toggleOperation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ApplicationInformation_deleteApplicationInformation_delete_4 &gt; div.heading &gt; h3 &gt; span.path &gt; a.toggleOperation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@name='applicationInformationId'])[3]</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#ApplicationInformation_deleteApplicationInformation_delete_4_content &gt; form.sandbox &gt; div.sandbox_header &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=/espi/1_1/resource/ApplicationInformation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
