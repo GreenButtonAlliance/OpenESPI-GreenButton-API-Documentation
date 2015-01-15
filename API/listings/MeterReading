@@ -15,7 +15,7 @@
 			[
         {
           "method": "GET",
-          "summary": "Retrieve all Meter Readings associated with a given Usage Point [FB_33]",
+          "summary": "Retrieve all Meter Readings within the Data Custodian [FB_33]",
           "notes": "An XML representation of all MeterReadingss will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "findMeterReadings",
           "authorizations": ["oauth2"],
@@ -103,7 +103,7 @@
         },
         {
           "method": "POST",
-          "summary": "Add a new Meter Reading to an existing Usage Point [FB_33]",
+          "summary": "Add a new Meter Reading to the Data Custodian [FB_33]",
           "nickname": "addMeterReading",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "consumes": ["application/atom+xml"],
@@ -143,7 +143,7 @@
 			[
         {
           "method": "GET",
-          "summary": "Retrieve a Usage Point's Meter Reading Using it's Meter Reading Id [FB_33]",
+          "summary": "Retrieve a Meter Reading Using it's Meter Reading Id [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "getMeterReading",
           "authorizations": ["oauth2"],
@@ -240,7 +240,7 @@
         },
         {
           "httpMethod": "PUT",
-          "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
+          "summary": "Update an existing Meter Reading within the Data Custodian [FB_33]",
           "notes": "The Usage Point and Meter Reading must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "updateMeterReading",
           "consumes": ["application/atom+xml"],					
@@ -289,7 +289,7 @@
         },
         {
           "method": "DELETE",
-          "summary": "Delete a Meter Reading from Usage Point [FB_33]",
+          "summary": "Delete a Meter Reading from the Data Custodian [FB_33]",
           "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
           "nickname": "deleteMeterReading",
 					"produces": ["application/xml"],
@@ -337,7 +337,7 @@
 					[
             {
               "name": "subscriptionId",
-              "description": "Id of the Retail Customer the Meter Reading references.",
+              "description": "Id of the Subscription associated with the Usage Point containing the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -442,7 +442,7 @@
 					[
             {
               "name": "subscriptionId",
-              "description": "Id of the Retail Customer the Meter Reading references.",
+              "description": "Id of the Subscription associated with the Usage Point containing the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -497,7 +497,7 @@
 					[
             {
               "name": "subscriptionId",
-              "description": "Id of the Retail Customer the Meter Reading references.",
+              "description": "Id of the Subscription associated with the Usage Point containing the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -610,7 +610,7 @@
 					[
             {
               "name": "subscriptionId",
-              "description": "Id of the Retail Customer the Meter Reading references.",
+              "description": "Id of the Subscription associated with the Usage Point containing the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
@@ -667,7 +667,7 @@
 					[
             {
               "name": "subscriptionId",
-              "description": "Id of the Retail Customer the Meter Reading references.",
+              "description": "Id of the Subscription associated with the Usage Point containing the Meter Reading.",
               "required": true,
               "allowMultiple": false,
               "dataType": "string",
