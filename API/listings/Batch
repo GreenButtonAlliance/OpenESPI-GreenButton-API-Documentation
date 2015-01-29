@@ -160,7 +160,7 @@
         {
           "method": "GET",
           "summary": "Request a Greenbutton Subscription from a DataCustodian [FB_3]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
           "nickname": "connectMyDataFeed",
           "authorizations": ["oauth2"],
           "parameters":
