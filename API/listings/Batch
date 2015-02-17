@@ -16,7 +16,7 @@
         {
           "method": "GET",
           "summary": "Request a Bulk transfer from a DataCustodian [FB_35]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"client_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "downloadMyData",
           "authorizations": ["oauth2"],
           "parameters":
@@ -112,7 +112,7 @@
         {
           "method": "POST",
           "summary": "Upload a Bulk transfer file [FB_99]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"client_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "downloadMyData",
 					"consumes": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -160,7 +160,7 @@
         {
           "method": "GET",
           "summary": "Request a Greenbutton Subscription from a DataCustodian [FB_3]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "connectMyDataFeed",
           "authorizations": ["oauth2"],
           "parameters":
@@ -262,7 +262,7 @@
         {
           "method": "GET",
           "summary": "Download a Green Button XML file containing a specific UsagePoint for this RetailCustomer [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"client_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "downloadMyData",
           "authorizations": ["oauth2"],
           "parameters":
@@ -358,7 +358,7 @@
         {
           "method": "POST",
           "summary": "Upload a Green Button XML file [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"upload_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"upload_access_token\"</strong> in the appropriate field at the top of this web page!",
           "consumes": ["application/xml"],
           "nickname": "uploadMyData",
           "parameters":
@@ -405,7 +405,7 @@
         {
           "method": "GET",
           "summary": "Request a Greenbutton Subscription from a DataCustodian [FB_32]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"upload_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"upload_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "connectMyDataFeed",
           "authorizations": ["oauth2"],
           "parameters":

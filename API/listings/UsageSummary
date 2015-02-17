@@ -16,7 +16,7 @@
         {
           "method": "GET",
           "summary": "Retrieve all Usage Summaries [FB_32]",
-          "notes": "An XML representation of all Usage Summaries will be returned.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "notes": "An XML representation of all Usage Summaries will be returned.  To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "findUsageSummaries",
           "authorizations": ["oauth2"],
           "parameters":
@@ -119,7 +119,7 @@
         {
           "method": "POST",
           "summary": "Add a new Usage Summary [FB_33]",
-          "notes": "The New Usage Summary will be added. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "The New Usage Summary will be added. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "addUsageSummary",
           "consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -174,7 +174,7 @@
         {
           "method": "GET",
           "summary": "Retrieve an Usage Summary Using it's Id [FB_32]",
-          "notes": "Returns a Usage Summary. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "notes": "Returns a Usage Summary. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "getUsageSummary",
           "authorizations": ["oauth2"],
           "parameters":
@@ -285,7 +285,7 @@
         {
           "method": "PUT",
           "summary": "Update an existing Usage Summary [FB_33]",
-          "notes": "The Usage Summary must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "The Usage Summary must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "updateUsageSummary",
           "consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -342,7 +342,7 @@
         {
           "method": "DELETE",
           "summary": "Delete an existing Usage Summary [FB_33]",
-          "notes": " To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": " To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "deleteUsageSummary",
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],

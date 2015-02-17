@@ -1,0 +1,53 @@
+{
+  "apiVersion": "1.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://services.greenbuttondata.org/DataCustodian",
+  "resourcePath": "/",
+  "produces":
+	[
+    "text/plain"
+  ],
+  "apis":
+	[
+    {
+      "path": "/management",
+      "operations":
+			[
+        {
+          "method": "GET",
+          "summary": "Reset Data Custodian Data Base",
+          "notes": "This non-standard interface permits the database of the sandbox to be reset to a known state. This is necessary if through using this sandbox, you corrupt the database or <strong>POST/PUT/or DELETE</strong> any resource (which you are encouraged to try :-). The reset command will enable the sandbox to be returned to a state where it has all preconfigured UsagePoints, access tokens, and Authorizations to use to continue testing.<br/> <br/>To provide the required Bearer access token in the HTTP Authorization header, enter either the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
+          "nickname": "resetDataCustodianDB",
+          "authorization": ["oauth2"],
+          "parameters":
+          [
+            {
+              "name": "command",
+              "description": "The Data Custodian management command to be issued",
+              "defaultValue": "resetDataCustodianDB",
+              "required": true,
+              "allowMultiple": false,
+              "dataType": "String",
+              "paramType": "query"
+            }
+					],
+          "responseMessages":
+					[
+            {
+              "code": 200,
+              "message": "OK"
+            },
+            {
+              "code": 400,
+              "message": "Bad Request"
+            },
+            {
+              "code": 403,
+              "message": "Forbidden"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

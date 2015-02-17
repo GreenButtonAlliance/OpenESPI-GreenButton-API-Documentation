@@ -19,44 +19,46 @@
   <script type="text/javascript">
 
     $(function () {
-      window.swaggerUi = new SwaggerUi({
-      url: "/OpenESPI-GreenButton-API-Documentation/API/api-docs",
-      dom_id: "swagger-ui-container",
-      onComplete: function(swaggerApi, swaggerUi){
-        if(console) {
-          console.log("Loaded SwaggerUI")
-        }
-        $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
-      },
-      onFailure: function(data) {
-        if(console) {
-          console.log("Unable to Load SwaggerUI");
-          console.log(data);
-        }
-      },
-      docExpansion: "none"
-    });
-			
-    $('#input_accessToken').change(function() {
-      console.log("Handler for Access Token .change() called...");
-      var token = $('#input_accessToken')[0].value;
-      console.log("input: " + token);
-      if(token && token.trim() != "") {
-        console.log("Access Token: " + token);
-        window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));				
-      }})
+        window.swaggerUi = new SwaggerUi({
+            url: "/OpenESPI-GreenButton-API-Documentation/API/api-docs",
+            dom_id: "swagger-ui-container",
+            onComplete: function (swaggerApi, swaggerUi) {
+                if (console) {
+                    console.log("Loaded SwaggerUI");
+                }
+                $('pre code').each(function (i, e) {hljs.highlightBlock(e)});
+            },
+            onFailure: function (data) {
+                if (console) {
+                    console.log("Unable to Load SwaggerUI");
+                    console.log(data);
+                }
+            },
+            docExpansion: "none"
+        });
 
-    var token = "";		
-	
-		window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));
-    window.swaggerUi.load();
-  });
-  function doAccessToken(aToken) {
-    var temp = document.getElementById("input_accessToken");
-    temp.value = aToken;
-    temp.focus();
-    temp.submit();
-  }
+        $('#input_accessToken').change(function () {
+            console.log("Handler for Access Token .change() called...");
+            var token = $('#input_accessToken')[0].value;
+            console.log("input: " + token);
+            if (token && token.trim() != "") {
+                console.log("Access Token: " + token);
+                window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));
+            }
+        });
+
+        var token = "";
+
+        window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));
+        window.swaggerUi.load();
+    });
+
+    function doAccessToken(aToken) {
+        var temp = document.getElementById("input_accessToken");
+        temp.value = aToken;
+        temp.focus();
+        temp.submit();
+    }
 
   </script>
 </head>

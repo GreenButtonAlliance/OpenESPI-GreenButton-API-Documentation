@@ -16,7 +16,7 @@
         {
           "method": "GET",
           "summary": "Retrieve all Electric Power Usage Summaries [FB_32]",
-          "notes": "An XML representation of all Electric Power Usage Summaries will be returned.  To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "notes": "An XML representation of all Electric Power Usage Summaries will be returned.  To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "findElectricPowerUsageSummaries",
           "authorizations": ["oauth2"],
           "parameters":
@@ -119,7 +119,7 @@
         {
           "method": "POST",
           "summary": "Add a new Electric Power Usage Summary [FB_33]",
-          "notes": "The New Electric Power Usage Summary will be added. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "The New Electric Power Usage Summary will be added. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "addElectricPowerUsageSummary",
           "consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -174,7 +174,7 @@
         {
           "method": "GET",
           "summary": "Retrieve an Electric Power Usage Summary Using it's Id [FB_32]",
-          "notes": "Returns a Electric Power Usage Summary. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "notes": "Returns a Electric Power Usage Summary. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "getElectricPowerUsageSummary",
           "authorizations": ["oauth2"],
           "parameters":
@@ -285,7 +285,7 @@
         {
           "method": "PUT",
           "summary": "Update an existing Electric Power Usage Summary [FB_33]",
-          "notes": "The Electric Power Usage Summary must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "The Electric Power Usage Summary must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "updateElectricPowerUsageSummary",
           "consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -342,7 +342,7 @@
         {
           "method": "DELETE",
           "summary": "Delete an existing Electric Power Usage Summary [FB_33]",
-          "notes": " To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": " To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "deleteElectricPowerUsageSummary",
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],

@@ -15,7 +15,7 @@
         {
           "method": "GET",
           "summary": "Retrieve all Interval Blocks [FB_33]",
-          "notes": "An XML representation of all Interval Blocks will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "An XML representation of all Interval Blocks will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "findIntervalBlocks",
           "authorizations": ["oauth2"],
           "parameters":
@@ -102,7 +102,7 @@
         {
           "method": "POST",
           "summary": "Add Interval Blocks to the Data Custodian [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "addIntervalBlocks",
 					"consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
@@ -142,7 +142,7 @@
         {
           "method": "GET",
           "summary": "Retrieve an Interval Block Using it's Id [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "findIntervalBlock",
           "authorizations": ["oauth2"],
           "parameters":
@@ -237,7 +237,7 @@
         {
           "method": "PUT",
           "summary": "Update an existing Interval Block [FB_33]",
-          "notes": "The Interval Block must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "The Interval Block must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "updateIntervalBlock",
 					"consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
@@ -270,7 +270,7 @@
         {
           "method": "DELETE",
           "summary": "Delete an Interval Block [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "deleteIntervalBlock",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -309,7 +309,7 @@
         {
           "method": "GET",
           "summary": "Retrieve all Interval Blocks [FB_32]",
-          "notes": "An XML representation of all Interval Blocks will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "notes": "An XML representation of all Interval Blocks will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "findIntervalBlocks",
           "authorizations": ["oauth2"],
           "parameters":
@@ -420,7 +420,7 @@
         {
           "method": "POST",
           "summary": "Add a new Interval Block to the Data Custodian [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "addIntervalBlock",
           "consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
@@ -483,7 +483,7 @@
         {
           "method": "GET",
           "summary": "Retrieve an IntervalBlock Using it's Id [FB_32]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "getIntervalBlock",
           "authorizations": ["oauth2"],
           "parameters":
@@ -602,7 +602,7 @@
         {
           "method": "PUT",
           "summary": "Update an existing Interval Block [FB_33]",
-          "notes": "The Interval Block must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "The Interval Block must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "updateIntervalBlock",
           "consumes": ["application/atom+xml"],					
           "authorizations": ["oauth2"],
@@ -667,7 +667,7 @@
         {
           "method": "DELETE",
           "summary": "Delete an Interval Block [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "deleteIntervalBlock",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],

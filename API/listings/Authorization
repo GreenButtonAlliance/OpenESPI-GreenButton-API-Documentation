@@ -13,7 +13,7 @@
         {
           "method": "GET",
           "summary": "Find  all Data Custodian Authorizations [FB_3]",
-          "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"client_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "findAuthorizations",
           "authorizations": ["oauth2"],
           "parameters":
@@ -105,7 +105,7 @@
         {
           "method": "GET",
           "summary": "Retrieve a Data Custodian Authorization Using it's Id [FB_3]",
-          "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "An XML representation of all Authorizations will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"client_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "getAuthorization",
           "authorizations": ["oauth2"],
           "parameters":
@@ -200,7 +200,7 @@
         {
           "method": "PUT",
           "summary": "Update an existing Data Custodian Authorization [FB_44]",
-          "notes": "The Authorization must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "The Authorization must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"client_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "updateAuthorization",
 					"consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -242,7 +242,7 @@
         {
           "method": "DELETE",
           "summary": "Delete an existing Data Custodian Authorization [FB_44]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"client_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"client_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "deleteAuthorization",
           "produces": ["application/xml"],
           "authorizations": ["oauth2"],

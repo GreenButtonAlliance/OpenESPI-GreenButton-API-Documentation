@@ -16,7 +16,7 @@
         {
           "method": "GET",
           "summary": "Obtain the Data Custodian Resource Server's Status [FB_3]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter either the \"data_custodian_access_token\", \"client_access_token\", or the \"upload_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter either the <strong>\"data_custodian_access_token\"</strong>, <strong>\"client_access_token\"</strong>, or the <strong>\"upload_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "getServiceStatus",
 					"authorizations": ["oauth2"],
           "parameters": [],

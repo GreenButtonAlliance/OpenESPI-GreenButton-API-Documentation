@@ -16,7 +16,7 @@
         {
           "method": "GET",
           "summary": "Retrieve all Usage Points [FB_33]",
-          "notes": "An XML representation of all Usage Points will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "An XML representation of all Usage Points will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "findUsagePoints",
           "authorizations": ["oauth2"],
           "parameters":
@@ -105,7 +105,7 @@
           "method": "POST",
           "summary": "Add a new Usage Point [FB_33]",
           "nickname": "addUsagePoint",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
           "parameters":
@@ -144,7 +144,7 @@
         {
           "method": "GET",
           "summary": "Retrieve a Usage Point Using it's Id [FB_32]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "getUsagePoint",
           "authorizations": ["oauth2"],
           "parameters":
@@ -240,7 +240,7 @@
         {
           "httpMethod": "PUT",
           "summary": "Update an existing Usage Point [FB_33]",
-          "notes": "The Usage Point must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "The Usage Point must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -282,7 +282,7 @@
         {
           "method": "DELETE",
           "summary": "Delete an existing Usage Point [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "deleteUsagePoint",
 					"produces": ["application/xml"],
           "authorizations": ["oauth2"],
@@ -322,7 +322,7 @@
         {
           "method": "GET",
           "summary": "Retrieve all Usage Points by Subscription Id [FB_32]",
-          "notes": "An XML representation of all Usage Points will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "notes": "An XML representation of all Usage Points will be returned. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "findUsagePoints",
           "authorizations": ["oauth2"],
           "parameters":
@@ -418,7 +418,7 @@
         {
           "method": "POST",
           "summary": "Add a new Usage Point by Subscription Id [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "addUsagePoint",
           "consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -466,7 +466,7 @@
         {
           "method": "GET",
           "summary": "Retrieve a Subscription Usage Point by it's Id [FB_32]",
-          "notes": " To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" or \"access_token\" in the appropriate field at the top of this web page!",
+          "notes": " To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "getUsagePoint",
           "authorizations": ["oauth2"],
           "parameters":
@@ -570,7 +570,7 @@
         {
           "httpMethod": "PUT",
           "summary": "Update an existing Subscription Usage Point [FB_33]",
-          "notes": "The Usage Point must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "The Usage Point must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "updateUsagePoint",
 					"consumes": ["application/atom+xml"],
           "authorizations": ["oauth2"],
@@ -620,7 +620,7 @@
         {
           "method": "DELETE",
           "summary": "Delete an existing Subscription Usage Point [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the \"data_custodian_access_token\" in the appropriate field at the top of this web page!",
+          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
           "nickname": "deleteUsagePoint",
           "authorizations": ["oauth2"],
           "parameters":
