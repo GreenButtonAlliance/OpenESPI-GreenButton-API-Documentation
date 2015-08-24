@@ -24,7 +24,6 @@
             {
               "name": "published-max",
               "description": "The upper bound on the published date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -33,7 +32,6 @@
             {
               "name": "published-min",
               "description": "The lower bound on the published date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -42,7 +40,6 @@
             {
               "name": "updated-max",
               "description": "The upper bound on the updated date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -51,7 +48,6 @@
             {
               "name": "updated-min",
               "description": "The lower bound on the updated date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -60,7 +56,6 @@
             {
               "name": "max-results",
               "description": "The upper bound on the number of entries to be contained in a reply.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -69,7 +64,6 @@
             {
               "name": "start-index",
               "description": "The one based offset in the DataCustodian's collection of Meter Readings that should be transferred as the first entry of the response.",
-              "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -78,7 +72,6 @@
             {
               "name": "depth",
               "description": "The maximum number of entries to be transferred in the response.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -160,7 +153,6 @@
             {
               "name": "published-max",
               "description": "The upper bound on the published date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -169,7 +161,6 @@
             {
               "name": "published-min",
               "description": "The lower bound on the published date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -178,7 +169,6 @@
             {
               "name": "updated-max",
               "description": "The upper bound on the updated date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -187,7 +177,6 @@
             {
               "name": "updated-min",
               "description": "The lower bound on the updated date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -196,7 +185,6 @@
             {
               "name": "max-results",
               "description": "The upper bound on the number of entries to be contained in a reply.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -205,7 +193,6 @@
             {
               "name": "start-index",
               "description": "The one based offset in the DataCustodian's collection of Meter Readings that should be transferred as the first entry of the response.",
-              "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -214,7 +201,6 @@
             {
               "name": "depth",
               "description": "The maximum number of entries to be transferred in the response.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -354,7 +340,6 @@
             {
               "name": "published-max",
               "description": "The upper bound on the published date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -363,7 +348,6 @@
             {
               "name": "published-min",
               "description": "The lower bound on the published date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -372,7 +356,6 @@
             {
               "name": "updated-max",
               "description": "The upper bound on the updated date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -381,7 +364,6 @@
             {
               "name": "updated-min",
               "description": "The lower bound on the updated date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -390,7 +372,6 @@
             {
               "name": "max-results",
               "description": "The upper bound on the number of entries to be contained in a reply.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -399,7 +380,6 @@
             {
               "name": "start-index",
               "description": "The one based offset in the DataCustodian's collection of Meter Readings that should be transferred as the first entry of the response.",
-              "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -408,7 +388,6 @@
             {
               "name": "depth",
               "description": "The maximum number of entries to be transferred in the response.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -522,8 +501,7 @@
             {
               "name": "published-max",
               "description": "The upper bound on the published date of the Meter Reading.",
-              "defaultValue": "All",
-              "required": false,
+             "required": false,
               "allowMultiple": false,
               "dataType": "Date",
               "paramType": "query"
@@ -531,7 +509,6 @@
             {
               "name": "published-min",
               "description": "The lower bound on the published date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -540,7 +517,6 @@
             {
               "name": "updated-max",
               "description": "The upper bound on the updated date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -549,7 +525,6 @@
             {
               "name": "updated-min",
               "description": "The lower bound on the updated date of the Meter Reading.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "Date",
@@ -558,7 +533,6 @@
             {
               "name": "max-results",
               "description": "The upper bound on the number of entries to be contained in a reply.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -567,7 +541,6 @@
             {
               "name": "start-index",
               "description": "The one based offset in the DataCustodian's collection of Meter Readings that should be transferred as the first entry of the response.",
-              "defaultValue": "1",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
@@ -576,7 +549,6 @@
             {
               "name": "depth",
               "description": "The maximum number of entries to be transferred in the response.",
-              "defaultValue": "All",
               "required": false,
               "allowMultiple": false,
               "dataType": "long",
