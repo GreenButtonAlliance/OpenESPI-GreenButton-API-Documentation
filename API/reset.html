@@ -10,8 +10,8 @@
 <script charset="utf-8">
 
 var xmlhttp = null;
-var resetUrl = "http://services.greenbuttondata.org/DataCustodian/management?command=resetDataCustodianDB";
-var initUrl = "http://services.greenbuttondata.org/DataCustodian/management?command=initializeDataCustodianDB";
+var resetUrl = "http://sandbox.greenbuttonalliance.org:8443/DataCustodian/management?command=resetDataCustodianDB";
+var initUrl = "http://sandbox.greenbuttonalliance.org:8443/DataCustodian/management?command=initializeDataCustodianDB";
 
 //var url = "http://localhost:8080/DataCustodian/management?command=resetDataCustodianDB";
                                                
@@ -27,7 +27,7 @@ function SendRequest (url) {
   xmlhttp.setRequestHeader ("Authorization", "Bearer 688b026c-665f-4994-9139-6b21b13fbeee");
   xmlhttp.setRequestHeader ("Content-type", "text/plain");
   xmlhttp.withCredentials = true;
-  xmlhttp.setRequestHeader ("Host", "services.greenbuttondata.org");
+  xmlhttp.setRequestHeader ("Host", "sandbox.greenbuttonalliance.org:8443");
   xmlhttp.onreadystatechange = OnStateChange;
   xmlhttp.send (null);
 }
