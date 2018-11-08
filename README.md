@@ -8,12 +8,10 @@ The Green Button API Documentation is served directly from the gh_pages branch o
 
 Developers Guide:
 
-<a href="http://energyos.github.io/OpenESPI-GreenButton-API-Documentation">http://energyos.github.io/OpenESPI-GreenButton-API-Documentation/</a>
+<a href="http://greenbuttonalliance.github.io/OpenESPI-GreenButton-API-Documentation">http://greenbuttonalliance.github.io/OpenESPI-GreenButton-API-Documentation/</a>
 
 API documentation:
 
-<a href="http://energyos.github.io/OpenESPI-GreenButton-API-Documentation/API/">http://energyos.github.io/OpenESPI-GreenButton-API-Documentation/API/</a>
-<hr />
+<a href="http://greenbuttonalliance.github.io/OpenESPI-GreenButton-API-Documentation/API/">http://greenbuttonalliance.github.io/OpenESPI-GreenButton-API-Documentation/API/</a>
 
-The documentation uses the <a href="https://developers.helloreverb.com/swagger/">swagger documentation framework</a>. 
 
