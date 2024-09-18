@@ -1,0 +1,91 @@
+/* Logo Styles */
+.logo {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Centered Table Container */
+.table-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically if needed */
+    margin: 20px 0;         /* Adds vertical spacing */
+}
+
+/* Make tables scrollable on small screens */
+.table-container {
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    .access-token-table,
+    .token-selection-table {
+        width: 100%;
+    }
+}
+
+/* Access Token Table Styles */
+.access-token-table {
+    border-collapse: collapse;
+    width: 100%;             /* Adjust as needed */
+}
+
+.access-token-table th,
+.access-token-table td {
+    /*border: 1px solid #ddd;*/
+    padding: 8px;
+}
+
+.access-token-table th,
+.access-token-table td {
+    /*background-color: #f2f2f2;*/
+    text-align: center;
+}
+
+/* Flex container for label and input */
+.token_selector {
+    display: flex;                /* Enables Flexbox for this div */
+    justify-content: center;      /* Centers items horizontally within the div */
+    align-items: center;          /* Centers items vertically within the div */
+}
+
+/* Styling the label */
+.token_selector label {
+    margin-right: 10px;           /* Adds space between label and input */
+    font-weight: bold;            /* Makes the label text bold */
+    text-align: right;            /* Aligns text to the right (optional) */
+    min-width: 120px;             /* Ensures consistent label width */
+}
+
+/* Styling the input field */
+.access-token-input {
+    width: 300px;                 /* Sets a fixed width for the input */
+    padding: 8px;                 /* Adds padding inside the input */
+    border: 1px solid #ccc;       /* Adds a subtle border */
+    border-radius: 4px;           /* Rounds the corners of the input */
+}
+
+
+/* Access Token Input Styles */
+.access-token-input {
+    width: 300px;
+    /* Add other styles as needed */
+}
+
+/* Add hover effects to table rows for better user interaction */
+.access-token-table tbody tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+/* Enhance readability by adding zebra stripping to table rows */
+.access-token-table tbody tr:nth-child(even) {
+    /*background-color: #f9f9f9;*/
+}
+
+/* Ensure text within tables is easily readable */
+.access-token-table th,
+.access-token-table td {
+    font-family: 'Droid Sans', sans-serif; /* Matches your Google Fonts */
+    font-size: 1em;
+}
