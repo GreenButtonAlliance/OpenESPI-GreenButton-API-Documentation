@@ -1,0 +1,74 @@
+/* Logo Styles */
+.logo {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+/* Container to center the table */
+.table-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    overflow-x: auto;        /* Enables horizontal scrolling */
+}
+
+/* Media Query: Adjustments for smaller screens */
+@media (max-width: 600px) {
+    .access-token-table {
+        width: 100%;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Styling for the access-token-table */
+.access-token-table {
+    width: 100%;                  /* Sets table width to 100% of its container */
+    border-collapse: collapse;    /* Collapses borders for a cleaner look */
+}
+
+.access-token-table th,
+.access-token-table td {
+    border: 1px solid #fff;    /* Adds a 1px solid white border around each cell */
+    padding: 8px;                 /* Adds padding inside cells for better readability */
+    text-align: center;           /* Aligns text to the center within cells */
+    font-family: 'Droid Sans', sans-serif; /* Matches your Google Fonts */
+    font-size: 1em;               /* Ensures consistent font size */
+}
+
+/* Optional: Styling for table headers */
+.access-token-table th {
+    font-weight: bold;
+    font-size: inherit;
+}
+
+/* Flex container for label and input */
+.token_selector {
+    display: flex;                /* Enables Flexbox for this div */
+    justify-content: center;      /* Centers items horizontally within the div */
+    align-items: center;          /* Centers items vertically within the div */
+}
+
+.token_selector label {
+    margin-right: 10px;           /* Adds space between label and input */
+    font-weight: bold;            /* Makes the label text bold */
+    min-width: 120px;             /* Ensures consistent label width */
+}
+
+/* Styling for input fields */
+.access-token-input {
+    width: 300px;                 /* Sets a fixed width for the input */
+    padding: 4px;                 /* Adds padding inside the input */
+    border: 1px solid #ccc;       /* Adds a subtle border */
+    border-radius: 4px;           /* Rounds the corners of the input */
+}
+
+/* Add hover effects to table rows for better user interaction */
+.access-token-table tbody tr:hover {
+    background-color: #90ee90;    /* Light gray background on hover */
+}
+
+/* Enhance readability by adding zebra stripping to table rows */
+/*.access-token-table tbody tr:nth-child(even) {*/
+/*    background-color: #90ee90;    !* Light gray background for even rows *!*/
+/*}*/

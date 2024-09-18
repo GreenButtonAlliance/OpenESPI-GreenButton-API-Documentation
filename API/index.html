@@ -1,165 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Green Button API</title>
-  <link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
-  <link href='css/highlight.default.css' media='screen' rel='stylesheet' type='text/css'/>
-  <link href='css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
-  <script type="text/javascript" src="lib/shred.bundle.js"></script>
-  <script src='lib/jquery-1.8.0.min.js' type='text/javascript'></script>
-  <script src='lib/jquery.slideto.min.js' type='text/javascript'></script>
-  <script src='lib/jquery.wiggle.min.js' type='text/javascript'></script>
-  <script src='lib/jquery.ba-bbq.min.js' type='text/javascript'></script>
-  <script src='lib/handlebars-1.0.0.js' type='text/javascript'></script>
-  <script src='lib/underscore-min.js' type='text/javascript'></script>
-  <script src='lib/backbone-min.js' type='text/javascript'></script>
-  <script src='lib/swagger.js' type='text/javascript'></script>
-  <script src='swagger-ui.js' type='text/javascript'></script>
-  <script src='lib/highlight.7.3.pack.js' type='text/javascript'></script>
-  <script type="text/javascript">
 
-    $(function () {
-        window.swaggerUi = new SwaggerUi({
-            url: "/OpenESPI-GreenButton-API-Documentation/API/api-docs",
-            dom_id: "swagger-ui-container",
-            onComplete: function (swaggerApi, swaggerUi) {
-                if (console) {
-                    console.log("Loaded SwaggerUI");
-                }
-                $('pre code').each(function (i, e) {hljs.highlightBlock(e)});
-            },
-            onFailure: function (data) {
-                if (console) {
-                    console.log("Unable to Load SwaggerUI");
-                    console.log(data);
-                }
-            },
-            docExpansion: "none"
-        });
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
 
-        $('#input_accessToken').change(function () {
-            console.log("Handler for Access Token .change() called...");
-            var token = $('#input_accessToken')[0].value;
-            console.log("input: " + token);
-            if (token && token.trim() != "") {
-                console.log("Access Token: " + token);
-                window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));
-            }
-        });
+  <!-- CSS Stylesheets -->
+  <link href="css/highlight.default.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="css/screen.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="css/oauth-table.css" media="screen" rel="stylesheet" type="text/css">
 
-        var token = "";
+  <!-- JavaScript Libraries -->
+  <script src="lib/shred.bundle.js"></script>
+  <script src="lib/jquery-1.8.0.min.js"></script>
+  <script src="lib/jquery.slideto.min.js"></script>
+  <script src="lib/jquery.wiggle.min.js"></script>
+  <script src="lib/jquery.ba-bbq.min.js"></script>
+  <script src="lib/handlebars-1.0.0.js"></script>
+  <script src="lib/underscore-min.js"></script>
+  <script src="lib/backbone-min.js"></script>
+  <script src="lib/swagger.js"></script>
+  <script src="swagger-ui.js"></script>
+  <script src="lib/highlight.7.3.pack.js"></script>
 
-        window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));
-        window.swaggerUi.load();
-    });
+  <!-- Initialization Script -->
+  <script>
+      $(function () {
+          window.swaggerUi = new SwaggerUi({
+              url: "/OpenESPI-GreenButton-API-Documentation/API/api-docs",
+              dom_id: "swagger-ui-container",
+              onComplete: function (swaggerApi, swaggerUi) {
+                  if (console) {
+                      console.log("Loaded SwaggerUI");
+                  }
+                  $('pre code').each(function (i, e) {hljs.highlightBlock(e)});
+              },
+              onFailure: function (data) {
+                  if (console) {
+                      console.log("Unable to Load SwaggerUI");
+                      console.log(data);
+                  }
+              },
+              docExpansion: "none"
+          });
 
-    function doAccessToken(aToken) {
-        var temp = document.getElementById("input_accessToken");
-        temp.value = aToken;
-        temp.focus();
-        temp.submit();
-    }
+          $('#input_accessToken').change(function () {
+              console.log("Handler for Access Token .change() called...");
+              var token = $('#input_accessToken').val().trim();
+              console.log("input: " + token);
+              if (token) {
+                  console.log("Access Token: " + token);
+                  window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));
+              }
+          });
 
+          var token = "";
+          window.authorizations.add("oauth2", new ApiKeyAuthorization("Authorization", token, "header"));
+          window.swaggerUi.load();
+      });
+
+      function doAccessToken(aToken) {
+          var temp = document.getElementById("input_accessToken");
+          temp.value = aToken;
+          temp.focus();
+          temp.select(); // Changed from submit() to select() to highlight the token
+      }
   </script>
 </head>
 
 <body>
-  <div id='header'>
-    <div class="swagger-ui-wrap">
-      <a id="logo" href="https://sandbox.greenbuttonalliance.org:8443">Green Button API</a>
-      <div style="float:right;"><a id="logo" href="https://sandbox.greenbuttonalliance.org:8443/">Back to Sandbox</a></div>
+<!-- Header Section -->
+<header id="header">
+  <div class="swagger-ui-wrap">
+    <!-- Unique Classes for Logos -->
+    <a class="logo" href="https://greenbuttonalliance.github.io/OpenESPI-GreenButton-API-Documentation/API">Green Button API</a>
+    <div style="float:right;">
+      <a class="logo" href="https://sandbox.greenbuttonalliance.org:8443/DataCustodian">Back to Sandbox</a>
     </div>
   </div>
-  <div class="swagger-ui-wrap">
-      <p>&nbsp;</p><p>
-The Green Button API provides access to RESTful services provided by Data Custodian and Third Party Applications. 
-These APIs allow application developers full access, in Green Button Format, to Energy Usage Information for the 
-purpose of developing new Green Button Applications. 
-      </p>
-<p>
-Access to Green Button APIs requires an OAuth2 Access Token.  The following table contains a list of <a href="https://archive.greenbuttondata.org/espi/access_tokens/">Access Tokens and the various Data Custodian Roles</a> that may be tested using the assigned Access Token.  Insert one the following  Access Tokens in the field labelled "Access Token:" at the top of the page prior to selecting the "Try It Out!" button:
-<center>
-      <table border='1' width="100%">
-	  <tr><th>Access Token</th><th>Token Type</th><th>Role Tested</th></tr>
-		<tr><td>Bearer 2a85f4bd-30db-4b7d-8f41-b046b0566cb3</td><td>datacustodian_access_token</td><td>Data Custodian Admin</td></tr>
-		<tr><td>Bearer 03909715-b0ca-4797-9a9a-601fff1d2848</td><td>upload_access_token</td><td>Meter Upload Admin</td></tr>
-		<tr><td>Bearer 53520584-d640-4812-a721-8a1afa459ff7</td><td>client_access_token</td><td>Third Party Admin</td></tr>
-		<tr><td>Bearer c66b0854-ea1f-4e24-afb7-afab9e0f6c5e</td><td>registration_access_token</td><td>Third Party Registration Admin</td></tr>
-    		<tr><td>Bearer f48223ce-92f5-4a41-9028-1a370eb102c5</td><td>access_token</td><td>Role User (alan -- SubscriptionID=5)</td></tr>
-		<tr><td>Bearer ae3e7cba-6478-444a-978c-7505d52034a0</td><td>access_token</td><td>Role User (charles -- SubscriptionID=6)</td></tr>
-	</table>
-<!--	
-<form>
-  <table border='1' width="80%">
-	  <tr><th style="text-align:left;">Access Token</th><th style="text-align:left;">Token Type</th><th style="text-align:left;">Role Tested</th></tr>
-		<tr><td style="text-align:left;">
-		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer 688b026c-665f-4994-9139-6b21b13fbeee'); return;" />
-		  Bearer 688b026c-665f-4994-9139-6b21b13fbeee
-		  </td>
-		  <td style="text-align:left;">datacustodian_access_token</td>
-		  <td style="text-align:left;">Data Custodian Admin</td></tr>
-		<tr><td style="text-align:left;">
-		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer 809caf03-612e-4e89-94b1-6f86d83b1ef8'); return;" />
-		  Bearer 809caf03-612e-4e89-94b1-6f86d83b1ef8
-		  </td>
-		  <td style="text-align:left;">upload_access_token</td>
-		  <td style="text-align:left;">Meter Upload Admin</td>
-		</tr>
-		<tr><td style="text-align:left;">
-		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer 75dd9c46-becf-48b5-9cb5-9c3233d718d0'); return;" />
-		  Bearer 75dd9c46-becf-48b5-9cb5-9c3233d718d0
-		  </td>
-		  <td style="text-align:left;">client_access_token</td>
-		  <td style="text-align:left;">Third Party Admin</td>
-		</tr>
-		<tr><td style="text-align:left;">
-		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer d89bb056-0f02-4d47-9fd2-ec6a19ba8d0c'); return;" />
-		  Bearer d89bb056-0f02-4d47-9fd2-ec6a19ba8d0c
-		  </td>
-		  <td style="text-align:left;">registration_access_token</td>
-		  <td style="text-align:left;">Third Party Registration Admin</td>
-		</tr>
-                <tr><td style="text-align:left;">
-		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer c59f88ed-26fb-4650-b07e-d5a031bfeb63'); return;" />
-		  Bearer c59f88ed-26fb-4650-b07e-d5a031bfeb63
-		  </td>
-		  <td style="text-align:left;">access_token</td>
-		  <td style="text-align:left;">Role User (alan -- ID=5)</td>
-		</tr>
-		<tr><td style="text-align:left;">
-		  <input type="radio" name="tokenSelector" onClick="doAccessToken('Bearer c1b42255-9ed2-4808-9f06-c38e39e5b3c0'); return;" />
-		  Bearer c1b42255-9ed2-4808-9f06-c38e39e5b3c0
-		  </td>
-		  <td style="text-align:left;">access_token</td>
-		  <td style="text-align:left;">Role User (charles -- ID=6)</td>
-		</tr>
-	</table>
-</form>
--->
-</p>
+</header>
 
-      <form id='api_selector'>		
-			  <div class='input'>
-				  <label for="input_accessToken">Access Token: </label>			
-				  <input type="text" style="width: 300px; size="300px" name="token" id="input_accessToken"/>
-				</div>
-     </form>				
-</center>
-<hr size="4" />
+<!-- Main Content Wrapper -->
+<main class="swagger-ui-wrap">
+  <p>&nbsp;</p>
+  <p>
+    The Green Button API provides access to REST services provided by Data Custodian and Third Party Applications.
+    These APIs allow application developers full access, in Green Button Format, to Energy Usage Information for the
+    purpose of developing new Green Button Applications.
+  </p>
+  <p>
+    Access to Green Button APIs requires an OAuth2 Access Token. The following table contains a list of
+    <a href="https://archive.greenbuttondata.org/espi/access_tokens/">Access Tokens and the various Data Custodian Roles</a>
+    that may be tested using the assigned Access Token. Insert one of the following Access Tokens in the field
+    labelled "Access Token:" at the top of the page prior to selecting the "Try It Out!" button:
+  </p>
 
-    <div>
-      <div id="message-bar" class="swagger-ui-wrap">
-  &nbsp;
-      </div>
+  <!-- Centered Table Container -->
+  <div class="table-container">
+    <table class="access-token-table">
 
-      <div id="swagger-ui-container" class="swagger-ui-wrap">
+      <tr>
+        <th scope="col">Access Token</th>
+        <th scope="col">Token Type</th>
+        <th scope="col">Role Tested</th>
+      </tr>
 
-      </div>
+      <tbody>
+      <tr>
+        <td>Bearer 2a85f4bd-30db-4b7d-8f41-b046b0566cb3</td>
+        <td>datacustodian_access_token</td>
+        <td>Data Custodian Admin</td>
+      </tr>
+      <tr>
+        <td>Bearer 03909715-b0ca-4797-9a9a-601fff1d2848</td>
+        <td>upload_access_token</td>
+        <td>Meter Upload Admin</td>
+      </tr>
+      <tr>
+        <td>Bearer 53520584-d640-4812-a721-8a1afa459ff7</td>
+        <td>client_access_token</td>
+        <td>Third Party Admin</td>
+      </tr>
+      <tr>
+        <td>Bearer c66b0854-ea1f-4e24-afb7-afab9e0f6c5e</td>
+        <td>registration_access_token</td>
+        <td>Third Party Registration Admin</td>
+      </tr>
+      <tr>
+        <td>Bearer f48223ce-92f5-4a41-9028-1a370eb102c5</td>
+        <td>access_token</td>
+        <td>Role User (alan -- SubscriptionID=5)</td>
+      </tr>
+      <tr>
+        <td>Bearer ae3e7cba-6478-444a-978c-7505d52034a0</td>
+        <td>access_token</td>
+        <td>Role User (charles -- SubscriptionID=6)</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 
-	  </div>
-		
-	</div>
+  <!-- Access Token Input Form -->
+  <form>
+    <div class="token_selector">
+      <label for="input_accessToken">Access Token: </label>
+      <input type="text" class="access-token-input" name="token" id="input_accessToken">
+    </div>
+  </form>
 
-</body>	
+  <hr>
+
+  <!-- Swagger UI Container -->
+  <div>
+    <div id="message-bar" class="swagger-ui-wrap">
+      &nbsp;
+    </div>
+    <div id="swagger-ui-container" class="swagger-ui-wrap">
+      <!-- Swagger UI will be rendered here -->
+    </div>
+  </div>
+
+</main>
+
+</body>
 
 </html>
