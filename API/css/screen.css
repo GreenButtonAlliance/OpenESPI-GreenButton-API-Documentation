@@ -186,7 +186,7 @@ table {
   font-size: 0.9em;
   border-bottom: none;
   vertical-align: top;
-	text-align: center;
+  text-align: center;
   line-height: 1.3em;
 }
 .swagger-ui-wrap ol {
@@ -260,7 +260,6 @@ table {
 .swagger-ui-wrap .content > .content-type > div > label {
   clear: both;
   display: block;
-#  color: #0F6AB4;
   color: rgba(76, 186, 111, 0.9);
   font-size: 1.1em;
   margin: 0;
@@ -475,7 +474,7 @@ table {
 }
 .swagger-ui-wrap th {
   text-align: center;
-	text-decoration: underline;
+    text-decoration: underline;
   font-weight: normal;
   vertical-align: middle;
 }
@@ -1021,7 +1020,7 @@ table {
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
-  background: transparent url(https://services.greenbuttondata.org/resources/ico/favicon.png) no-repeat left center;
+  background: transparent url(https://www.greenbuttonalliance.org/img/noviams-logo.png) no-repeat left center;
   padding: 20px 0 20px 40px;
   color: white;
 }
