@@ -38,6 +38,10 @@
               "message": "OK"
             },
             {
+              "code": 202,
+              "message": "Accepted"
+            },
+            {
               "code": 400,
               "message": "Bad Request"
             },

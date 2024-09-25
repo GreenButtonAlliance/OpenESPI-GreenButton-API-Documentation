@@ -12,13 +12,12 @@
 <tr><td><a href="Authorization">Authorization</a></td></tr>
 <tr><td><a href="Batch">Batch</a></td></tr>
 <tr><td><a href="ElectricPowerQualitySummary">ElectricPowerQualitySummary</a></td></tr>
-<tr><td><a href="ElectricPowerUsageSummary">ElectricPowerUsageSummary</a></td></tr>
 <tr><td><a href="IntervalBlock">IntervalBlock</a></td></tr>
 <tr><td><a href="LocalTimeParameters">LocalTimeParameters</a></td></tr>
 <tr><td><a href="MeterReading">MeterReading</a></td></tr>
 <tr><td><a href="ReadingType">ReadingType</a></td></tr>
 <tr><td><a href="ServiceStatus">ServiceStatus</a></td></tr>
-<tr><td><a href="ElectricPowerUsageSummary">UsagePoint</a></td></tr>
+<tr><td><a href="UsageSummary">UsagePoint</a></td></tr>
 </tbody></table>
 </body>
 </html>

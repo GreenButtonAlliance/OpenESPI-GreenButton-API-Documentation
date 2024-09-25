@@ -100,6 +100,9 @@
               "message" : "OK"
             },
             {
+              "code": 202,
+              "message": "Accepted"
+            },            {
               "code": 400,
               "message": "Bad Request"
             },
@@ -145,8 +148,8 @@
           ],
           "responseMessages": [
             {
-              "code": 200,
-              "message" : "OK"
+              "code": 201,
+              "message" : "Created"
             },
             {
               "code": 400,
@@ -259,6 +262,9 @@
               "message" : "OK"
             },
             {
+              "code": 202,
+              "message": "Accepted"
+            },            {
               "code": 400,
               "message": "Bad Request"
             },
@@ -316,6 +322,10 @@
               "message" : "OK"
             },
             {
+              "code": 201,
+              "message": "Created"
+            },
+            {
               "code": 400,
               "message": "Bad Request"
             },
@@ -371,6 +381,14 @@
             {
               "code": 403,
               "message": "Forbidden"
+            },
+            {
+              "code": 404,
+              "message": "Not Found"
+            },
+            {
+              "code": 410,
+              "message": "Gone"
             }
           ]
         }

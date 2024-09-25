@@ -184,7 +184,7 @@ Handlebars.registerHelper('log', function(context, options) {
 });
 ;
 // lib/handlebars/compiler/parser.js
-/* Jison generated parser */
+/* JSON generated parser */
 var handlebars = (function(){
 var parser = {trace: function trace() { },
 yy: {},
