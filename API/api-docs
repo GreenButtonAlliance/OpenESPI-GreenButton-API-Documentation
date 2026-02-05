@@ -4,37 +4,37 @@
   "espiVersion": "1.1",
   "apis": [
     {
-      "path": "../listings/ApplicationInformation"
+      "path": "/../listings/ApplicationInformation"
     },
     {
-      "path": "../listings/Authorization"
+      "path": "/../listings/Authorization"
     },
     {
-      "path": "../listings/Batch"
+      "path": "/../listings/Batch"
     },
     {
-      "path": "../listings/ElectricPowerQualitySummary"
+      "path": "/../listings/ElectricPowerQualitySummary"
     },
     {
-      "path": "../listings/ElectricPowerUsageSummary"
+      "path": "/../listings/UsageSummary"
     },
     {
-      "path": "../listings/IntervalBlock"
+      "path": "/../listings/IntervalBlock"
     },
     {
-      "path": "../listings/LocalTimeParameters"
+      "path": "/../listings/LocalTimeParameters"
     },
     {
-      "path": "../listings/MeterReading"
+      "path": "/../listings/MeterReading"
     },
     {
-      "path": "../listings/ReadingType"
+      "path": "/../listings/ReadingType"
     },
     {
-      "path": "../listings/ServiceStatus"
+      "path": "/../listings/ServiceStatus"
     },		
     {
-      "path": "../listings/UsagePoint"
+      "path": "/../listings/UsagePoint"
     }
   ]
 }
