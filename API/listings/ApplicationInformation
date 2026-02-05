@@ -97,41 +97,7 @@
               "message": "Forbidden"
             }
 					]
-	      },
-        {
-          "method": "POST",
-          "summary": "Add a new Application Information Structure [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "addApplicationInformation",
-					"consumes": ["application/atom+xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "applicationInformationData",
-              "description": "The new Application Information data.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "String",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 201,
-              "message": "Created"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-					]
-        }
+	      }
       ]
     },
     {
@@ -174,93 +140,6 @@
               "message": "Forbidden"
             }
             ]
-        },
-        {
-          "method": "PUT",
-          "summary": "Update an existing Application Information Structure [FB_41]",
-          "notes": "The Application Information must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"registration_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "updateApplicationInformation",
-					"consumes": ["application/atom+xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "applicationInformationId",
-              "description": "The Id of the Application Information.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "String",
-              "paramType": "path"
-            },
-            {
-              "name": "applicationInformationData",
-              "description": "The Application Information data to be updated.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message": "OK"
-            },
-            {
-              "code": 201,
-              "message": "Created"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-	      },
-        {
-          "method": "DELETE",
-          "summary": "Delete an Application Information Structure [FB_41]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> or <strong>\"registration_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "deleteApplicationInformation",
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "applicationInformationId",
-              "description": "The Id of the Application Information Structure to be deleted.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "String",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message": "OK"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            },
-            {
-              "code": 404,
-              "message": "Not Found"
-            },
-            {
-              "code": 410,
-              "message": "Gone"
-            }
-          ]
         }
       ]
     }
