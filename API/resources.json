@@ -1,9 +1,388 @@
 {
-  "apiVersion": "1.0",
-  "apis": [{
-    "description": "Green Button API",
-    "path": "/developer/datacustodian/"
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Green Button API Documentation",
+    "description": "Green Button API - ESPI 4.0",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Green Button Alliance",
+      "url": "https://www.greenbuttonalliance.org"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "servers": [{
+    "url": "https://sandbox.greenbuttonalliance.org:8443/DataCustodian",
+    "description": "GBA Green Button Sandbox"
   }],
-  "basePath": "http://www.greenbuttondata.org/developer",
-  "swaggerVersion": "1.2"
+  "components": {
+    "schemas": {
+      "ApplicationInformation": {
+        "type": "object",
+        "description": "Contains information about a Third Party Application requesting access to DataCustodian services",
+        "xml": {"name": "ApplicationInformation", "namespace": "http://naesb.org/espi"},
+        "properties": {
+          "dataCustodianId": {"type": "string", "description": "Identifier for the Data Custodian"},
+          "dataCustodianApplicationStatus": {"type": "integer", "description": "Current status of the application (provided by Data Custodian)"},
+          "thirdPartyApplicationDescription": {"type": "string", "description": "Description of the Third Party Application"},
+          "thirdPartyApplicationStatus": {"type": "integer", "description": "Current status of the Third Party Application"},
+          "thirdPartyApplicationType": {"type": "integer", "description": "Type of application (1=Web, 2=Desktop, 3=Mobile, 4=Device)"},
+          "thirdPartyApplicationUse": {"type": "integer", "description": "Expected use of the application"},
+          "client_name": {"type": "string", "description": "Name of the application (OAuth client_name)"},
+          "client_id": {"type": "string", "description": "Identifier for the Third Party (OAuth client_id)"},
+          "client_secret": {"type": "string", "description": "Secret for the client (OAuth client_secret)"},
+          "redirect_uri": {"type": "array", "items": {"type": "string"}, "description": "OAuth redirect URIs"},
+          "scope": {"type": "array", "items": {"type": "string"}, "description": "OAuth scopes"},
+          "grant_types": {"type": "array", "items": {"type": "string"}, "description": "Supported OAuth grant types"}
+        }
+      },
+      "Authorization": {
+        "type": "object",
+        "description": "Represents a permission granted by an owner for access to a resource",
+        "xml": {"name": "Authorization", "namespace": "http://naesb.org/espi"},
+        "properties": {
+          "status": {"type": "integer", "description": "Status of the authorization (0=Revoked, 1=Active, 2=Denied)"},
+          "expires_at": {"type": "integer", "format": "int64", "description": "Expiration period for the access token (Unix timestamp)"},
+          "grant_type": {"type": "string", "description": "Type of grant being negotiated"},
+          "scope": {"type": "string", "description": "Negotiated scope of the authorization"},
+          "token_type": {"type": "string", "description": "Type of token (Bearer)"},
+          "resourceURI": {"type": "string", "format": "uri", "description": "URI to access the authorized resource"},
+          "authorizationURI": {"type": "string", "format": "uri", "description": "URI to update or delete this authorization"},
+          "customerResourceURI": {"type": "string", "format": "uri", "description": "URI to access PII data authorized for this customer"}
+        }
+      },
+      "UsagePoint": {
+        "type": "object",
+        "description": "Logical point on a network at which consumption or production is measured or estimated",
+        "xml": {"name": "UsagePoint", "namespace": "http://naesb.org/espi"},
+        "properties": {
+          "roleFlags": {"type": "string", "description": "Specifies roles assigned to this usage point"},
+          "ServiceCategory": {"type": "integer", "description": "Category of service (0=electricity, 1=gas, 2=water, etc.)"},
+          "status": {"type": "integer", "description": "Current status (0=off, 1=on)"},
+          "isSdp": {"type": "boolean", "description": "Whether this is a service delivery point"},
+          "isVirtual": {"type": "boolean", "description": "Whether this is a virtual (logical) usage point"},
+          "connectionState": {"type": "string", "description": "Connection state relative to network"}
+        }
+      },
+      "AtomLink": {
+        "type": "object",
+        "description": "Atom link element (RFC 4287)",
+        "xml": {"name": "link", "namespace": "http://www.w3.org/2005/Atom"},
+        "properties": {
+          "href": {"type": "string", "format": "uri", "description": "Link URI"},
+          "rel": {"type": "string", "description": "Link relationship type (e.g., 'self', 'up')"},
+          "type": {"type": "string", "description": "Media type (e.g., 'application/atom+xml')"}
+        }
+      },
+      "AtomContent": {
+        "type": "object",
+        "description": "Atom content element containing ESPI resource (RFC 4287)",
+        "xml": {"name": "content", "namespace": "http://www.w3.org/2005/Atom"},
+        "properties": {
+          "type": {"type": "string", "description": "Content media type (typically 'application/xml')"}
+        }
+      },
+      "AtomEntry": {
+        "type": "object",
+        "description": "Atom feed entry (RFC 4287) containing ESPI resource",
+        "xml": {"name": "entry", "namespace": "http://www.w3.org/2005/Atom"},
+        "properties": {
+          "id": {"type": "string", "format": "uri", "description": "Unique entry identifier"},
+          "title": {"type": "string", "description": "Entry title"},
+          "published": {"type": "string", "format": "date-time", "description": "ISO 8601 publication timestamp"},
+          "updated": {"type": "string", "format": "date-time", "description": "ISO 8601 last update timestamp"},
+          "link": {"type": "array", "items": {"$ref": "#/components/schemas/AtomLink"}, "description": "Entry links (minimum 2 required per Atom spec)"},
+          "content": {"$ref": "#/components/schemas/AtomContent"}
+        }
+      },
+      "AtomFeed": {
+        "type": "object",
+        "description": "Atom Feed (RFC 4287) containing ESPI resources",
+        "xml": {"name": "feed", "namespace": "http://www.w3.org/2005/Atom"},
+        "properties": {
+          "id": {"type": "string", "format": "uri", "description": "Feed identifier"},
+          "title": {"type": "string", "description": "Feed title"},
+          "updated": {"type": "string", "format": "date-time", "description": "ISO 8601 timestamp of last feed update"},
+          "link": {"type": "array", "items": {"$ref": "#/components/schemas/AtomLink"}, "description": "Feed links (minimum 1 required per Atom spec)"},
+          "entry": {"type": "array", "items": {"$ref": "#/components/schemas/AtomEntry"}, "description": "Feed entries containing ESPI resources"}
+        }
+      }
+    },
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://sandbox.greenbuttonalliance.org:8443/oauth/authorize",
+            "tokenUrl": "https://sandbox.greenbuttonalliance.org:8443/oauth/token",
+            "scopes": {}
+          },
+          "clientCredentials": {
+            "tokenUrl": "https://sandbox.greenbuttonalliance.org:8443/oauth/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  },
+  "security": [{"oauth2": []}],
+  "tags": [
+    {"name": "ApplicationInformation", "description": "Application Information endpoints"},
+    {"name": "Authorization", "description": "Authorization endpoints"},
+    {"name": "Batch", "description": "Batch data transfer endpoints"},
+    {"name": "UsagePoint", "description": "Usage Point endpoints"}
+  ],
+  "paths": {
+    "/espi/1_1/resource/ApplicationInformation": {
+      "get": {
+        "tags": ["ApplicationInformation"],
+        "summary": "Retrieve all Application Information [FB_33]",
+        "operationId": "findApplicationInformations",
+        "parameters": [
+          {"name": "published-max", "in": "query", "description": "Maximum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "published-min", "in": "query", "description": "Minimum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-max", "in": "query", "description": "Maximum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-min", "in": "query", "description": "Minimum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "max-results", "in": "query", "description": "Maximum number of results to return", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "start-index", "in": "query", "description": "Index of first result (1-indexed)", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "depth", "in": "query", "description": "Response depth control", "schema": {"type": "integer", "format": "int64"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/AtomFeed"}
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/AtomFeed"}
+              }
+            }
+          },
+          "400": {"description": "Bad Request"},
+          "403": {"description": "Forbidden"}
+        }
+      }
+    },
+    "/espi/1_1/resource/ApplicationInformation/{applicationInformationId}": {
+      "get": {
+        "tags": ["ApplicationInformation"],
+        "summary": "Retrieve Application Information by Id [FB_3]",
+        "operationId": "getApplicationInformation",
+        "parameters": [
+          {"name": "applicationInformationId", "in": "path", "required": true, "description": "Unique identifier for the ApplicationInformation resource", "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/ApplicationInformation"}
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/ApplicationInformation"}
+              }
+            }
+          },
+          "400": {"description": "Bad Request"},
+          "403": {"description": "Forbidden"}
+        }
+      }
+    },
+    "/espi/1_1/resource/Authorization": {
+      "get": {
+        "tags": ["Authorization"],
+        "summary": "Find all Authorizations [FB_3]",
+        "operationId": "findAuthorizations",
+        "parameters": [
+          {"name": "published-max", "in": "query", "description": "Maximum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "published-min", "in": "query", "description": "Minimum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-max", "in": "query", "description": "Maximum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-min", "in": "query", "description": "Minimum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "max-results", "in": "query", "description": "Maximum number of results to return", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "start-index", "in": "query", "description": "Index of first result (1-indexed)", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "depth", "in": "query", "description": "Response depth control", "schema": {"type": "integer", "format": "int64"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/AtomFeed"}
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/AtomFeed"}
+              }
+            }
+          },
+          "400": {"description": "Bad Request"},
+          "403": {"description": "Forbidden"}
+        }
+      }
+    },
+    "/espi/1_1/resource/Authorization/{authorizationId}": {
+      "get": {
+        "tags": ["Authorization"],
+        "summary": "Retrieve Authorization by Id [FB_3]",
+        "operationId": "getAuthorization",
+        "parameters": [
+          {"name": "authorizationId", "in": "path", "required": true, "description": "Unique identifier for the Authorization resource", "schema": {"type": "string"}},
+          {"name": "published-max", "in": "query", "description": "Maximum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "published-min", "in": "query", "description": "Minimum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-max", "in": "query", "description": "Maximum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-min", "in": "query", "description": "Minimum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "max-results", "in": "query", "description": "Maximum number of results to return", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "start-index", "in": "query", "description": "Index of first result (1-indexed)", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "depth", "in": "query", "description": "Response depth control", "schema": {"type": "integer", "format": "int64"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/Authorization"}
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/Authorization"}
+              }
+            }
+          },
+          "400": {"description": "Bad Request"},
+          "403": {"description": "Forbidden"}
+        }
+      }
+    },
+    "/espi/1_1/resource/Batch/Bulk/{bulkId}": {
+      "get": {
+        "tags": ["Batch"],
+        "summary": "Request Bulk transfer [FB_35]",
+        "operationId": "downloadBulkData",
+        "parameters": [
+          {"name": "bulkId", "in": "path", "required": true, "description": "Unique identifier for the Bulk transfer", "schema": {"type": "string"}},
+          {"name": "published-max", "in": "query", "description": "Maximum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "published-min", "in": "query", "description": "Minimum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-max", "in": "query", "description": "Maximum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-min", "in": "query", "description": "Minimum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "max-results", "in": "query", "description": "Maximum number of results to return", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "start-index", "in": "query", "description": "Index of first result (1-indexed)", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "depth", "in": "query", "description": "Response depth control", "schema": {"type": "integer", "format": "int64"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/AtomFeed"}
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/AtomFeed"}
+              }
+            }
+          },
+          "400": {"description": "Bad Request"},
+          "403": {"description": "Forbidden"}
+        }
+      }
+    },
+    "/espi/1_1/resource/UsagePoint": {
+      "get": {
+        "tags": ["UsagePoint"],
+        "summary": "Retrieve all Usage Points [FB_33]",
+        "operationId": "findUsagePoints",
+        "parameters": [
+          {"name": "published-max", "in": "query", "description": "Maximum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "published-min", "in": "query", "description": "Minimum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-max", "in": "query", "description": "Maximum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-min", "in": "query", "description": "Minimum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "max-results", "in": "query", "description": "Maximum number of results to return", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "start-index", "in": "query", "description": "Index of first result (1-indexed)", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "depth", "in": "query", "description": "Response depth control", "schema": {"type": "integer", "format": "int64"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/AtomFeed"}
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/AtomFeed"}
+              }
+            }
+          },
+          "400": {"description": "Bad Request"},
+          "403": {"description": "Forbidden"}
+        }
+      }
+    },
+    "/espi/1_1/resource/UsagePoint/{usagePointId}": {
+      "get": {
+        "tags": ["UsagePoint"],
+        "summary": "Retrieve Usage Point by Id [FB_32]",
+        "operationId": "getUsagePoint",
+        "parameters": [
+          {"name": "usagePointId", "in": "path", "required": true, "description": "Unique identifier for the UsagePoint resource", "schema": {"type": "string"}},
+          {"name": "published-max", "in": "query", "description": "Maximum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "published-min", "in": "query", "description": "Minimum publication date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-max", "in": "query", "description": "Maximum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "updated-min", "in": "query", "description": "Minimum update date (RFC 3339 instant)", "schema": {"type": "string", "format": "date"}},
+          {"name": "max-results", "in": "query", "description": "Maximum number of results to return", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "start-index", "in": "query", "description": "Index of first result (1-indexed)", "schema": {"type": "integer", "format": "int64"}},
+          {"name": "depth", "in": "query", "description": "Response depth control", "schema": {"type": "integer", "format": "int64"}}
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/UsagePoint"}
+              }
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/atom+xml": {
+                "schema": {"$ref": "#/components/schemas/UsagePoint"}
+              }
+            }
+          },
+          "400": {"description": "Bad Request"},
+          "403": {"description": "Forbidden"}
+        }
+      }
+    }
+  }
 }

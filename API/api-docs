@@ -16,7 +16,7 @@
       "path": "/../listings/ElectricPowerQualitySummary"
     },
     {
-      "path": "/../listings/ElectricPowerUsageSummary"
+      "path": "/../listings/UsageSummary"
     },
     {
       "path": "/../listings/IntervalBlock"
@@ -35,9 +35,6 @@
     },		
     {
       "path": "/../listings/UsagePoint"
-    },		
-    {
-      "path": "/../listings/SandboxDataBaseManagement"
     }
   ]
 }

@@ -97,41 +97,7 @@
               "message": "Forbidden"
             }
           ]
-	      },
-        {
-          "method": "POST",
-          "summary": "Add a new Reading Type [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "addReadingType",
-					"consumes": ["application/atom+xml"],					
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "ReadingTypeData",
-              "description": "1 or more Reading Types to be added.",
-              "required": false,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 201,
-              "message": "Created"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-        }
+	      }
       ]
     },
     {
@@ -228,94 +194,6 @@
             {
               "code": 403,
               "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "method": "PUT",
-          "summary": "Update an existing Reading Type [FB_33]",
-          "notes": "The Reading Type must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "updateReadingType",
-					"consumes": ["application/atom+xml"],					
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "ReadingTypeID",
-              "description": "ID of Reading Type to delete",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "ReadingTypeData",
-              "description": "The Reading Type to be updated.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message": "OK"
-            },
-            {
-              "code": 201,
-              "message": "Created"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "method": "DELETE",
-          "summary": "Delete a Reading Type [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "deleteReadingType",
-					"produces": ["application/xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "ReadingTypeID",
-              "description": "ID of Reading Type to delete",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message": "OK"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            },
-            {
-              "code": 404,
-              "message": "Not Found"
-            },
-            {
-              "code": 410,
-              "message": "Gone"
             }
           ]
         }

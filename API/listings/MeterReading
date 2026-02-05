@@ -26,7 +26,7 @@
               "description": "The upper bound on the published date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -34,7 +34,7 @@
               "description": "The lower bound on the published date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -42,7 +42,7 @@
               "description": "The upper bound on the updated date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -50,7 +50,7 @@
               "description": "The lower bound on the updated date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -58,7 +58,7 @@
               "description": "The upper bound on the number of entries to be contained in a reply.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             },
             {
@@ -66,7 +66,7 @@
               "description": "The one based offset in the DataCustodian's collection of Meter Readings that should be transferred as the first entry of the response.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             },
             {
@@ -74,7 +74,7 @@
               "description": "The maximum number of entries to be transferred in the response.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             }
 					],
@@ -87,40 +87,6 @@
             {
               "code": 202,
               "message": "Accepted"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "method": "POST",
-          "summary": "Add a new Meter Reading to the Data Custodian [FB_33]",
-          "nickname": "addMeterReading",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "consumes": ["application/atom+xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "meterReadingData",
-              "description": "1 or more MeterReadings to be added.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 201,
-              "message": "Created"
             },
             {
               "code": 400,
@@ -151,7 +117,7 @@
               "description": "Id of the Meter Reading.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "type": "string",
               "paramType": "path"
             },
             {
@@ -159,7 +125,7 @@
               "description": "The upper bound on the published date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -167,7 +133,7 @@
               "description": "The lower bound on the published date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -175,7 +141,7 @@
               "description": "The upper bound on the updated date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -183,7 +149,7 @@
               "description": "The lower bound on the updated date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -191,7 +157,7 @@
               "description": "The upper bound on the number of entries to be contained in a reply.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             },
             {
@@ -199,7 +165,7 @@
               "description": "The one based offset in the DataCustodian's collection of Meter Readings that should be transferred as the first entry of the response.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             },
             {
@@ -207,7 +173,7 @@
               "description": "The maximum number of entries to be transferred in the response.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             }
 
@@ -231,101 +197,6 @@
               "message": "Forbidden"
             }
           ]
-        },
-        {
-          "httpMethod": "PUT",
-          "summary": "Update an existing Meter Reading within the Data Custodian [FB_33]",
-          "notes": "The Usage Point and Meter Reading must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "updateMeterReading",
-          "consumes": ["application/atom+xml"],					
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "usagePointId",
-              "description": "Id of the UsagePoint the Meter Reading references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "meterReadingId",
-              "description": "Id of the Meter Reading.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "meterReadingData",
-              "description": "The updated Meter Reading information.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 200,
-              "message" : "OK"
-            },
-            {
-              "code": 201,
-              "message": "Created"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "method": "DELETE",
-          "summary": "Delete a Meter Reading from the Data Custodian [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "deleteMeterReading",
-					"produces": ["application/xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "meterReadingId",
-              "description": "Id of the Meter Reading.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message" : "OK"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            },
-            {
-              "code": 404,
-              "message": "Not Found"
-            },
-            {
-              "code": 410,
-              "message": "Gone"
-            }
-          ]
         }
       ]
     },
@@ -346,7 +217,7 @@
               "description": "Id of the Subscription associated with the Usage Point containing the Meter Reading.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "type": "string",
               "paramType": "path"
             },
             {
@@ -354,7 +225,7 @@
               "description": "Id of the UsagePoint the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "type": "string",
               "paramType": "path"
             },
             {
@@ -362,7 +233,7 @@
               "description": "The upper bound on the published date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -370,7 +241,7 @@
               "description": "The lower bound on the published date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -378,7 +249,7 @@
               "description": "The upper bound on the updated date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -386,7 +257,7 @@
               "description": "The lower bound on the updated date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -394,7 +265,7 @@
               "description": "The upper bound on the number of entries to be contained in a reply.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             },
             {
@@ -402,7 +273,7 @@
               "description": "The one based offset in the DataCustodian's collection of Meter Readings that should be transferred as the first entry of the response.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             },
             {
@@ -410,7 +281,7 @@
               "description": "The maximum number of entries to be transferred in the response.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             }
           ],
@@ -423,56 +294,6 @@
             {
               "code": 202,
               "message": "Accepted"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "method": "POST",
-          "summary": "Add a new Meter Reading to an existing Usage Point [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "addMeterReading",
-					"consumes": ["application/atom+xml"],
-					"authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "subscriptionId",
-              "description": "Id of the Subscription associated with the Usage Point containing the Meter Reading.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "usagePointId",
-              "description": "Id of the UsagePoint the Meter Reading references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "meterReadingData",
-              "description": "1 or more MeterReadings to be added.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 201,
-              "message": "Created"
             },
             {
               "code": 400,
@@ -503,7 +324,7 @@
               "description": "Id of the Subscription associated with the Usage Point containing the Meter Reading.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "type": "string",
               "paramType": "path"
             },
             {
@@ -511,7 +332,7 @@
               "description": "Id of the UsagePoint the Meter Reading references.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "type": "string",
               "paramType": "path"
             },
             {
@@ -519,7 +340,7 @@
               "description": "Id of the Meter Reading.",
               "required": true,
               "allowMultiple": false,
-              "dataType": "string",
+              "type": "string",
               "paramType": "path"
             },
             {
@@ -527,7 +348,7 @@
               "description": "The upper bound on the published date of the Meter Reading.",
              "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -535,7 +356,7 @@
               "description": "The lower bound on the published date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -543,7 +364,7 @@
               "description": "The upper bound on the updated date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -551,7 +372,7 @@
               "description": "The lower bound on the updated date of the Meter Reading.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "Date",
+              "type": "Date",
               "paramType": "query"
             },
             {
@@ -559,7 +380,7 @@
               "description": "The upper bound on the number of entries to be contained in a reply.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             },
             {
@@ -567,7 +388,7 @@
               "description": "The one based offset in the DataCustodian's collection of Meter Readings that should be transferred as the first entry of the response.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             },
             {
@@ -575,7 +396,7 @@
               "description": "The maximum number of entries to be transferred in the response.",
               "required": false,
               "allowMultiple": false,
-              "dataType": "long",
+              "type": "long",
               "paramType": "query"
             }
           ],
@@ -596,125 +417,6 @@
             {
               "code": 403,
               "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "httpMethod": "PUT",
-          "summary": "Update an existing Meter Reading within Usage Point [FB_33]",
-          "notes": "The Usage Point and Meter Reading must exist.  To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "updateMeterReading",
-					"consumes": ["application/atom+xml"],					
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "subscriptionId",
-              "description": "Id of the Subscription associated with the Usage Point containing the Meter Reading.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "usagePointId",
-              "description": "Id of the UsagePoint the Meter Reading references.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "meterReadingId",
-              "description": "Id of the Meter Reading.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "meterReadingData",
-              "description": "The updated Meter Reading information.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 200,
-              "message" : "OK"
-            },
-            {
-              "code": 201,
-              "message": "Created"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "method": "DELETE",
-          "summary": "Delete a Meter Reading from Usage Point [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "deleteMeterReading",
-					"produces": ["application/xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "subscriptionId",
-              "description": "Id of the Subscription associated with the Usage Point containing the Meter Reading.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "usagePointId",
-              "description": "Id of Usage Point containing the Meter Reading.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "meterReadingId",
-              "description": "Id of the Meter Reading.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message" : "OK"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            },
-            {
-              "code": 404,
-              "message": "Not Found"
-            },
-            {
-              "code": 410,
-              "message": "Gone"
             }
           ]
         }

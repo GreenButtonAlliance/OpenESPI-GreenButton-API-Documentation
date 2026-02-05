@@ -97,41 +97,7 @@
               "message": "Forbidden"
             }
           ]
-	      },
-        {
-          "method": "POST",
-          "summary": "Add a new Usage Point [FB_33]",
-          "nickname": "addUsagePoint",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "consumes": ["application/atom+xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "usagePointData",
-              "description": "1 or more Usage Points to be added.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 201,
-              "message": "Created"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-        }
+	      }
       ]
     },
     {
@@ -228,94 +194,6 @@
             {
               "code": 403,
               "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "httpMethod": "PUT",
-          "summary": "Update an existing Usage Point [FB_33]",
-          "notes": "The Usage Point must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "updateUsagePoint",
-					"consumes": ["application/atom+xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "usagePointId",
-              "description": "Id of the UsagePoint.",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "usagePointData",
-              "description": "The updated Usage Point information.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message": "OK"
-            },
-            {
-              "code": 201,
-              "message": "Created"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "method": "DELETE",
-          "summary": "Delete an existing Usage Point [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "deleteUsagePoint",
-					"produces": ["application/xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "usagePointId",
-              "description": "Id of the Usage Point",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message": "OK"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            },
-            {
-              "code": 404,
-              "message": "Not Found"
-            },
-            {
-              "code": 410,
-              "message": "Gone"
             }
           ]
         }
@@ -417,49 +295,7 @@
               "message": "Forbidden"
             }
           ]
-	      },
-        {
-          "method": "POST",
-          "summary": "Add a new Usage Point by Subscription Id [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "addUsagePoint",
-          "consumes": ["application/atom+xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "subscriptionId",
-              "description": "The Subscription's Id",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            },
-            {
-              "name": "usagePointData",
-              "description": "1 or more Usage Points to be added.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 201,
-              "message": "Created"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-        }
+	      }
       ]
     },
     {
@@ -564,109 +400,6 @@
             {
               "code": 403,
               "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "httpMethod": "PUT",
-          "summary": "Update an existing Subscription Usage Point [FB_33]",
-          "notes": "The Usage Point must exist. To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "updateUsagePoint",
-					"consumes": ["application/atom+xml"],
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "subscriptionId",
-              "description": "The Subscription's Id",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            },
-            {
-              "name": "usagePointId",
-              "description": "Id of the UsagePoint",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "usagePointData",
-              "description": "The updated Usage Point information.",
-              "required": true,
-              "allowMultiple": true,
-              "dataType": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message": "OK"
-            },
-            {
-              "code": 201,
-              "message": "Created"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            }
-          ]
-        },
-        {
-          "method": "DELETE",
-          "summary": "Delete an existing Subscription Usage Point [FB_33]",
-          "notes": "To provide the required Bearer access token in the HTTP Authorization header, enter the <strong>\"data_custodian_access_token\"</strong> in the appropriate field at the top of this web page!",
-          "nickname": "deleteUsagePoint",
-          "authorizations": ["oauth2"],
-          "parameters":
-					[
-            {
-              "name": "subscriptionId",
-              "description": "The Subscription's Id",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "String",
-              "paramType": "path"
-            },
-            {
-              "name": "usagePointId",
-              "description": "Id of the Usage Point",
-              "required": true,
-              "allowMultiple": false,
-              "dataType": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages":
-					[
-            {
-              "code": 200,
-              "message": "OK"
-            },
-            {
-              "code": 400,
-              "message": "Bad Request"
-            },
-            {
-              "code": 403,
-              "message": "Forbidden"
-            },
-            {
-              "code": 404,
-              "message": "Not Found"
-            },
-            {
-              "code": 410,
-              "message": "Gone"
             }
           ]
         }
